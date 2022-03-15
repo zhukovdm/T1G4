@@ -1,0 +1,23 @@
+Our domain focuses on a regional public transport, which is served by **trains**
+and **buses** exclusively. These **vehicles** share traits such as *capacity*,
+*fuel consumption*, *length*, *purchasing price* and **producer**. While
+**buses** use identified by *license plate number*, **trains** are identified
+by *EVN*, which also can be used to determine dependent/independent
+*traction*.
+
+Each **vehicle** is owned by **transit agency**, which has its individual
+*name* and various amount of contact possibilities, like *phone* and *email*.
+
+**Vehicles** then execute **connections**, by each **connection** being done
+by exactly one **vehicle**. Multiple **connections** are grouped into a
+**transit route** with its *license number*, given *length*, and *validity
+from - to*, which specifies for how long can public transport be provided on
+this route. Each individual **connection** has also its *number* within that
+**route** and also *depature* and *arrival* time.
+
+Each **connection** consists of multiple **stops** (as events), having
+*arrival* and *departure* time, while happening at a given **station** .
+**Stations** can be split into two kinds: **train stations** and **bus
+stations**, which are very different in reality, but have common traits for
+the sake of public transport: *geolocation*, *name* and (vehicular)
+*capacity*.
