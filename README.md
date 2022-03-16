@@ -11,7 +11,13 @@ datové formáty
 
 **Comments**
 
-- [ ] Replace Bus.Bus with Bus.licensePlateNumber.
-- [ ] Align Connection.Beginning/.End with .departure/.arrival.
-- [ ] Explain the relationship between Stop and Station. Why Stop has at least 2 stations?
+- [x] Align diagram style with the style from task description.
+      Solution: bold class names, attributes written with lowercase.
+- [x] Replace Bus.Bus with Bus.LicensePlateNumber.
+      Solution: simple replace.
+- [x] Align Connection.Beginning/.End with .departure/.arrival.
+      Solution: attributes are replaced by new "starts with", "ends with" relation.
+- [x] Explain the relationship between Stop and Station. Why Stop has at least 2 stations?
+      Solution: Stop means úzel, which has its own id and times. Stop is mandatorily
+      associated with the station. Station may serve stops.
 - [ ] Structure textual description similar to [link](https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/#třída-katalog).
