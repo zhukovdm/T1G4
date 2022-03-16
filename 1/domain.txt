@@ -1,23 +1,159 @@
-Our domain focuses on a regional public transport, which is served by **trains**
-and **buses** exclusively. These **vehicles** share traits such as *capacity*,
-*fuel consumption*, *length*, *purchasing price* and **producer**. While
-**buses** use identified by *license plate number*, **trains** are identified
-by *EVN*, which also can be used to determine dependent/independent
-*traction*.
+Our domain focuses on a regional public transport. The document preserves
+the data model structure drawn as UML diagram and extends it with sufficient
+descriptions of classes and properties used within the diagram.
 
-Each **vehicle** is owned by **transit agency**, which has its individual
-*name* and various amount of contact possibilities, like *phone* and *email*.
+Class Vehicle (Vůz)
 
-**Vehicles** then execute **connections**, by each **connection** being done
-by exactly one **vehicle**. Multiple **connections** are grouped into a
-**transit route** with its *license number*, given *length*, and *validity
-from - to*, which specifies for how long can public transport be provided on
-this route. Each individual **connection** has also its *number* within that
-**route** and also *depature* and *arrival* time.
+    description:
+    
+        A vehicle is any abstract vehicle, such as bus or train.
 
-Each **connection** consists of multiple **stops** (as events), having
-*arrival* and *departure* time, while happening at a given **station** .
-**Stations** can be split into two kinds: **train stations** and **bus
-stations**, which are very different in reality, but have common traits for
-the sake of public transport: *geolocation*, *name* and (vehicular)
-*capacity*.
+    attributes:
+
+      * capacity is a maximum amount of people vehicle could transport
+        simultaneously,
+      * consumption is an average rate of fuel consumption in l/km,
+      * purchase price is a self-describing property.
+
+    relations:
+
+        Vehicle might be owned by a Transit agency.
+        Vehicle is produced by a Producer.
+        Vehicle rides a Connection.
+
+Class Train (Vlak)
+
+    description:
+
+        Train is a subclass of the Vehicle with special properties.
+
+    attributes:
+
+      * electric motor is a sign whether it is driven by electricity,
+      * european vehicle number is a unique number issued by the regulator.
+
+Class Bus (Autobus)
+
+    description:
+
+        Bus is a subclass of the Vehicle with special properties.
+    
+    attributes:
+
+        license plate number is a unique number issued by the regulator
+
+Class Producer (Výrobce)
+
+    description:
+
+        Producer is a legal company.
+    
+    attributes:
+
+        * name is a legal name of a producer.
+
+    relations:
+
+        Producer produces Vehicles.
+
+Transit agency (Dopravní podnik)
+
+    description:
+
+        Transit agency is a legal company.
+
+    attributes:
+
+      * name is a legal name of the company,
+      * phone is self-describing,
+      * email is self-describing.
+
+    relations:
+
+        Transit agency may own any vehicle.
+
+Transit route (Linka)
+
+    description:
+
+        Transit route is a ground path from one point to another with
+        unique identification within and city and predefined stations to visit.
+
+    attributes:
+
+      * number is a route unique identification,
+      * length is measured in km,
+      * valid from is a date when agency starts to operate the route,
+      * valid to is the last date when route becomes publicly unavailable.
+
+    relations:
+
+        Transit route contains connections.
+        Transit route starts with station.
+        Transit route ends with station.
+
+Connection (Spoj)
+
+    description:
+
+        Connection is a particular instance of a transit route which has its id.
+        Each connection goes through the set of stops.
+
+    attributes:
+
+      * number is a unique identification of a particular connection.
+
+    relations:
+
+        Connection always belongs to some transit route.
+
+Stop (Úzel)
+
+    description:
+
+        Stop is a coincidence of id (point in the universe), arrival time
+        and departure time. Set of stops define a connection.
+
+    attributes:
+
+      * id is self-describing,
+      * arrival time is self-describing,
+      * departure time is self-describing.
+
+    relations:
+
+        Stop is followed by another stop.
+        Stop is preceded by another stop.
+        Connection connects at least two stops.
+        Stop is always served by a real (physical) station.
+
+Station (Zastávka)
+
+    description:
+
+        Station is a physical point on a map. Any stop must be covered by
+        some station.
+
+    attributes:
+
+      * gps is a certain position on a ground, where station is located,
+      * name is an official (public) identification of a station,
+      * capacity is an amount of people, that could fit into a station
+        simultaneously.
+
+    relations:
+
+        Station serves a set of stops.
+        Station could be a termination point (either start or end) for a transit route.
+
+Train station (Tramvajová zastávka)
+
+    description:
+
+        Train station is a subclass of the Station without special properties.
+
+Bus station (Autobusová zastávka)
+
+    description:
+
+        Bus station is a subclass of the Station without special properties.

@@ -7,7 +7,7 @@ datové formáty
 - [x] Choose a domain/topic for your homework.
 - [x] Create a conceptual model of that domain using UML Class Diagrams
 - [x] Create a textual description of what is represented in the domain model.
-- [ ] Implement corrections on comments after 1st review.
+- [x] Implement corrections on comments after 1st review.
 
 **Comments**
 
@@ -28,4 +28,6 @@ Solution: attributes are replaced by new "starts with", "ends with" relation.
 Solution: Stop means úzel, which has its own id and times. Stop is mandatorily
 associated with the station. Station may serve stops.
 
-- [ ] Structure textual description similar to [link](https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/#třída-katalog).
+- [x] Structure textual description similar to [link](https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/#třída-katalog).
+
+Solution: restructure text into hierarchy.
