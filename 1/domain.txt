@@ -102,8 +102,6 @@ Connection (Spoj)
     attributes:
 
       * number is a unique identification of a particular connection.
-      * beginning is the time when connection starts
-      * end is the time when connection starts
 
     relations:
 
