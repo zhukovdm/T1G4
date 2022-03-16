@@ -102,6 +102,8 @@ Connection (Spoj)
     attributes:
 
       * number is a unique identification of a particular connection.
+      * beginning is the time when connection starts
+      * end is the time when connection starts
 
     relations:
 
@@ -125,7 +127,7 @@ Stop (Zastavení)
         Stop is followed by another stop.
         Stop is preceded by another stop.
         Connection connects at least two stops.
-        Stop is always served by a real (physical) station.
+        Stop always serves a real (physical) station.
 
 Station (Stanice)
 
@@ -143,7 +145,7 @@ Station (Stanice)
 
     relations:
 
-        Station serves a set of stops.
+        Station is served by a set of stops.
         Station could be a termination point (either start or end) for a transit route.
 
 Train station (Vlaková stanice)
