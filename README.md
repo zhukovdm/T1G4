@@ -31,3 +31,5 @@ associated with the station. Station may serve stops.
 - [x] Structure textual description similar to [link](https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/#třída-katalog).
 
 Solution: restructure text into hierarchy.
+
+## 02
