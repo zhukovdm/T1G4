@@ -33,3 +33,17 @@ associated with the station. Station may serve stops.
 Solution: restructure text into hierarchy.
 
 ## 02
+
+- [x] Fix the conceptual model from the previous homework.
+- [ ] Cover conceptual model with classes and properties.
+- [ ] Represent the data using RDF Turtle.
+- [ ] Load RDF data into a triplestore to browse it.
+- [ ] Develop a few meaningful executable queries using SPARQL.
+- [ ] Vizualize data sample in LPG with nodes, edges, properties and types.
+- [ ] Represent data in LPG using an executable Cypher script.
+- [ ] Load the LPG data into Neo4j.
+- [ ] Develop a few meaningful executable queries using Cypher.
+
+**Comments**
+
+TBA
