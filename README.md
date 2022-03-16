@@ -7,6 +7,7 @@ datové formáty
 - [x] Choose a domain/topic for your homework.
 - [x] Create a conceptual model of that domain using UML Class Diagrams
 - [x] Create a textual description of what is represented in the domain model.
+- [x] Send the package for 1st review.
 - [x] Implement corrections on comments after 1st review.
 
 **Comments**
@@ -43,6 +44,8 @@ Solution: restructure text into hierarchy.
 - [ ] Represent data in LPG using an executable Cypher script.
 - [ ] Load the LPG data into Neo4j.
 - [ ] Develop a few meaningful executable queries using Cypher.
+- [ ] Replace the `NPRG036-T1G4.zip` file with fixed one in SIS.
+- [ ] Upload new `NPRG036-HW2-T1G4.zip` file in SIS.
 
 **Comments**
 
