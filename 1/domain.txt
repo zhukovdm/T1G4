@@ -2,7 +2,7 @@ Our domain focuses on a regional public transport. The document preserves
 the data model structure drawn as UML diagram and extends it with sufficient
 descriptions of classes and properties used within the diagram.
 
-Class Vehicle (Vůz)
+Class Vehicle (Dopravní prostředek)
 
     description:
     
@@ -107,7 +107,7 @@ Connection (Spoj)
 
         Connection always belongs to some transit route.
 
-Stop (Úzel)
+Stop (Zastavení)
 
     description:
 
@@ -127,7 +127,7 @@ Stop (Úzel)
         Connection connects at least two stops.
         Stop is always served by a real (physical) station.
 
-Station (Zastávka)
+Station (Stanice)
 
     description:
 
@@ -146,13 +146,13 @@ Station (Zastávka)
         Station serves a set of stops.
         Station could be a termination point (either start or end) for a transit route.
 
-Train station (Tramvajová zastávka)
+Train station (Vlaková stanice)
 
     description:
 
         Train station is a subclass of the Station without special properties.
 
-Bus station (Autobusová zastávka)
+Bus station (Autobusová stanice)
 
     description:
 
