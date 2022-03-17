@@ -15,7 +15,7 @@
 
 @prefix ex: <http://example.org/vocabulary/> .
 
-# other custom prefixes are defined within the data section
+# other custom prefixes are defined within "data samples" section
 
 # classes ______________________________________________________________________
 
@@ -285,6 +285,32 @@ agency:dpp a gtfs:Agency ;
     ex:phone "+420 640 921 554" ;
     ex:email "info@dpp.cz" .
 
+@prefix station: <https://T1G4.DOX.cz/Station/#> .
+
+station:1 a ex:TrainStation ;
+    ex:stationName "Heřmánky"@cs ;
+    ex:capacity 50 .
+
+station:2 a ex:TrainStation ;
+    ex:stationName "Vítkov"@cs ;
+    ex:capacity 40 .
+
+station:3 a ex:TrainStation ;
+    ex:stationName "Jakubčovice nad Odrou"@cs ;
+    ex:capacity 60 .
+
+station:4 a ex:BusStation ;
+    ex:stationName "Oderská"@cs ;
+    ex:capacity 30 .
+
+station:5 a ex:BusStation ;
+    ex:stationName "Budišovská"@cs ;
+    ex:capacity 20 .
+
+station:6 a ex:BusStation ;
+    ex:stationName "Spojovací"@cs ;
+    ex:capacity 45 .
+
 @prefix route: <https://T1G4.DOX.cz/TransitRoute/#> .
 
 route:1 a gtfs:Route ;
@@ -306,3 +332,50 @@ route:137 a gtfs:Route ;
     ex:length 12.2 ;
     ex:validFrom "2021-12-13"^^xsd:date ;
     ex:validTo "2022-12-12"^^xsd:date .
+
+@prefix conn: <https://T1G4.DOX.cz/Connection/#> .
+
+conn:1-1 a ex:Connection .
+conn:1-2 a ex:Connection .
+conn:1-3 a ex:Connection .
+conn:9-1 a ex:Connection .
+conn:9-2 a ex:Connection .
+conn:9-3 a ex:Connection .
+conn:37-1 a ex:Connection .
+conn:37-2 a ex:Connection .
+conn:37-3 a ex:Connection .
+conn:137-1 a ex:Connection .
+conn:137-2 a ex:Connection .
+conn:137-3 a ex:Connection .
+
+@prefix stop: <https://T1G4.DOX.cz/Stop/#> .
+
+stop:1 a gtfs:Stop ;
+    ex:gps "49.7134667N, 17.7582722E" ;
+    ex:arrivalTime "12:00:00"^^xsd:time ;
+    ex:departureTime "12:01:00"^^xsd:time .
+
+stop:2 a gtfs:Stop ;
+    ex:gps "49.7741814N, 17.7475375E" ;
+    ex:arrivalTime "12:05:00"^^xsd:time ;
+    ex:departureTime "12:06:00"^^xsd:time .
+
+stop:3 a gtfs:Stop ;
+    ex:gps "49.6969069N, 17.7886239E" ;
+    ex:arrivalTime "12:10:00"^^xsd:time ;
+    ex:departureTime "12:11:00"^^xsd:time .
+
+stop:4 a gtfs:Stop ;
+    ex:gps "49.6952592N, 17.7879486E" ;
+    ex:arrivalTime "11:00:00"^^xsd:time ;
+    ex:departureTime "11:01:00"^^xsd:time .
+
+stop:5 a gtfs:Stop ;
+    ex:gps "49.7067069N, 17.7684325E" ;
+    ex:arrivalTime "11:05:00"^^xsd:time ;
+    ex:departureTime "11:06:00"^^xsd:time .
+
+stop:6 a gtfs:Stop ;
+    ex:gps "49.7760583N, 17.7494736E" ;
+    ex:arrivalTime "11:10:00"^^xsd:time ;
+    ex:departureTime "11:11:00"^^xsd:time .
