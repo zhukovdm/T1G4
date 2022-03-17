@@ -1,0 +1,24 @@
+# Find all trains and buses, which rides connections with exactly 2 stops.
+# Order them by a consumption in ascending order.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <https://dbpedia.org/ontology/>
+PREFIX gtfs: <http://vocab.gtfs.org/terms#>
+PREFIX ex: <http://example.org/vocabulary/>
+
+SELECT ?vehicle ?cons WHERE
+{
+  {
+    ?vehicle a dbpedia-owl:Train .
+  }
+  UNION
+  {
+    ?vehicle a ex:Bus .
+  }
+  ?vehicle ex:rides ?conn .
+  ?vehicle ex:consumption ?cons .
+  ?conn ex:connects ?stop .
+}
+GROUP BY ?vehicle ?cons # not safe in general
+HAVING (COUNT(?stop) = 2)
+ORDER BY ASC(?cons)
