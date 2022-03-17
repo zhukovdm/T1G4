@@ -1,0 +1,82 @@
+<https://T1G4.DOX.cz/Connection/137-1>: a root:Connection
+	root:ConnectionNumber 137-1 ;
+	root:Beginning "Vítkov, žel.st." ;
+	root:End "Jakubčovice nad Odrou, pož. zbroj." ;
+
+<https://T1G4.DOX.cz/Connection/37-2>: a root:Connection
+	root:ConnectionNumber 37-2 ;
+	root:Beginning "Jakubčovice nad Odrou" ;
+	root:End "Vítkov" ;
+
+<https://T1G4.DOX.cz/TransitRoute/#37> a root:TransitRoute
+	gtfs:shortName 37 ;
+	root:Length 11.6 ;
+	root:ValidFrom 2021-12-10 ;
+	root:validTo 2022-12-12 ;
+
+<https://T1G4.DOX.cz/TransitRoute/#137> a root:TransitRoute
+	gtfs:shortName 137 ;
+	root:Length 12.2 ;
+	root:ValidFrom 2021-12-13 ;
+	root:ValidTo 2022-12-12 ;
+
+<https://T1G4.DOX.cz/trainStaion/#1> a schema:TrainStation ;
+    schema:geo 49.7134667N, 17.7582722E ;
+    schema:address "Heřmánky 301, 742 35 Heřmánky"@cs ;
+    root:capacity 50 .
+
+<https://T1G4.DOX.cz/trainStaion/#2> a schema:TrainStation ;
+    schema:geo 49.7741814N, 17.7475375E ;
+    schema:address "Švermova 239, 749 01 Vítkov"@cs ;
+    root:capacity 40 .
+
+<https://T1G4.DOX.cz/trainStaion/#3> a schema:TrainStation ;
+    schema:geo 49.6969069N, 17.7886239E ;
+    schema:address "742 36 Jakubčovice nad Odrou"@cs ;
+    root:capacity 60 .
+
+<https://T1G4.DOX.cz/busStaion/#1> a schema:BusStation ;
+    schema:geo 49.6952592N, 17.7879486E ;
+    schema:address "Oderská 100, 742 36 Jakubčovice nad Odrou"@cs ;
+    root:capacity 60 .
+
+<https://T1G4.DOX.cz/busStaion/#2> a schema:BusStation ;
+    schema:geo 49.7067069N, 17.7684325E ;
+    schema:address "Heřmánky 257, 742 35 Heřmánky"@cs ;
+    root:capacity 60 .
+
+<https://T1G4.DOX.cz/busStaion/#3> a schema:BusStation ;
+    schema:geo 49.7760583N, 17.7494736E ;
+    schema:address "Budišovská 877, 749 01 Vítkov"@cs ;
+    root:capacity 60 .
+
+<https://T1G4.DOX.cz/stop/train/#1> a root:Stop ;
+    schema:arrivalTime "12:00:00";
+    schema:departureTime "12:01:00".
+
+<https://T1G4.DOX.cz/stop/train/#2> a root:Stop ;
+    schema:arrivalTime "12:05:00";
+    schema:departureTime "12:06:00".
+
+<https://T1G4.DOX.cz/stop/train/#3> a root:Stop ;
+    schema:arrivalTime "12:10:00";
+    schema:departureTime "12:11:00".
+
+<https://T1G4.DOX.cz/stop/bus/#1> a root:Stop ;
+    schema:arrivalTime "11:00:00";
+    schema:departureTime "11:01:00".
+
+<https://T1G4.DOX.cz/stop/bus/#2> a root:Stop ;
+    schema:arrivalTime "11:05:00";
+    schema:departureTime "11:06:00".
+
+<https://T1G4.DOX.cz/stop/bus/#3> a root:Stop ;
+    schema:arrivalTime "11:10:00";
+    schema:departureTime "11:11:00".
+
+<https://T1G4.DOX.cz/stop/train/#1> root:Serves <https://T1G4.DOX.cz/trainStaion/#1>
+<https://T1G4.DOX.cz/stop/train/#2> root:Serves <https://T1G4.DOX.cz/trainStaion/#2>
+<https://T1G4.DOX.cz/stop/train/#3> root:Serves <https://T1G4.DOX.cz/trainStaion/#3>
+<https://T1G4.DOX.cz/stop/bus/#1> root:Serves <https://T1G4.DOX.cz/busStaion/#1>
+<https://T1G4.DOX.cz/stop/bus/#2> root:Serves <https://T1G4.DOX.cz/busStaion/#2>
+<https://T1G4.DOX.cz/stop/bus/#3> root:Serves <https://T1G4.DOX.cz/busStaion/#3>
