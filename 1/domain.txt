@@ -6,7 +6,7 @@ Class Vehicle (Dopravní prostředek)
 
     description:
     
-        A vehicle is any abstract vehicle, such as bus or train.
+        A vehicle is any abstract vehicle, for example bus or train.
 
     attributes:
 
@@ -50,7 +50,7 @@ Class Producer (Výrobce)
     
     attributes:
 
-        * name is a legal name of a producer.
+        * legal name is a self-describing attribute.
 
     relations:
 
@@ -64,9 +64,9 @@ Transit agency (Dopravní podnik)
 
     attributes:
 
-      * name is a legal name of the company,
-      * phone is self-describing,
-      * email is self-describing.
+      * legal name is a self-describing attribute,
+      * phone is a self-describing attribute,
+      * email is a self-describing attribute.
 
     relations:
 
@@ -81,7 +81,6 @@ Transit route (Linka)
 
     attributes:
 
-      * number is a route unique identification,
       * length is measured in km,
       * valid from is a date when agency starts to operate the route,
       * valid to is the last date when route becomes publicly unavailable.
@@ -99,13 +98,9 @@ Connection (Spoj)
         Connection is a particular instance of a transit route which has its id.
         Each connection goes through the set of stops.
 
-    attributes:
-
-      * number is a unique identification of a particular connection.
-
     relations:
 
-        Connection always belongs to some transit route.
+        Each connection belongs to some transit route.
 
 Stop (Zastavení)
 
@@ -116,34 +111,33 @@ Stop (Zastavení)
 
     attributes:
 
-      * id is self-describing,
-      * arrival time is self-describing,
-      * departure time is self-describing.
+      * gps is a certain point on a map,
+      * arrival time is a self-describing attribute,
+      * departure time is a self-describing attribute.
 
     relations:
 
         Stop is followed by another stop.
         Stop is preceded by another stop.
         Connection connects at least two stops.
-        Stop always serves a real (physical) station.
+        Each stop is served by some station.
 
 Station (Stanice)
 
     description:
 
-        Station is a physical point on a map. Any stop must be covered by
+        Station is a virtual named placeholder. Any stop must be covered by
         some station.
 
     attributes:
-
-      * gps is a certain position on a ground, where station is located,
-      * name is an official (public) identification of a station,
+      
+      * station name is an official (public) identification of a station,
       * capacity is an amount of people, that could fit into a station
         simultaneously.
 
     relations:
 
-        Station is served by a set of stops.
+        Station serves some stops.
         Station could be a termination point (either start or end) for a transit route.
 
 Train station (Vlaková stanice)
