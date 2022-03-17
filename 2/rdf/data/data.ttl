@@ -15,6 +15,8 @@
 
 @prefix ex: <http://example.org/vocabulary/> .
 
+# other custom prefixes are defined within the data section
+
 # classes ______________________________________________________________________
 
 # Vehicle ~ pext:Vehicle
@@ -110,46 +112,46 @@ ex:purchasePrice a rdf:Property ;
     rdfs:range xsd:integer .
 
 ex:length a rdfs:Property ;
-	rdfs:label "length"@en ;
-	rdfs:comment "A length of route in kilometers."@en ;
-	rdfs:domain gtfs:Route ;
-	rdfs:range xsd:decimal .
+    rdfs:label "length"@en ;
+    rdfs:comment "A length of route in kilometers."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range xsd:decimal .
 
 ex:validFrom a rdfs:Property ;
-	rdfs:label "valid from"@en ;
-	rdfs:comment "A date since when was operation on a route allowed."@en ;
-	rdfs:domain gtfs:Route ;
-	rdfs:range xsd:date .
+    rdfs:label "valid from"@en ;
+    rdfs:comment "A date since when was operation on a route allowed."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range xsd:date .
 
 ex:validTo a rdfs:Property ;
-	rdfs:label "valid to"@en ;
-	rdfs:comment "Last date of allowed operation on a route."@en ;
-	rdfs:domain gtfs:Route ;
-	rdfs:range xsd:date .
+    rdfs:label "valid to"@en ;
+    rdfs:comment "Last date of allowed operation on a route."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range xsd:date .
 
 ex:gps a rdfs:Property ;
-	rdfs:label "gps"@en ;
-	rdfs:comment "Exact point on a map where stop is located."@en ;
-	rdfs:domain gtfs:Stop ;
-	rdfs:range xsd:string .
+    rdfs:label "gps"@en ;
+    rdfs:comment "Exact point on a map where stop is located."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:string .
 
 ex:arrivalTime a rdfs:Property ;
-	rdfs:label "arrival time"@en ;
-	rdfs:comment "Arrival time of a vehicle."@en ;
-	rdfs:domain gtfs:Stop ;
-	rdfs:range xsd:time .
+    rdfs:label "arrival time"@en ;
+    rdfs:comment "Arrival time of a vehicle."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:time .
 
 ex:departureTime a rdfs:Property ;
-	rdfs:label "departure time"@en ;
-	rdfs:comment "Departure time of a vehicle."@en ;
-	rdfs:domain gtfs:Stop ;
-	rdfs:range xsd:time .
+    rdfs:label "departure time"@en ;
+    rdfs:comment "Departure time of a vehicle."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:time .
 
 ex:stationName a rdfs:Property ;
     rdfs:label "station name"@en ;
-	rdfs:comment "Actual station name."@en ;
-	rdfs:domain dbpedia-owl:Station ;
-	rdfs:range xsd:string .
+    rdfs:comment "Actual station name."@en ;
+    rdfs:domain dbpedia-owl:Station ;
+    rdfs:range xsd:string .
 
 # associations _________________________________________________________________
 
@@ -196,20 +198,20 @@ ex:serves a rdf:Property ;
     rdfs:range gtfs:Stop .
 
 ex:startsWith a rdf:Property ;
-	rdfs:label "starts with"@end ;
-	rdfs:comment "Name of a station, where the route begins."@en ;
-	rdfs:domain gtfs:Route ;
-	rdfs:range dbpedia-owl:Station .
+    rdfs:label "starts with"@end ;
+    rdfs:comment "Name of a station, where the route begins."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range dbpedia-owl:Station .
 
 ex:endsWith a rdf:Property ;
-	rdfs:label "ends with"@end ;
-	rdfs:comment "Name of a stop, where the route ends."@en ;
-	rdfs:domain gtfs:Route ;
-	rdfs:range dbpedia-owl:Station .
+    rdfs:label "ends with"@end ;
+    rdfs:comment "Name of a stop, where the route ends."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range dbpedia-owl:Station .
 
 # data samples _________________________________________________________________
 
-@prefix train: <https://T1G4.DOX.cz/train/#> .
+@prefix train: <https://T1G4.DOX.cz/Train/#> .
 
 train:1 a dbpedia-owl:Train ;
     ex:capacity 30 ;
@@ -232,7 +234,7 @@ train:3 a dbpedia-owl:Train ;
     ex:electricMotor "false"^^xsd:boolean ;
     ex:europeanVehicleNumber "EW 40 672" .
 
-@prefix bus: <https://T1G4.DOX.cz/bus/#> .
+@prefix bus: <https://T1G4.DOX.cz/Bus/#> .
 
 bus:1 a ex:Bus ;
     ex:capacity 23 ;
@@ -252,7 +254,7 @@ bus:3 a ex:Bus ;
     ex:purchasePrice 123000 ;
     ex:licensePlateNumber "6M4 1426" .
 
-@prefix producer: <https://T1G4.DOX.cz/producer/#> .
+@prefix producer: <https://T1G4.DOX.cz/Producer/#> .
 
 producer:tatra a ex:Producer ;
     ex:legalName "TATRA TRUCKS a.s."@cs .
@@ -265,3 +267,42 @@ producer:siemens a ex:Producer ;
 
 producer:bombardier a ex:Producer ;
     ex:legalName "Bombardier Inc."@en .
+
+@prefix agency: <https://T1G4.DOX.cz/TransitAgency/#> .
+
+agency:student a gtfs:Agency ;
+    ex:legalName "Student Agency"@en ;
+    ex:phone "+420 630 784 245" ;
+    ex:email "info@studentagency.cz" .
+
+agency:leo a gtfs:Agency ;
+    ex:legalName "Leo Express"@en ;
+    ex:phone "+420 543 140 738" ;
+    ex:email "info@leoexpress.com" .
+
+agency:dpp a gtfs:Agency ;
+    ex:legalName "Dopravní podnik hl. m. Prahy"@cz ;
+    ex:phone "+420 640 921 554" ;
+    ex:email "info@dpp.cz" .
+
+@prefix route: <https://T1G4.DOX.cz/TransitRoute/#> .
+
+route:1 a gtfs:Route ;
+    ex:length 120.5 ;
+    ex:validFrom "2015-01-01"^^xsd:date ;
+    ex:validTo "2020-12-31"^^xsd:date .
+
+route:9 a gtfs:Route ;
+    ex:length 37.0 ;
+    ex:validFrom "2005-10-01"^^xsd:date ;
+    ex:validTo "2025-09-25"^^xsd:date .
+
+route:37 a gtfs:Route ;
+    ex:length 11.6 ;
+    ex:validFrom "2021-12-10"^^xsd:date ;
+    ex:validTo "2022-12-12"^^xsd:date .
+
+route:137 a gtfs:Route ;
+    ex:length 12.2 ;
+    ex:validFrom "2021-12-13"^^xsd:date ;
+    ex:validTo "2022-12-12"^^xsd:date .

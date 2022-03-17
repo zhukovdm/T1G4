@@ -8,18 +8,6 @@
 	root:Beginning "Jakubčovice nad Odrou" ;
 	root:End "Vítkov" ;
 
-<https://T1G4.DOX.cz/TransitRoute/#37> a root:TransitRoute
-	gtfs:shortName 37 ;
-	root:Length 11.6 ;
-	root:ValidFrom 2021-12-10 ;
-	root:validTo 2022-12-12 ;
-
-<https://T1G4.DOX.cz/TransitRoute/#137> a root:TransitRoute
-	gtfs:shortName 137 ;
-	root:Length 12.2 ;
-	root:ValidFrom 2021-12-13 ;
-	root:ValidTo 2022-12-12 ;
-
 <https://T1G4.DOX.cz/trainStaion/#1> a schema:TrainStation ;
     schema:geo 49.7134667N, 17.7582722E ;
     schema:address "Heřmánky 301, 742 35 Heřmánky"@cs ;
