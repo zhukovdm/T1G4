@@ -36,9 +36,9 @@ Solution: restructure text into hierarchy.
 ## 02
 
 - [x] Fix the conceptual model from the previous homework.
-- [ ] Cover conceptual model with classes and properties.
-- [ ] Represent the data using RDF Turtle.
-- [ ] Load RDF data into a triplestore to browse it.
+- [x] Cover conceptual model with classes and properties.
+- [x] Represent the data using RDF Turtle.
+- [x] Load RDF data into a triplestore to browse it.
 - [ ] Develop a few meaningful executable queries using SPARQL.
 - [ ] Vizualize data sample in LPG with nodes, edges, properties and types.
 - [ ] Represent data in LPG using an executable Cypher script.
