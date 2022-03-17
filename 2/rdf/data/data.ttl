@@ -196,13 +196,13 @@ ex:serves a rdf:Property ;
     rdfs:domain dbpedia-owl:Station ;
     rdfs:range gtfs:Stop .
 
-ex:startsWith a root:Property ;
+ex:startsWith a rdf:Property ;
 	rdfs:label "starts with"@end ;
 	rdfs:comment "Name of a station, where the route begins."@en ;
 	rdfs:domain gtfs:Route ;
 	rdfs:range dbpedia-owl:Station .
 
-root:endsWith a root:Property ;
+ex:endsWith a rdf:Property ;
 	rdfs:label "ends with"@end ;
 	rdfs:comment "Name of a stop, where the route ends."@en ;
 	rdfs:domain gtfs:Route ;
@@ -210,4 +210,4 @@ root:endsWith a root:Property ;
 
 # data samples _________________________________________________________________
 
-# TODO: add existing data and extend
+# TODO: add existing data and extend it respectively.
