@@ -1,0 +1,22 @@
+# Jména železničních stanic které obsluhuje Dopravní podnik hl. m. Prahy
+# Names of railway stations served by Dopravní podnik of Prague
+
+PREFIX ex: <http://example.org/vocabulary/>
+
+Select distinct ?StationName
+where 
+{
+?station a ex:TrainStation ;
+  ex:stationName  ?StationName.
+
+?agency ex:owns ?vehicle ;
+  ex:legalName ?aName .
+
+?vehicle ex:rides ?connection .
+
+?connection ex:connects ?stop .
+
+?station ex:serves ?stop .
+
+FILTER(?aName = "Dopravní podnik hl. m. Prahy"@cz)
+}
