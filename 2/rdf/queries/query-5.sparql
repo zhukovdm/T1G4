@@ -1,0 +1,26 @@
+# Číslo prvního vlaku, který odjíždí ze stanice Heřmánky, a doba tohoto odjezdu.
+# An EVN of a train which departs from the Heřmánky station as first of the day, and when.
+
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX gtfs: <http://vocab.gtfs.org/terms>
+PREFIX pext: <http://www.ontotext.com/proton/protonext> 
+PREFIX dbpedia-owl: <https://dbpedia.org/ontology/>
+
+SELECT ?evn ?dtime
+WHERE
+{
+
+	?train a dbpedia-owl:Train ;
+		ex:europeanVehicleNumber ?evn .
+
+	?train ex:rides ?conn .
+	?conn ex:connects ?stop .
+	?stop ex:departureTime ?dtime.
+
+	?station ex:serves ?stop ;
+		ex:stationName "Heřmánky"@cs .
+
+}
+
+ORDER BY ?dtime
+LIMIT 1
