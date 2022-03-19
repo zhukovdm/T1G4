@@ -503,9 +503,9 @@ station:12 ex:serves stop:14 .
 
 route:1 ex:startsWith station:1 ;
     ex:endsWith station:3 .
-route:2 ex:startsWith station:4 ;
+route:9 ex:startsWith station:4 ;
     ex:endsWith station:6 .
-route:3 ex:startsWith station:7 ;
+route:37 ex:startsWith station:7 ;
     ex:endsWith station:10 .
-route:4 ex:startsWith station:11 ;
+route:137 ex:startsWith station:11 ;
     ex:endsWith station:12 .
