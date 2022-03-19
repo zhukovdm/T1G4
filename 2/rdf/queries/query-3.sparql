@@ -1,15 +1,17 @@
 # SPZ autobusů, které vyrobila TATRA TRUCKS a.s.
-# License plates of buses manufactured by TATRA TRUCKS a.s.
+# License plates of buses manufactured by TATRA TRUCKS a.s., and their purchasing prices
 
 PREFIX ex: <http://example.org/vocabulary/>
-Select ?spz
+Select ?spz ?price
 where 
 {
-?vehicle a ex:Bus ;
-  ex:licensePlateNumber ?spz .
+?bus a ex:Bus ;
+  ex:licensePlateNumber ?spz ;
+  ex:purchasePrice ?price .
 
-?producer ex:produces ?vehicle ;
+?producer ex:produces ?bus ;
   ex:legalName ?name .
   
 FILTER(?name = "TATRA TRUCKS a.s."@cs)
 }
+ORDER BY ?price
