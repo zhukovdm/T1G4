@@ -40,9 +40,9 @@ Solution: restructure text into hierarchy.
 - [x] Represent the data using RDF Turtle.
 - [x] Load RDF data into a triplestore to browse it.
 - [ ] Develop a few meaningful executable queries using SPARQL.
-- [ ] Vizualize data sample in LPG with nodes, edges, properties and types.
-- [ ] Represent data in LPG using an executable Cypher script.
-- [ ] Load the LPG data into Neo4j.
+- [x] Vizualize data sample in LPG with nodes, edges, properties and types.
+- [x] Represent data in LPG using an executable Cypher script.
+- [x] Load the LPG data into Neo4j.
 - [ ] Develop a few meaningful executable queries using Cypher.
 - [ ] Replace the `NPRG036-T1G4.zip` file with fixed one in SIS.
 - [ ] Upload new `NPRG036-HW2-T1G4.zip` file in SIS.
