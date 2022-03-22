@@ -1,20 +1,20 @@
 // ---NODES DEFINITIONS---
 
 // "train" definition
-CREATE (train1:Train{capacity: 30, consumtion: 500, purchasePrice: 550000, electricMotor:true, europeanVehicleNumber: "B 228 FK"})
-CREATE (train2:Train{capacity: 100, consumtion: 1000, purchasePrice: 1000000, electricMotor:true, europeanVehicleNumber: "CGI 964"})
-CREATE (train3:Train{capacity: 123, consumtion: 300, purchasePrice: 200000, electricMotor:false, europeanVehicleNumber: "EW 40 672"})
+CREATE (train1:Train{capacity: 30, consumption: 500, purchasePrice: 550000, electricMotor:true, europeanVehicleNumber: "B 228 FK"})
+CREATE (train2:Train{capacity: 100, consumption: 1000, purchasePrice: 1000000, electricMotor:true, europeanVehicleNumber: "CGI 964"})
+CREATE (train3:Train{capacity: 123, consumption: 300, purchasePrice: 200000, electricMotor:false, europeanVehicleNumber: "EW 40 672"})
 
 // "bus" definition
-CREATE (bus1:Bus{capacity: 23, consumtion: 42, purchasePrice: 523147, licensePlateNumber: "4A2 7983"})
-CREATE (bus2:Bus{capacity: 5, consumtion: 10, purchasePrice: 65000, licensePlateNumber: "5T1 9876"})
-CREATE (bus3:Bus{capacity: 54, consumtion: 98, purchasePrice: 123000, licensePlateNumber: "6M4 1426"})
+CREATE (bus1:Bus{capacity: 23, consumption: 42, purchasePrice: 523147, licensePlateNumber: "4A2 7983"})
+CREATE (bus2:Bus{capacity: 5, consumption: 10, purchasePrice: 65000, licensePlateNumber: "5T1 9876"})
+CREATE (bus3:Bus{capacity: 54, consumption: 98, purchasePrice: 123000, licensePlateNumber: "6M4 1426"})
 
 // "producers" definition
-CREATE (tatra:Poducer{legalName: "TATRA TRUCKS a.s."})
-CREATE (man:Poducer{legalName: "Maschinenfabrik Augsburg-Nürnberg"})
-CREATE (siemens:Poducer{legalName: "Siemens AG"})
-CREATE (bombardier:Poducer{legalName: "Bombardier Inc."})
+CREATE (tatra:Producer{legalName: "TATRA TRUCKS a.s."})
+CREATE (man:Producer{legalName: "Maschinenfabrik Augsburg-Nürnberg"})
+CREATE (siemens:Producer{legalName: "Siemens AG"})
+CREATE (bombardier:Producer{legalName: "Bombardier Inc."})
 
 // "transport" agency definition
 CREATE (student:Agency{legalName: "Student Agency", phone: "+420 630 784 245", email: "info@studentagency.cz"})
@@ -36,10 +36,10 @@ CREATE (bst5:BusStation{stationName: "Sídliště Novodvorská", capacity: 25})
 CREATE (bst6:BusStation{stationName: "Limuzská", capacity: 80})
 
 // "route" definition
-CREATE (route1:Route{lenght: 120.5, validFrom: "2015-01-01", validTo: "2020-12-31"})
-CREATE (route9:Route{lenght: 37.0, validFrom: "2005-10-01", validTo: "2025-09-25"})
-CREATE (route37:Route{lenght: 11.6, validFrom: "2021-12-10", validTo: "2022-12-12"})
-CREATE (route137:Route{lenght: 12.2, validFrom: "2021-12-13", validTo: "2022-12-12"})
+CREATE (route1:Route{length: 120.5, validFrom: "2015-01-01", validTo: "2020-12-31"})
+CREATE (route9:Route{length: 37.0, validFrom: "2005-10-01", validTo: "2025-09-25"})
+CREATE (route37:Route{length: 11.6, validFrom: "2021-12-10", validTo: "2022-12-12"})
+CREATE (route137:Route{length: 12.2, validFrom: "2021-12-13", validTo: "2022-12-12"})
 
 // "connection" definition
 CREATE (con11:Connection)
@@ -147,4 +147,3 @@ CREATE (route1)-[:ENDS_WITH]->(tst3)
 CREATE (route9)-[:ENDS_WITH]->(bst3)
 CREATE (route37)-[:ENDS_WITH]->(tst5)
 CREATE (route137)-[:ENDS_WITH]->(bst6)
-
