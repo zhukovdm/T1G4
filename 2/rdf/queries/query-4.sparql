@@ -1,2 +1,24 @@
-# Jména dopravců, jejichž spoj obsahuje zastávku pod 50. rovnoběžkou severní šířky.
-# Names of transit agencies whose connections contain stops which is below 50th parallel north.
+# Jméno dopravce s nejdelším spojem.(začínající ve Vítkově.)
+# Name of transit agency with the longest transit route.(that starts in Vítkov.)
+
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX gtfs: <http://vocab.gtfs.org/terms#>
+
+SELECT ?LegalName ?Length
+WHERE
+{
+    ?agency a gtfs:Agency ;
+     ex:legalName ?LegalName.
+
+    ?route a gtfs:Route ;
+     ex:length ?Length.
+
+    ?agency ex:owns ?vehicle .
+
+    ?vehicle ex:rides ?connection .
+
+    ?connection ex:belongsTo ?route .
+}
+
+ORDER BY ?Length
+LIMIT 1
