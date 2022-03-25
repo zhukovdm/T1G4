@@ -111,43 +111,43 @@ ex:purchasePrice a rdf:Property ;
     rdfs:domain pext:Vehicle ;
     rdfs:range xsd:integer .
 
-ex:length a rdfs:Property ;
+ex:length a rdf:Property ;
     rdfs:label "length"@en ;
     rdfs:comment "A length of route in kilometers."@en ;
     rdfs:domain gtfs:Route ;
     rdfs:range xsd:decimal .
 
-ex:validFrom a rdfs:Property ;
+ex:validFrom a rdf:Property ;
     rdfs:label "valid from"@en ;
     rdfs:comment "A date since when was operation on a route allowed."@en ;
     rdfs:domain gtfs:Route ;
     rdfs:range xsd:date .
 
-ex:validTo a rdfs:Property ;
+ex:validTo a rdf:Property ;
     rdfs:label "valid to"@en ;
     rdfs:comment "Last date of allowed operation on a route."@en ;
     rdfs:domain gtfs:Route ;
     rdfs:range xsd:date .
 
-ex:gps a rdfs:Property ;
+ex:gps a rdf:Property ;
     rdfs:label "gps"@en ;
     rdfs:comment "Exact point on a map where stop is located."@en ;
     rdfs:domain gtfs:Stop ;
     rdfs:range xsd:string .
 
-ex:arrivalTime a rdfs:Property ;
+ex:arrivalTime a rdf:Property ;
     rdfs:label "arrival time"@en ;
     rdfs:comment "Arrival time of a vehicle."@en ;
     rdfs:domain gtfs:Stop ;
     rdfs:range xsd:time .
 
-ex:departureTime a rdfs:Property ;
+ex:departureTime a rdf:Property ;
     rdfs:label "departure time"@en ;
     rdfs:comment "Departure time of a vehicle."@en ;
     rdfs:domain gtfs:Stop ;
     rdfs:range xsd:time .
 
-ex:stationName a rdfs:Property ;
+ex:stationName a rdf:Property ;
     rdfs:label "station name"@en ;
     rdfs:comment "Actual station name."@en ;
     rdfs:domain dbpedia-owl:Station ;

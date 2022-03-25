@@ -50,6 +50,6 @@ Solution: restructure text into hierarchy.
 **Comments**
 
 - [ ] Define ex:phone with tel: scheme, see example from the lecture.
-- [ ] Find rdfs:Property and use rdf:Property instead.
+- [x] Find rdfs:Property and use rdf:Property instead.
 
 ## 03
