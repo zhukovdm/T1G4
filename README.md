@@ -51,7 +51,9 @@ Solution: restructure text into hierarchy.
 
 - [ ] Define ex:phone with tel: scheme, see example from the lecture.
 
-To be announced.
+Solution to be announced.
+[Link](https://stackoverflow.com/questions/1009181/url-scheme-for-phone-call)
+as possible reference. How to express "tel:" in RDF?
 
 - [x] Find rdfs:Property and use rdf:Property instead.
 
