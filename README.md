@@ -60,3 +60,21 @@ as possible reference. How to express "tel:" in RDF?
 Simple replacement.
 
 ## 03
+
+- [ ] Fix previous homework based on the comments.
+- [ ] Create directed and acyclic hierarchical model(s) from the latest conceptual model.
+- [ ] Create `XML Schema` with datatypes for each hierarchical model.
+- [ ] Represent data against `XML Schema`, enforce `xml:lang` attribute, [src](https://stackoverflow.com/q/7502382/3623646).
+- [ ] Create at least **4** non-trivial `XPath` queries on data.
+- [ ] Create at least **4** non-trivial `XSLT` transformations of a data subsets to html format.
+- [ ] Create `XSLT` transformation of the data to `RDF` form identical to the `HW2`.
+- [ ] Create `JSON Schema` representation for each hierarchical model.
+- [ ] Represent data against `JSON Schema`.
+- [ ] Create `JSON-LD` mapping of `JSON` data to `RDF` identical to `HW2`.
+- [ ] Create at least **4** non-trivial `jq` queries.
+- [ ] Replace the `NPRG036-HW2-T1G4.zip` file with fixed one in SIS.
+- [ ] Upload new `NPRG036-HW3-T1G4.zip` file in SIS.
+
+**Comments**
+
+TBA
