@@ -5,6 +5,39 @@
 
     <vehicles>
         <vehicle>
+            <capacity>30</capacity>
+            <consumption>500</consumption>
+            <purchasePrice>550000</purchasePrice>
+            <train>
+                <id>1</id>
+                <electricMotor>true</electricMotor>
+                <europeanVehicleNumber>B 228 FK</europeanVehicleNumber>
+            </train>
+        </vehicle>
+
+        <vehicle>
+            <capacity>100</capacity>
+            <consumption>1000</consumption>
+            <purchasePrice>1000000</purchasePrice>
+            <train>
+                <id>2</id>
+                <electricMotor>true</electricMotor>
+                <europeanVehicleNumber>CGI 964</europeanVehicleNumber>
+            </train>
+        </vehicle>
+
+        <vehicle>
+            <capacity>123</capacity>
+            <consumption>300</consumption>
+            <purchasePrice>200000</purchasePrice>
+            <train>
+                <id>3</id>
+                <electricMotor>false</electricMotor>
+                <europeanVehicleNumber>EW 40 672</europeanVehicleNumber>
+            </train>
+        </vehicle>
+
+        <vehicle>
             <capacity>23</capacity>
             <consumption>42</consumption>
             <purchasePrice>523147</purchasePrice>
@@ -40,119 +73,45 @@
             <id>tatra</id>
             <legalName xml:lang="cs">TATRA TRUCKS a.s.</legalName>
         </producer>
+        
         <producer>
             <id>man</id>
             <legalName xml:lang="de">Maschinenfabrik Augsburg-Nürnberg</legalName>
         </producer>
+        
         <producer>
             <id>siemens</id>
             <legalName xml:lang="de">Siemens AG</legalName>
         </producer>
+        
         <producer>
             <id>bombardier</id>
             <legalName xml:lang="en">Bombardier Inc.</legalName>
         </producer>
     </producers>
 
-    <stops>
-        <stop>
-            <id>1</id>
-            <gps>49.7134667N, 17.7582722E</gps>
-            <arrivalTime>12:00:00</arrivalTime>
-            <departureTime>12:01:00</departureTime>
-        </stop>
+    <agencies>
+        <agency>
+            <id>student</id>
+            <legalName xml:lang="en">Student Agency</legalName>
+            <phone>tel:+420-630-784-245</phone>
+            <email>info@studentagency.cz</email>
+        </agency>
+        
+        <agency>
+            <id>leo</id>
+            <legalName xml:lang="en">Leo Express</legalName>
+            <phone>tel:+420-543-140-738</phone>
+            <email>info@leoexpress.com</email>
+        </agency>
 
-        <stop>
-            <id>2</id>
-            <gps>49.7741814N, 17.7475375E</gps>
-            <arrivalTime>12:05:00</arrivalTime>
-            <departureTime>12:06:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>3</id>
-            <gps>49.6969069N, 17.7886239E</gps>
-            <arrivalTime>12:10:00</arrivalTime>
-            <departureTime>12:11:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>4</id>
-            <gps>49.6952592N, 17.7879486E</gps>
-            <arrivalTime>11:00:00</arrivalTime>
-            <departureTime>11:01:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>5</id>
-            <gps>49.7067069N, 17.7684325E</gps>
-            <arrivalTime>11:05:00</arrivalTime>
-            <departureTime>11:06:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>6</id>
-            <gps>49.7760583N, 17.7494736E</gps>
-            <arrivalTime>11:10:00</arrivalTime>
-            <departureTime>11:11:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>7</id>
-            <gps>45.0034761N, 14.2635348E</gps>
-            <arrivalTime>10:00:00</arrivalTime>
-            <departureTime>10:01:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>8</id>
-            <gps>50.0916890N, 14.4438130E</gps>
-            <arrivalTime>10:05:00</arrivalTime>
-            <departureTime>10:06:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>9</id>
-            <gps>50.1004810N, 14.4645900E</gps>
-            <arrivalTime>10:10:00</arrivalTime>
-            <departureTime>10:11:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>10</id>
-            <gps>50.1083880N, 14.4757450E</gps>
-            <arrivalTime>10:15:00</arrivalTime>
-            <departureTime>10:16:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>11</id>
-            <gps>50.1083880N, 14.4757450E</gps>
-            <arrivalTime>14:00:00</arrivalTime>
-            <departureTime>14:01:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>12</id>
-            <gps>50.1004810N, 14.4645900E</gps>
-            <arrivalTime>14:05:00</arrivalTime>
-            <departureTime>14:06:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>13</id>
-            <gps>50.1083880N, 14.4757450E</gps>
-            <arrivalTime>15:00:00</arrivalTime>
-            <departureTime>15:01:00</departureTime>
-        </stop>
-
-        <stop>
-            <id>14</id>
-            <gps>50.1004810N, 14.4645900E</gps>
-            <arrivalTime>15:05:00</arrivalTime>
-            <departureTime>15:07:00</departureTime>
-        </stop>
-    </stops>
+        <agency>
+            <id>dpp</id>
+            <legalName xml:lang="cz">Dopravní podnik hl. m. Prahy</legalName>
+            <phone>tel:+420-640-921-554</phone>
+            <email>info@dpp.cz</email>
+        </agency>
+    </agencies>
 
     <stations>
         <station>
@@ -260,9 +219,114 @@
 
     <connections>
         <connection>1-1</connection>
+
         <connection>9-1</connection>
+        
         <connection>37-1</connection>
+        
         <connection>137-1</connection>
+        
         <connection>137-2</connection>
     </connections>
+
+    <stops>
+        <stop>
+            <id>1</id>
+            <gps>49.7134667N, 17.7582722E</gps>
+            <arrivalTime>12:00:00</arrivalTime>
+            <departureTime>12:01:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>2</id>
+            <gps>49.7741814N, 17.7475375E</gps>
+            <arrivalTime>12:05:00</arrivalTime>
+            <departureTime>12:06:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>3</id>
+            <gps>49.6969069N, 17.7886239E</gps>
+            <arrivalTime>12:10:00</arrivalTime>
+            <departureTime>12:11:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>4</id>
+            <gps>49.6952592N, 17.7879486E</gps>
+            <arrivalTime>11:00:00</arrivalTime>
+            <departureTime>11:01:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>5</id>
+            <gps>49.7067069N, 17.7684325E</gps>
+            <arrivalTime>11:05:00</arrivalTime>
+            <departureTime>11:06:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>6</id>
+            <gps>49.7760583N, 17.7494736E</gps>
+            <arrivalTime>11:10:00</arrivalTime>
+            <departureTime>11:11:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>7</id>
+            <gps>45.0034761N, 14.2635348E</gps>
+            <arrivalTime>10:00:00</arrivalTime>
+            <departureTime>10:01:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>8</id>
+            <gps>50.0916890N, 14.4438130E</gps>
+            <arrivalTime>10:05:00</arrivalTime>
+            <departureTime>10:06:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>9</id>
+            <gps>50.1004810N, 14.4645900E</gps>
+            <arrivalTime>10:10:00</arrivalTime>
+            <departureTime>10:11:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>10</id>
+            <gps>50.1083880N, 14.4757450E</gps>
+            <arrivalTime>10:15:00</arrivalTime>
+            <departureTime>10:16:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>11</id>
+            <gps>50.1083880N, 14.4757450E</gps>
+            <arrivalTime>14:00:00</arrivalTime>
+            <departureTime>14:01:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>12</id>
+            <gps>50.1004810N, 14.4645900E</gps>
+            <arrivalTime>14:05:00</arrivalTime>
+            <departureTime>14:06:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>13</id>
+            <gps>50.1083880N, 14.4757450E</gps>
+            <arrivalTime>15:00:00</arrivalTime>
+            <departureTime>15:01:00</departureTime>
+        </stop>
+
+        <stop>
+            <id>14</id>
+            <gps>50.1004810N, 14.4645900E</gps>
+            <arrivalTime>15:05:00</arrivalTime>
+            <departureTime>15:07:00</departureTime>
+        </stop>
+    </stops>
+
 </root>
