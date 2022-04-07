@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="bus"/>
+    
+    <xs:element name="train"/>
+                
+    <xs:element name="vehicles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element name="bus"/>
+                    <xs:element name="train"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="stop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="gps" type="xs:string"/>
+                <xs:element name="arrivalTime" type="xs:time"/>
+                <xs:element name="departureTime" type="xs:time"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="stops">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="stop" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="vehicles" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="stops" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
