@@ -404,46 +404,46 @@ stop:6 a gtfs:Stop ;
 # 7 -> 8 -> 9 -> 10
 
 stop:7 a gtfs:Stop ;
-    ex:gps "45.0034761N 14.2635348E" ;
+    ex:gps "45.0034761N, 14.2635348E" ;
     ex:arrivalTime "10:00:00"^^xsd:time ;
     ex:departureTime "10:01:00"^^xsd:time .
 
 stop:8 a gtfs:Stop ;
-    ex:gps "50.091689N 14.443813E" ;
+    ex:gps "50.0916890N, 14.4438130E" ;
     ex:arrivalTime "10:05:00"^^xsd:time ;
     ex:departureTime "10:06:00"^^xsd:time .
 
 stop:9 a gtfs:Stop ;
-    ex:gps "50.100481N 14.464590E" ;
+    ex:gps "50.1004810N, 14.4645900E" ;
     ex:arrivalTime "10:10:00"^^xsd:time ;
     ex:departureTime "10:11:00"^^xsd:time .
 
 stop:10 a gtfs:Stop ;
-    ex:gps "50.108388N 14.475745E" ;
+    ex:gps "50.1083880N, 14.4757450E" ;
     ex:arrivalTime "10:15:00"^^xsd:time ;
     ex:departureTime "10:16:00"^^xsd:time .
 
 # 11 -> 12
 
 stop:11 a gtfs:Stop ;
-    ex:gps "50.108388N 14.475745E" ;
+    ex:gps "50.1083880N, 14.4757450E" ;
     ex:arrivalTime "14:00:00"^^xsd:time ;
     ex:departureTime "14:01:00"^^xsd:time .
 
 stop:12 a gtfs:Stop ;
-    ex:gps "50.100481N 14.464590E" ;
+    ex:gps "50.1004810N, 14.4645900E" ;
     ex:arrivalTime "14:05:00"^^xsd:time ;
     ex:departureTime "14:06:00"^^xsd:time .
 
 # 13 -> 14
 
 stop:13 a gtfs:Stop ;
-    ex:gps "50.108388N 14.475745E" ;
+    ex:gps "50.1083880N, 14.4757450E" ;
     ex:arrivalTime "15:00:00"^^xsd:time ;
     ex:departureTime "15:01:00"^^xsd:time .
 
 stop:14 a gtfs:Stop ;
-    ex:gps "50.100481N 14.464590E" ;
+    ex:gps "50.1004810N, 14.4645900E" ;
     ex:arrivalTime "15:05:00"^^xsd:time ;
     ex:departureTime "15:07:00"^^xsd:time .
 
