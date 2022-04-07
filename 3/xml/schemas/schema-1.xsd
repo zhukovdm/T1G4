@@ -2,17 +2,72 @@
 <xs:schema
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="bus"/>
-    
-    <xs:element name="train"/>
-                
+    <xs:import
+      namespace="http://www.w3.org/XML/1998/namespace"
+      schemaLocation="https://www.w3.org/2009/01/xml.xsd"/>
+
+    <xs:element name="bus">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="licensePlateNumber" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="train">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="electricMotor" type="xs:boolean"/>
+                <xs:element name="europeanVehicleNumber" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="vehicle">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="capacity" type="xs:integer"/>
+                <xs:element name="consumption" type="xs:integer"/>
+                <xs:element name="purchasePrice" type="xs:integer"/>
+                <xs:choice>
+                    <xs:element ref="bus"/>
+                    <xs:element ref="train"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="vehicles">
         <xs:complexType>
             <xs:sequence>
-                <xs:choice maxOccurs="unbounded">
-                    <xs:element name="bus"/>
-                    <xs:element name="train"/>
-                </xs:choice>
+                <xs:element ref="vehicle" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="producer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
+                <xs:element name="legalName">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute ref="xml:lang" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="producers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="producer" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -20,7 +75,14 @@
     <xs:element name="stop">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="gps" type="xs:string"/>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="gps">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{1,2}.[0-9]{7}[N], [0-9]{1,2}.[0-9]{7}[E]"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
                 <xs:element name="arrivalTime" type="xs:time"/>
                 <xs:element name="departureTime" type="xs:time"/>
             </xs:sequence>
@@ -39,8 +101,10 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="vehicles" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="producers" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="stops" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
 </xs:schema>
