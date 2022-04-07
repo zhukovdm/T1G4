@@ -97,12 +97,76 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="station">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
+                <xs:element name="stationName">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute ref="xml:lang" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="capacity" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="stations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="station" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="route">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="length" type="xs:double"/>
+                <xs:element name="validFrom" type="xs:date"/>
+                <xs:element name="validTo" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="routes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="route" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="connection">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]+-[0-9]+"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="connections">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="connection" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="root">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="vehicles" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="producers" minOccurs="1" maxOccurs="1"/>
                 <xs:element ref="stops" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="stations" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="routes" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="connections" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

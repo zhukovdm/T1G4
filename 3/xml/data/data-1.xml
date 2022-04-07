@@ -153,4 +153,116 @@
             <departureTime>15:07:00</departureTime>
         </stop>
     </stops>
+
+    <stations>
+        <station>
+            <id>1</id>
+            <stationName xml:lang="cs">Heřmánky</stationName>
+            <capacity>50</capacity>
+        </station>
+
+        <station>
+            <id>2</id>
+            <stationName xml:lang="cs">Vítkov</stationName>
+            <capacity>40</capacity>
+        </station>
+
+        <station>
+            <id>3</id>
+            <stationName xml:lang="cs">Jakubčovice nad Odrou</stationName>
+            <capacity>60</capacity>
+        </station>
+
+        <station>
+            <id>4</id>
+            <stationName xml:lang="cs">Oderská</stationName>
+            <capacity>30</capacity>
+        </station>
+
+        <station>
+            <id>5</id>
+            <stationName xml:lang="cs">Budišovská</stationName>
+            <capacity>20</capacity>
+        </station>
+
+        <station>
+            <id>6</id>
+            <stationName xml:lang="cs">Spojovací</stationName>
+            <capacity>45</capacity>
+        </station>
+
+        <station>
+            <id>7</id>
+            <stationName xml:lang="cs">Malostranské náměstí</stationName>
+            <capacity>120</capacity>
+        </station>
+
+        <station>
+            <id>8</id>
+            <stationName xml:lang="cs">Doliny</stationName>
+            <capacity>5</capacity>
+        </station>
+
+        <station>
+            <id>9</id>
+            <stationName xml:lang="cs">Budějovická</stationName>
+            <capacity>170</capacity>
+        </station>
+
+        <station>
+            <id>10</id>
+            <stationName xml:lang="cs">Na Vrstevnici</stationName>
+            <capacity>35</capacity>
+        </station>
+
+        <station>
+            <id>11</id>
+            <stationName xml:lang="cs">Sídliště Novodvorská</stationName>
+            <capacity>25</capacity>
+        </station>
+
+        <station>
+            <id>12</id>
+            <stationName xml:lang="cs">Limuzská</stationName>
+            <capacity>80</capacity>
+        </station>
+    </stations>
+
+    <routes>
+        <route>
+            <id>1</id>
+            <length>120.5</length>
+            <validFrom>2015-01-01</validFrom>
+            <validTo>2020-12-31</validTo>
+        </route>
+
+        <route>
+            <id>9</id>
+            <length>37.0</length>
+            <validFrom>2005-10-01</validFrom>
+            <validTo>2025-09-25</validTo>
+        </route>
+
+        <route>
+            <id>37</id>
+            <length>11.6</length>
+            <validFrom>2021-12-10</validFrom>
+            <validTo>2022-12-12</validTo>
+        </route>
+
+        <route>
+            <id>137</id>
+            <length>12.2</length>
+            <validFrom>2021-12-13</validFrom>
+            <validTo>2022-12-12</validTo>
+        </route>
+    </routes>
+
+    <connections>
+        <connection>1-1</connection>
+        <connection>9-1</connection>
+        <connection>37-1</connection>
+        <connection>137-1</connection>
+        <connection>137-2</connection>
+    </connections>
 </root>
