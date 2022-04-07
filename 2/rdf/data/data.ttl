@@ -2,6 +2,7 @@
 
 # 3rd party
 
+@prefix addr: <http://www.w3.org/Addressing/schemes.html#> .
 @prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix pext: <http://www.ontotext.com/proton/protonext#> .
@@ -91,7 +92,7 @@ ex:phone a rdf:Property ;
     rdfs:label "phone number"@en ;
     rdfs:comment "Mobile or stationary phone number"@en ;
     rdfs:domain gtfs:Agency ;
-    rdfs:range xsd:string .
+    rdfs:range addr:tel .
 
 ex:email a rdf:Property ;
     rdfs:label "email"@en ;
@@ -272,17 +273,17 @@ producer:bombardier a ex:Producer ;
 
 agency:student a gtfs:Agency ;
     ex:legalName "Student Agency"@en ;
-    ex:phone "+420 630 784 245" ;
+    ex:phone "tel:+420-630-784-245" ;
     ex:email "info@studentagency.cz" .
 
 agency:leo a gtfs:Agency ;
     ex:legalName "Leo Express"@en ;
-    ex:phone "+420 543 140 738" ;
+    ex:phone "tel:+420-543-140-738" ;
     ex:email "info@leoexpress.com" .
 
 agency:dpp a gtfs:Agency ;
     ex:legalName "Dopravní podnik hl. m. Prahy"@cz ;
-    ex:phone "+420 640 921 554" ;
+    ex:phone "tel:+420-640-921-554" ;
     ex:email "info@dpp.cz" .
 
 @prefix station: <https://T1G4.DOX.cz/Station/#> .

@@ -49,11 +49,12 @@ Solution: restructure text into hierarchy.
 
 **Comments**
 
-- [ ] Define ex:phone with tel: scheme, see example from the lecture.
+- [x] Define ex:phone with tel: scheme, see example from the lecture.
 
-Solution to be announced.
-[Link](https://stackoverflow.com/questions/1009181/url-scheme-for-phone-call)
-as possible reference. How to express "tel:" in RDF?
+[[1]](https://stackoverflow.com/questions/1009181/url-scheme-for-phone-call),
+[[2]](https://www.rfc-editor.org/rfc/rfc3966) as possible references.
+Solution: define `ex:phone` using the same range as `foaf:phone`,
+[[3]](http://xmlns.com/foaf/spec/#term_phone).
 
 - [x] Find rdfs:Property and use rdf:Property instead.
 
