@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<producers
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../schemas/schema-2.xsd">
+
+    <producer>
+        <id>tatra</id>
+        <legalName xml:lang="cs">TATRA TRUCKS a.s.</legalName>
+        <vehicles>
+            <vehicle>
+                <capacity>23</capacity>
+                <consumption>42</consumption>
+                <purchasePrice>523147</purchasePrice>
+                <bus>
+                    <id>1</id>
+                    <licensePlateNumber>4A2 7983</licensePlateNumber>
+                </bus>
+            </vehicle>
+
+            <vehicle>
+                <capacity>5</capacity>
+                <consumption>10</consumption>
+                <purchasePrice>65000</purchasePrice>
+                <bus>
+                    <id>2</id>
+                    <licensePlateNumber>5T1 9876</licensePlateNumber>
+                </bus>
+            </vehicle>
+
+            <vehicle>
+                <capacity>123</capacity>
+                <consumption>300</consumption>
+                <purchasePrice>200000</purchasePrice>
+                <train>
+                    <id>3</id>
+                    <electricMotor>false</electricMotor>
+                    <europeanVehicleNumber>EW 40 672</europeanVehicleNumber>
+                </train>
+            </vehicle>
+        </vehicles>
+    </producer>
+
+    <producer>
+        <id>man</id>
+        <legalName xml:lang="de">Maschinenfabrik Augsburg-Nürnberg</legalName>
+        <vehicles>
+            <vehicle>
+                <capacity>54</capacity>
+                <consumption>98</consumption>
+                <purchasePrice>123000</purchasePrice>
+                <bus>
+                    <id>3</id>
+                    <licensePlateNumber>6M4 1426</licensePlateNumber>
+                </bus>
+            </vehicle>
+        </vehicles>
+    </producer>
+
+    <producer>
+        <id>siemens</id>
+        <legalName xml:lang="de">Siemens AG</legalName>
+        <vehicles>
+            <vehicle>
+                <capacity>30</capacity>
+                <consumption>500</consumption>
+                <purchasePrice>550000</purchasePrice>
+                <train>
+                    <id>1</id>
+                    <electricMotor>true</electricMotor>
+                    <europeanVehicleNumber>B 228 FK</europeanVehicleNumber>
+                </train>
+            </vehicle>
+        </vehicles>
+    </producer>
+
+    <producer>
+        <id>bombardier</id>
+        <legalName xml:lang="en">Bombardier Inc.</legalName>
+        <vehicles>
+            <vehicle>
+                <capacity>100</capacity>
+                <consumption>1000</consumption>
+                <purchasePrice>1000000</purchasePrice>
+                <train>
+                    <id>2</id>
+                    <electricMotor>true</electricMotor>
+                    <europeanVehicleNumber>CGI 964</europeanVehicleNumber>
+                </train>
+            </vehicle>
+        </vehicles>
+    </producer>
+
+</producers>

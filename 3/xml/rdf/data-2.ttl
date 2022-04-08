@@ -1,0 +1,25 @@
+@prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix pext: <http://www.ontotext.com/proton/protonext#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <https://www.w3.org/TR/xmlschema-2/#> .
+
+dbpedia-owl:Train rdfs:subClassOf pext:Vehicle .
+
+ex:Producer a rdfs:Class ;
+    rdfs:label "producer"@en ;
+    rdfs:comment "A company-producer of different kinds of vehicles"@en .
+
+@prefix producer: <https://T1G4.DOX.cz/Producer/#> .
+
+producer:tatra a ex:Producer ;
+    ex:legalName "TATRA TRUCKS a.s."@cs .
+
+producer:man a ex:Producer ;
+    ex:legalName "Maschinenfabrik Augsburg-Nürnberg"@de .
+
+producer:siemens a ex:Producer ;
+    ex:legalName "Siemens AG"@de .
+
+producer:bombardier a ex:Producer ;
+    ex:legalName "Bombardier Inc."@en .
