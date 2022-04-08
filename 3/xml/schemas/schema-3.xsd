@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vehicles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="vehicle" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="train">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="electricMotor" type="xs:boolean"/>
+                <xs:element name="europeanVehicleNumber" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="bus">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="licensePlateNumber" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="vehicle">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="capacity" type="xs:integer"/>
+                <xs:element name="consumption" type="xs:integer"/>
+                <xs:element name="purchasePrice" type="xs:integer"/>
+                <xs:choice>
+                    <xs:element ref="bus"/>
+                    <xs:element ref="train"/>
+                </xs:choice>
+                <xs:element name="Connection" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Connection">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Stop" minOccurs="2" maxOccurs="unbounded"/>
+                <xs:element ref="TransitRoute" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Stop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="gps">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{1,2}.[0-9]{7}[N], [0-9]{1,2}.[0-9]{7}[E]"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="arrivalTime" type="xs:time"/>
+                <xs:element name="departureTime" type="xs:time"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="TransitRoute">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="length" type="xs:double"/>
+                <xs:element name="validFrom" type="xs:date"/>
+                <xs:element name="validTo" type="xs:date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

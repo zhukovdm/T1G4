@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehicles
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../schemas/schema-3.xsd">
+
+<vehicle>
+    <capacity>30</capacity>
+    <consumption>500</consumption>
+    <purchasePrice>550000</purchasePrice>
+    <train>
+        <electricMotor>true</electricMotor>
+        <europeanVehicleNumber>B 228 FK</europeanVehicleNumber>
+    </train>
+    <Connection>
+        <TransitRoute>
+            <length>120.5</length>
+            <validFrom>2015-01-01</validFrom>
+            <validTo>2020-12-31</validTo>
+        </TransitRoute>
+        <Stop>
+            <gps>49.7134667N, 17.7582722E</gps>
+            <arrivalTime>12:00:00</arrivalTime>
+            <departureTime>12:01:00</departureTime>
+        </Stop>
+        <Stop>
+            <gps>49.7741814N, 17.7475375E</gps>
+            <arrivalTime>12:05:00</arrivalTime>
+            <departureTime>12:06:00</departureTime>
+        </Stop>
+        <Stop>
+            <gps>49.6969069N, 17.7886239E</gps>
+            <arrivalTime>12:10:00</arrivalTime>
+            <departureTime>12:11:00</departureTime>
+        </Stop>
+    </Connection>
+</vehicle>
+
+<vehicle>
+    <capacity>100</capacity>
+    <consumption>1000</consumption>
+    <purchasePrice>1000000</purchasePrice>
+    <train>
+        <electricMotor>true</electricMotor>
+        <europeanVehicleNumber>CGI 964</europeanVehicleNumber>
+    </train>
+</vehicle>
+
+<vehicle>
+    <capacity>123</capacity>
+    <consumption>300</consumption>
+    <purchasePrice>200000</purchasePrice>
+    <train>
+        <electricMotor>false</electricMotor>
+        <europeanVehicleNumber>EW 40 672</europeanVehicleNumber>
+    </train>
+    <Connection>
+        <TransitRoute>
+            <length>12.2</length>
+            <validFrom>2021-12-13</validFrom>
+            <validTo>2022-12-12</validTo>
+        </TransitRoute>
+        <stop>
+            <gps>50.1083880N, 14.4757450E</gps>
+            <arrivalTime>14:00:00</arrivalTime>
+            <departureTime>14:01:00</departureTime>
+        </stop>
+
+        <stop>
+            <gps>50.1004810N, 14.4645900E</gps>
+            <arrivalTime>14:05:00</arrivalTime>
+            <departureTime>14:06:00</departureTime>
+        </stop>
+    </Connection>
+</vehicle>
+
+<vehicle>
+    <capacity>23</capacity>
+    <consumption>42</consumption>
+    <purchasePrice>523147</purchasePrice>
+    <bus>
+        <licensePlateNumber>4A2 7983</licensePlateNumber>
+    </bus>
+    <Connection>
+        <TransitRoute>
+            <length>12.2</length>
+            <validFrom>2021-12-13</validFrom>
+            <validTo>2022-12-12</validTo>
+        </TransitRoute>
+        <stop>
+            <gps>50.1004810N, 14.4645900E</gps>
+            <arrivalTime>10:10:00</arrivalTime>
+            <departureTime>10:11:00</departureTime>
+        </stop>
+        <stop>
+            <id>10</id>
+            <gps>50.1083880N, 14.4757450E</gps>
+            <arrivalTime>10:15:00</arrivalTime>
+            <departureTime>10:16:00</departureTime>
+        </stop>
+    </Connection>
+</vehicle>
+<vehicle>
+    <capacity>5</capacity>
+    <consumption>10</consumption>
+    <purchasePrice>65000</purchasePrice>
+    <bus>
+        <licensePlateNumber>5T1 9876</licensePlateNumber>
+    </bus>
+    <Connection>
+        <TransitRoute>
+            <length>37.0</length>
+            <validFrom>2005-10-01</validFrom>
+            <validTo>2025-09-25</validTo>
+        </TransitRoute>
+        <stop>
+            <gps>49.6952592N, 17.7879486E</gps>
+            <arrivalTime>11:00:00</arrivalTime>
+            <departureTime>11:01:00</departureTime>
+        </stop>
+        <stop>
+            <gps>49.7067069N, 17.7684325E</gps>
+            <arrivalTime>11:05:00</arrivalTime>
+            <departureTime>11:06:00</departureTime>
+        </stop>
+        <stop>
+            <gps>49.7760583N, 17.7494736E</gps>
+            <arrivalTime>11:10:00</arrivalTime>
+            <departureTime>11:11:00</departureTime>
+        </stop>
+    </Connection>
+</vehicle>
+<vehicle>
+    <capacity>54</capacity>
+    <consumption>98</consumption>
+    <purchasePrice>123000</purchasePrice>
+    <bus>
+        <licensePlateNumber>6M4 1426</licensePlateNumber>
+    </bus>
+    <Connection>
+        <TransitRoute>
+            <length>11.6</length>
+            <validFrom>2021-12-10</validFrom>
+            <validTo>2022-12-12</validTo>
+        </TransitRoute>
+        <stop>
+            <gps>45.0034761N 14.2635348E</gps>
+            <arrivalTime>10:00:00</arrivalTime>
+            <departureTime>10:01:00</departureTime>
+        </stop>
+        <stop>
+            <gps>50.091689N 14.443813E</gps>
+            <arrivalTime>10:05:00</arrivalTime>
+            <departureTime>10:06:00</departureTime>
+        </stop>
+        <stop>
+            <gps>50.100481N 14.464590E</gps>
+            <arrivalTime>10:10:00</arrivalTime>
+            <departureTime>10:11:00</departureTime>
+        </stop>
+        <stop>
+            <gps>50.108388N 14.475745E</gps>
+            <arrivalTime>10:15:00</arrivalTime>
+            <departureTime>10:16:00</departureTime>
+        </stop>
+    </Connection>
+</vehicle>
+</vehicles>
