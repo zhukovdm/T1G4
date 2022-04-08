@@ -1,16 +1,155 @@
+
 @prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
 @prefix ex: <http://example.org/vocabulary/> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix pext: <http://www.ontotext.com/proton/protonext#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <https://www.w3.org/TR/xmlschema-2/#> .
 
+@prefix train: <https://T1G4.DOX.cz/Train/#> .
+@prefix bus: <https://T1G4.DOX.cz/Bus/#> .
+@prefix producer: <https://T1G4.DOX.cz/Producer/#> .
+@prefix station: <https://T1G4.DOX.cz/Station/#> .
+@prefix stop: <https://T1G4.DOX.cz/Stop/#> .
+
 dbpedia-owl:Train rdfs:subClassOf pext:Vehicle .
+
+ex:Bus a rdfs:Class ;
+    rdfs:label "bus"@en ;
+    rdfs:comment "Public transport road vehicle"@en .
+ex:Bus rdfs:subClassOf pext:Vehicle .
 
 ex:Producer a rdfs:Class ;
     rdfs:label "producer"@en ;
     rdfs:comment "A company-producer of different kinds of vehicles"@en .
 
-@prefix producer: <https://T1G4.DOX.cz/Producer/#> .
+ex:TrainStation a rdfs:Class ;
+    rdfs:label "train station"@en ;
+    rdfs:comment "Named train station."@en .
+ex:TrainStation rdfs:subClassOf dbpedia-owl:Station .
+
+ex:BusStation a rdfs:Class ;
+    rdfs:label "bus station"@en ;
+    rdfs:comment "Named bus station."@en.
+ex:BusStation rdfs:subClassOf dbpedia-owl:Station .
+
+ex:legalName a rdf:Property ;
+    rdfs:label "legal name"@en ;
+    rdfs:comment "Company legal name"@en ;
+    rdfs:domain rdfs:Class ;
+    rdfs:range xsd:string .
+
+ex:capacity a rdf:Property ;
+    rdfs:label "capacity"@en ;
+    rdfs:comment "Number of people who can fit to a structure"@en ;
+    rdfs:domain rdfs:Class ;
+    rdfs:range xsd:integer .
+
+ex:electricMotor a rdf:Property ;
+    rdfs:label "Is motor electric?"@en ;
+    rdfs:comment "Indication if a vehicle has electric motor or not"@en ;
+    rdfs:domain dbpedia-owl:Train ;
+    rdfs:range xsd:boolean .
+
+ex:europeanVehicleNumber a rdf:Property ;
+    rdfs:label "european vehicle number"@en ;
+    rdfs:comment "Vehicle number issued by a European regulator."@en ;
+    rdfs:domain dbpedia-owl:Train ;
+    rdfs:range xsd:string .
+
+ex:licensePlateNumber a rdf:Property ;
+    rdfs:label "license plate number"@en ;
+    rdfs:comment "License plate number issued by a regulator."@en ;
+    rdfs:domain ex:Bus ;
+    rdfs:range xsd:string .
+
+ex:consumption a rdf:Property ;
+    rdfs:label "consumption"@en ;
+    rdfs:comment "Vehicle consumption of gasoline or electricity per km."@en ;
+    rdfs:domain pext:Vehicle ;
+    rdfs:range xsd:integer .
+
+ex:purchasePrice a rdf:Property ;
+    rdfs:label "purchase price"@en ;
+    rdfs:comment "Vehicle purchase price in CZK."@en ;
+    rdfs:domain pext:Vehicle ;
+    rdfs:range xsd:integer .
+
+ex:gps a rdf:Property ;
+    rdfs:label "gps"@en ;
+    rdfs:comment "Exact point on a map where stop is located."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:string .
+
+ex:arrivalTime a rdf:Property ;
+    rdfs:label "arrival time"@en ;
+    rdfs:comment "Arrival time of a vehicle."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:time .
+
+ex:departureTime a rdf:Property ;
+    rdfs:label "departure time"@en ;
+    rdfs:comment "Departure time of a vehicle."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:time .
+
+ex:produces a rdf:Property ;
+    rdfs:label "produces"@en ;
+    rdfs:comment "A producer produces a vehicle."@en ;
+    rdfs:domain ex:Producer ;
+    rdfs:range pext:Vehicle .
+
+ex:followedBy a rdf:Property ;
+    rdfs:label "followed by"@en ;
+    rdfs:comment "A stop is followed by the next stop."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range gtfs:Stop .
+
+ex:serves a rdf:Property ;
+    rdfs:label "serves"@en ;
+    rdfs:comment "A station serves a stop."@en ;
+    rdfs:domain dbpedia-owl:Station ;
+    rdfs:range gtfs:Stop .
+
+bus:1 a ex:Bus ;
+    ex:capacity 23 ;
+    ex:consumption 42 ;
+    ex:purchasePrice 523147 ;
+    ex:licensePlateNumber "4A2 7983" .
+
+bus:2 a ex:Bus ;
+    ex:capacity 5 ;
+    ex:consumption 10 ;
+    ex:purchasePrice 65000 ;
+    ex:licensePlateNumber "5T1 9876" .
+
+train:3 a dbpedia-owl:Train ;
+    ex:capacity 123 ;
+    ex:consumption 300 ;
+    ex:purchasePrice 200000 ;
+    ex:electricMotor "false"^^xsd:boolean ;
+    ex:europeanVehicleNumber "EW 40 672" .
+
+bus:3 a ex:Bus ;
+    ex:capacity 54 ;
+    ex:consumption 98 ;
+    ex:purchasePrice 123000 ;
+    ex:licensePlateNumber "6M4 1426" .
+
+train:1 a dbpedia-owl:Train ;
+    ex:capacity 30 ;
+    ex:consumption 500 ;
+    ex:purchasePrice 550000 ;
+    ex:electricMotor "true"^^xsd:boolean ;
+    ex:europeanVehicleNumber "B 228 FK" .
+
+train:2 a dbpedia-owl:Train ;
+    ex:capacity 100 ;
+    ex:consumption 1000 ;
+    ex:purchasePrice 1000000 ;
+    ex:electricMotor "true"^^xsd:boolean ;
+    ex:europeanVehicleNumber "CGI 964" .
 
 producer:tatra a ex:Producer ;
     ex:legalName "TATRA TRUCKS a.s."@cs .
@@ -23,3 +162,163 @@ producer:siemens a ex:Producer ;
 
 producer:bombardier a ex:Producer ;
     ex:legalName "Bombardier Inc."@en .
+
+station:1 a ex:TrainStation ;
+    ex:stationName "Heřmánky"@cs ;
+    ex:capacity 50 .
+
+station:1 ex:serves stop:1 .
+
+stop:1 a gtfs:Stop ;
+    ex:gps "49.7134667N, 17.7582722E" ;
+    ex:arrivalTime "12:00:00"^^xsd:time ;
+    ex:departureTime "12:01:00"^^xsd:time .
+
+stop:1 ex:followedBy stop:2 .
+
+station:2 a ex:TrainStation ;
+    ex:stationName "Vítkov"@cs ;
+    ex:capacity 40 .
+
+station:2 ex:serves stop:2 .
+
+stop:2 a gtfs:Stop ;
+    ex:gps "49.7741814N, 17.7475375E" ;
+    ex:arrivalTime "12:05:00"^^xsd:time ;
+    ex:departureTime "12:06:00"^^xsd:time .
+
+stop:2 ex:followedBy stop:3 .
+
+station:3 a ex:TrainStation ;
+    ex:stationName "Jakubčovice nad Odrou"@cs ;
+    ex:capacity 60 .
+
+station:3 ex:serves stop:3 .
+
+stop:3 a gtfs:Stop ;
+    ex:gps "49.6969069N, 17.7886239E" ;
+    ex:arrivalTime "12:10:00"^^xsd:time ;
+    ex:departureTime "12:11:00"^^xsd:time .
+
+station:4 a ex:BusStation ;
+    ex:stationName "Oderská"@cs ;
+    ex:capacity 30 .
+
+station:4 ex:serves stop:4 .
+
+stop:4 a gtfs:Stop ;
+    ex:gps "49.6952592N, 17.7879486E" ;
+    ex:arrivalTime "11:00:00"^^xsd:time ;
+    ex:departureTime "11:01:00"^^xsd:time .
+
+stop:4 ex:followedBy stop:5 .
+
+station:5 a ex:BusStation ;
+    ex:stationName "Budišovská"@cs ;
+    ex:capacity 20 .
+
+station:5 ex:serves stop:5 .
+
+stop:5 a gtfs:Stop ;
+    ex:gps "49.7067069N, 17.7684325E" ;
+    ex:arrivalTime "11:05:00"^^xsd:time ;
+    ex:departureTime "11:06:00"^^xsd:time .
+
+stop:5 ex:followedBy stop:6 .
+
+station:6 a ex:BusStation ;
+    ex:stationName "Spojovací"@cs ;
+    ex:capacity 45 .
+
+station:6 ex:serves stop:6 .
+
+stop:6 a gtfs:Stop ;
+    ex:gps "49.7760583N, 17.7494736E" ;
+    ex:arrivalTime "11:10:00"^^xsd:time ;
+    ex:departureTime "11:11:00"^^xsd:time .
+
+station:7 a ex:TrainStation ;
+    ex:stationName "Malostranské náměstí"@cs ;
+    ex:capacity 120 .
+
+station:7 ex:serves stop:7 .
+
+stop:7 a gtfs:Stop ;
+    ex:gps "45.0034761N, 14.2635348E" ;
+    ex:arrivalTime "10:00:00"^^xsd:time ;
+    ex:departureTime "10:01:00"^^xsd:time .
+
+stop:7 ex:followedBy stop:8 .
+
+station:8 a ex:TrainStation ;
+    ex:stationName "Doliny"@cs ;
+    ex:capacity 5 .
+
+station:8 ex:serves stop:8 .
+
+stop:8 a gtfs:Stop ;
+    ex:gps "50.0916890N, 14.4438130E" ;
+    ex:arrivalTime "10:05:00"^^xsd:time ;
+    ex:departureTime "10:06:00"^^xsd:time .
+
+stop:8 ex:followedBy stop:9 .
+
+station:9 a ex:TrainStation ;
+    ex:stationName "Budějovická"@cs ;
+    ex:capacity 170 .
+
+station:9 ex:serves stop:9 .
+
+stop:9 a gtfs:Stop ;
+    ex:gps "50.1004810N, 14.4645900E" ;
+    ex:arrivalTime "10:10:00"^^xsd:time ;
+    ex:departureTime "10:11:00"^^xsd:time .
+
+stop:9 ex:followedBy stop:10 .
+
+station:10 a ex:BusStation ;
+    ex:stationName "Na Vrstevnici"@cs ;
+    ex:capacity 35 .
+
+station:10 ex:serves stop:10 .
+
+stop:10 a gtfs:Stop ;
+    ex:gps "50.1083880N, 14.4757450E" ;
+    ex:arrivalTime "10:15:00"^^xsd:time ;
+    ex:departureTime "10:16:00"^^xsd:time .
+
+station:11 a ex:BusStation ;
+    ex:stationName "Sídliště Novodvorská"@cs ;
+    ex:capacity 25 .
+
+station:11 ex:serves stop:1113 .
+
+stop:11 a gtfs:Stop ;
+    ex:gps "50.1083880N, 14.4757450E" ;
+    ex:arrivalTime "14:00:00"^^xsd:time ;
+    ex:departureTime "14:01:00"^^xsd:time .
+
+stop:11 ex:followedBy stop:12 .
+
+stop:13 a gtfs:Stop ;
+    ex:gps "50.1083880N, 14.4757450E" ;
+    ex:arrivalTime "15:00:00"^^xsd:time ;
+    ex:departureTime "15:01:00"^^xsd:time .
+
+stop:13 ex:followedBy stop:14 .
+
+station:12 a ex:BusStation ;
+    ex:stationName "Limuzská"@cs ;
+    ex:capacity 80 .
+
+station:12 ex:serves stop:1214 .
+
+stop:12 a gtfs:Stop ;
+    ex:gps "50.1004810N, 14.4645900E" ;
+    ex:arrivalTime "14:05:00"^^xsd:time ;
+    ex:departureTime "14:06:00"^^xsd:time .
+
+stop:14 a gtfs:Stop ;
+    ex:gps "50.1004810N, 14.4645900E" ;
+    ex:arrivalTime "15:05:00"^^xsd:time ;
+    ex:departureTime "15:07:00"^^xsd:time .

@@ -68,7 +68,74 @@
     <xs:element name="producers">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="producer" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="producer" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="stop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="gps">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{1,2}.[0-9]{7}[N], [0-9]{1,2}.[0-9]{7}[E]"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="arrivalTime" type="xs:time"/>
+                <xs:element name="departureTime" type="xs:time"/>
+                <xs:element name="followedBy" type="xs:integer" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="station">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="stationName">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute ref="xml:lang" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="capacity" type="xs:integer"/>
+                <xs:element name="kind">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="(Bus)|(Train)"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="serves">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="stop" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="stations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="station" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="producers"/>
+                <xs:element ref="stations"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
