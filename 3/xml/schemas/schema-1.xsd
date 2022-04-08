@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="vehicles">
+
+    <xs:import
+    namespace="http://www.w3.org/XML/1998/namespace"
+    schemaLocation="https://www.w3.org/2009/01/xml.xsd"/>
+
+    <xs:element name="agency">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="vehicle" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="legalName">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute ref="xml:lang" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="phone" type="xs:integer"/>
+                <xs:element name="owns" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="vehicle" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -11,6 +33,7 @@
     <xs:element name="train">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
                 <xs:element name="electricMotor" type="xs:boolean"/>
                 <xs:element name="europeanVehicleNumber" type="xs:string"/>
             </xs:sequence>
@@ -20,6 +43,7 @@
     <xs:element name="bus">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
                 <xs:element name="licensePlateNumber" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
@@ -35,7 +59,13 @@
                     <xs:element ref="bus"/>
                     <xs:element ref="train"/>
                 </xs:choice>
-                <xs:element name="Connection" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="rides" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="Connection" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -43,15 +73,29 @@
     <xs:element name="Connection">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="Stop" minOccurs="2" maxOccurs="unbounded"/>
-                <xs:element ref="TransitRoute" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="belongsTo">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="transitRoute" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="connects">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="stop" minOccurs="2" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="Stop">
+    <xs:element name="stop">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
                 <xs:element name="gps">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -65,13 +109,62 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="TransitRoute">
+    <xs:element name="transitRoute">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
                 <xs:element name="length" type="xs:double"/>
                 <xs:element name="validFrom" type="xs:date"/>
                 <xs:element name="validTo" type="xs:date"/>
+                <xs:element name ="startsWith">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="station" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name = "endsWith">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="station" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:element name="station">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"/>
+                <xs:element name="stationName">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute ref="xml:lang" use="required"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="capacity" type="xs:integer"/>
+                <xs:element name="kind">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="(Bus)|(Train)"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="agency" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
