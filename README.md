@@ -62,12 +62,12 @@ Simple replacement.
 
 ## 03
 
-- [ ] Fix previous homework based on the comments.
-- [ ] Create directed and acyclic hierarchical model(s) from the latest conceptual model.
+- [x] Fix previous homework based on the comments.
+- [x] Create directed and acyclic hierarchical model(s) from the latest conceptual model.
 - [ ] Create `XML Schema` with datatypes for each hierarchical model.
 - [ ] Represent data against `XML Schema`, enforce `xml:lang` attribute, [src](https://stackoverflow.com/q/7502382/3623646).
 - [ ] Create at least **4** non-trivial `XPath` queries on data.
-- [ ] Create at least **4** non-trivial `XSLT` transformations of a data subsets to html format.
+- [ ] Create `XSLT` transformations of a data subsets to html format.
 - [ ] Create `XSLT` transformation of the data to `RDF` form identical to the `HW2`.
 - [ ] Create `JSON Schema` representation for each hierarchical model.
 - [ ] Represent data against `JSON Schema`.
