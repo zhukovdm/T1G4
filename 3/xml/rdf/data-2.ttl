@@ -118,11 +118,15 @@ bus:1 a ex:Bus ;
     ex:purchasePrice 523147 ;
     ex:licensePlateNumber "4A2 7983" .
 
+producer:tatra ex:produces bus:1 .
+
 bus:2 a ex:Bus ;
     ex:capacity 5 ;
     ex:consumption 10 ;
     ex:purchasePrice 65000 ;
     ex:licensePlateNumber "5T1 9876" .
+
+producer:tatra ex:produces bus:2 .
 
 train:3 a dbpedia-owl:Train ;
     ex:capacity 123 ;
@@ -131,11 +135,15 @@ train:3 a dbpedia-owl:Train ;
     ex:electricMotor "false"^^xsd:boolean ;
     ex:europeanVehicleNumber "EW 40 672" .
 
+producer:tatra ex:produces train:3 .
+
 bus:3 a ex:Bus ;
     ex:capacity 54 ;
     ex:consumption 98 ;
     ex:purchasePrice 123000 ;
     ex:licensePlateNumber "6M4 1426" .
+
+producer:man ex:produces bus:3 .
 
 train:1 a dbpedia-owl:Train ;
     ex:capacity 30 ;
@@ -144,12 +152,16 @@ train:1 a dbpedia-owl:Train ;
     ex:electricMotor "true"^^xsd:boolean ;
     ex:europeanVehicleNumber "B 228 FK" .
 
+producer:siemens ex:produces train:1 .
+
 train:2 a dbpedia-owl:Train ;
     ex:capacity 100 ;
     ex:consumption 1000 ;
     ex:purchasePrice 1000000 ;
     ex:electricMotor "true"^^xsd:boolean ;
     ex:europeanVehicleNumber "CGI 964" .
+
+producer:bombardier ex:produces train:2 .
 
 producer:tatra a ex:Producer ;
     ex:legalName "TATRA TRUCKS a.s."@cs .
@@ -291,7 +303,9 @@ station:11 a ex:BusStation ;
     ex:stationName "Sídliště Novodvorská"@cs ;
     ex:capacity 25 .
 
-station:11 ex:serves stop:1113 .
+station:11 ex:serves stop:11 .
+
+station:11 ex:serves stop:13 .
 
 stop:11 a gtfs:Stop ;
     ex:gps "50.1083880N, 14.4757450E" ;
@@ -311,7 +325,9 @@ station:12 a ex:BusStation ;
     ex:stationName "Limuzská"@cs ;
     ex:capacity 80 .
 
-station:12 ex:serves stop:1214 .
+station:12 ex:serves stop:12 .
+
+station:12 ex:serves stop:14 .
 
 stop:12 a gtfs:Stop ;
     ex:gps "50.1004810N, 14.4645900E" ;

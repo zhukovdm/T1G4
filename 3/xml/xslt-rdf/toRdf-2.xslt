@@ -131,6 +131,8 @@ train:<xsl:value-of select="id"/> a dbpedia-owl:Train ;
     ex:purchasePrice <xsl:value-of select="parent::node()/purchasePrice"/> ;
     ex:electricMotor &quot;<xsl:value-of select="electricMotor"/>&quot;^^xsd:boolean ;
     ex:europeanVehicleNumber &quot;<xsl:value-of select="europeanVehicleNumber"/>&quot; .
+
+producer:<xsl:value-of select="parent::node()/parent::node()/parent::node()/id"/> ex:produces train:<xsl:value-of select="id"/> .
 </xsl:template>
 
 <xsl:template match="bus">
@@ -139,6 +141,8 @@ bus:<xsl:value-of select="id"/> a ex:Bus ;
     ex:consumption <xsl:value-of select="parent::node()/consumption"/> ;
     ex:purchasePrice <xsl:value-of select="parent::node()/purchasePrice"/> ;
     ex:licensePlateNumber &quot;<xsl:value-of select="licensePlateNumber"/>&quot; .
+
+producer:<xsl:value-of select="parent::node()/parent::node()/parent::node()/id"/> ex:produces bus:<xsl:value-of select="id"/> .
 </xsl:template>
 
 <xsl:template match="producer">
@@ -150,8 +154,10 @@ producer:<xsl:value-of select="id"/> a ex:Producer ;
 station:<xsl:value-of select="id"/> a ex:<xsl:value-of select="kind"/>Station ;
     ex:stationName &quot;<xsl:value-of select="stationName"/>&quot;@<xsl:value-of select="stationName/@xml:lang"/> ;
     ex:capacity <xsl:value-of select="capacity"/> .
-
-station:<xsl:value-of select="id"/> ex:serves stop:<xsl:value-of select="serves/stop/id/text()"/> .
+<xsl:variable name="stationId" select="id"/>
+<xsl:for-each select="serves/stop/id">
+station:<xsl:value-of select="$stationId"/> ex:serves stop:<xsl:value-of select="text()"/> .
+</xsl:for-each>
 <xsl:apply-templates/>
 </xsl:template>
 
