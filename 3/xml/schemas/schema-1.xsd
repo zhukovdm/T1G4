@@ -8,6 +8,7 @@
     <xs:element name="agency">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
                 <xs:element name="legalName">
                     <xs:complexType>
                         <xs:simpleContent>

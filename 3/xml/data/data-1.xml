@@ -4,6 +4,7 @@
   xsi:noNamespaceSchemaLocation="../schemas/schema-1.xsd">
 
 <agency>
+    <id>leo</id>
     <legalName xml:lang="en">Leo Express</legalName>
     <email>info@leoexpress.com</email>
     <phone>420543140738</phone>
@@ -77,6 +78,7 @@
 </agency>
 
 <agency>
+    <id>dpp</id>
     <legalName xml:lang="cs">Dopravní podnik hl. m. Prahy</legalName>
     <email>info@dpp.cz</email>
     <phone>420640921554</phone>
@@ -203,6 +205,7 @@
 </agency>
 
 <agency>
+    <id>student</id>
     <legalName xml:lang="en">Student Agency</legalName>
     <email>info@studentagency.cz</email>
     <phone>420630784245</phone>

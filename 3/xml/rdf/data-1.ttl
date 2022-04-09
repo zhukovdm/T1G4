@@ -1,0 +1,443 @@
+
+@prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
+@prefix pext: <http://www.ontotext.com/proton/protonext#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <https://www.w3.org/TR/xmlschema-2/#> .
+
+@prefix train: <https://T1G4.DOX.cz/Train/#> .
+@prefix bus: <https://T1G4.DOX.cz/Bus/#> .
+@prefix station: <https://T1G4.DOX.cz/Station/#> .
+@prefix stop: <https://T1G4.DOX.cz/Stop/#> .
+@prefix agency: <https://T1G4.DOX.cz/Agency/#> .
+@prefix conn: <https://T1G4.DOX.cz/Connection/#> .
+@prefix transitRoute: <https://T1G4.DOX.cz/TransitRoute/#> .
+
+dbpedia-owl:Train rdfs:subClassOf pext:Vehicle .
+
+ex:Bus a rdfs:Class ;
+    rdfs:label "bus"@en ;
+    rdfs:comment "Public transport road vehicle"@en .
+ex:Bus rdfs:subClassOf pext:Vehicle .
+
+ex:TrainStation a rdfs:Class ;
+    rdfs:label "train station"@en ;
+    rdfs:comment "Named train station."@en .
+ex:TrainStation rdfs:subClassOf dbpedia-owl:Station .
+
+ex:BusStation a rdfs:Class ;
+    rdfs:label "bus station"@en ;
+    rdfs:comment "Named bus station."@en.
+ex:BusStation rdfs:subClassOf dbpedia-owl:Station .
+
+ex:Connection a rdfs:Class ;
+    rdfs:label "connection"@en ;
+    rdfs:comment "A particular instance of a transit route which has its id. Each connection goes through the set of stops"@en .
+
+ex:phone a rdf:Property ;
+    rdfs:label "phone number"@en ;
+    rdfs:comment "Mobile or stationary phone number"@en ;
+    rdfs:domain gtfs:Agency ;
+    rdfs:range addr:tel .
+
+ex:email a rdf:Property ;
+    rdfs:label "email"@en ;
+    rdfs:comment "E-mail address"@en ;
+    rdfs:domain gtfs:Agency ;
+    rdfs:range xsd:string .
+
+ex:legalName a rdf:Property ;
+    rdfs:label "legal name"@en ;
+    rdfs:comment "Company legal name"@en ;
+    rdfs:domain rdfs:Class ;
+    rdfs:range xsd:string .
+
+ex:capacity a rdf:Property ;
+    rdfs:label "capacity"@en ;
+    rdfs:comment "Number of people who can fit to a structure"@en ;
+    rdfs:domain rdfs:Class ;
+    rdfs:range xsd:integer .
+
+ex:electricMotor a rdf:Property ;
+    rdfs:label "Is motor electric?"@en ;
+    rdfs:comment "Indication if a vehicle has electric motor or not"@en ;
+    rdfs:domain dbpedia-owl:Train ;
+    rdfs:range xsd:boolean .
+
+ex:europeanVehicleNumber a rdf:Property ;
+    rdfs:label "european vehicle number"@en ;
+    rdfs:comment "Vehicle number issued by a European regulator."@en ;
+    rdfs:domain dbpedia-owl:Train ;
+    rdfs:range xsd:string .
+
+ex:licensePlateNumber a rdf:Property ;
+    rdfs:label "license plate number"@en ;
+    rdfs:comment "License plate number issued by a regulator."@en ;
+    rdfs:domain ex:Bus ;
+    rdfs:range xsd:string .
+
+ex:consumption a rdf:Property ;
+    rdfs:label "consumption"@en ;
+    rdfs:comment "Vehicle consumption of gasoline or electricity per km."@en ;
+    rdfs:domain pext:Vehicle ;
+    rdfs:range xsd:integer .
+
+ex:purchasePrice a rdf:Property ;
+    rdfs:label "purchase price"@en ;
+    rdfs:comment "Vehicle purchase price in CZK."@en ;
+    rdfs:domain pext:Vehicle ;
+    rdfs:range xsd:integer .
+
+ex:gps a rdf:Property ;
+    rdfs:label "gps"@en ;
+    rdfs:comment "Exact point on a map where stop is located."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:string .
+
+ex:arrivalTime a rdf:Property ;
+    rdfs:label "arrival time"@en ;
+    rdfs:comment "Arrival time of a vehicle."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:time .
+
+ex:departureTime a rdf:Property ;
+    rdfs:label "departure time"@en ;
+    rdfs:comment "Departure time of a vehicle."@en ;
+    rdfs:domain gtfs:Stop ;
+    rdfs:range xsd:time .
+
+ex:length a rdf:Property ;
+    rdfs:label "length"@en ;
+    rdfs:comment "A length of route in kilometers."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range xsd:decimal .
+
+ex:validFrom a rdf:Property ;
+    rdfs:label "valid from"@en ;
+    rdfs:comment "A date since when was operation on a route allowed."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range xsd:date .
+
+ex:validTo a rdf:Property ;
+    rdfs:label "valid to"@en ;
+    rdfs:comment "Last date of allowed operation on a route."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range xsd:date .
+
+ex:stationName a rdf:Property ;
+    rdfs:label "station name"@en ;
+    rdfs:comment "Actual station name."@en ;
+    rdfs:domain dbpedia-owl:Station ;
+    rdfs:range xsd:string .
+
+ex:owns a rdf:Property ;
+    rdfs:label "owns"@en ;
+    rdfs:comment "A transit agency owns a vehicle."@en ;
+    rdfs:domain gtfs:Agency ;
+    rdfs:range pext:Vehicle .
+
+ex:rides a rdf:Property ;
+    rdfs:label "rides"@en ;
+    rdfs:comment "A vehicle rides a connection."@en ;
+    rdfs:domain pext:Vehicle ;
+    rdfs:range ex:Connection .
+
+ex:belongsTo a rdf:Property ;
+    rdfs:label "belongs to"@en ;
+    rdfs:comment "A connection belongs to a transit route."@en ;
+    rdfs:domain ex:Connection ;
+    rdfs:range gtfs:Route .
+
+ex:connects a rdf:Property ;
+    rdfs:label "connects"@en ;
+    rdfs:comment "A connection connects a set of stops."@en ;
+    rdfs:domain ex:Connection ;
+    rdfs:range gtfs:Stop .
+
+ex:startsWith a rdf:Property ;
+    rdfs:label "starts with"@end ;
+    rdfs:comment "Name of a station, where the route begins."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range dbpedia-owl:Station .
+
+ex:endsWith a rdf:Property ;
+    rdfs:label "ends with"@end ;
+    rdfs:comment "Name of a stop, where the route ends."@en ;
+    rdfs:domain gtfs:Route ;
+    rdfs:range dbpedia-owl:Station .
+
+agency:leo a gtfs:Agency ;
+    ex:legalName "Leo Express" ;
+    ex:email "info@leoexpress.com" ;
+    ex:phone 420543140738 ;
+
+agency:leo ex:owns train:2 .
+
+agency:leo ex:owns train:3 .
+
+agency:dpp a gtfs:Agency ;
+    ex:legalName "Dopravní podnik hl. m. Prahy" ;
+    ex:email "info@dpp.cz" ;
+    ex:phone 420640921554 ;
+
+agency:dpp ex:owns bus:2 .
+
+agency:dpp ex:owns train:1 .
+
+agency:student a gtfs:Agency ;
+    ex:legalName "Student Agency" ;
+    ex:email "info@studentagency.cz" ;
+    ex:phone 420630784245 ;
+
+agency:student ex:owns bus:1 .
+
+agency:student ex:owns bus:3 .
+
+train:2 a dbpedia-owl:Train ;
+    ex:capacity 100 ;
+    ex:consumption 1000 ;
+    ex:purchasePrice 1000000 ;
+    ex:electricMotor "true"^^xsd:boolean ;
+    ex:europeanVehicleNumber "CGI 964" .
+
+train:3 a dbpedia-owl:Train ;
+    ex:capacity 123 ;
+    ex:consumption 300 ;
+    ex:purchasePrice 200000 ;
+    ex:electricMotor "false"^^xsd:boolean ;
+    ex:europeanVehicleNumber "EW 40 672" .
+
+train:3 ex:rides conn:1372 .
+
+conn:1372 a ex:Connection .
+
+conn:1372 ex:belongsTo route:137 .
+
+conn:1372 ex:connects stop:11 .
+
+conn:1372 ex:connects stop:12 .
+
+stop:11 a gtfs:Stop ;
+    ex:gps "50.1083880N, 14.4757450E" ;
+    ex:arrivalTime "14:00:00"^^xsd:time ;
+    ex:departureTime "14:01:00"^^xsd:time .
+
+stop:12 a gtfs:Stop ;
+    ex:gps "50.1004810N, 14.4645900E" ;
+    ex:arrivalTime "14:05:00"^^xsd:time ;
+    ex:departureTime "14:06:00"^^xsd:time .
+
+route:137 a gtfs:Route ;
+    ex:length 12.2 ;
+    ex:validFrom "2021-12-13"^^xsd:date ;
+    ex:validTo "2022-12-12"^^xsd:date .
+
+route:137 ex:startsWith station:10 ;
+    ex:endsWith station:12 .
+
+station:10 a ex:BusStation ;
+    ex:stationName "Na Vrstevnici"@cs ;
+    ex:capacity 35 .
+
+station:12 a ex:BusStation ;
+    ex:stationName "Limuzská"@cs ;
+    ex:capacity 80 .
+
+bus:2 a ex:Bus ;
+    ex:capacity 5 ;
+    ex:consumption 10 ;
+    ex:purchasePrice 65000 ;
+    ex:licensePlateNumber "5T1 9876" .
+
+bus:2 ex:rides conn:91 .
+
+conn:91 a ex:Connection .
+
+conn:91 ex:belongsTo route:9 .
+
+conn:91 ex:connects stop:4 .
+
+conn:91 ex:connects stop:5 .
+
+conn:91 ex:connects stop:6 .
+
+stop:4 a gtfs:Stop ;
+    ex:gps "49.6952592N, 17.7879486E" ;
+    ex:arrivalTime "11:00:00"^^xsd:time ;
+    ex:departureTime "11:01:00"^^xsd:time .
+
+stop:5 a gtfs:Stop ;
+    ex:gps "49.7067069N, 17.7684325E" ;
+    ex:arrivalTime "11:05:00"^^xsd:time ;
+    ex:departureTime "11:06:00"^^xsd:time .
+
+stop:6 a gtfs:Stop ;
+    ex:gps "49.7760583N, 17.7494736E" ;
+    ex:arrivalTime "11:10:00"^^xsd:time ;
+    ex:departureTime "11:11:00"^^xsd:time .
+
+route:9 a gtfs:Route ;
+    ex:length 37.0 ;
+    ex:validFrom "2005-10-01"^^xsd:date ;
+    ex:validTo "2025-09-25"^^xsd:date .
+
+route:9 ex:startsWith station:4 ;
+    ex:endsWith station:6 .
+
+station:4 a ex:BusStation ;
+    ex:stationName "Oderská"@cs ;
+    ex:capacity 30 .
+
+station:6 a ex:BusStation ;
+    ex:stationName "Spojovací"@cs ;
+    ex:capacity 45 .
+
+train:1 a dbpedia-owl:Train ;
+    ex:capacity 30 ;
+    ex:consumption 500 ;
+    ex:purchasePrice 550000 ;
+    ex:electricMotor "true"^^xsd:boolean ;
+    ex:europeanVehicleNumber "B 228 FK" .
+
+train:1 ex:rides conn:11 .
+
+conn:11 a ex:Connection .
+
+conn:11 ex:belongsTo route:1 .
+
+conn:11 ex:connects stop:1 .
+
+conn:11 ex:connects stop:2 .
+
+conn:11 ex:connects stop:3 .
+
+stop:1 a gtfs:Stop ;
+    ex:gps "49.7134667N, 17.7582722E" ;
+    ex:arrivalTime "12:00:00"^^xsd:time ;
+    ex:departureTime "12:01:00"^^xsd:time .
+
+stop:2 a gtfs:Stop ;
+    ex:gps "49.7741814N, 17.7475375E" ;
+    ex:arrivalTime "12:05:00"^^xsd:time ;
+    ex:departureTime "12:06:00"^^xsd:time .
+
+stop:3 a gtfs:Stop ;
+    ex:gps "49.6969069N, 17.7886239E" ;
+    ex:arrivalTime "12:10:00"^^xsd:time ;
+    ex:departureTime "12:11:00"^^xsd:time .
+
+route:1 a gtfs:Route ;
+    ex:length 120.5 ;
+    ex:validFrom "2015-01-01"^^xsd:date ;
+    ex:validTo "2020-12-31"^^xsd:date .
+
+route:1 ex:startsWith station:1 ;
+    ex:endsWith station:3 .
+
+station:1 a ex:TrainStation ;
+    ex:stationName "Heřmánky"@cs ;
+    ex:capacity 50 .
+
+station:3 a ex:TrainStation ;
+    ex:stationName "Jakubčovice nad Odrou"@cs ;
+    ex:capacity 60 .
+
+bus:1 a ex:Bus ;
+    ex:capacity 23 ;
+    ex:consumption 42 ;
+    ex:purchasePrice 523147 ;
+    ex:licensePlateNumber "4A2 7983" .
+
+bus:1 ex:rides conn:1371 .
+
+conn:1371 a ex:Connection .
+
+conn:1371 ex:belongsTo route:137 .
+
+conn:1371 ex:connects stop:9 .
+
+conn:1371 ex:connects stop:10 .
+
+stop:9 a gtfs:Stop ;
+    ex:gps "50.1004810N, 14.4645900E" ;
+    ex:arrivalTime "10:10:00"^^xsd:time ;
+    ex:departureTime "10:11:00"^^xsd:time .
+
+stop:10 a gtfs:Stop ;
+    ex:gps "50.1083880N, 14.4757450E" ;
+    ex:arrivalTime "10:15:00"^^xsd:time ;
+    ex:departureTime "10:16:00"^^xsd:time .
+
+route:137 a gtfs:Route ;
+    ex:length 12.2 ;
+    ex:validFrom "2021-12-13"^^xsd:date ;
+    ex:validTo "2022-12-12"^^xsd:date .
+
+route:137 ex:startsWith station:10 ;
+    ex:endsWith station:12 .
+
+station:10 a ex:BusStation ;
+    ex:stationName "Na Vrstevnici"@cs ;
+    ex:capacity 35 .
+
+station:12 a ex:BusStation ;
+    ex:stationName "Limuzská"@cs ;
+    ex:capacity 80 .
+
+bus:3 a ex:Bus ;
+    ex:capacity 54 ;
+    ex:consumption 98 ;
+    ex:purchasePrice 123000 ;
+    ex:licensePlateNumber "6M4 1426" .
+
+bus:3 ex:rides conn:371 .
+
+conn:371 a ex:Connection .
+
+conn:371 ex:belongsTo route:37 .
+
+conn:371 ex:connects stop:7 .
+
+conn:371 ex:connects stop:8 .
+
+conn:371 ex:connects stop:9 .
+
+conn:371 ex:connects stop:10 .
+
+stop:7 a gtfs:Stop ;
+    ex:gps "45.0034761N, 14.2635348E" ;
+    ex:arrivalTime "10:00:00"^^xsd:time ;
+    ex:departureTime "10:01:00"^^xsd:time .
+
+stop:8 a gtfs:Stop ;
+    ex:gps "50.0916895N, 14.4438135E" ;
+    ex:arrivalTime "10:05:00"^^xsd:time ;
+    ex:departureTime "10:06:00"^^xsd:time .
+
+stop:9 a gtfs:Stop ;
+    ex:gps "50.1004815N, 14.4645905E" ;
+    ex:arrivalTime "10:10:00"^^xsd:time ;
+    ex:departureTime "10:11:00"^^xsd:time .
+
+stop:10 a gtfs:Stop ;
+    ex:gps "50.1083885N, 14.4757455E" ;
+    ex:arrivalTime "10:15:00"^^xsd:time ;
+    ex:departureTime "10:16:00"^^xsd:time .
+
+route:37 a gtfs:Route ;
+    ex:length 11.6 ;
+    ex:validFrom "2021-12-10"^^xsd:date ;
+    ex:validTo "2022-12-12"^^xsd:date .
+
+route:37 ex:startsWith station:7 ;
+    ex:endsWith station:8 .
+
+station:7 a ex:TrainStation ;
+    ex:stationName "Malostranské náměstí"@cs ;
+    ex:capacity 120 .
+
+station:8 a ex:TrainStation ;
+    ex:stationName "Doliny"@cs ;
+    ex:capacity 5 .
