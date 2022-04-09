@@ -76,6 +76,8 @@ Simple replacement.
 - [ ] Replace the `NPRG036-HW2-T1G4.zip` file with fixed one in SIS.
 - [ ] Upload new `NPRG036-HW3-T1G4.zip` file in SIS.
 
+XPath queries were tested against [XPather](http://xpather.com/).
+
 **Comments**
 
 TBA
