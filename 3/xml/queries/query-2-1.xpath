@@ -1,0 +1,4 @@
+(: Find license plate numbers of all buses produced in Germany with :)
+(: consumption more than 50 units. :)
+
+//producer[legalName[@xml:lang="de"]]//bus[../consumption > 50]/licensePlateNumber

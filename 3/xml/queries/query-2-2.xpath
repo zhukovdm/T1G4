@@ -1,0 +1,7 @@
+(: Find the following items. :)
+(: 1. Producers, which had produced vehicles with purchase price :)
+(:    greater than 200000 units and legal name starts with 'B' or 'S'. :)
+(: 2. Station names of stations, which serve stops with arrival time :)
+(:    later than 2:30PM :)
+
+//producer[//purchasePrice > 200000 and (starts-with(legalName, 'B') or starts-with(legalName, 'S'))]/legalName | //station[serves//arrivalTime > xs:time("14:30:00")]/stationName
