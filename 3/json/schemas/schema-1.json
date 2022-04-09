@@ -54,7 +54,8 @@
         "type":"integer"
       },
       "oneOf":[
-
+        {"$ref":"#/bus"},
+        {"$ref":"#/train"}
       ]
     },
     "connection":{
@@ -62,10 +63,14 @@
         "type":"integer"
       },
       "belongsTo":{
-        
+        "$ref":"#/transitRoute"
       },
       "connects":{
-
+        "type":"array",
+        "minItems":2,
+        "items":[
+          {"$ref":"#/stop"}
+        ]
       }
     },
     "stop":{
@@ -98,11 +103,15 @@
         "type":"datetime"
       },
       "startsWith":{
-
+        "$ref":"#/station"
       },
       "endsWith":{
-        
+        "$ref":"#/station"
       }
+    },
+    "busStop":{
+    },
+    "trainStop":{
     },
     "station":{
       "id":{
@@ -115,7 +124,8 @@
         "type":"integer"
       },
       "oneOf":[
-
+        {"$ref":"#/busStop"},
+        {"$ref":"#/trainStop"}
       ]
     }
   }
