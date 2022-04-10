@@ -99,10 +99,12 @@
           "pattern":"[0-9]{1,2}.[0-9]{7}[N], [0-9]{1,2}.[0-9]{7}[E]"
         },
         "arrivalTime":{
-          "type":"time"
+          "type":"string",
+          "format":"time"
         },
         "departureTime":{
-          "type":"time"
+          "type":"string",
+          "format":"time"
         }
       },
       "additionalProperties":false,
