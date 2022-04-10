@@ -1,0 +1,342 @@
+{
+    "-xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "-xsi:noNamespaceSchemaLocation": "../schemas/schema-1.xsd",
+    "agency": [
+      {
+        "id": "leo",
+        "legalName":"Leo Express",
+        "email": "info@leoexpress.com",
+        "phone": "420543140738",
+        "owns": {
+          "vehicle": [
+            {
+              "capacity": "100",
+              "consumption": "1000",
+              "purchasePrice": "1000000",
+              "train": {
+                "id": "2",
+                "electricMotor": "true",
+                "europeanVehicleNumber": "CGI 964"
+              }
+            },
+            {
+              "capacity": "123",
+              "consumption": "300",
+              "purchasePrice": "200000",
+              "train": {
+                "id": "3",
+                "electricMotor": "false",
+                "europeanVehicleNumber": "EW 40 672"
+              },
+              "rides": {
+                "Connection": {
+                  "id": "1372",
+                  "belongsTo": {
+                    "transitRoute": {
+                      "id": "137",
+                      "length": "12.2",
+                      "validFrom": "2021-12-13",
+                      "validTo": "2022-12-12",
+                      "startsWith": {
+                        "station": {
+                          "id": "10",
+                          "stationName": "Na Vrstevnici",
+                          "capacity": "35",
+                          "kind": "Bus"
+                        }
+                      },
+                      "endsWith": {
+                        "station": {
+                          "id": "12",
+                          "stationName": "Limuzská",
+                          "capacity": "80",
+                          "kind": "Bus"
+                        }
+                      }
+                    }
+                  },
+                  "connects": {
+                    "stop": [
+                      {
+                        "id": "11",
+                        "gps": "50.1083880N, 14.4757450E",
+                        "arrivalTime": "14:00:00",
+                        "departureTime": "14:01:00"
+                      },
+                      {
+                        "id": "12",
+                        "gps": "50.1004810N, 14.4645900E",
+                        "arrivalTime": "14:05:00",
+                        "departureTime": "14:06:00"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "dpp",
+        "legalName": "Dopravní podnik hl.m.Prahy",
+        "email": "info@dpp.cz",
+        "phone": "420640921554",
+        "owns": {
+          "vehicle": [
+            {
+              "capacity": "5",
+              "consumption": "10",
+              "purchasePrice": "65000",
+              "bus": {
+                "id": "2",
+                "licensePlateNumber": "5T1 9876"
+              },
+              "rides": {
+                "Connection": {
+                  "id": "91",
+                  "belongsTo": {
+                    "transitRoute": {
+                      "id": "9",
+                      "length": "37.0",
+                      "validFrom": "2005-10-01",
+                      "validTo": "2025-09-25",
+                      "startsWith": {
+                        "station": {
+                          "id": "4",
+                          "stationName": "Oderská",
+                          "capacity": "30",
+                          "kind": "Bus"
+                        }
+                      },
+                      "endsWith": {
+                        "station": {
+                          "id": "6",
+                          "stationName": "Spojovací",
+                          "capacity": "45",
+                          "kind": "Bus"
+                        }
+                      }
+                    }
+                  },
+                  "connects": {
+                    "stop": [
+                      {
+                        "id": "4",
+                        "gps": "49.6952592N, 17.7879486E",
+                        "arrivalTime": "11:00:00",
+                        "departureTime": "11:01:00"
+                      },
+                      {
+                        "id": "5",
+                        "gps": "49.7067069N, 17.7684325E",
+                        "arrivalTime": "11:05:00",
+                        "departureTime": "11:06:00"
+                      },
+                      {
+                        "id": "6",
+                        "gps": "49.7760583N, 17.7494736E",
+                        "arrivalTime": "11:10:00",
+                        "departureTime": "11:11:00"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "capacity": "30",
+              "consumption": "500",
+              "purchasePrice": "550000",
+              "train": {
+                "id": "1",
+                "electricMotor": "true",
+                "europeanVehicleNumber": "B 228 FK"
+              },
+              "rides": {
+                "Connection": {
+                  "id": "11",
+                  "belongsTo": {
+                    "transitRoute": {
+                      "id": "1",
+                      "length": "120.5",
+                      "validFrom": "2015-01-01",
+                      "validTo": "2020-12-31",
+                      "startsWith": {
+                        "station": {
+                          "id": "1",
+                          "stationName":"Heřmánky",
+                          "capacity": "50",
+                          "kind": "Train"
+                        }
+                      },
+                      "endsWith": {
+                        "station": {
+                          "id": "3",
+                          "stationName":"Jakubčovice nad Odrou",
+                          "capacity": "60",
+                          "kind": "Train"
+                        }
+                      }
+                    }
+                  },
+                  "connects": {
+                    "stop": [
+                      {
+                        "id": "1",
+                        "gps": "49.7134667N, 17.7582722E",
+                        "arrivalTime": "12:00:00",
+                        "departureTime": "12:01:00"
+                      },
+                      {
+                        "id": "2",
+                        "gps": "49.7741814N, 17.7475375E",
+                        "arrivalTime": "12:05:00",
+                        "departureTime": "12:06:00"
+                      },
+                      {
+                        "id": "3",
+                        "gps": "49.6969069N, 17.7886239E",
+                        "arrivalTime": "12:10:00",
+                        "departureTime": "12:11:00"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "student",
+        "legalName":"Student Agency",
+        "email": "info@studentagency.cz",
+        "phone": "420630784245",
+        "owns": {
+          "vehicle": [
+            {
+              "capacity": "23",
+              "consumption": "42",
+              "purchasePrice": "523147",
+              "bus": {
+                "id": "1",
+                "licensePlateNumber": "4A2 7983"
+              },
+              "rides": {
+                "Connection": {
+                  "id": "1371",
+                  "belongsTo": {
+                    "transitRoute": {
+                      "id": "137",
+                      "length": "12.2",
+                      "validFrom": "2021-12-13",
+                      "validTo": "2022-12-12",
+                      "startsWith": {
+                        "station": {
+                          "id": "10",
+                          "stationName": "Na Vrstevnici",
+                          "capacity": "35",
+                          "kind": "Bus"
+                        }
+                      },
+                      "endsWith": {
+                        "station": {
+                          "id": "12",
+                          "stationName":"Limuzská",
+                          "capacity": "80",
+                          "kind": "Bus"
+                        }
+                      }
+                    }
+                  },
+                  "connects": {
+                    "stop": [
+                      {
+                        "id": "9",
+                        "gps": "50.1004810N, 14.4645900E",
+                        "arrivalTime": "10:10:00",
+                        "departureTime": "10:11:00"
+                      },
+                      {
+                        "id": "10",
+                        "gps": "50.1083880N, 14.4757450E",
+                        "arrivalTime": "10:15:00",
+                        "departureTime": "10:16:00"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "capacity": "54",
+              "consumption": "98",
+              "purchasePrice": "123000",
+              "bus": {
+                "id": "3",
+                "licensePlateNumber": "6M4 1426"
+              },
+              "rides": {
+                "Connection": {
+                  "id": "371",
+                  "belongsTo": {
+                    "transitRoute": {
+                      "id": "37",
+                      "length": "11.6",
+                      "validFrom": "2021-12-10",
+                      "validTo": "2022-12-12",
+                      "startsWith": {
+                        "station": {
+                          "id": "7",
+                          "stationName":"Malostranské náměstí",
+                          "capacity": "120",
+                          "kind": "Train"
+                        }
+                      },
+                      "endsWith": {
+                        "station": {
+                          "id": "8",
+                          "stationName":"Doliny",
+                          "capacity": "5",
+                          "kind": "Train"
+                        }
+                      }
+                    }
+                  },
+                  "connects": {
+                    "stop": [
+                      {
+                        "id": "7",
+                        "gps": "45.0034761N, 14.2635348E",
+                        "arrivalTime": "10:00:00",
+                        "departureTime": "10:01:00"
+                      },
+                      {
+                        "id": "8",
+                        "gps": "50.0916895N, 14.4438135E",
+                        "arrivalTime": "10:05:00",
+                        "departureTime": "10:06:00"
+                      },
+                      {
+                        "id": "9",
+                        "gps": "50.1004815N, 14.4645905E",
+                        "arrivalTime": "10:10:00",
+                        "departureTime": "10:11:00"
+                      },
+                      {
+                        "id": "10",
+                        "gps": "50.1083885N, 14.4757455E",
+                        "arrivalTime": "10:15:00",
+                        "departureTime": "10:16:00"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
