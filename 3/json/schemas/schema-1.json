@@ -23,110 +23,141 @@
       }
     },
     "train":{
-      "id":{
-        "type":"integer"
+      "properties":{
+        "id":{
+          "type":"integer"
+        },
+        "electricMotor":{
+          "type":"boolean"
+        },
+        "europeanVehicleNumber":{
+          "type":"string"
+        }
       },
-      "electricMotor":{
-        "type":"boolean"
-      },
-      "europeanVehicleNumber":{
-        "type":"string"
-      }
+      "additionalProperties": false,
+      "minProperties": 3
     },
     "bus":{
-      "id":{
-        "type":"integer"
+      "properties":{
+        "id":{
+          "type":"integer"
+        },
+        "licensePlateNumber":{
+          "type":"string"
+        }
       },
-      "licensePlateNumber":{
-        "type":"string"
-      }
+      "additionalProperties":false,
+      "minProperties":2
     },
     "vehicle":{
-      "capacity":{
-        "type":"integer",
-        "minimum":0
+      "properties":{
+        "capacity":{
+          "type":"integer",
+          "minimum":0
+        },
+        "consumption":{
+          "type":"integer",
+          "minimum":0
+        },
+        "purchasePrice":{
+          "type":"integer"
+        }
       },
-      "consumption":{
-        "type":"integer",
-        "minimum":0
-      },
-      "purchasePrice":{
-        "type":"integer"
-      },
+      "additionalProperties":false,
+      "minProperties":3,
       "oneOf":[
         {"$ref":"#/bus"},
         {"$ref":"#/train"}
       ]
     },
     "connection":{
-      "id":{
-        "type":"integer"
+      "properties":{
+        "id":{
+          "type":"integer"
+        },
+        "belongsTo":{
+          "$ref":"#/transitRoute"
+        },
+        "connects":{
+          "type":"array",
+          "minItems":2,
+          "items":[
+            {"$ref":"#/stop"}
+          ]
+        }
       },
-      "belongsTo":{
-        "$ref":"#/transitRoute"
-      },
-      "connects":{
-        "type":"array",
-        "minItems":2,
-        "items":[
-          {"$ref":"#/stop"}
-        ]
-      }
+      "additionalProperties":false,
+      "minProperties":3
     },
     "stop":{
-      "id":{
-        "type":"integer"
+      "properties":{
+        "id":{
+          "type":"integer"
+        },
+        "gps":{
+          "type":"string",
+          "pattern":"[0-9]{1,2}.[0-9]{7}[N], [0-9]{1,2}.[0-9]{7}[E]"
+        },
+        "arrivalTime":{
+          "type":"time"
+        },
+        "departureTime":{
+          "type":"time"
+        }
       },
-      "gps":{
-        "type":"string",
-        "pattern":"[0-9]{1,2}.[0-9]{7}[N], [0-9]{1,2}.[0-9]{7}[E]"
-      },
-      "arrivalTime":{
-        "type":"time"
-      },
-      "departureTime":{
-        "type":"time"
-      }
+      "additionalProperties":false,
+      "minProperties":4
     },
     "transitRoute":{
-      "id":{
-        "type":"integer"
+      "properties":{
+        "id":{
+          "type":"integer"
+        },
+        "length":{
+          "type":"number",
+          "minimum":0
+        },
+        "validFrom":{
+          "type": "string",
+          "format": "date-time"
+        },
+        "validTo":{
+          "type": "string",
+          "format": "date-time"
+        },
+        "startsWith":{
+          "$ref":"#/station"
+        },
+        "endsWith":{
+          "$ref":"#/station"
+        }
       },
-      "length":{
-        "type":"number",
-        "minimum":0
-      },
-      "validFrom":{
-        "type":"datetime"
-      },
-      "validTo":{
-        "type":"datetime"
-      },
-      "startsWith":{
-        "$ref":"#/station"
-      },
-      "endsWith":{
-        "$ref":"#/station"
-      }
+      "additionalProperties":false,
+      "minProperties":6
     },
-    "busStop":{
+    "busStation":{
     },
-    "trainStop":{
+    "trainStation":{
     },
     "station":{
-      "id":{
-        "type":"integer"
+      "properties":{
+        "id":{
+          "type":"integer"
+        },
+        "stationName":{
+          "type":"string"
+        },
+        "capacity":{
+          "type":"integer"
+        }
       },
-      "stationName":{
-        "type":"string"
-      },
-      "capacity":{
-        "type":"integer"
-      },
+      "additionalProperties":false,
+      "minProperties":3,
       "oneOf":[
-        {"$ref":"#/busStop"},
-        {"$ref":"#/trainStop"}
+        {"$ref":"#/busStation"},
+        {"$ref":"#/trainStation"}
       ]
     }
+    
   }
 }
