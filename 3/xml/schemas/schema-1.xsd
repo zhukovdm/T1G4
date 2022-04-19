@@ -23,7 +23,7 @@
                 <xs:element name="owns" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element ref="vehicle" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element ref="vehicle" minOccurs="0" maxOccurs="unbounded"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -63,7 +63,7 @@
                 <xs:element name="rides" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element ref="Connection" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element ref="Connection" minOccurs="0" maxOccurs="unbounded"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -78,7 +78,7 @@
                 <xs:element name="belongsTo">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element ref="transitRoute" minOccurs="1" maxOccurs="1"/>
+                            <xs:element ref="transitRoute"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -120,14 +120,14 @@
                 <xs:element name ="startsWith">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element ref="station" minOccurs="1" maxOccurs="1"/>
+                            <xs:element ref="station"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name = "endsWith">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element ref="station" minOccurs="1" maxOccurs="1"/>
+                            <xs:element ref="station"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -163,7 +163,7 @@
     <xs:element name="root">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="agency" maxOccurs="unbounded"/>
+                <xs:element ref="agency" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
