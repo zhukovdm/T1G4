@@ -52,7 +52,9 @@ Solution: restructure text into hierarchy.
 - [x] Define ex:phone with tel: scheme, see example from the lecture.
 
 [[1]](https://stackoverflow.com/questions/1009181/url-scheme-for-phone-call),
-[[2]](https://www.rfc-editor.org/rfc/rfc3966) as possible references.
+[[2]](https://www.rfc-editor.org/rfc/rfc3966)
+are possible references.
+
 Solution: define `ex:phone` using the same range as `foaf:phone`,
 [[3]](http://xmlns.com/foaf/spec/#term_phone).
 
@@ -64,10 +66,10 @@ Simple replacement.
 
 - [x] Fix previous homework based on the comments.
 - [x] Create directed and acyclic hierarchical model(s) from the latest conceptual model.
-- [ ] Create `XML Schema` with datatypes for each hierarchical model.
-- [ ] Represent data against `XML Schema`, enforce `xml:lang` attribute, [src](https://stackoverflow.com/q/7502382/3623646).
+- [x] Create `XML Schema` with datatypes for each hierarchical model.
+- [x] Represent data against `XML Schema`, enforce `xml:lang` attribute, [src](https://stackoverflow.com/q/7502382/3623646).
 - [ ] Create at least **4** non-trivial `XPath` queries on data.
-- [ ] Create `XSLT` transformations of a data subsets to html format.
+- [ ] Create `XSLT` transformations of a data subsets to `HTML` format.
 - [ ] Create `XSLT` transformation of the data to `RDF` form identical to the `HW2`.
 - [ ] Create `JSON Schema` representation for each hierarchical model.
 - [ ] Represent data against `JSON Schema`.
@@ -76,9 +78,9 @@ Simple replacement.
 - [ ] Replace the `NPRG036-HW2-T1G4.zip` file with fixed one in SIS.
 - [ ] Upload new `NPRG036-HW3-T1G4.zip` file in SIS.
 
-XSLT transformations were performed using [XSLT Test Tool](https://xslttest.appspot.com/)
+`XSLT` transformations were performed using [XSLT Test Tool](https://xslttest.appspot.com/).
 
-XPath queries were tested against [XPather](http://xpather.com/).
+`XPath` queries were tested against [XPather](http://xpather.com/).
 
 **Comments**
 
