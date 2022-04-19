@@ -72,7 +72,7 @@
         }
       },
       "additionalProperties":false,
-      "minProperties":2
+      "minProperties":3
     },
     "vehicle":{
       "properties":{
