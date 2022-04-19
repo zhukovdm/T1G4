@@ -7,7 +7,7 @@
     <id>leo</id>
     <legalName xml:lang="en">Leo Express</legalName>
     <email>info@leoexpress.com</email>
-    <phone>420543140738</phone>
+    <phone>tel:+420-543-140-738</phone>
     <owns>
         <vehicle>
             <capacity>100</capacity>
@@ -19,7 +19,6 @@
                 <europeanVehicleNumber>CGI 964</europeanVehicleNumber>
             </train>
         </vehicle>
-
         <vehicle>
             <capacity>123</capacity>
             <consumption>300</consumption>
@@ -30,8 +29,8 @@
                 <europeanVehicleNumber>EW 40 672</europeanVehicleNumber>
             </train>
             <rides>
-                <Connection>
-                    <id>1372</id>
+                <connection>
+                    <id>137-1</id>
                     <belongsTo>
                         <transitRoute>
                             <id>137</id>
@@ -40,9 +39,9 @@
                             <validTo>2022-12-12</validTo>
                             <startsWith>
                                 <station>
-                                    <id>10</id>
-                                    <stationName xml:lang="cs">Na Vrstevnici</stationName>
-                                    <capacity>35</capacity>
+                                    <id>11</id>
+                                    <stationName xml:lang="cs">Sídliště Novodvorská</stationName>
+                                    <capacity>25</capacity>
                                     <kind>Bus</kind>
                                 </station>
                             </startsWith>
@@ -63,7 +62,6 @@
                             <arrivalTime>14:00:00</arrivalTime>
                             <departureTime>14:01:00</departureTime>
                         </stop>
-            
                         <stop>
                             <id>12</id>
                             <gps>50.1004810N, 14.4645900E</gps>
@@ -71,7 +69,7 @@
                             <departureTime>14:06:00</departureTime>
                         </stop>
                     </connects>
-                </Connection>
+                </connection>
             </rides>
         </vehicle>
     </owns>
@@ -81,7 +79,7 @@
     <id>dpp</id>
     <legalName xml:lang="cs">Dopravní podnik hl. m. Prahy</legalName>
     <email>info@dpp.cz</email>
-    <phone>420640921554</phone>
+    <phone>tel:+420-640-921-554</phone>
     <owns>
         <vehicle>
             <capacity>5</capacity>
@@ -92,8 +90,8 @@
                 <licensePlateNumber>5T1 9876</licensePlateNumber>
             </bus>
             <rides>
-                <Connection>
-                    <id>91</id>
+                <connection>
+                    <id>9-1</id>
                     <belongsTo>
                         <transitRoute>
                             <id>9</id>
@@ -138,10 +136,9 @@
                             <departureTime>11:11:00</departureTime>
                         </stop>
                     </connects>
-                </Connection>
+                </connection>
             </rides>
         </vehicle>
-
         <vehicle>
             <capacity>30</capacity>
             <consumption>500</consumption>
@@ -152,8 +149,8 @@
                 <europeanVehicleNumber>B 228 FK</europeanVehicleNumber>
             </train>
             <rides>
-                <Connection>
-                    <id>11</id>
+                <connection>
+                    <id>1-1</id>
                     <belongsTo>
                         <transitRoute>
                             <id>1</id>
@@ -198,7 +195,7 @@
                             <departureTime>12:11:00</departureTime>
                         </stop>
                     </connects>
-                </Connection>
+                </connection>
             </rides>
         </vehicle>
     </owns>
@@ -208,61 +205,8 @@
     <id>student</id>
     <legalName xml:lang="en">Student Agency</legalName>
     <email>info@studentagency.cz</email>
-    <phone>420630784245</phone>
+    <phone>tel:+420-630-784-245</phone>
     <owns>
-        <vehicle>
-            <capacity>23</capacity>
-            <consumption>42</consumption>
-            <purchasePrice>523147</purchasePrice>
-            <bus>
-                <id>1</id>
-                <licensePlateNumber>4A2 7983</licensePlateNumber>
-            </bus>
-            <rides>
-                <Connection>
-                    <id>1371</id>
-                    <belongsTo>
-                        <transitRoute>
-                            <id>137</id>
-                            <length>12.2</length>
-                            <validFrom>2021-12-13</validFrom>
-                            <validTo>2022-12-12</validTo>
-                            <startsWith>
-                                <station>
-                                    <id>10</id>
-                                    <stationName xml:lang="cs">Na Vrstevnici</stationName>
-                                    <capacity>35</capacity>
-                                    <kind>Bus</kind>
-                                </station>
-                            </startsWith>
-                            <endsWith>
-                                <station>
-                                    <id>12</id>
-                                    <stationName xml:lang="cs">Limuzská</stationName>
-                                    <capacity>80</capacity>
-                                    <kind>Bus</kind>
-                                </station>
-                            </endsWith>
-                        </transitRoute>
-                    </belongsTo>
-                    <connects>
-                        <stop>
-                            <id>9</id>
-                            <gps>50.1004810N, 14.4645900E</gps>
-                            <arrivalTime>10:10:00</arrivalTime>
-                            <departureTime>10:11:00</departureTime>
-                        </stop>
-                        <stop>
-                            <id>10</id>
-                            <gps>50.1083880N, 14.4757450E</gps>
-                            <arrivalTime>10:15:00</arrivalTime>
-                            <departureTime>10:16:00</departureTime>
-                        </stop>
-                    </connects>
-                </Connection>
-            </rides>
-        </vehicle>
-
         <vehicle>
             <capacity>54</capacity>
             <consumption>98</consumption>
@@ -272,8 +216,8 @@
                 <licensePlateNumber>6M4 1426</licensePlateNumber>
             </bus>
             <rides>
-                <Connection>
-                    <id>371</id>
+                <connection>
+                    <id>37-1</id>
                     <belongsTo>
                         <transitRoute>
                             <id>37</id>
@@ -290,10 +234,10 @@
                             </startsWith>
                             <endsWith>
                                 <station>
-                                    <id>8</id>
-                                    <stationName xml:lang="cs">Doliny</stationName>
-                                    <capacity>5</capacity>
-                                    <kind>Train</kind>
+                                    <id>10</id>
+                                    <stationName xml:lang="cs">Na Vrstevnici</stationName>
+                                    <capacity>35</capacity>
+                                    <kind>Bus</kind>
                                 </station>
                             </endsWith>
                         </transitRoute>
@@ -307,26 +251,25 @@
                         </stop>
                         <stop>
                             <id>8</id>
-                            <gps>50.0916895N, 14.4438135E</gps>
+                            <gps>50.0916890N, 14.4438130E</gps>
                             <arrivalTime>10:05:00</arrivalTime>
                             <departureTime>10:06:00</departureTime>
                         </stop>
                         <stop>
                             <id>9</id>
-                            <gps>50.1004815N, 14.4645905E</gps>
+                            <gps>50.1004810N, 14.4645900E</gps>
                             <arrivalTime>10:10:00</arrivalTime>
                             <departureTime>10:11:00</departureTime>
                         </stop>
                         <stop>
                             <id>10</id>
-                            <gps>50.1083885N, 14.4757455E</gps>
+                            <gps>50.1083880N, 14.4757450E</gps>
                             <arrivalTime>10:15:00</arrivalTime>
                             <departureTime>10:16:00</departureTime>
                         </stop>
                     </connects>
-                </Connection>
+                </connection>
             </rides>
-
         </vehicle>
     </owns>
 </agency>
