@@ -25,25 +25,50 @@
     "train":{
       "properties":{
         "id":{
-          "type":"integer"
+          "type":"string"
         },
         "electricMotor":{
           "type":"boolean"
         },
         "europeanVehicleNumber":{
           "type":"string"
+        },
+        "producer":{
+          "properties":{
+              "id":{
+                "type":"string",
+              },
+              "legalName":{
+                "type":"string"
+              }
+          },
+          "additionalProperties":false,
+          "minProperties":2
         }
       },
       "additionalProperties": false,
-      "minProperties": 3
+      "minProperties": 4
+
     },
     "bus":{
       "properties":{
         "id":{
-          "type":"integer"
-        },
+                "type":"string"
+              },
         "licensePlateNumber":{
           "type":"string"
+        },
+        "producer":{
+          "properties":{
+              "id":{
+                "type":"string"
+              },
+              "legalName":{
+                "type":"string"
+              }
+          },
+          "additionalProperties":false,
+          "minProperties":2
         }
       },
       "additionalProperties":false,
@@ -73,8 +98,8 @@
     "connection":{
       "properties":{
         "id":{
-          "type":"integer"
-        },
+                "type":"string"
+              },
         "belongsTo":{
           "$ref":"#/transitRoute"
         },
@@ -92,7 +117,7 @@
     "stop":{
       "properties":{
         "id":{
-          "type":"integer"
+          "type":"string"
         },
         "gps":{
           "type":"string",
@@ -113,7 +138,7 @@
     "transitRoute":{
       "properties":{
         "id":{
-          "type":"integer"
+          "type":"string"
         },
         "length":{
           "type":"number",
@@ -144,7 +169,7 @@
     "station":{
       "properties":{
         "id":{
-          "type":"integer"
+          "type":"string"
         },
         "stationName":{
           "type":"string"
