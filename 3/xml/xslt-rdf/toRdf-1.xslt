@@ -6,7 +6,7 @@
 
 <xsl:output method="text" encoding="UTF-8" />
 
-<xsl:template match="root">
+<xsl:template match="/">
 @prefix dbpedia-owl: &lt;https://dbpedia.org/ontology/&gt; .
 @prefix ex: &lt;http://example.org/vocabulary/&gt; .
 @prefix gtfs: &lt;http://vocab.gtfs.org/terms#&gt; .
@@ -175,8 +175,10 @@ ex:endsWith a rdf:Property ;
     rdfs:comment &quot;Name of a stop, where the route ends.&quot;@en ;
     rdfs:domain gtfs:Route ;
     rdfs:range dbpedia-owl:Station .
-<xsl:apply-templates/>
-<xsl:apply-templates select="agency/owns/vehicle"/>
+<xsl:apply-templates select="//agency"/>
+<xsl:apply-templates select="//train"/>
+<xsl:apply-templates select="//bus"/>
+<xsl:apply-templates select="//rides"/>
 </xsl:template>
 
 <xsl:template match="agency">
@@ -184,13 +186,6 @@ agency:<xsl:value-of select="id"/> a gtfs:Agency ;
     ex:legalName &quot;<xsl:value-of select="legalName"/>&quot; ;
     ex:email &quot;<xsl:value-of select="email"/>&quot; ;
     ex:phone <xsl:value-of select="phone"/> ;
-<xsl:variable name="agencyId" select="id"/>
-<xsl:for-each select="owns/vehicle/bus">
-agency:<xsl:value-of select="$agencyId"/> ex:owns bus:<xsl:value-of select="id"/> .
-</xsl:for-each>
-<xsl:for-each select="owns/vehicle/train">
-agency:<xsl:value-of select="$agencyId"/> ex:owns train:<xsl:value-of select="id"/> .
-</xsl:for-each>
 </xsl:template>
 
 <xsl:template match="train">
@@ -200,10 +195,8 @@ train:<xsl:value-of select="id"/> a dbpedia-owl:Train ;
     ex:purchasePrice <xsl:value-of select="parent::node()/purchasePrice"/> ;
     ex:electricMotor &quot;<xsl:value-of select="electricMotor"/>&quot;^^xsd:boolean ;
     ex:europeanVehicleNumber &quot;<xsl:value-of select="europeanVehicleNumber"/>&quot; .
-<xsl:variable name="trainId" select="id"/>
-<xsl:for-each select="../rides/Connection">
-train:<xsl:value-of select="$trainId"/> ex:rides conn:<xsl:value-of select="id"/> .
-</xsl:for-each>
+
+agency:<xsl:value-of select="parent::node()/parent::node()/parent::node()/id"/> ex:owns train:<xsl:value-of select="id"/> .
 </xsl:template>
 
 <xsl:template match="bus">
@@ -212,47 +205,54 @@ bus:<xsl:value-of select="id"/> a ex:Bus ;
     ex:consumption <xsl:value-of select="parent::node()/consumption"/> ;
     ex:purchasePrice <xsl:value-of select="parent::node()/purchasePrice"/> ;
     ex:licensePlateNumber &quot;<xsl:value-of select="licensePlateNumber"/>&quot; .
-<xsl:variable name="busId" select="id"/>
-<xsl:for-each select="../rides/Connection">
-bus:<xsl:value-of select="$busId"/> ex:rides conn:<xsl:value-of select="id"/> .
-</xsl:for-each>
+
+agency:<xsl:value-of select="parent::node()/parent::node()/parent::node()/id"/> ex:owns bus:<xsl:value-of select="id"/> .
 </xsl:template>
 
-<xsl:template match="Connection">
-conn:<xsl:value-of select="id"/> a ex:Connection .
+<xsl:template match="connection">
 <xsl:variable name="connId" select="id"/>
-conn:<xsl:value-of select="$connId"/> ex:belongsTo route:<xsl:value-of select="belongsTo/transitRoute/id"/> .
-<xsl:for-each select="connects/stop">
-conn:<xsl:value-of select="$connId"/> ex:connects stop:<xsl:value-of select="id"/> .
-</xsl:for-each>
-<xsl:apply-templates select="connects"/>
-<xsl:apply-templates select="belongsTo"/>
-</xsl:template>
-
-<xsl:template match="stop">
-stop:<xsl:value-of select="id"/> a gtfs:Stop ;
-    ex:gps &quot;<xsl:value-of select="gps"/>&quot; ;
-    ex:arrivalTime &quot;<xsl:value-of select="arrivalTime"/>&quot;^^xsd:time ;
-    ex:departureTime &quot;<xsl:value-of select="departureTime"/>&quot;^^xsd:time .
-</xsl:template>
-
-<xsl:template match="transitRoute">
+conn:<xsl:value-of select="$connId"/> a ex:Connection .
+<xsl:for-each select="belongsTo/transitRoute[ends-with(parent::node()/parent::node()/id, '1')]">
+<xsl:variable name="routId" select="id"/>
 route:<xsl:value-of select="id"/> a gtfs:Route ;
     ex:length <xsl:value-of select="length"/> ;
     ex:validFrom &quot;<xsl:value-of select="validFrom"/>&quot;^^xsd:date ;
     ex:validTo &quot;<xsl:value-of select="validTo"/>&quot;^^xsd:date .
-
-route:<xsl:value-of select="id"/> ex:startsWith station:<xsl:value-of select="startsWith/station/id"/> ;
-    ex:endsWith station:<xsl:value-of select="endsWith/station/id"/> .
-<xsl:apply-templates select="startsWith"/>
-<xsl:apply-templates select="endsWith"/>
-</xsl:template>
-
-<xsl:template match="station">
+<xsl:for-each select="startsWith/station">
 station:<xsl:value-of select="id"/> a ex:<xsl:value-of select="kind"/>Station ;
     ex:stationName &quot;<xsl:value-of select="stationName"/>&quot;@<xsl:value-of select="stationName/@xml:lang"/> ;
     ex:capacity <xsl:value-of select="capacity"/> .
+
+route:<xsl:value-of select="$routId"/> ex:startsWith station:<xsl:value-of select="id"/> .
+</xsl:for-each>
+<xsl:for-each select="endsWith/station">
+station:<xsl:value-of select="id"/> a ex:<xsl:value-of select="kind"/>Station ;
+    ex:stationName &quot;<xsl:value-of select="stationName"/>&quot;@<xsl:value-of select="stationName/@xml:lang"/> ;
+    ex:capacity <xsl:value-of select="capacity"/> .
+
+route:<xsl:value-of select="$routId"/> ex:endsWith station:<xsl:value-of select="id"/> .
+</xsl:for-each>
+</xsl:for-each>
+conn:<xsl:value-of select="$connId"/> ex:belongsTo route:<xsl:value-of select="belongsTo/transitRoute/id"/> .
+<xsl:for-each select="connects/stop">
+stop:<xsl:value-of select="id"/> a gtfs:Stop ;
+    ex:gps &quot;<xsl:value-of select="gps"/>&quot; ;
+    ex:arrivalTime &quot;<xsl:value-of select="arrivalTime"/>&quot;^^xsd:time ;
+    ex:departureTime &quot;<xsl:value-of select="departureTime"/>&quot;^^xsd:time .
+
+conn:<xsl:value-of select="$connId"/> ex:connects stop:<xsl:value-of select="id"/> .
+</xsl:for-each>
+<xsl:for-each select="parent::node()/parent::node()">
+<xsl:choose>
+<xsl:when test="train">
+train:<xsl:value-of select="train/id"/> ex:rides conn:<xsl:value-of select="$connId"/> .
+</xsl:when>
+<xsl:otherwise>
+bus:<xsl:value-of select="bus/id"/> ex:rides conn:<xsl:value-of select="$connId"/> .
+</xsl:otherwise>
+</xsl:choose>
+</xsl:for-each>
 </xsl:template>
 
-    <xsl:template match="text()"/>
+<xsl:template match="text()"/>
 </xsl:stylesheet>
