@@ -1,4 +1,5 @@
 
+@prefix addr: <http://www.w3.org/Addressing/schemes.html#> .
 @prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
 @prefix ex: <http://example.org/vocabulary/> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
@@ -13,7 +14,7 @@
 @prefix stop: <https://T1G4.DOX.cz/Stop/#> .
 @prefix agency: <https://T1G4.DOX.cz/Agency/#> .
 @prefix conn: <https://T1G4.DOX.cz/Connection/#> .
-@prefix transitRoute: <https://T1G4.DOX.cz/TransitRoute/#> .
+@prefix route: <https://T1G4.DOX.cz/TransitRoute/#> .
 
 dbpedia-owl:Train rdfs:subClassOf pext:Vehicle .
 
@@ -171,17 +172,17 @@ ex:endsWith a rdf:Property ;
 agency:leo a gtfs:Agency ;
     ex:legalName "Leo Express" ;
     ex:email "info@leoexpress.com" ;
-    ex:phone tel:+420-543-140-738 ;
+    ex:phone "tel:+420-543-140-738" .
 
 agency:dpp a gtfs:Agency ;
     ex:legalName "Dopravní podnik hl. m. Prahy" ;
     ex:email "info@dpp.cz" ;
-    ex:phone tel:+420-640-921-554 ;
+    ex:phone "tel:+420-640-921-554" .
 
 agency:student a gtfs:Agency ;
     ex:legalName "Student Agency" ;
     ex:email "info@studentagency.cz" ;
-    ex:phone tel:+420-630-784-245 ;
+    ex:phone "tel:+420-630-784-245" .
 
 train:2 a dbpedia-owl:Train ;
     ex:capacity 100 ;

@@ -7,6 +7,7 @@
 <xsl:output method="text" encoding="UTF-8" />
 
 <xsl:template match="/">
+@prefix addr: &lt;http://www.w3.org/Addressing/schemes.html#&gt; .
 @prefix dbpedia-owl: &lt;https://dbpedia.org/ontology/&gt; .
 @prefix ex: &lt;http://example.org/vocabulary/&gt; .
 @prefix gtfs: &lt;http://vocab.gtfs.org/terms#&gt; .
@@ -21,7 +22,7 @@
 @prefix stop: &lt;https://T1G4.DOX.cz/Stop/#&gt; .
 @prefix agency: &lt;https://T1G4.DOX.cz/Agency/#&gt; .
 @prefix conn: &lt;https://T1G4.DOX.cz/Connection/#&gt; .
-@prefix transitRoute: &lt;https://T1G4.DOX.cz/TransitRoute/#&gt; .
+@prefix route: &lt;https://T1G4.DOX.cz/TransitRoute/#&gt; .
 
 dbpedia-owl:Train rdfs:subClassOf pext:Vehicle .
 
@@ -185,7 +186,7 @@ ex:endsWith a rdf:Property ;
 agency:<xsl:value-of select="id"/> a gtfs:Agency ;
     ex:legalName &quot;<xsl:value-of select="legalName"/>&quot; ;
     ex:email &quot;<xsl:value-of select="email"/>&quot; ;
-    ex:phone <xsl:value-of select="phone"/> ;
+    ex:phone &quot;<xsl:value-of select="phone"/>&quot; .
 </xsl:template>
 
 <xsl:template match="train">
