@@ -171,29 +171,17 @@ ex:endsWith a rdf:Property ;
 agency:leo a gtfs:Agency ;
     ex:legalName "Leo Express" ;
     ex:email "info@leoexpress.com" ;
-    ex:phone 420543140738 ;
-
-agency:leo ex:owns train:2 .
-
-agency:leo ex:owns train:3 .
+    ex:phone tel:+420-543-140-738 ;
 
 agency:dpp a gtfs:Agency ;
     ex:legalName "Dopravní podnik hl. m. Prahy" ;
     ex:email "info@dpp.cz" ;
-    ex:phone 420640921554 ;
-
-agency:dpp ex:owns bus:2 .
-
-agency:dpp ex:owns train:1 .
+    ex:phone tel:+420-640-921-554 ;
 
 agency:student a gtfs:Agency ;
     ex:legalName "Student Agency" ;
     ex:email "info@studentagency.cz" ;
-    ex:phone 420630784245 ;
-
-agency:student ex:owns bus:1 .
-
-agency:student ex:owns bus:3 .
+    ex:phone tel:+420-630-784-245 ;
 
 train:2 a dbpedia-owl:Train ;
     ex:capacity 100 ;
@@ -202,6 +190,8 @@ train:2 a dbpedia-owl:Train ;
     ex:electricMotor "true"^^xsd:boolean ;
     ex:europeanVehicleNumber "CGI 964" .
 
+agency:leo ex:owns train:2 .
+
 train:3 a dbpedia-owl:Train ;
     ex:capacity 123 ;
     ex:consumption 300 ;
@@ -209,90 +199,7 @@ train:3 a dbpedia-owl:Train ;
     ex:electricMotor "false"^^xsd:boolean ;
     ex:europeanVehicleNumber "EW 40 672" .
 
-train:3 ex:rides conn:1372 .
-
-conn:1372 a ex:Connection .
-
-conn:1372 ex:belongsTo route:137 .
-
-conn:1372 ex:connects stop:11 .
-
-conn:1372 ex:connects stop:12 .
-
-stop:11 a gtfs:Stop ;
-    ex:gps "50.1083880N, 14.4757450E" ;
-    ex:arrivalTime "14:00:00"^^xsd:time ;
-    ex:departureTime "14:01:00"^^xsd:time .
-
-stop:12 a gtfs:Stop ;
-    ex:gps "50.1004810N, 14.4645900E" ;
-    ex:arrivalTime "14:05:00"^^xsd:time ;
-    ex:departureTime "14:06:00"^^xsd:time .
-
-route:137 a gtfs:Route ;
-    ex:length 12.2 ;
-    ex:validFrom "2021-12-13"^^xsd:date ;
-    ex:validTo "2022-12-12"^^xsd:date .
-
-route:137 ex:startsWith station:10 ;
-    ex:endsWith station:12 .
-
-station:10 a ex:BusStation ;
-    ex:stationName "Na Vrstevnici"@cs ;
-    ex:capacity 35 .
-
-station:12 a ex:BusStation ;
-    ex:stationName "Limuzská"@cs ;
-    ex:capacity 80 .
-
-bus:2 a ex:Bus ;
-    ex:capacity 5 ;
-    ex:consumption 10 ;
-    ex:purchasePrice 65000 ;
-    ex:licensePlateNumber "5T1 9876" .
-
-bus:2 ex:rides conn:91 .
-
-conn:91 a ex:Connection .
-
-conn:91 ex:belongsTo route:9 .
-
-conn:91 ex:connects stop:4 .
-
-conn:91 ex:connects stop:5 .
-
-conn:91 ex:connects stop:6 .
-
-stop:4 a gtfs:Stop ;
-    ex:gps "49.6952592N, 17.7879486E" ;
-    ex:arrivalTime "11:00:00"^^xsd:time ;
-    ex:departureTime "11:01:00"^^xsd:time .
-
-stop:5 a gtfs:Stop ;
-    ex:gps "49.7067069N, 17.7684325E" ;
-    ex:arrivalTime "11:05:00"^^xsd:time ;
-    ex:departureTime "11:06:00"^^xsd:time .
-
-stop:6 a gtfs:Stop ;
-    ex:gps "49.7760583N, 17.7494736E" ;
-    ex:arrivalTime "11:10:00"^^xsd:time ;
-    ex:departureTime "11:11:00"^^xsd:time .
-
-route:9 a gtfs:Route ;
-    ex:length 37.0 ;
-    ex:validFrom "2005-10-01"^^xsd:date ;
-    ex:validTo "2025-09-25"^^xsd:date .
-
-route:9 ex:startsWith station:4 ;
-    ex:endsWith station:6 .
-
-station:4 a ex:BusStation ;
-    ex:stationName "Oderská"@cs ;
-    ex:capacity 30 .
-
-station:6 a ex:BusStation ;
-    ex:stationName "Spojovací"@cs ;
-    ex:capacity 45 .
+agency:leo ex:owns train:3 .
 
 train:1 a dbpedia-owl:Train ;
     ex:capacity 30 ;
@@ -301,90 +208,15 @@ train:1 a dbpedia-owl:Train ;
     ex:electricMotor "true"^^xsd:boolean ;
     ex:europeanVehicleNumber "B 228 FK" .
 
-train:1 ex:rides conn:11 .
+agency:dpp ex:owns train:1 .
 
-conn:11 a ex:Connection .
+bus:2 a ex:Bus ;
+    ex:capacity 5 ;
+    ex:consumption 10 ;
+    ex:purchasePrice 65000 ;
+    ex:licensePlateNumber "5T1 9876" .
 
-conn:11 ex:belongsTo route:1 .
-
-conn:11 ex:connects stop:1 .
-
-conn:11 ex:connects stop:2 .
-
-conn:11 ex:connects stop:3 .
-
-stop:1 a gtfs:Stop ;
-    ex:gps "49.7134667N, 17.7582722E" ;
-    ex:arrivalTime "12:00:00"^^xsd:time ;
-    ex:departureTime "12:01:00"^^xsd:time .
-
-stop:2 a gtfs:Stop ;
-    ex:gps "49.7741814N, 17.7475375E" ;
-    ex:arrivalTime "12:05:00"^^xsd:time ;
-    ex:departureTime "12:06:00"^^xsd:time .
-
-stop:3 a gtfs:Stop ;
-    ex:gps "49.6969069N, 17.7886239E" ;
-    ex:arrivalTime "12:10:00"^^xsd:time ;
-    ex:departureTime "12:11:00"^^xsd:time .
-
-route:1 a gtfs:Route ;
-    ex:length 120.5 ;
-    ex:validFrom "2015-01-01"^^xsd:date ;
-    ex:validTo "2020-12-31"^^xsd:date .
-
-route:1 ex:startsWith station:1 ;
-    ex:endsWith station:3 .
-
-station:1 a ex:TrainStation ;
-    ex:stationName "Heřmánky"@cs ;
-    ex:capacity 50 .
-
-station:3 a ex:TrainStation ;
-    ex:stationName "Jakubčovice nad Odrou"@cs ;
-    ex:capacity 60 .
-
-bus:1 a ex:Bus ;
-    ex:capacity 23 ;
-    ex:consumption 42 ;
-    ex:purchasePrice 523147 ;
-    ex:licensePlateNumber "4A2 7983" .
-
-bus:1 ex:rides conn:1371 .
-
-conn:1371 a ex:Connection .
-
-conn:1371 ex:belongsTo route:137 .
-
-conn:1371 ex:connects stop:9 .
-
-conn:1371 ex:connects stop:10 .
-
-stop:9 a gtfs:Stop ;
-    ex:gps "50.1004810N, 14.4645900E" ;
-    ex:arrivalTime "10:10:00"^^xsd:time ;
-    ex:departureTime "10:11:00"^^xsd:time .
-
-stop:10 a gtfs:Stop ;
-    ex:gps "50.1083880N, 14.4757450E" ;
-    ex:arrivalTime "10:15:00"^^xsd:time ;
-    ex:departureTime "10:16:00"^^xsd:time .
-
-route:137 a gtfs:Route ;
-    ex:length 12.2 ;
-    ex:validFrom "2021-12-13"^^xsd:date ;
-    ex:validTo "2022-12-12"^^xsd:date .
-
-route:137 ex:startsWith station:10 ;
-    ex:endsWith station:12 .
-
-station:10 a ex:BusStation ;
-    ex:stationName "Na Vrstevnici"@cs ;
-    ex:capacity 35 .
-
-station:12 a ex:BusStation ;
-    ex:stationName "Limuzská"@cs ;
-    ex:capacity 80 .
+agency:dpp ex:owns bus:2 .
 
 bus:3 a ex:Bus ;
     ex:capacity 54 ;
@@ -392,52 +224,180 @@ bus:3 a ex:Bus ;
     ex:purchasePrice 123000 ;
     ex:licensePlateNumber "6M4 1426" .
 
-bus:3 ex:rides conn:371 .
+agency:student ex:owns bus:3 .
 
-conn:371 a ex:Connection .
+conn:137-1 a ex:Connection .
 
-conn:371 ex:belongsTo route:37 .
+route:137 a gtfs:Route ;
+    ex:length 12.2 ;
+    ex:validFrom "2021-12-13"^^xsd:date ;
+    ex:validTo "2022-12-12"^^xsd:date .
 
-conn:371 ex:connects stop:7 .
+station:11 a ex:BusStation ;
+    ex:stationName "Sídliště Novodvorská"@cs ;
+    ex:capacity 25 .
 
-conn:371 ex:connects stop:8 .
+route:137 ex:startsWith station:11 .
 
-conn:371 ex:connects stop:9 .
+station:12 a ex:BusStation ;
+    ex:stationName "Limuzská"@cs ;
+    ex:capacity 80 .
 
-conn:371 ex:connects stop:10 .
+route:137 ex:endsWith station:12 .
 
-stop:7 a gtfs:Stop ;
-    ex:gps "45.0034761N, 14.2635348E" ;
-    ex:arrivalTime "10:00:00"^^xsd:time ;
-    ex:departureTime "10:01:00"^^xsd:time .
+conn:137-1 ex:belongsTo route:137 .
 
-stop:8 a gtfs:Stop ;
-    ex:gps "50.0916895N, 14.4438135E" ;
-    ex:arrivalTime "10:05:00"^^xsd:time ;
-    ex:departureTime "10:06:00"^^xsd:time .
+stop:11 a gtfs:Stop ;
+    ex:gps "50.1083880N, 14.4757450E" ;
+    ex:arrivalTime "14:00:00"^^xsd:time ;
+    ex:departureTime "14:01:00"^^xsd:time .
 
-stop:9 a gtfs:Stop ;
-    ex:gps "50.1004815N, 14.4645905E" ;
-    ex:arrivalTime "10:10:00"^^xsd:time ;
-    ex:departureTime "10:11:00"^^xsd:time .
+conn:137-1 ex:connects stop:11 .
 
-stop:10 a gtfs:Stop ;
-    ex:gps "50.1083885N, 14.4757455E" ;
-    ex:arrivalTime "10:15:00"^^xsd:time ;
-    ex:departureTime "10:16:00"^^xsd:time .
+stop:12 a gtfs:Stop ;
+    ex:gps "50.1004810N, 14.4645900E" ;
+    ex:arrivalTime "14:05:00"^^xsd:time ;
+    ex:departureTime "14:06:00"^^xsd:time .
+
+conn:137-1 ex:connects stop:12 .
+
+train:3 ex:rides conn:137-1 .
+
+conn:9-1 a ex:Connection .
+
+route:9 a gtfs:Route ;
+    ex:length 37.0 ;
+    ex:validFrom "2005-10-01"^^xsd:date ;
+    ex:validTo "2025-09-25"^^xsd:date .
+
+station:4 a ex:BusStation ;
+    ex:stationName "Oderská"@cs ;
+    ex:capacity 30 .
+
+route:9 ex:startsWith station:4 .
+
+station:6 a ex:BusStation ;
+    ex:stationName "Spojovací"@cs ;
+    ex:capacity 45 .
+
+route:9 ex:endsWith station:6 .
+
+conn:9-1 ex:belongsTo route:9 .
+
+stop:4 a gtfs:Stop ;
+    ex:gps "49.6952592N, 17.7879486E" ;
+    ex:arrivalTime "11:00:00"^^xsd:time ;
+    ex:departureTime "11:01:00"^^xsd:time .
+
+conn:9-1 ex:connects stop:4 .
+
+stop:5 a gtfs:Stop ;
+    ex:gps "49.7067069N, 17.7684325E" ;
+    ex:arrivalTime "11:05:00"^^xsd:time ;
+    ex:departureTime "11:06:00"^^xsd:time .
+
+conn:9-1 ex:connects stop:5 .
+
+stop:6 a gtfs:Stop ;
+    ex:gps "49.7760583N, 17.7494736E" ;
+    ex:arrivalTime "11:10:00"^^xsd:time ;
+    ex:departureTime "11:11:00"^^xsd:time .
+
+conn:9-1 ex:connects stop:6 .
+
+bus:2 ex:rides conn:9-1 .
+
+conn:1-1 a ex:Connection .
+
+route:1 a gtfs:Route ;
+    ex:length 120.5 ;
+    ex:validFrom "2015-01-01"^^xsd:date ;
+    ex:validTo "2020-12-31"^^xsd:date .
+
+station:1 a ex:TrainStation ;
+    ex:stationName "Heřmánky"@cs ;
+    ex:capacity 50 .
+
+route:1 ex:startsWith station:1 .
+
+station:3 a ex:TrainStation ;
+    ex:stationName "Jakubčovice nad Odrou"@cs ;
+    ex:capacity 60 .
+
+route:1 ex:endsWith station:3 .
+
+conn:1-1 ex:belongsTo route:1 .
+
+stop:1 a gtfs:Stop ;
+    ex:gps "49.7134667N, 17.7582722E" ;
+    ex:arrivalTime "12:00:00"^^xsd:time ;
+    ex:departureTime "12:01:00"^^xsd:time .
+
+conn:1-1 ex:connects stop:1 .
+
+stop:2 a gtfs:Stop ;
+    ex:gps "49.7741814N, 17.7475375E" ;
+    ex:arrivalTime "12:05:00"^^xsd:time ;
+    ex:departureTime "12:06:00"^^xsd:time .
+
+conn:1-1 ex:connects stop:2 .
+
+stop:3 a gtfs:Stop ;
+    ex:gps "49.6969069N, 17.7886239E" ;
+    ex:arrivalTime "12:10:00"^^xsd:time ;
+    ex:departureTime "12:11:00"^^xsd:time .
+
+conn:1-1 ex:connects stop:3 .
+
+train:1 ex:rides conn:1-1 .
+
+conn:37-1 a ex:Connection .
 
 route:37 a gtfs:Route ;
     ex:length 11.6 ;
     ex:validFrom "2021-12-10"^^xsd:date ;
     ex:validTo "2022-12-12"^^xsd:date .
 
-route:37 ex:startsWith station:7 ;
-    ex:endsWith station:8 .
-
 station:7 a ex:TrainStation ;
     ex:stationName "Malostranské náměstí"@cs ;
     ex:capacity 120 .
 
-station:8 a ex:TrainStation ;
-    ex:stationName "Doliny"@cs ;
-    ex:capacity 5 .
+route:37 ex:startsWith station:7 .
+
+station:10 a ex:BusStation ;
+    ex:stationName "Na Vrstevnici"@cs ;
+    ex:capacity 35 .
+
+route:37 ex:endsWith station:10 .
+
+conn:37-1 ex:belongsTo route:37 .
+
+stop:7 a gtfs:Stop ;
+    ex:gps "45.0034761N, 14.2635348E" ;
+    ex:arrivalTime "10:00:00"^^xsd:time ;
+    ex:departureTime "10:01:00"^^xsd:time .
+
+conn:37-1 ex:connects stop:7 .
+
+stop:8 a gtfs:Stop ;
+    ex:gps "50.0916890N, 14.4438130E" ;
+    ex:arrivalTime "10:05:00"^^xsd:time ;
+    ex:departureTime "10:06:00"^^xsd:time .
+
+conn:37-1 ex:connects stop:8 .
+
+stop:9 a gtfs:Stop ;
+    ex:gps "50.1004810N, 14.4645900E" ;
+    ex:arrivalTime "10:10:00"^^xsd:time ;
+    ex:departureTime "10:11:00"^^xsd:time .
+
+conn:37-1 ex:connects stop:9 .
+
+stop:10 a gtfs:Stop ;
+    ex:gps "50.1083880N, 14.4757450E" ;
+    ex:arrivalTime "10:15:00"^^xsd:time ;
+    ex:departureTime "10:16:00"^^xsd:time .
+
+conn:37-1 ex:connects stop:10 .
+
+bus:3 ex:rides conn:37-1 .
