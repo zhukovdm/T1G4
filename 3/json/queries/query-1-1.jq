@@ -1,5 +1,5 @@
 #Select all routes served by train and having length over 20 km
-.agency[] | try.owns.vehicle[] |
+.agencies[] | try.owns.vehicle[] |
  try.rides.Connection.belongsTo.transitRoute |
  select(.startsWith.station.kind=="Train") |
  select(.length|tonumber>=20) |
