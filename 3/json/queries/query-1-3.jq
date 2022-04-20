@@ -1,4 +1,5 @@
-.agencies[] | try.owns.vehicle[] |
-select(.producer.legalName=="Siemens AG") |
-.bus | select(.licensePlateNumber!=null) |
-{licensePlateNumber: .licensePlateNumber}
+.agencies[] | .owns.vehicle[] | select (.train , .rides) | 
+.rides.Connection.belongsTo.transitRoute.startsWith.station.stationName | 
+if . != null then . else "null" end | 
+select( . != "null" ) | 
+{ stationName: . }
