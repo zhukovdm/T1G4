@@ -82,10 +82,13 @@ Simple replacement.
 
 `XPath` queries were tested against [XPather](http://xpather.com/).
 
-How to convert `JSON-LD` to `RDF Turtle`?
-Convert [JSON-LD to N-Quads](https://json-ld.org/playground/), then
-convert [N-Quads to Turtle/N3](https://issemantic.net/rdf-converter). Or use
-direct conversion [JSON-LD to Turtle/N3](https://issemantic.net/rdf-converter).
+[JSON validator](https://jsonformatter.curiousconcept.com/#),
+[JSON schema validator](https://www.jsonschemavalidator.net/),
+[jq-play](https://jqplay.org/).
+
+How to convert `JSON-LD` to `RDF Turtle`? Use any bullet.
+- [JSON-LD -> N-Quads](https://json-ld.org/playground/), then [N-Quads -> Turtle/N3](https://issemantic.net/rdf-converter)
+- [JSON-LD to Turtle/N3](https://issemantic.net/rdf-converter)
 
 **Comments**
 
