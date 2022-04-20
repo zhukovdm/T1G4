@@ -1,14 +1,5 @@
 {
-    "@context":{
-      "addr": "http://www.w3.org/Addressing/schemes.html#",
-      "dbpedia-owl": "https://dbpedia.org/ontology/",
-      "ex": "http://example.org/vocabulary/",
-      "gtfs": "http://vocab.gtfs.org/terms#",
-      "pext": "http://www.ontotext.com/proton/protonext/",
-      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "xsd": "https://www.w3.org/TR/xmlschema-2/#"
-    },
+    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context-1.jsonld",
     "gtfs:agency":[
       {
         "id": "leo",
