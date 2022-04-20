@@ -1,6 +1,3 @@
-#Find Producers, which had produced vehicles with purchase price
-#greater than 150000 units and legal name starts with 'T' or 'S'
-
 .agencies[] |
 try.owns.vehicle[] |
 select(.purchasePrice|tonumber>150000) |
