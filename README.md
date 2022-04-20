@@ -84,7 +84,8 @@ Simple replacement.
 
 How to convert `JSON-LD` to `RDF Turtle`?
 Convert [JSON-LD to N-Quads](https://json-ld.org/playground/), then
-convert [N-Quads to Turtle/N3](https://issemantic.net/rdf-converter).
+convert [N-Quads to Turtle/N3](https://issemantic.net/rdf-converter). Or use
+direct conversion [JSON-LD to Turtle/N3](https://issemantic.net/rdf-converter).
 
 **Comments**
 
