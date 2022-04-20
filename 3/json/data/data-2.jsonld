@@ -31,7 +31,7 @@
                 "ex:capacity": "123",
                 "ex:consumption": "300",
                 "ex:purchasePrice": "200000",
-                "train": {
+                "dbpedia-owl:train": {
                    "id": "3",
                    "ex:electricMotor": "false",
                    "ex:europeanVehicleNumber": "EW 40 672"
@@ -46,7 +46,7 @@
              "#text": "Maschinenfabrik Augsburg-Nürnberg"
           },
           "ex:vehicles": {
-             "ex:vehicle": {
+             "pext:vehicle": {
                 "ex:capacity": "54",
                 "ex:consumption": "98",
                 "ex:purchasePrice": "123000",
@@ -64,11 +64,11 @@
              "#text": "Siemens AG"
           },
           "ex:vehicles": {
-             "ex:vehicle": {
+             "pext:vehicle": {
                 "ex:capacity": "30",
                 "ex:consumption": "500",
                 "ex:purchasePrice": "550000",
-                "train": {
+                "dbpedia-owl:train": {
                    "id": "1",
                    "ex:electricMotor": "true",
                    "ex:europeanVehicleNumber": "B 228 FK"
@@ -83,11 +83,11 @@
              "#text": "Bombardier Inc."
           },
           "ex:vehicles": {
-             "ex:vehicle": {
+             "pext:vehicle": {
                 "ex:capacity": "100",
                 "ex:consumption": "1000",
                 "ex:purchasePrice": "1000000",
-                "train": {
+                "dbpedia-owl:train": {
                    "id": "2",
                    "ex:electricMotor": "true",
                    "ex:europeanVehicleNumber": "CGI 964"
@@ -96,7 +96,7 @@
           }
        }
     ],
-    "stations": [
+    "dbpedia-owl:stations": [
        {
           "id": "1",
           "ex:stationName": {
@@ -106,7 +106,7 @@
           "ex:capacity": "50",
           "ex:kind": "Train",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "1",
                 "ex:gps": "49.7134667N, 17.7582722E",
                 "ex:arrivalTime": "12:00:00",
@@ -124,7 +124,7 @@
           "ex:capacity": "40",
           "ex:kind": "Train",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "2",
                 "ex:gps": "49.7741814N, 17.7475375E",
                 "ex:arrivalTime": "12:05:00",
@@ -142,7 +142,7 @@
           "ex:capacity": "60",
           "ex:kind": "Train",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "3",
                 "ex:gps": "49.6969069N, 17.7886239E",
                 "ex:arrivalTime": "12:10:00",
@@ -159,7 +159,7 @@
           "ex:capacity": "30",
           "ex:kind": "Bus",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "4",
                 "ex:gps": "49.6952592N, 17.7879486E",
                 "ex:arrivalTime": "11:00:00",
@@ -177,7 +177,7 @@
           "ex:capacity": "20",
           "ex:kind": "Bus",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "5",
                 "ex:gps": "49.7067069N, 17.7684325E",
                 "ex:arrivalTime": "11:05:00",
@@ -195,7 +195,7 @@
           "ex:capacity": "45",
           "ex:kind": "Bus",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "6",
                 "ex:gps": "49.7760583N, 17.7494736E",
                 "ex:arrivalTime": "11:10:00",
@@ -212,7 +212,7 @@
           "ex:capacity": "120",
           "ex:kind": "Train",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "7",
                 "ex:gps": "45.0034761N, 14.2635348E",
                 "ex:arrivalTime": "10:00:00",
@@ -230,7 +230,7 @@
           "ex:capacity": "5",
           "ex:kind": "Train",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "8",
                 "ex:gps": "50.0916890N, 14.4438130E",
                 "ex:arrivalTime": "10:05:00",
@@ -248,7 +248,7 @@
           "ex:capacity": "170",
           "ex:kind": "Train",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "9",
                 "ex:gps": "50.1004810N, 14.4645900E",
                 "ex:arrivalTime": "10:10:00",
@@ -266,7 +266,7 @@
           "ex:capacity": "35",
           "ex:kind": "Bus",
           "ex:serves": {
-             "stop": {
+             "gtfs:stop": {
                 "id": "10",
                 "ex:gps": "50.1083880N, 14.4757450E",
                 "ex:arrivalTime": "10:15:00",
