@@ -1,0 +1,326 @@
+{
+   "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context-1.jsonld",
+    "@noNamespaceSchemaLocation": "../schemas/schema-2.xsd",
+    "ex:producers": [
+       {
+          "id": "tatra",
+          "ex:legalName": {
+             "@lang": "cs",
+             "#text": "TATRA TRUCKS a.s."
+          },
+          "ex:vehicles": [
+             {
+                "ex:capacity": "23",
+                "ex:consumption": "42",
+                "ex:purchasePrice": "523147",
+                "ex:bus": {
+                   "id": "1",
+                   "ex:licensePlateNumber": "4A2 7983"
+                }
+             },
+             {
+                "ex:capacity": "5",
+                "ex:consumption": "10",
+                "ex:purchasePrice": "65000",
+                "ex:bus": {
+                   "id": "2",
+                   "ex:licensePlateNumber": "5T1 9876"
+                }
+             },
+             {
+                "ex:capacity": "123",
+                "ex:consumption": "300",
+                "ex:purchasePrice": "200000",
+                "train": {
+                   "id": "3",
+                   "ex:electricMotor": "false",
+                   "ex:europeanVehicleNumber": "EW 40 672"
+                }
+             }
+          ]
+       },
+       {
+          "id": "man",
+          "ex:legalName": {
+             "@lang": "de",
+             "#text": "Maschinenfabrik Augsburg-Nürnberg"
+          },
+          "ex:vehicles": {
+             "ex:vehicle": {
+                "ex:capacity": "54",
+                "ex:consumption": "98",
+                "ex:purchasePrice": "123000",
+                "ex:bus": {
+                   "id": "3",
+                   "ex:licensePlateNumber": "6M4 1426"
+                }
+             }
+          }
+       },
+       {
+          "id": "siemens",
+          "ex:legalName": {
+             "@lang": "de",
+             "#text": "Siemens AG"
+          },
+          "ex:vehicles": {
+             "ex:vehicle": {
+                "ex:capacity": "30",
+                "ex:consumption": "500",
+                "ex:purchasePrice": "550000",
+                "train": {
+                   "id": "1",
+                   "ex:electricMotor": "true",
+                   "ex:europeanVehicleNumber": "B 228 FK"
+                }
+             }
+          }
+       },
+       {
+          "id": "bombardier",
+          "ex:legalName": {
+             "@lang": "en",
+             "#text": "Bombardier Inc."
+          },
+          "ex:vehicles": {
+             "ex:vehicle": {
+                "ex:capacity": "100",
+                "ex:consumption": "1000",
+                "ex:purchasePrice": "1000000",
+                "train": {
+                   "id": "2",
+                   "ex:electricMotor": "true",
+                   "ex:europeanVehicleNumber": "CGI 964"
+                }
+             }
+          }
+       }
+    ],
+    "stations": [
+       {
+          "id": "1",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Heřmánky"
+          },
+          "ex:capacity": "50",
+          "ex:kind": "Train",
+          "ex:serves": {
+             "stop": {
+                "id": "1",
+                "ex:gps": "49.7134667N, 17.7582722E",
+                "ex:arrivalTime": "12:00:00",
+                "ex:departureTime": "12:01:00",
+                "ex:followedBy": "2"
+             }
+          }
+       },
+       {
+          "id": "2",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Vítkov"
+          },
+          "ex:capacity": "40",
+          "ex:kind": "Train",
+          "ex:serves": {
+             "stop": {
+                "id": "2",
+                "ex:gps": "49.7741814N, 17.7475375E",
+                "ex:arrivalTime": "12:05:00",
+                "ex:departureTime": "12:06:00",
+                "ex:followedBy": "3"
+             }
+          }
+       },
+       {
+          "id": "3",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Jakubčovice nad Odrou"
+          },
+          "ex:capacity": "60",
+          "ex:kind": "Train",
+          "ex:serves": {
+             "stop": {
+                "id": "3",
+                "ex:gps": "49.6969069N, 17.7886239E",
+                "ex:arrivalTime": "12:10:00",
+                "ex:departureTime": "12:11:00"
+             }
+          }
+       },
+       {
+          "id": "4",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Oderská"
+          },
+          "ex:capacity": "30",
+          "ex:kind": "Bus",
+          "ex:serves": {
+             "stop": {
+                "id": "4",
+                "ex:gps": "49.6952592N, 17.7879486E",
+                "ex:arrivalTime": "11:00:00",
+                "ex:departureTime": "11:01:00",
+                "ex:followedBy": "5"
+             }
+          }
+       },
+       {
+          "id": "5",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Budišovská"
+          },
+          "ex:capacity": "20",
+          "ex:kind": "Bus",
+          "ex:serves": {
+             "stop": {
+                "id": "5",
+                "ex:gps": "49.7067069N, 17.7684325E",
+                "ex:arrivalTime": "11:05:00",
+                "ex:departureTime": "11:06:00",
+                "ex:followedBy": "6"
+             }
+          }
+       },
+       {
+          "id": "6",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Spojovací"
+          },
+          "ex:capacity": "45",
+          "ex:kind": "Bus",
+          "ex:serves": {
+             "stop": {
+                "id": "6",
+                "ex:gps": "49.7760583N, 17.7494736E",
+                "ex:arrivalTime": "11:10:00",
+                "ex:departureTime": "11:11:00"
+             }
+          }
+       },
+       {
+          "id": "7",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Malostranské náměstí"
+          },
+          "ex:capacity": "120",
+          "ex:kind": "Train",
+          "ex:serves": {
+             "stop": {
+                "id": "7",
+                "ex:gps": "45.0034761N, 14.2635348E",
+                "ex:arrivalTime": "10:00:00",
+                "ex:departureTime": "10:01:00",
+                "ex:followedBy": "8"
+             }
+          }
+       },
+       {
+          "id": "8",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Doliny"
+          },
+          "ex:capacity": "5",
+          "ex:kind": "Train",
+          "ex:serves": {
+             "stop": {
+                "id": "8",
+                "ex:gps": "50.0916890N, 14.4438130E",
+                "ex:arrivalTime": "10:05:00",
+                "ex:departureTime": "10:06:00",
+                "ex:followedBy": "9"
+             }
+          }
+       },
+       {
+          "id": "9",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Budějovická"
+          },
+          "ex:capacity": "170",
+          "ex:kind": "Train",
+          "ex:serves": {
+             "stop": {
+                "id": "9",
+                "ex:gps": "50.1004810N, 14.4645900E",
+                "ex:arrivalTime": "10:10:00",
+                "ex:departureTime": "10:11:00",
+                "ex:followedBy": "10"
+             }
+          }
+       },
+       {
+          "id": "10",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Na Vrstevnici"
+          },
+          "ex:capacity": "35",
+          "ex:kind": "Bus",
+          "ex:serves": {
+             "stop": {
+                "id": "10",
+                "ex:gps": "50.1083880N, 14.4757450E",
+                "ex:arrivalTime": "10:15:00",
+                "ex:departureTime": "10:16:00"
+             }
+          }
+       },
+       {
+          "id": "11",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Sídliště Novodvorská"
+          },
+          "ex:capacity": "25",
+          "ex:kind": "Bus",
+          "ex:serves": [
+             {
+                "id": "11",
+                "ex:gps": "50.1083880N, 14.4757450E",
+                "ex:arrivalTime": "14:00:00",
+                "ex:departureTime": "14:01:00",
+                "ex:followedBy": "12"
+             },
+             {
+                "id": "13",
+                "ex:gps": "50.1083880N, 14.4757450E",
+                "ex:arrivalTime": "15:00:00",
+                "ex:departureTime": "15:01:00",
+                "ex:followedBy": "14"
+             }
+          ]
+       },
+       {
+          "id": "12",
+          "ex:stationName": {
+             "@lang": "cs",
+             "#text": "Limuzská"
+          },
+          "ex:capacity": "80",
+          "ex:kind": "Bus",
+          "ex:serves": [
+             {
+                "id": "12",
+                "ex:gps": "50.1004810N, 14.4645900E",
+                "ex:arrivalTime": "14:05:00",
+                "ex:departureTime": "14:06:00"
+             },
+             {
+                "id": "14",
+                "ex:gps": "50.1004810N, 14.4645900E",
+                "ex:arrivalTime": "15:05:00",
+                "ex:departureTime": "15:07:00"
+             }
+          ]
+       }
+    ]
+ }
