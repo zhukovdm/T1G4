@@ -1,190 +1,266 @@
 {
+  "$id": "https://T1G4.DOX.cz/schemas/agencies",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/T1G4/DOX/schema.json",
-  "definitions": {
-    "agency":{
-      "type":"object",
-      "required":[
-        "legalName",
-        "email",
-        "phone"
-      ],
-      "properties":{
-        "legalName":{
-          "type":"string"
+  "title": "Agencies",
+  "description": "List of agencies",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "@context": {
+        "type": "string",
+        "format": "iri"
+      },
+      "@id": {
+        "type": "string",
+        "pattern": "^agency:[A-Za-z0-9-]+$"
+      },
+      "@type": {
+        "type": "string",
+        "pattern": "^gtfs:Agency$"
+      },
+      "ex:legalName": {
+        "type": "object",
+        "patternProperties": {
+          "^(en)|(cz)$": { "type": "string" }
         },
-        "email":{
-          "type":"string",
-          "format":"email"
-        },
-        "phone":{
-          "type":"integer"
+        "minProperties": 1,
+        "additionalProperties": false
+      },
+      "ex:phone": {
+        "type": "string",
+        "pattern": "^tel:\\+[0-9-]+$"
+      },
+      "ex:email": {
+        "type": "string",
+        "format": "email"
+      },
+      "ex:owns": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "$id": "https://T1G4.DOX.cz/schemas/bus",
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "pattern": "^bus:[0-9]+$"
+                },
+                "@type": {
+                  "type": "string",
+                  "pattern": "^ex:Bus$"
+                },
+                "ex:capacity": { "$ref": "#/$defs/positive_int" },
+                "ex:consumption": { "$ref": "#/$defs/positive_int" },
+                "ex:purchasePrice": { "$ref": "#/$defs/positive_int" },
+                "ex:licensePlateNumber": { "type": "string" },
+                "ex:rides": { "$ref": "#/$defs/connection" }
+              },
+              "required": [
+                "@id",
+                "@type",
+                "ex:capacity",
+                "ex:consumption",
+                "ex:purchasePrice",
+                "ex:licensePlateNumber",
+                "ex:rides"
+              ],
+              "additionalProperties": false,
+              "$defs": {
+                "positive_int": {
+                  "$id": "https://T1G4.DOX.cz/schemas/positive_int",
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "connection": {
+                  "$id": "https://T1G4.DOX.cz/schemas/connection",
+                  "oneOf": [
+                    { "type": "null" },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "@id": {
+                          "type": "string",
+                          "pattern": "^conn:[0-9]+-[0-9]+$"
+                        },
+                        "@type": {
+                          "type": "string",
+                          "pattern": "^ex:Connection$"
+                        },
+                        "ex:belongsTo": {
+                          "$id": "https://T1G4.DOX.cz/schemas/route",
+                          "type": "object",
+                          "properties": {
+                            "@id": {
+                              "type": "string",
+                              "pattern": "^route:[0-9]+$"
+                            },
+                            "@type": {
+                              "type": "string",
+                              "pattern": "^gtfs:Route$"
+                            },
+                            "ex:length": {
+                              "type": "number",
+                              "exclusiveMinimum": 0.0
+                            },
+                            "ex:validFrom": {
+                              "type": "string",
+                              "format": "date"
+                            },
+                            "ex:validTo": {
+                              "type": "string",
+                              "format": "date"
+                            },
+                            "ex:startsWith": { "$ref": "#/$defs/station" },
+                            "ex:endsWith": { "$ref": "#/$defs/station" }
+                          },
+                          "required": [
+                            "@id",
+                            "@type",
+                            "ex:length",
+                            "ex:validFrom",
+                            "ex:validTo",
+                            "ex:startsWith",
+                            "ex:endsWith"
+                          ],
+                          "additionalProperties": false,
+                          "$defs": {
+                            "station": {
+                              "type": "object",
+                              "properties": {
+                                "@id": {
+                                  "type": "string",
+                                  "pattern": "^station:[0-9]+$"
+                                },
+                                "@type": {
+                                  "type": "string",
+                                  "pattern": "^(ex:TrainStation)|(ex:BusStation)$"
+                                },
+                                "ex:stationName": {
+                                  "type": "object",
+                                  "patternProperties": {
+                                    "^(en)|(cs)$": { "type": "string" }
+                                  },
+                                  "minProperties": 1,
+                                  "additionalProperties": false
+                                },
+                                "ex:capacity": {
+                                  "type": "integer",
+                                  "minimum": 1
+                                }
+                              },
+                              "required": [
+                                "@id",
+                                "@type",
+                                "ex:stationName",
+                                "ex:capacity"
+                              ],
+                              "additionalProperties": false
+                            }
+                          }
+                        },
+                        "ex:connects": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "@id": {
+                                "type": "string",
+                                "pattern": "^stop:[0-9]+$"
+                              },
+                              "@type": {
+                                "type": "string",
+                                "pattern": "^gtfs:Stop$"
+                              },
+                              "ex:gps": {
+                                "type": "string",
+                                "pattern": "^[0-9]{1,2}\\.[0-9]{7}N, [0-9]{1,2}\\.[0-9]{7}E$"
+                              },
+                              "ex:arrivalTime": {
+                                "type": "string",
+                                "format": "time"
+                              },
+                              "ex:departureTime": {
+                                "type": "string",
+                                "format": "time"
+                              }
+                            },
+                            "required": [
+                              "@id",
+                              "@type",
+                              "ex:gps",
+                              "ex:arrivalTime",
+                              "ex:departureTime"
+                            ],
+                            "additionalProperties": false
+                          },
+                          "minItems": 2
+                        }
+                      },
+                      "required": [
+                        "@id",
+                        "@type",
+                        "ex:belongsTo",
+                        "ex:connects"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "pattern": "^train:[0-9]+$"
+                },
+                "@type": {
+                  "type": "string",
+                  "pattern": "^dbpedia-owl:Train$"
+                },
+                "ex:capacity": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:consumption": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:purchasePrice": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:electricMotor": { "type": "boolean" },
+                "ex:europeanVehicleNumber": { "type": "string" },
+                "ex:rides": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/connection"
+                }
+              },
+              "required": [
+                  "@id",
+                  "@type",
+                  "ex:capacity",
+                  "ex:consumption",
+                  "ex:purchasePrice",
+                  "ex:electricMotor",
+                  "ex:europeanVehicleNumber",
+                  "ex:rides"
+                ],
+                "additionalProperties": false
+            }
+          ]
         }
       }
     },
-    "train":{
-      "properties":{
-        "id":{
-          "type":"string"
-        },
-        "electricMotor":{
-          "type":"boolean"
-        },
-        "europeanVehicleNumber":{
-          "type":"string"
-        },
-        "producer":{
-          "properties":{
-              "id":{
-                "type":"string"
-              },
-              "legalName":{
-                "type":"string"
-              }
-          },
-          "additionalProperties":false,
-          "minProperties":2
-        }
-      },
-      "additionalProperties": false,
-      "minProperties": 4
-
-    },
-    "bus":{
-      "properties":{
-        "id":{
-                "type":"string"
-              },
-        "licensePlateNumber":{
-          "type":"string"
-        },
-        "producer":{
-          "properties":{
-              "id":{
-                "type":"string"
-              },
-              "legalName":{
-                "type":"string"
-              }
-          },
-          "additionalProperties":false,
-          "minProperties":2
-        }
-      },
-      "additionalProperties":false,
-      "minProperties":3
-    },
-    "vehicle":{
-      "properties":{
-        "capacity":{
-          "type":"integer",
-          "minimum":0
-        },
-        "consumption":{
-          "type":"integer",
-          "minimum":0
-        },
-        "purchasePrice":{
-          "type":"integer"
-        }
-      },
-      "additionalProperties":false,
-      "minProperties":3,
-      "oneOf":[
-        {"$ref":"#/bus"},
-        {"$ref":"#/train"}
-      ]
-    },
-    "connection":{
-      "properties":{
-        "id":{
-                "type":"string"
-              },
-        "belongsTo":{
-          "$ref":"#/transitRoute"
-        },
-        "connects":{
-          "type":"array",
-          "minItems":2,
-          "items":[
-            {"$ref":"#/stop"}
-          ]
-        }
-      },
-      "additionalProperties":false,
-      "minProperties":3
-    },
-    "stop":{
-      "properties":{
-        "id":{
-          "type":"string"
-        },
-        "gps":{
-          "type":"string",
-          "pattern":"[0-9]{1,2}.[0-9]{7}[N], [0-9]{1,2}.[0-9]{7}[E]"
-        },
-        "arrivalTime":{
-          "type":"string",
-          "format":"time"
-        },
-        "departureTime":{
-          "type":"string",
-          "format":"time"
-        }
-      },
-      "additionalProperties":false,
-      "minProperties":4
-    },
-    "transitRoute":{
-      "properties":{
-        "id":{
-          "type":"string"
-        },
-        "length":{
-          "type":"number",
-          "minimum":0
-        },
-        "validFrom":{
-          "type": "string",
-          "format": "date-time"
-        },
-        "validTo":{
-          "type": "string",
-          "format": "date-time"
-        },
-        "startsWith":{
-          "$ref":"#/station"
-        },
-        "endsWith":{
-          "$ref":"#/station"
-        }
-      },
-      "additionalProperties":false,
-      "minProperties":6
-    },
-    "busStation":{
-    },
-    "trainStation":{
-    },
-    "station":{
-      "properties":{
-        "id":{
-          "type":"string"
-        },
-        "stationName":{
-          "type":"string"
-        },
-        "capacity":{
-          "type":"integer"
-        }
-      },
-      "additionalProperties":false,
-      "minProperties":3,
-      "oneOf":[
-        {"$ref":"#/busStation"},
-        {"$ref":"#/trainStation"}
-      ]
-    }
-    
+    "required": [
+      "@context",
+      "@id",
+      "@type",
+      "ex:legalName",
+      "ex:phone",
+      "ex:email",
+      "ex:owns"
+    ],
+    "additionalProperties": false
   }
 }
