@@ -1,0 +1,92 @@
+[
+  {
+    "@context": {
+      "gtfs": "http://vocab.gtfs.org/terms#",
+      "xsd": "https://www.w3.org/TR/xmlschema-2/#",
+
+      "ex": "http://example.org/vocabulary/",
+
+      "agency": "https://T1G4.DOX.cz/TransitAgency/#",
+      "bus": "https://T1G4.DOX.cz/Bus/#",
+      "conn": "https://T1G4.DOX.cz/Connection/#",
+      "route": "https://T1G4.DOX.cz/TransitRoute/#",
+      "stop": "https://T1G4.DOX.cz/Stop/#",
+
+      "ex:legalName": { "@container": "@language" },
+      "ex:stationName": { "@container": "@language" },
+      "ex:validFrom": { "@type": "xsd:date" },
+      "ex:validTo": { "@type": "xsd:date" },
+      "ex:arrivalTime": { "@type": "xsd:time" },
+      "ex:departureTime": { "@type": "xsd:time" }
+    },
+
+    "@id": "agency:student",
+    "@type": "gtfs:Agency",
+    "ex:legalName": { "en": "Student Agency" },
+    "ex:phone": "tel:+420-630-784-245",
+    "ex:email": "info@studentagency.cz",
+    "ex:owns": [
+      {
+        "@id": "bus:3",
+        "@type": "ex:Bus",
+        "ex:capacity": 54,
+        "ex:consumption": 98,
+        "ex:purchasePrice": 123000,
+        "ex:licensePlateNumber": "6M4 1426",
+        "ex:rides": {
+          "@id": "conn:37-1",
+          "@type": "ex:Connection",
+          "ex:belongsTo": {
+            "@id": "route:37",
+            "@type": "gtfs:Route",
+            "ex:length": 11.6,
+            "ex:validFrom": "2021-12-10",
+            "ex:validTo": "2022-12-12",
+            "ex:startsWith": {
+              "@id": "station:7",
+              "@type": "ex:TrainStation",
+              "ex:stationName": { "cs": "Malostranské náměstí" },
+              "ex:capacity": 120
+            },
+            "ex:endsWith": {
+              "@id": "station:10",
+              "@type": "ex:BusStation",
+              "ex:stationName": { "cs": "Na Vrstevnici" },
+              "ex:capacity": 35
+            }
+          }
+        },
+        "ex:connects": [
+          {
+            "@id": "stop:7",
+            "@type": "gtfs:Stop",
+            "ex:gps": "45.0034761N, 14.2635348E",
+            "ex:arrivalTime": "10:00:00",
+            "ex:departureTime": "10:01:00"
+          },
+          {
+            "@id": "stop:8",
+            "@type": "gtfs:Stop",
+            "ex:gps": "50.0916890N, 14.4438130E",
+            "ex:arrivalTime": "10:05:00",
+            "ex:departureTime": "10:06:00"
+          },
+          {
+            "@id": "stop:9",
+            "@type": "gtfs:Stop",
+            "ex:gps": "50.1004810N, 14.4645900E",
+            "ex:arrivalTime": "10:10:00",
+            "ex:departureTime": "10:11:00"
+          },
+          {
+            "@id": "stop:10",
+            "@type": "gtfs:Stop",
+            "ex:gps": "50.1083880N, 14.4757450E",
+            "ex:arrivalTime": "10:15:00",
+            "ex:departureTime": "10:16:00"
+          }
+        ]
+      }
+    ]
+  }
+]
