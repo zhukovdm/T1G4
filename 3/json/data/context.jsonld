@@ -1,0 +1,21 @@
+{
+  "@context": {
+      "gtfs": "http://vocab.gtfs.org/terms#",
+      "xsd": "https://www.w3.org/TR/xmlschema-2/#",
+
+      "ex": "http://example.org/vocabulary/",
+
+      "agency": "https://T1G4.DOX.cz/TransitAgency/#",
+      "bus": "https://T1G4.DOX.cz/Bus/#",
+      "conn": "https://T1G4.DOX.cz/Connection/#",
+      "route": "https://T1G4.DOX.cz/TransitRoute/#",
+      "stop": "https://T1G4.DOX.cz/Stop/#",
+
+      "ex:legalName": { "@container": "@language" },
+      "ex:stationName": { "@container": "@language" },
+      "ex:validFrom": { "@type": "xsd:date" },
+      "ex:validTo": { "@type": "xsd:date" },
+      "ex:arrivalTime": { "@type": "xsd:time" },
+      "ex:departureTime": { "@type": "xsd:time" }
+    }
+}
