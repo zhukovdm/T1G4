@@ -1,7 +1,11 @@
 {
   "@context": {
+    "addr": "http://www.w3.org/Addressing/schemes.html#",
     "dbpedia-owl": "https://dbpedia.org/ontology/",
     "gtfs": "http://vocab.gtfs.org/terms#",
+    "pext": "http://www.ontotext.com/proton/protonext#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "https://www.w3.org/TR/xmlschema-2/#",
 
     "ex": "http://example.org/vocabulary/",
@@ -9,6 +13,7 @@
     "agency": "https://T1G4.DOX.cz/TransitAgency/#",
     "bus": "https://T1G4.DOX.cz/Bus/#",
     "conn": "https://T1G4.DOX.cz/Connection/#",
+    "producer": "https://T1G4.DOX.cz/Producer/#",
     "route": "https://T1G4.DOX.cz/TransitRoute/#",
     "station": "https://T1G4.DOX.cz/Station/#",
     "stop": "https://T1G4.DOX.cz/Stop/#",
