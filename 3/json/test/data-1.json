@@ -1,7 +1,6 @@
 [
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-
     "@id": "agency:student",
     "@type": "gtfs:Agency",
     "ex:legalName": { "en": "Student Agency" },
@@ -36,42 +35,108 @@
               "ex:stationName": { "cs": "Na Vrstevnici" },
               "ex:capacity": 35
             }
-          }
-        },
-        "ex:connects": [
-          {
-            "@id": "stop:7",
-            "@type": "gtfs:Stop",
-            "ex:gps": "45.0034761N, 14.2635348E",
-            "ex:arrivalTime": "10:00:00",
-            "ex:departureTime": "10:01:00"
           },
-          {
-            "@id": "stop:8",
-            "@type": "gtfs:Stop",
-            "ex:gps": "50.0916890N, 14.4438130E",
-            "ex:arrivalTime": "10:05:00",
-            "ex:departureTime": "10:06:00"
-          },
-          {
-            "@id": "stop:9",
-            "@type": "gtfs:Stop",
-            "ex:gps": "50.1004810N, 14.4645900E",
-            "ex:arrivalTime": "10:10:00",
-            "ex:departureTime": "10:11:00"
-          },
-          {
-            "@id": "stop:10",
-            "@type": "gtfs:Stop",
-            "ex:gps": "50.1083880N, 14.4757450E",
-            "ex:arrivalTime": "10:15:00",
-            "ex:departureTime": "10:16:00"
-          }
-        ]
+          "ex:connects": [
+            {
+              "@id": "stop:7",
+              "@type": "gtfs:Stop",
+              "ex:gps": "45.0034761N, 14.2635348E",
+              "ex:arrivalTime": "10:00:00",
+              "ex:departureTime": "10:01:00"
+            },
+            {
+              "@id": "stop:8",
+              "@type": "gtfs:Stop",
+              "ex:gps": "50.0916890N, 14.4438130E",
+              "ex:arrivalTime": "10:05:00",
+              "ex:departureTime": "10:06:00"
+            },
+            {
+              "@id": "stop:9",
+              "@type": "gtfs:Stop",
+              "ex:gps": "50.1004810N, 14.4645900E",
+              "ex:arrivalTime": "10:10:00",
+              "ex:departureTime": "10:11:00"
+            },
+            {
+              "@id": "stop:10",
+              "@type": "gtfs:Stop",
+              "ex:gps": "50.1083880N, 14.4757450E",
+              "ex:arrivalTime": "10:15:00",
+              "ex:departureTime": "10:16:00"
+            }
+          ]
+        }
       }
     ]
   },
   {
-
+    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
+    "@id": "agency:leo",
+    "@type": "gtfs:Agency",
+    "ex:legalName": { "en": "Leo Express" },
+    "ex:phone": "tel:+420-543-140-738",
+    "ex:email": "info@leoexpress.com",
+    "ex:owns": [
+      {
+        "@id": "train:2",
+        "@type": "dbpedia-owl:Train",
+        "ex:capacity": 100,
+        "ex:consumption": 1000,
+        "ex:purchasePrice": 1000000,
+        "ex:electricMotor": true,
+        "ex:europeanVehicleNumber": "CGI 964",
+        "ex:rides": null,
+        "ex:connects": []
+      },
+      {
+        "@id": "train:3",
+        "@type": "dbpedia-owl:Train",
+        "ex:capacity": 123,
+        "ex:consumption": 300,
+        "ex:purchasePrice": 200000,
+        "ex:electricMotor": false,
+        "ex:europeanVehicleNumber": "EW 40 672",
+        "ex:rides": {
+          "@id": "conn:137-1",
+          "@type": "ex:Connection",
+          "ex:belongsTo": {
+            "@id": "route:137",
+            "@type": "gtfs:Route",
+            "ex:length": 12.2,
+            "ex:validFrom": "2021-12-13",
+            "ex:validTo": "2022-12-12",
+            "ex:startsWith": {
+              "@id": "station:11",
+              "@type": "ex:BusStation",
+              "ex:stationName": { "cs": "Sídliště Novodvorská" },
+              "ex:capacity": 25
+            },
+            "ex:endsWith": {
+              "@id": "station:12",
+              "@type": "ex:BusStation",
+              "ex:stationName": { "cs": "Limuzská" },
+              "ex:capacity": 80
+            }
+          },
+          "ex:connects": [
+            {
+              "@id": "stop:11",
+              "@type": "gtfs:Stop",
+              "ex:gps": "50.1083880N, 14.4757450E",
+              "ex:arrivalTime": "14:00:00",
+              "ex:departureTime": "14:01:00"
+            },
+            {
+              "@id": "stop:12",
+              "@type": "gtfs:Stop",
+              "ex:gps": "50.1004810N, 14.4645900E",
+              "ex:arrivalTime": "14:05:00",
+              "ex:departureTime": "14:06:00"
+            }
+          ]
+        }
+      }
+    ]
   }
 ]
