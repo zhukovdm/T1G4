@@ -9,6 +9,7 @@
       "bus": "https://T1G4.DOX.cz/Bus/#",
       "conn": "https://T1G4.DOX.cz/Connection/#",
       "route": "https://T1G4.DOX.cz/TransitRoute/#",
+      "station": "https://T1G4.DOX.cz/Station/#",
       "stop": "https://T1G4.DOX.cz/Stop/#",
 
       "ex:legalName": { "@container": "@language" },
