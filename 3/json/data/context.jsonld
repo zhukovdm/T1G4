@@ -1,22 +1,25 @@
 {
   "@context": {
-      "gtfs": "http://vocab.gtfs.org/terms#",
-      "xsd": "https://www.w3.org/TR/xmlschema-2/#",
+    "dbpedia-owl": "https://dbpedia.org/ontology/",
+    "gtfs": "http://vocab.gtfs.org/terms#",
+    "xsd": "https://www.w3.org/TR/xmlschema-2/#",
 
-      "ex": "http://example.org/vocabulary/",
+    "ex": "http://example.org/vocabulary/",
 
-      "agency": "https://T1G4.DOX.cz/TransitAgency/#",
-      "bus": "https://T1G4.DOX.cz/Bus/#",
-      "conn": "https://T1G4.DOX.cz/Connection/#",
-      "route": "https://T1G4.DOX.cz/TransitRoute/#",
-      "station": "https://T1G4.DOX.cz/Station/#",
-      "stop": "https://T1G4.DOX.cz/Stop/#",
+    "agency": "https://T1G4.DOX.cz/TransitAgency/#",
+    "bus": "https://T1G4.DOX.cz/Bus/#",
+    "conn": "https://T1G4.DOX.cz/Connection/#",
+    "route": "https://T1G4.DOX.cz/TransitRoute/#",
+    "station": "https://T1G4.DOX.cz/Station/#",
+    "stop": "https://T1G4.DOX.cz/Stop/#",
+    "train": "https://T1G4.DOX.cz/Train/#",
 
-      "ex:legalName": { "@container": "@language" },
-      "ex:stationName": { "@container": "@language" },
-      "ex:validFrom": { "@type": "xsd:date" },
-      "ex:validTo": { "@type": "xsd:date" },
-      "ex:arrivalTime": { "@type": "xsd:time" },
-      "ex:departureTime": { "@type": "xsd:time" }
-    }
+    "ex:legalName": { "@container": "@language" },
+    "ex:stationName": { "@container": "@language" },
+    "ex:electricMotor": { "@type": "xsd:boolean" },
+    "ex:validFrom": { "@type": "xsd:date" },
+    "ex:validTo": { "@type": "xsd:date" },
+    "ex:arrivalTime": { "@type": "xsd:time" },
+    "ex:departureTime": { "@type": "xsd:time" }
+  }
 }
