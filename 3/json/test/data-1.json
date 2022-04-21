@@ -86,8 +86,7 @@
         "ex:purchasePrice": 1000000,
         "ex:electricMotor": true,
         "ex:europeanVehicleNumber": "CGI 964",
-        "ex:rides": null,
-        "ex:connects": []
+        "ex:rides": null
       },
       {
         "@id": "train:3",
@@ -133,6 +132,125 @@
               "ex:gps": "50.1004810N, 14.4645900E",
               "ex:arrivalTime": "14:05:00",
               "ex:departureTime": "14:06:00"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
+    "@id": "agency:dpp",
+    "@type": "gtfs:Agency",
+    "ex:legalName": { "cz": "Dopravní podnik hl. m. Prahy" },
+    "ex:phone": "tel:+420-640-921-554",
+    "ex:email": "info@dpp.cz",
+    "ex:owns": [
+      {
+        "@id": "train:1",
+        "@type": "dbpedia-owl:Train",
+        "ex:capacity": 30,
+        "ex:consumption": 500,
+        "ex:purchasePrice": 550000,
+        "ex:electricMotor": true,
+        "ex:europeanVehicleNumber": "B 228 FK",
+        "ex:rides": {
+          "@id": "conn:1-1",
+          "@type": "ex:Connection",
+          "ex:belongsTo": {
+            "@id": "route:1",
+            "@type": "gtfs:Route",
+            "ex:length": 120.5,
+            "ex:validFrom": "2015-01-01",
+            "ex:validTo": "2020-12-31",
+            "ex:startsWith": {
+              "@id": "station:1",
+              "@type": "ex:TrainStation",
+              "ex:stationName": { "cs": "Heřmánky" },
+              "ex:capacity": 50
+            },
+            "ex:endsWith": {
+              "@id": "station:3",
+              "@type": "ex:TrainStation",
+              "ex:stationName": { "cs": "Jakubčovice nad Odrou" },
+              "ex:capacity": 60
+            }
+          },
+          "ex:connects": [
+            {
+              "@id": "stop:1",
+              "@type": "gtfs:Stop",
+              "ex:gps": "49.7134667N, 17.7582722E",
+              "ex:arrivalTime": "12:00:00",
+              "ex:departureTime": "12:01:00"
+            },
+            {
+              "@id": "stop:2",
+              "@type": "gtfs:Stop",
+              "ex:gps": "49.7741814N, 17.7475375E",
+              "ex:arrivalTime": "12:05:00",
+              "ex:departureTime": "12:06:00"
+            },
+            {
+              "@id": "stop:3",
+              "@type": "gtfs:Stop",
+              "ex:gps": "49.6969069N, 17.7886239E",
+              "ex:arrivalTime": "12:10:00",
+              "ex:departureTime": "12:11:00"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "bus:2",
+        "@type": "dbpedia-owl:Train",
+        "ex:capacity": 5,
+        "ex:consumption": 10,
+        "ex:purchasePrice": 65000,
+        "ex:licensePlateNumber": "5T1 9876",
+        "ex:rides": {
+          "@id": "conn:9-1",
+          "@type": "ex:Connection",
+          "ex:belongsTo": {
+            "@id": "route:9",
+            "@type": "gtfs:Route",
+            "ex:length": 37.0,
+            "ex:validFrom": "2005-10-01",
+            "ex:validTo": "2025-09-25",
+            "ex:startsWith": {
+              "@id": "station:4",
+              "@type": "ex:BusStation",
+              "ex:stationName": { "cs": "Oderská" },
+              "ex:capacity": 30
+            },
+            "ex:endsWith": {
+              "@id": "station:6",
+              "@type": "ex:BusStation",
+              "ex:stationName": { "cs": "Spojovací" },
+              "ex:capacity": 45
+            }
+          },
+          "ex:connects": [
+            {
+              "@id": "stop:4",
+              "@type": "gtfs:Stop",
+              "ex:gps": "49.6952592N, 17.7879486E",
+              "ex:arrivalTime": "11:00:00",
+              "ex:departureTime": "11:01:00"
+            },
+            {
+              "@id": "stop:5",
+              "@type": "gtfs:Stop",
+              "ex:gps": "49.7067069N, 17.7684325E",
+              "ex:arrivalTime": "11:05:00",
+              "ex:departureTime": "11:06:00"
+            },
+            {
+              "@id": "stop:6",
+              "@type": "gtfs:Stop",
+              "ex:gps": "49.7760583N, 17.7494736E",
+              "ex:arrivalTime": "11:10:00",
+              "ex:departureTime": "11:11:00"
             }
           ]
         }
