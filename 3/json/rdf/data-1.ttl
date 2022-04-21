@@ -1,127 +1,203 @@
-@prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
-@prefix ex: <http://example.org/vocabulary/> .
-@prefix gtfs: <http://vocab.gtfs.org/terms#> .
-@prefix pext: <http://www.ontotext.com/proton/protonext/> .
+@prefix ns1: <http://example.org/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] gtfs:agency [ ex:email "info@studentagency.cz" ;
-            ex:id "student" ;
-            ex:legalName "Student Agency" ;
-            ex:owns [ pext:vehicle [ ex:bus [ ex:licensePlateNumber "6M4 1426" ] ;
-                            ex:capacity "54" ;
-                            ex:consumption "98" ;
-                            ex:purchasePrice "123000" ;
-                            ex:rides [ ex:Connection [ ex:belongsTo [ gtfs:transitRoute [ ex:endsWith [ dbpedia-owl:station [ ex:capacity "5" ;
-                                                                            ex:kind "Train" ;
-                                                                            ex:stationName "Doliny" ] ] ;
-                                                            ex:length "11.6" ;
-                                                            ex:startsWith [ dbpedia-owl:station [ ex:capacity "120" ;
-                                                                            ex:kind "Train" ;
-                                                                            ex:stationName "Malostranské náměstí" ] ] ;
-                                                            ex:validFrom "2021-12-10" ;
-                                                            ex:validTo "2022-12-12" ] ] ;
-                                            ex:connects [ gtfs:stop [ ex:arrivalTime "10:10:00" ;
-                                                            ex:departureTime "10:11:00" ;
-                                                            ex:gps "50.1004815N, 14.4645905E" ],
-                                                        [ ex:arrivalTime "10:00:00" ;
-                                                            ex:departureTime "10:01:00" ;
-                                                            ex:gps "45.0034761N, 14.2635348E" ],
-                                                        [ ex:arrivalTime "10:05:00" ;
-                                                            ex:departureTime "10:06:00" ;
-                                                            ex:gps "50.0916895N, 14.4438135E" ],
-                                                        [ ex:arrivalTime "10:15:00" ;
-                                                            ex:departureTime "10:16:00" ;
-                                                            ex:gps "50.1083885N, 14.4757455E" ] ] ] ] ],
-                        [ ex:bus [ ex:licensePlateNumber "4A2 7983" ] ;
-                            ex:capacity "23" ;
-                            ex:consumption "42" ;
-                            ex:purchasePrice "523147" ;
-                            ex:rides [ ex:Connection [ ex:belongsTo [ gtfs:transitRoute [ ex:endsWith [ dbpedia-owl:station [ ex:capacity "80" ;
-                                                                            ex:kind "Bus" ;
-                                                                            ex:stationName "Limuzská" ] ] ;
-                                                            ex:length "12.2" ;
-                                                            ex:startsWith [ dbpedia-owl:station [ ex:capacity "35" ;
-                                                                            ex:kind "Bus" ;
-                                                                            ex:stationName "Na Vrstevnici" ] ] ;
-                                                            ex:validFrom "2021-12-13" ;
-                                                            ex:validTo "2022-12-12" ] ] ;
-                                            ex:connects [ gtfs:stop [ ex:arrivalTime "10:10:00" ;
-                                                            ex:departureTime "10:11:00" ;
-                                                            ex:gps "50.1004810N, 14.4645900E" ],
-                                                        [ ex:arrivalTime "10:15:00" ;
-                                                            ex:departureTime "10:16:00" ;
-                                                            ex:gps "50.1083880N, 14.4757450E" ] ] ] ] ] ] ;
-            ex:phone "420630784245" ],
-        [ ex:email "info@leoexpress.com" ;
-            ex:legalName "Leo Express" ;
-            ex:owns [ pext:vehicle [ ex:capacity "123" ;
-                            ex:consumption "300" ;
-                            ex:purchasePrice "200000" ;
-                            ex:rides [ ex:Connection [ ex:belongsTo [ gtfs:transitRoute [ ex:endsWith [ dbpedia-owl:station [ ex:capacity "80" ;
-                                                                            ex:kind "Bus" ;
-                                                                            ex:stationName "Limuzská" ] ] ;
-                                                            ex:length "12.2" ;
-                                                            ex:startsWith [ ] ;
-                                                            ex:validFrom "2021-12-13" ;
-                                                            ex:validTo "2022-12-12" ] ] ;
-                                            ex:connects [ gtfs:stop [ ex:arrivalTime "14:05:00" ;
-                                                            ex:departureTime "14:06:00" ;
-                                                            ex:gps "50.1004810N, 14.4645900E" ],
-                                                        [ ex:arrivalTime "14:00:00" ;
-                                                            ex:departureTime "14:01:00" ;
-                                                            ex:gps "50.1083880N, 14.4757450E" ] ] ] ] ;
-                            dbpedia-owl:train [ ex:electricMotor "false" ;
-                                    ex:europeanVehicleNumber "EW 40 672" ] ],
-                        [ ex:capacity "100" ;
-                            ex:consumption "1000" ;
-                            ex:purchasePrice "1000000" ;
-                            dbpedia-owl:train [ ex:electricMotor "true" ;
-                                    ex:europeanVehicleNumber "CGI 964" ] ] ] ;
-            ex:phone "420543140738" ],
-        [ ex:email "info@dpp.cz" ;
-            ex:legalName "Dopravní podnik hl.m.Prahy" ;
-            ex:owns [ pext:vehicle [ ex:bus [ ex:licensePlateNumber "5T1 9876" ] ;
-                            ex:capacity "5" ;
-                            ex:consumption "10" ;
-                            ex:purchasePrice "65000" ;
-                            ex:rides [ ex:Connection [ ex:belongsTo [ gtfs:transitRoute [ ex:endsWith [ dbpedia-owl:station [ ex:capacity "45" ;
-                                                                            ex:kind "Bus" ;
-                                                                            ex:stationName "Spojovací" ] ] ;
-                                                            ex:length "37.0" ;
-                                                            ex:startsWith [ dbpedia-owl:station [ ex:capacity "30" ;
-                                                                            ex:kind "Bus" ;
-                                                                            ex:stationName "Oderská" ] ] ;
-                                                            ex:validFrom "2005-10-01" ;
-                                                            ex:validTo "2025-09-25" ] ] ;
-                                            ex:connects [ gtfs:stop [ ex:arrivalTime "11:00:00" ;
-                                                            ex:departureTime "11:01:00" ;
-                                                            ex:gps "49.6952592N, 17.7879486E" ],
-                                                        [ ex:arrivalTime "11:10:00" ;
-                                                            ex:departureTime "11:11:00" ;
-                                                            ex:gps "49.7760583N, 17.7494736E" ],
-                                                        [ ex:arrivalTime "11:05:00" ;
-                                                            ex:departureTime "11:06:00" ;
-                                                            ex:gps "49.7067069N, 17.7684325E" ] ] ] ] ],
-                        [ ex:capacity "30" ;
-                            ex:consumption "500" ;
-                            ex:purchasePrice "550000" ;
-                            ex:rides [ ex:Connection [ ex:belongsTo [ gtfs:transitRoute [ ex:alidFrom "2015-01-01" ;
-                                                            ex:endsWith [ dbpedia-owl:station [ ex:capacity "60" ;
-                                                                            ex:kind "Train" ;
-                                                                            ex:stationName "Jakubčovice nad Odrou" ] ] ;
-                                                            ex:length "120.5" ;
-                                                            ex:startsWith [ dbpedia-owl:station [ ex:capacity "50" ;
-                                                                            ex:kind "Train" ;
-                                                                            ex:stationName "Heřmánky" ] ] ;
-                                                            ex:validTo "2020-12-31" ] ] ;
-                                            ex:connects [ gtfs:stop [ ex:arrivalTime "12:00:00" ;
-                                                            ex:departureTime "12:01:00" ;
-                                                            ex:gps "49.7134667N, 17.7582722E" ],
-                                                        [ ex:arrivalTime "12:10:00" ;
-                                                            ex:departureTime "12:11:00" ;
-                                                            ex:gps "49.6969069N, 17.7886239E" ],
-                                                        [ ex:arrivalTime "12:05:00" ;
-                                                            ex:departureTime "12:06:00" ;
-                                                            ex:gps "49.7741814N, 17.7475375E" ] ] ] ] ;
-                            dbpedia-owl:train [ ex:electricMotor "true" ;
-                                    ex:europeanVehicleNumber "B 228 FK" ] ] ] ;
-            ex:phone "420640921554" ] .
+<https://T1G4.DOX.cz/TransitAgency/#dpp> a <http://vocab.gtfs.org/terms#Agency> ;
+    ns1:email "info@dpp.cz" ;
+    ns1:legalName "Dopravní podnik hl. m. Prahy"@cz ;
+    ns1:owns <https://T1G4.DOX.cz/Bus/#2>,
+        <https://T1G4.DOX.cz/Train/#1> ;
+    ns1:phone "tel:+420-640-921-554" .
+
+<https://T1G4.DOX.cz/TransitAgency/#leo> a <http://vocab.gtfs.org/terms#Agency> ;
+    ns1:email "info@leoexpress.com" ;
+    ns1:legalName "Leo Express"@en ;
+    ns1:owns <https://T1G4.DOX.cz/Train/#2>,
+        <https://T1G4.DOX.cz/Train/#3> ;
+    ns1:phone "tel:+420-543-140-738" .
+
+<https://T1G4.DOX.cz/TransitAgency/#student> a <http://vocab.gtfs.org/terms#Agency> ;
+    ns1:email "info@studentagency.cz" ;
+    ns1:legalName "Student Agency"@en ;
+    ns1:owns <https://T1G4.DOX.cz/Bus/#3> ;
+    ns1:phone "tel:+420-630-784-245" .
+
+<https://T1G4.DOX.cz/Bus/#2> a ns1:Bus ;
+    ns1:capacity 5 ;
+    ns1:consumption 10 ;
+    ns1:licensePlateNumber "5T1 9876" ;
+    ns1:purchasePrice 65000 ;
+    ns1:rides <https://T1G4.DOX.cz/Connection/#9-1> .
+
+<https://T1G4.DOX.cz/Bus/#3> a ns1:Bus ;
+    ns1:capacity 54 ;
+    ns1:consumption 98 ;
+    ns1:licensePlateNumber "6M4 1426" ;
+    ns1:purchasePrice 123000 ;
+    ns1:rides <https://T1G4.DOX.cz/Connection/#37-1> .
+
+<https://T1G4.DOX.cz/Connection/#1-1> a ns1:Connection ;
+    ns1:belongsTo <https://T1G4.DOX.cz/TransitRoute/#1> ;
+    ns1:connects <https://T1G4.DOX.cz/Stop/#1>,
+        <https://T1G4.DOX.cz/Stop/#2>,
+        <https://T1G4.DOX.cz/Stop/#3> .
+
+<https://T1G4.DOX.cz/Connection/#137-1> a ns1:Connection ;
+    ns1:belongsTo <https://T1G4.DOX.cz/TransitRoute/#137> ;
+    ns1:connects <https://T1G4.DOX.cz/Stop/#11>,
+        <https://T1G4.DOX.cz/Stop/#12> .
+
+<https://T1G4.DOX.cz/Connection/#37-1> a ns1:Connection ;
+    ns1:belongsTo <https://T1G4.DOX.cz/TransitRoute/#37> ;
+    ns1:connects <https://T1G4.DOX.cz/Stop/#10>,
+        <https://T1G4.DOX.cz/Stop/#7>,
+        <https://T1G4.DOX.cz/Stop/#8>,
+        <https://T1G4.DOX.cz/Stop/#9> .
+
+<https://T1G4.DOX.cz/Connection/#9-1> a ns1:Connection ;
+    ns1:belongsTo <https://T1G4.DOX.cz/TransitRoute/#9> ;
+    ns1:connects <https://T1G4.DOX.cz/Stop/#4>,
+        <https://T1G4.DOX.cz/Stop/#5>,
+        <https://T1G4.DOX.cz/Stop/#6> .
+
+<https://T1G4.DOX.cz/Station/#1> a ns1:TrainStation ;
+    ns1:capacity 50 ;
+    ns1:stationName "Heřmánky"@cs .
+
+<https://T1G4.DOX.cz/Station/#10> a ns1:BusStation ;
+    ns1:capacity 35 ;
+    ns1:stationName "Na Vrstevnici"@cs .
+
+<https://T1G4.DOX.cz/Station/#11> a ns1:BusStation ;
+    ns1:capacity 25 ;
+    ns1:stationName "Sídliště Novodvorská"@cs .
+
+<https://T1G4.DOX.cz/Station/#12> a ns1:BusStation ;
+    ns1:capacity 80 ;
+    ns1:stationName "Limuzská"@cs .
+
+<https://T1G4.DOX.cz/Station/#3> a ns1:TrainStation ;
+    ns1:capacity 60 ;
+    ns1:stationName "Jakubčovice nad Odrou"@cs .
+
+<https://T1G4.DOX.cz/Station/#4> a ns1:BusStation ;
+    ns1:capacity 30 ;
+    ns1:stationName "Oderská"@cs .
+
+<https://T1G4.DOX.cz/Station/#6> a ns1:BusStation ;
+    ns1:capacity 45 ;
+    ns1:stationName "Spojovací"@cs .
+
+<https://T1G4.DOX.cz/Station/#7> a ns1:TrainStation ;
+    ns1:capacity 120 ;
+    ns1:stationName "Malostranské náměstí"@cs .
+
+<https://T1G4.DOX.cz/Stop/#1> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "12:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "12:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "49.7134667N, 17.7582722E" .
+
+<https://T1G4.DOX.cz/Stop/#10> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "10:15:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "10:16:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "50.1083880N, 14.4757450E" .
+
+<https://T1G4.DOX.cz/Stop/#11> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "14:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "14:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "50.1083880N, 14.4757450E" .
+
+<https://T1G4.DOX.cz/Stop/#12> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "14:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "14:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "50.1004810N, 14.4645900E" .
+
+<https://T1G4.DOX.cz/Stop/#2> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "12:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "12:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "49.7741814N, 17.7475375E" .
+
+<https://T1G4.DOX.cz/Stop/#3> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "12:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "12:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "49.6969069N, 17.7886239E" .
+
+<https://T1G4.DOX.cz/Stop/#4> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "11:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "11:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "49.6952592N, 17.7879486E" .
+
+<https://T1G4.DOX.cz/Stop/#5> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "11:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "11:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "49.7067069N, 17.7684325E" .
+
+<https://T1G4.DOX.cz/Stop/#6> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "11:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "11:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "49.7760583N, 17.7494736E" .
+
+<https://T1G4.DOX.cz/Stop/#7> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "10:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "10:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "45.0034761N, 14.2635348E" .
+
+<https://T1G4.DOX.cz/Stop/#8> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "10:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "10:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "50.0916890N, 14.4438130E" .
+
+<https://T1G4.DOX.cz/Stop/#9> a <http://vocab.gtfs.org/terms#Stop> ;
+    ns1:arrivalTime "10:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:departureTime "10:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:gps "50.1004810N, 14.4645900E" .
+
+<https://T1G4.DOX.cz/Train/#1> a <https://dbpedia.org/ontology/Train> ;
+    ns1:capacity 30 ;
+    ns1:consumption 500 ;
+    ns1:electricMotor "true"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
+    ns1:europeanVehicleNumber "B 228 FK" ;
+    ns1:purchasePrice 550000 ;
+    ns1:rides <https://T1G4.DOX.cz/Connection/#1-1> .
+
+<https://T1G4.DOX.cz/Train/#2> a <https://dbpedia.org/ontology/Train> ;
+    ns1:capacity 100 ;
+    ns1:consumption 1000 ;
+    ns1:electricMotor "true"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
+    ns1:europeanVehicleNumber "CGI 964" ;
+    ns1:purchasePrice 1000000 .
+
+<https://T1G4.DOX.cz/Train/#3> a <https://dbpedia.org/ontology/Train> ;
+    ns1:capacity 123 ;
+    ns1:consumption 300 ;
+    ns1:electricMotor "false"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
+    ns1:europeanVehicleNumber "EW 40 672" ;
+    ns1:purchasePrice 200000 ;
+    ns1:rides <https://T1G4.DOX.cz/Connection/#137-1> .
+
+<https://T1G4.DOX.cz/TransitRoute/#1> a <http://vocab.gtfs.org/terms#Route> ;
+    ns1:endsWith <https://T1G4.DOX.cz/Station/#3> ;
+    ns1:length 1.205e+02 ;
+    ns1:startsWith <https://T1G4.DOX.cz/Station/#1> ;
+    ns1:validFrom "2015-01-01"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
+    ns1:validTo "2020-12-31"^^<https://www.w3.org/TR/xmlschema-2/#date> .
+
+<https://T1G4.DOX.cz/TransitRoute/#137> a <http://vocab.gtfs.org/terms#Route> ;
+    ns1:endsWith <https://T1G4.DOX.cz/Station/#12> ;
+    ns1:length 1.22e+01 ;
+    ns1:startsWith <https://T1G4.DOX.cz/Station/#11> ;
+    ns1:validFrom "2021-12-13"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
+    ns1:validTo "2022-12-12"^^<https://www.w3.org/TR/xmlschema-2/#date> .
+
+<https://T1G4.DOX.cz/TransitRoute/#37> a <http://vocab.gtfs.org/terms#Route> ;
+    ns1:endsWith <https://T1G4.DOX.cz/Station/#10> ;
+    ns1:length 1.16e+01 ;
+    ns1:startsWith <https://T1G4.DOX.cz/Station/#7> ;
+    ns1:validFrom "2021-12-10"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
+    ns1:validTo "2022-12-12"^^<https://www.w3.org/TR/xmlschema-2/#date> .
+
+<https://T1G4.DOX.cz/TransitRoute/#9> a <http://vocab.gtfs.org/terms#Route> ;
+    ns1:endsWith <https://T1G4.DOX.cz/Station/#6> ;
+    ns1:length 3.7e+01 ;
+    ns1:startsWith <https://T1G4.DOX.cz/Station/#4> ;
+    ns1:validFrom "2005-10-01"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
+    ns1:validTo "2025-09-25"^^<https://www.w3.org/TR/xmlschema-2/#date> .
