@@ -1,13 +1,50 @@
+[
+  {
+    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
+    "@id": "producer:tatra",
+    "@type": "ex:Producer",
+    "ex:legalName": { "cs": "TATRA TRUCKS a.s." },
+    "ex:produces": [
+
+    ]
+  },
+  {
+    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
+    "@id": "producer:man",
+    "@type": "ex:Producer",
+    "ex:legalName": { "de": "Maschinenfabrik Augsburg-Nürnberg" },
+    "ex:produces": [
+
+    ]
+  },
+  {
+    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
+    "@id": "producer:siemens",
+    "@type": "ex:Producer",
+    "ex:legalName": { "de": "Siemens AG" },
+    "ex:produces": [
+
+    ]
+  },
+  {
+    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
+    "@id": "producer:bombardier",
+    "@type": "ex:Producer",
+    "ex:legalName": { "en": "Bombardier Inc." },
+    "ex:produces": [
+      
+    ]
+  }
+]
+
+
+
+
 {
-   "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context-1.jsonld",
+  "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context-1.jsonld",
     "@noNamespaceSchemaLocation": "../schemas/schema-2.xsd",
     "ex:producers": [
        {
-          "id": "tatra",
-          "ex:legalName": {
-             "@lang": "cs",
-             "#text": "TATRA TRUCKS a.s."
-          },
           "ex:vehicles": [
              {
                 "ex:capacity": "23",

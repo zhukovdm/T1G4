@@ -1,1 +1,10 @@
 {
+  "$id": "https://T1G4.DOX.cz/schemas/produces",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Producers",
+  "description": "List of producers",
+  "type": "array",
+  "items": {
+    
+  }
+}
