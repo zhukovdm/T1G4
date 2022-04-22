@@ -38,7 +38,7 @@
       "ex:owns": {
         "type": "array",
         "items": {
-          "anyOf": [
+          "oneOf": [
             {
               "$id": "https://T1G4.DOX.cz/schemas/bus",
               "type": "object",
