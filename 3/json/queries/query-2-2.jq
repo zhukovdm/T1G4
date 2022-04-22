@@ -1,8 +1,15 @@
-.agencies[] |
-try.owns.vehicle[] |
-select(.purchasePrice|tonumber>150000) |
-select(
-    (.producer.legalName |startswith("B")) or
-    (.producer.legalName | startswith("S"))
-) |
-try.producer | {legalName : .legalName}
+[ .[]
+| select
+  ( ."ex:legalName"
+  | has("de")
+  )
+| select
+  ( ."ex:produces"[]
+  | select
+    (."ex:purchasePrice" > 150000
+    )
+  )
+| { producer: ."ex:legalName"."de"
+  }
+]
+| unique_by(.producer)
