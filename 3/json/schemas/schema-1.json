@@ -22,7 +22,7 @@
       "ex:legalName": {
         "type": "object",
         "patternProperties": {
-          "^(en)|(cz)$": { "type": "string" }
+          "^(en)|(cs)$": { "type": "string" }
         },
         "minProperties": 1,
         "additionalProperties": false

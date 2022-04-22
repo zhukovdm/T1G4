@@ -142,7 +142,7 @@
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
     "@id": "agency:dpp",
     "@type": "gtfs:Agency",
-    "ex:legalName": { "cz": "Dopravní podnik hl. m. Prahy" },
+    "ex:legalName": { "cs": "Dopravní podnik hl. m. Prahy" },
     "ex:phone": "tel:+420-640-921-554",
     "ex:email": "info@dpp.cz",
     "ex:owns": [
