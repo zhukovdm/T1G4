@@ -2,8 +2,8 @@ query-1-1.jq
 Select all routes served by train and having length over 20 km.
 
 query-1-2.jq
-Get name, email and phone of an agency which owns bus that rides a connection
-with more than two stops //add: remove duplicates
+Get name, email and phone of an agency which owns bus that rides
+a connection with more than two stops //add: remove duplicates
 
 query-1-3.jq
 Select all names of stations with which starts a route that belongs
