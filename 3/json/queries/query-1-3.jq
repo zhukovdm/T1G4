@@ -1,5 +1,12 @@
-.agencies[] | .owns.vehicle[] | select (.train , .rides) | 
-.rides.Connection.belongsTo.transitRoute.startsWith.station.stationName | 
-if . != null then . else "null" end | 
-select( . != "null" ) | 
-{ stationName: . }
+[.[]
+| ."ex:owns"[]
+| select
+  ( ."@id"
+  | startswith("train")
+  )
+| { name: ."ex:rides"."ex:belongsTo"."ex:startsWith"."ex:stationName"."cs"
+  }
+| select
+  ( .name != null
+  )
+]

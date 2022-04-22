@@ -9,10 +9,9 @@
   | ."ex:rides"."ex:connects"
   | length > 2
   )
-| {
-    name: ."@id",
-    email: ."ex:email",
-    phone: ."ex:phone"
+| { name: ."@id"
+  , email: ."ex:email"
+  , phone: ."ex:phone"
   }
 ]
 | unique_by(.name)
