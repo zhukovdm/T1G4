@@ -1,0 +1,76 @@
+{
+  "$id": "https://T1G4.DOX.cz/schemas/stations",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stations",
+  "description": "List of stations",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "@context": {
+        "type": "string",
+        "format": "iri"
+      },
+      "@id": {
+        "type": "string",
+        "pattern": "^station:[A-Za-z0-9]+$"
+      },
+      "@type": {
+        "type": "string",
+        "pattern": "^(ex:BusStation)|(ex:TrainStation)$"
+      },
+      "ex:stationName": {
+        "type": "object",
+        "patternProperties": {
+          "^cs$": { "type": "string" }
+        },
+        "minProperties": 1,
+        "additionalProperties": false
+      },
+      "ex:capacity": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "ex:serves": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string",
+              "pattern": "^stop:[0-9]+$"
+            },
+            "@type": {
+              "type": "string",
+              "pattern": "^gtfs:Stop$"
+            },
+            "ex:gps": {
+              "type": "string",
+              "pattern": "^[0-9]{1,2}\\.[0-9]{7}N, [0-9]{1,2}\\.[0-9]{7}E$"
+            },
+            "ex:arrivalTime": {
+              "type": "string",
+              "format": "time"
+            },
+            "ex:departureTime": {
+              "type": "string",
+              "format": "time"
+            },
+            "ex:followedBy": {
+              "type": "string",
+              "pattern": "^stop:[0-9]+$"
+            }
+          },
+          "required": [
+            "@id",
+            "@type",
+            "ex:gps",
+            "ex:arrivalTime",
+            "ex:departureTime"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}
