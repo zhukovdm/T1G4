@@ -1,10 +1,128 @@
 {
-  "$id": "https://T1G4.DOX.cz/schemas/produces",
+  "$id": "https://T1G4.DOX.cz/schemas/producers",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Producers",
   "description": "List of producers",
   "type": "array",
   "items": {
-    
+    "type": "object",
+    "properties": {
+      "@context": {
+        "type": "string",
+        "format": "iri"
+      },
+      "@id": {
+        "type": "string",
+        "pattern": "^producer:[A-Za-z0-9]+$"
+      },
+      "@type": {
+        "type": "string",
+        "pattern": "^ex:Producer$"
+      },
+      "ex:legalName": {
+        "type": "object",
+        "patternProperties": {
+          "(en)|(cs)|(de)": { "type": "string" }
+        },
+        "minProperties": 1,
+        "additionalProperties": false
+      },
+      "ex:produces": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "pattern": "^bus:[0-9]+$"
+                },
+                "@type": {
+                  "type": "string",
+                  "pattern": "^ex:Bus$"
+                },
+                "ex:capacity": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:consumption": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:purchasePrice": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:licensePlateNumber": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "@id",
+                "@type",
+                "ex:capacity",
+                "ex:consumption",
+                "ex:purchasePrice",
+                "ex:licensePlateNumber"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "pattern": "^train:[0-9]+$"
+                },
+                "@type": {
+                  "type": "string",
+                  "pattern": "^dbpedia-owl:Train$"
+                },
+                "ex:capacity": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:consumption": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:purchasePrice": {
+                  "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
+                },
+                "ex:electricMotor": {
+                  "type": "boolean"
+                },
+                "ex:europeanVehicleNumber": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "@id",
+                "@type",
+                "ex:capacity",
+                "ex:consumption",
+                "ex:purchasePrice",
+                "ex:electricMotor",
+                "ex:europeanVehicleNumber"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      }
+    },
+    "required": [
+      "@context",
+      "@id",
+      "@type",
+      "ex:legalName",
+      "ex:produces"
+    ],
+    "additionalProperties": false
+  },
+  "$defs": {
+    "positive_int": {
+      "$id": "https://T1G4.DOX.cz/schemas/positive_int",
+      "type": "integer",
+      "minimum": 1
+    }
   }
 }
