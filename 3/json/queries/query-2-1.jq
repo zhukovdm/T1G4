@@ -1,4 +1,16 @@
-.agencies[] | try.owns.vehicle[] |
-select(.producer.legalName=="Siemens AG") |
-.bus | select(.licensePlateNumber!=null) |
-{licensePlateNumber: .licensePlateNumber}
+[ .[]
+| select
+  ( ."@id"
+  | endswith("tatra")
+  )
+| ."ex:produces"[]
+| select
+  ( ."@id"
+  | startswith("bus")
+  )
+| select
+  ( ."ex:consumption" > 20
+  )
+| { license: ."ex:licensePlateNumber"
+  }
+]

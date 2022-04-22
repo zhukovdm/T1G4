@@ -10,8 +10,8 @@ Select all names of stations with which starts a route that belongs
 to connection which is ridden by a train
 
 query-2-1.jq
-Find license plate numbers of all buses produced by Siemens with at least
-30 units of consumption.
+Find license plate numbers of all buses produced by Tatra
+with at least 20 units of consumption.
 
 query-2-2.jq
 Find Producers, which had produced vehicles with purchase price greater than
