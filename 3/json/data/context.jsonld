@@ -19,6 +19,8 @@
     "stop": "https://T1G4.DOX.cz/Stop/#",
     "train": "https://T1G4.DOX.cz/Train/#",
 
+    "rdfs:label": { "@container": "@language" },
+    "rdfs:comment": { "@container": "@language" },
     "ex:legalName": { "@container": "@language" },
     "ex:stationName": { "@container": "@language" },
     "ex:electricMotor": { "@type": "xsd:boolean" },
