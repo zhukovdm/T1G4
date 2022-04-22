@@ -1,4 +1,4 @@
-  .[]
+[ .[]
 | ."ex:owns"[]
 | select
   ( ."@id"
@@ -11,3 +11,4 @@
     lastStation: ."ex:endsWith"."ex:stationName"."cs",
     length: ."ex:length"
   }
+]
