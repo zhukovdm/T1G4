@@ -206,7 +206,7 @@ ex:startsWith a rdf:Property ;
 
 ex:endsWith a rdf:Property ;
     rdfs:label "ends with"@end ;
-    rdfs:comment "Name of a stop, where the route ends."@en ;
+    rdfs:comment "Name of a station, where the route ends."@en ;
     rdfs:domain gtfs:Route ;
     rdfs:range dbpedia-owl:Station .
 
