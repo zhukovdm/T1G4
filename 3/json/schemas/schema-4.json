@@ -1,0 +1,52 @@
+{
+  "$id": "https://T1G4.DOX.cz/schemas/entities",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Entities",
+  "description": "List of entities",
+  "type": "array",
+  "items": {
+    "$id": "https://T1G4.DOX.cz/schemas/entity",
+    "type": "object",
+    "properties": {
+      "@context": {
+        "type": "string",
+        "format": "iri"
+      },
+      "@id": { "type": "string" },
+      "@type": { "type": "string" },
+      "rdfs:label": { "$ref": "#/$defs/lang_pack" },
+      "rdfs:comment": { "$ref": "#/$defs/lang_pack" },
+      "rdfs:domain": { "$ref": "#/$defs/func_pack" },
+      "rdfs:range": { "$ref": "#/$defs/func_pack" },
+      "rdfs:subClassOf": { "$ref": "#/$defs/func_pack" }
+    },
+    "required": [
+      "@context",
+      "@id"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+      "lang_pack": {
+        "type": "object",
+        "patternProperties": {
+          "^(en)|(cs)$": { "type": "string" }
+        },
+        "minProperties": 1,
+        "additionalProperties": false
+      },
+      "func_pack": {
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "pattern": "^[A-Za-z-]+:[A-Za-z-]+$"
+          }
+        },
+        "required": [
+          "@id"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}
