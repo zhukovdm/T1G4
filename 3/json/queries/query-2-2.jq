@@ -6,7 +6,7 @@
 | select
   ( ."ex:produces"[]
   | select
-    (."ex:purchasePrice" > 150000
+    ( ."ex:purchasePrice" > 150000
     )
   )
 | { producer: ."ex:legalName"."de"
