@@ -1,11 +1,56 @@
 <mxfile host="65bd71144e">
     <diagram id="FuOvQAU6wyrWDUQQwPfa" name="Page-1">
-        <mxGraphModel dx="527" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1111" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="5" value="just something so this isnt an empty file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="20" y="30" width="170" height="30" as="geometry"/>
+                <mxCell id="6" value="Train(trainID, capacity, consumption, purchasePrice, electricMotor, europeanVehicleNumber, producerID), producerID is from Producer.producerID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="10" width="780" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Bus(busID, capacity, consumption, puchasePrice, licensePlate, producerID), producerID is from Producer.producerID" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="50" width="630" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Producer(producerID, legalName)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="80" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Connection(connectionID, routeID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="110" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Rides(trainID/busID, connectionID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="140" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Agency(agencyID, legalName)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="170" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Phone(phoneID, phone, agencyID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="200" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Email(emailID, email, agencyID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="230" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Owns(agencyID, busID/trainID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="260" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="140" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Stop(stopID, gps, arrivalTime, departureTime, connectionID, busID/trainID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="290" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="FollowedBy(stopID, stopID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="320" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Route(length, validFrom, validTo, routeID, trainStationID/busStationID, trainStationID/busStationID)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="350" width="530" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="TrainStation(trainStationID, stationName, capacity)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="380" width="280" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="BusStation(busStationID, stationName, capacity)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="410" width="270" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
