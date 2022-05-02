@@ -347,25 +347,117 @@
                 "columns": [
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
+                        "name":"StopID",
+                        "title":"Stop Id",
+                        "dc:description":"gtfs:stop",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"GPS",
+                        "title":"GPS",
+                        "dc:description":"Location of the stop",
+                        "datatype":"string",
+                        "pattern":"^[0-9]{1,2}\\.[0-9]{7}N, [0-9]{1,2}\\.[0-9]{7}E$",
+                        "required":true
+                    },{
+                        "@type":"Column",
+                        "name":"ArrivalTime",
+                        "title":"ArrivalTime",
+                        "dc:description":"Arrival time of a vehicle",
+                        "datatype":"datetime",
+                        "required":true
+                    },{
+                        "@type":"Column",
+                        "name":"DepartureTime",
+                        "title":"DepartureTime",
+                        "dc:description":"Departure time of a vehicle",
+                        "datatype":"datetime",
+                        "required":true
+                    }
+                    ,{
+                        "@type":"Column",
+                        "name":"ConnectionID",
+                        "title":"ConnectionId",
+                        "dc:description":"Connection to which this stop belongs",
+                        "datatype":"integer",
+                        "required":true
+                    },{
+                        "@type":"Column",
+                        "name":"TrainID/BusID",
+                        "title":"Train or bus Id",
+                        "dc:description":"Train or bus serving this stop",
+                        "datatype":"integer",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"StopID",
+                "foreignKeys":["TrainID/BusID","ConnectionID"]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"FollowingID",
+                        "title":"Following Id",
+                        "dc:description":"Identifier of the \"followed by\" tuple",
                         "datatype":"",
                         "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
+                        "name":"Stop1ID",
+                        "title":"Stop",
+                        "dc:description":"A first stop of the \"followed by\" tuple",
                         "datatype":"",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"Stop2ID",
+                        "title":"Following stop",
+                        "dc:description":"Second stop of the \"followed by\" tuple",
+                        "datatype":"integer",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"FollowingID",
+                "foreignKeys":["Stop1ID","Stop2ID"]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"TrainStationID",
+                        "title":"Train station Id",
+                        "dc:description":"Station for train",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"StationName",
+                        "title":"Station name",
+                        "dc:description":"dbpedia-owl:Station",
+                        "datatype":"string",
                         "required":true
                     },{
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"Capacity",
+                        "title":"Capacity",
+                        "dc:description":"Number of people who can fit to a structure",
+                        "datatype":"integer",
                         "required":true
                     },{
                         "@type":"Column",
@@ -376,7 +468,7 @@
                         "required":true
                     }
                 ],
-                "primaryKey":"",
+                "primaryKey":"TrainStation",
                 "foreignKeys":[]
             }
         },
@@ -388,25 +480,25 @@
                 "columns": [
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"BusStationID",
+                        "title":"Bus station Id",
+                        "dc:description":"Station for train",
+                        "datatype":"integer",
                         "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"StationName",
+                        "title":"Station name",
+                        "dc:description":"dbpedia-owl:Station",
+                        "datatype":"string",
                         "required":true
                     },{
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"Capacity",
+                        "title":"Capacity",
+                        "dc:description":"Number of people who can fit to a structure",
+                        "datatype":"integer",
                         "required":true
                     },{
                         "@type":"Column",
@@ -417,90 +509,11 @@
                         "required":true
                     }
                 ],
-                "primaryKey":"",
+                "primaryKey":"BusStationID",
                 "foreignKeys":[]
             }
-        },{
-            "@type":"Table",
-            "url":"",
-            "tableSchema":{
-                "@type":"schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    }
-                ],
-                "primaryKey":"",
-                "foreignKeys":[]
-            }
-        },{
-            "@type":"Table",
-            "url":"",
-            "tableSchema":{
-                "@type":"schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    }
-                ],
-                "primaryKey":"",
-                "foreignKeys":[]
-            }
-        },{
+        },
+        {
             "@type":"Table",
             "url":"",
             "tableSchema":{
