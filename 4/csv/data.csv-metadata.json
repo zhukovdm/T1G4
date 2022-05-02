@@ -29,28 +29,80 @@
                         "required":true,
                         "lang":["cs","en"]
                     },
+                    
+                    
+                ],
+                "primaryKey":"AgencyID",
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
                     {
                         "@type":"Column",
-                        "name":"Phone",
-                        "title":"Phone",
-                        "dc:description":"Telephone contact of the agency",
+                        "name":"AgencyID",
+                        "title":"AgencyId",
+                        "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
-                        "pattern": "^tel:\\+[0-9-]+$",
-                        "required":false,
+                        "required":true,
                         "lang":["cs","en"]
                     },
                     {
                         "@type":"Column",
                         "name":"Email",
                         "title":"E-mail",
-                        "dc:description":"An e-mail contact of the agency",
+                        "dc:description":"An e-mail contact of an agency",
+                        "datatype":"string",
+                        "format":"email",
+                        "required":true,
+                        "lang":["cs","en"]
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"Phone",
+                        "title":"Phone",
+                        "dc:description":"Telephone contact of an agency",
+                        "datatype":"string",
+                        "pattern": "^tel:\\+[0-9-]+$",
+                        "required":false,
+                        "lang":["cs","en"]
+                    }
+                ],
+                "primaryKey":"",
+                "foreignKeys":""
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"AgencyID",
+                        "title":"AgencyId",
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":["cs","en"]
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"Email",
+                        "title":"E-mail",
+                        "dc:description":"An e-mail contact of an agency",
                         "datatype":"string",
                         "format":"email",
                         "required":true,
                         "lang":["cs","en"]
                     }
                 ],
-                "primaryKey":"AgencyID",
+                "primaryKey":"",
+                "foreignKeys":""
             }
         },
         {
