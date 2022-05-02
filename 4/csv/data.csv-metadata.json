@@ -1,5 +1,5 @@
 {
-    "@id":"",
+    "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-csv.metadata.jsonld",
     "@context":[
 
     ],
@@ -7,52 +7,51 @@
     "tables":[
         {
         "@type":"Table",
-        "url":"",
+        "url":"https://T1G4.DOX.cz/Agencies",
         "tableSchema":{
             "@type":"schema",
-            
             "columns": [
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"AgencyID",
+                        "title":"AgencyId",
+                        "dc:description":"Unique identifier for the agency",
+                        "datatype":"string",
                         "required":true,
-                        "lang":""
+                        "lang":["cs","en"]
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"LegalName",
+                        "title":"LegalName",
+                        "dc:description":"Official name of the company",
+                        "datatype":"string",
                         "required":true,
-                        "lang":""
+                        "lang":["cs","en"]
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true,
-                        "lang":""
+                        "name":"Phone",
+                        "title":"Phone",
+                        "dc:description":"Telephone contact of the agency",
+                        "datatype":"string",
+                        "pattern": "^tel:\\+[0-9-]+$",
+                        "required":false,
+                        "lang":["cs","en"]
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"Email",
+                        "title":"E-mail",
+                        "dc:description":"An e-mail contact of the agency",
+                        "datatype":"string",
+                        "format":"email",
                         "required":true,
-                        "lang":""
+                        "lang":["cs","en"]
                     }
                 ],
-                "primaryKey":"",
-                "foreignKeys":""
+                "primaryKey":"AgencyID",
             }
-            
         },
         {
             "@type":"Table",
