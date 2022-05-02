@@ -7,7 +7,7 @@
     "tables":[
         {
         "@type":"Table",
-        "url":"https://T1G4.DOX.cz/Agencies",
+        "url":"https://T1G4.DOX.cz/Agency",
         "tableSchema":{
             "@type":"schema",
             "columns": [
@@ -35,7 +35,7 @@
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Phone",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -60,12 +60,20 @@
                     }
                 ],
                 "primaryKey":"Phone",
-                "foreignKeys":["AgencyID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "AgencyID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Agency",
+                            "columnReference": "AgencyID"
+                        }
+                    }
+                ]
             }
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Email",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -90,12 +98,20 @@
                     }
                 ],
                 "primaryKey":"Email",
-                "foreignKeys":["AgencyID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "AgencyID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Agency",
+                            "columnReference": "AgencyID"
+                        }
+                    }
+                ]
             }
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Train",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -157,12 +173,20 @@
                     }
                 ],
                 "primaryKey":"TrainID",
-                "foreignKeys":["ProducerID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "ProducerID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Producer",
+                            "columnReference": "ProducerID"
+                        }
+                    }
+                ]
             }
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Bus",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -216,12 +240,20 @@
                     }
                 ],
                 "primaryKey":"BusID",
-                "foreignKeys":["ProducerID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "ProducerID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Producer",
+                            "columnReference": "ProducerID"
+                        }
+                    }
+                ]
             }
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Producer",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -242,12 +274,13 @@
                         "required":true
                     }
                 ],
-                "primaryKey":"ProducerID"
+                "primaryKey":"ProducerID",
+                "foreignKeys":[]
             }
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Connection",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -277,12 +310,27 @@
                     }
                 ],
                 "primaryKey":"ConnectionID",
-                "foreignKeys":["TrainID/BusID","RouteID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "BusID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Bus",
+                            "columnReference": "BusID"
+                        }
+                    },
+                    {
+                        "columnReference": "RouteID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Route",
+                            "columnReference": "RouteID"
+                        }
+                    }
+                ]
             }
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Route",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -336,7 +384,22 @@
                     }
                 ],
                 "primaryKey":"RouteID",
-                "foreignKeys":["Station1ID","Station2ID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "Station1ID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/BusStation",
+                            "columnReference": "BusStationID"
+                        }
+                    },
+                    {
+                        "columnReference": "Station2ID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/BusStation",
+                            "columnReference": "BusStationID"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -393,7 +456,22 @@
                     }
                 ],
                 "primaryKey":"StopID",
-                "foreignKeys":["TrainID/BusID","ConnectionID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "BusID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/BusStation",
+                            "columnReference": "BusStationID"
+                        }
+                    },
+                    {
+                        "columnReference": "ConnectionID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Connection",
+                            "columnReference": "ConnectionID"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -428,7 +506,22 @@
                     }
                 ],
                 "primaryKey":"FollowingID",
-                "foreignKeys":["Stop1ID","Stop2ID"]
+                "foreignKeys":[
+                    {
+                        "columnReference": "Stop1ID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Stop",
+                            "columnReference": "StopID"
+                        }
+                    },
+                    {
+                        "columnReference": "Stop2ID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Stop",
+                            "columnReference": "StopID"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -510,6 +603,47 @@
                     }
                 ],
                 "primaryKey":"BusStationID",
+                "foreignKeys":[]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"",
+                        "title":"",
+                        "dc:description":"",
+                        "datatype":"",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"",
+                        "title":"",
+                        "dc:description":"",
+                        "datatype":"",
+                        "required":true
+                    },{
+                        "@type":"Column",
+                        "name":"",
+                        "title":"",
+                        "dc:description":"",
+                        "datatype":"",
+                        "required":true
+                    },{
+                        "@type":"Column",
+                        "name":"",
+                        "title":"",
+                        "dc:description":"",
+                        "datatype":"",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"",
                 "foreignKeys":[]
             }
         },
