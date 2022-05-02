@@ -153,7 +153,7 @@
                         "title":"Electric motor",
                         "dc:description":"Indication if a vehicle has electric motor or not",
                         "datatype":"boolean",
-                        "required":true,
+                        "required":true
                     },
                     {
                         "@type":"Column",
