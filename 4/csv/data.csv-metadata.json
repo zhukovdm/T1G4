@@ -146,7 +146,7 @@
                         "dc:description":"Vehicle number issued by a European regulator.",
                         "datatype":"string",
                         "required":true
-                    }
+                    },
                     {
                         "@type":"Column",
                         "name":"ProducerID",
@@ -215,8 +215,69 @@
                         "required":true
                     }
                 ],
-                "primaryKey":"TrainID",
+                "primaryKey":"BusID",
                 "foreignKeys":["ProducerID"]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"ProducerID",
+                        "title":"Producer Id",
+                        "dc:description":"A company-producer of different kinds of vehicles",
+                        "datatype":"string",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"LegalName",
+                        "title":"Producer name",
+                        "dc:description":"Company legal name",
+                        "datatype":"string",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"ProducerID"
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"ConnectionID",
+                        "title":"Connection Id",
+                        "dc:description":"A particular instance of a transit route which has its id. Each connection goes through the set of stops",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"RouteID",
+                        "title":"Route Id",
+                        "dc:description":"Transit route as grouping of connections",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"TrainID/BusID",
+                        "title":"Train or bus ID",
+                        "dc:description":"Vehicle riding that particular connection",
+                        "datatype":"integer",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"ConnectionID",
+                "foreignKeys":["TrainID/BusID","RouteID"]
             }
         }
     ]
