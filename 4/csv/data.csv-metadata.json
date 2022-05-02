@@ -28,11 +28,9 @@
                         "datatype":"string",
                         "required":true,
                         "lang":["cs","en"]
-                    },
-                    
-                    
+                    }
                 ],
-                "primaryKey":"AgencyID",
+                "primaryKey":"AgencyID"
             }
         },
         {
@@ -47,16 +45,6 @@
                         "title":"AgencyId",
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
-                        "required":true,
-                        "lang":["cs","en"]
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"Email",
-                        "title":"E-mail",
-                        "dc:description":"An e-mail contact of an agency",
-                        "datatype":"string",
-                        "format":"email",
                         "required":true,
                         "lang":["cs","en"]
                     },
@@ -64,15 +52,15 @@
                         "@type":"Column",
                         "name":"Phone",
                         "title":"Phone",
-                        "dc:description":"Telephone contact of an agency",
+                        "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "pattern": "^tel:\\+[0-9-]+$",
                         "required":false,
                         "lang":["cs","en"]
                     }
                 ],
-                "primaryKey":"",
-                "foreignKeys":""
+                "primaryKey":"Phone",
+                "foreignKeys":["AgencyID"]
             }
         },
         {
@@ -94,15 +82,15 @@
                         "@type":"Column",
                         "name":"Email",
                         "title":"E-mail",
-                        "dc:description":"An e-mail contact of an agency",
+                        "dc:description":"E-mail address",
                         "datatype":"string",
                         "format":"email",
                         "required":true,
                         "lang":["cs","en"]
                     }
                 ],
-                "primaryKey":"",
-                "foreignKeys":""
+                "primaryKey":"Email",
+                "foreignKeys":["AgencyID"]
             }
         },
         {
@@ -113,43 +101,122 @@
                 "columns": [
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true,
-                        "lang":""
+                        "name":"TrainID",
+                        "title":"TrainId",
+                        "dc:description":"Unique identifier of train",
+                        "datatype":"integer",
+                        "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true,
-                        "lang":""
+                        "name":"Capacity",
+                        "title":"Capacity",
+                        "dc:description":"Number of people who can fit into a vehicle",
+                        "datatype":"integer",
+                        "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true,
-                        "lang":""
+                        "name":"Consumption",
+                        "title":"Consumption",
+                        "dc:description":"Vehicle consumption of gasoline or electricity per km.",
+                        "datatype":"integer",
+                        "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
+                        "name":"PurchasePrice",
+                        "title":"Purchase price",
+                        "dc:description":"Vehicle purchase price in CZK.",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"ElectricMotor",
+                        "title":"Electric motor",
+                        "dc:description":"Indication if a vehicle has electric motor or not",
+                        "datatype":"boolean",
                         "required":true,
-                        "lang":""
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"EuropeanVehicleNumber",
+                        "title":"EVN",
+                        "dc:description":"Vehicle number issued by a European regulator.",
+                        "datatype":"string",
+                        "required":true
+                    }
+                    {
+                        "@type":"Column",
+                        "name":"ProducerID",
+                        "title":"Producer Id",
+                        "dc:description":"Identifier of company producing this train",
+                        "datatype":"string",
+                        "required":true
                     }
                 ],
-                "primaryKey":"",
-                "foreignKeys":""
+                "primaryKey":"TrainID",
+                "foreignKeys":["ProducerID"]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"",
+            "tableSchema":{
+                "@type":"schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"BusID",
+                        "title":"Bus Id",
+                        "dc:description":"Unique identifier of train",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"Capacity",
+                        "title":"Capacity",
+                        "dc:description":"Number of people who can fit into a vehicle",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"Consumption",
+                        "title":"Consumption",
+                        "dc:description":"Vehicle consumption of gasoline or electricity per km.",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"PurchasePrice",
+                        "title":"Purchase price",
+                        "dc:description":"Vehicle purchase price in CZK.",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"LicensePlateNumber",
+                        "title":"License plate number",
+                        "dc:description":"License plate number issued by a regulator.",
+                        "datatype":"string",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"ProducerID",
+                        "title":"Producer Id",
+                        "dc:description":"Identifier of company producing this bus",
+                        "datatype":"string",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"TrainID",
+                "foreignKeys":["ProducerID"]
             }
         }
     ]
