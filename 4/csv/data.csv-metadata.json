@@ -120,7 +120,7 @@
                         "name":"TrainID",
                         "title":"TrainId",
                         "dc:description":"Unique identifier of train",
-                        "datatype":"integer",
+                        "datatype":"string",
                         "required":true
                     },
                     {
@@ -195,7 +195,7 @@
                         "name":"BusID",
                         "title":"Bus Id",
                         "dc:description":"Unique identifier of train",
-                        "datatype":"integer",
+                        "datatype":"string",
                         "required":true
                     },
                     {
