@@ -7,7 +7,7 @@
     "tables":[
         {
         "@type":"Table",
-        "url":"Agency.csv",
+        "url":"data-6.csv",
         "tableSchema":{
             "@type":"Schema",
             "columns": [
@@ -35,7 +35,7 @@
         },
         {
             "@type":"Table",
-            "url":"Phone.csv",
+            "url":"data-7.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -64,7 +64,7 @@
                     {
                         "columnReference": "AgencyID",
                         "reference": {
-                            "resource": "Agency.csv",
+                            "resource": "data-6.csv",
                             "columnReference": "AgencyID"
                         }
                     }
@@ -73,7 +73,7 @@
         },
         {
             "@type":"Table",
-            "url":"Email.csv",
+            "url":"data-8.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -102,7 +102,7 @@
                     {
                         "columnReference": "AgencyID",
                         "reference": {
-                            "resource": "Agency.csv",
+                            "resource": "data-6.csv",
                             "columnReference": "AgencyID"
                         }
                     }
@@ -111,7 +111,7 @@
         },
         {
             "@type":"Table",
-            "url":"Train.csv",
+            "url":"data-1.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -120,7 +120,7 @@
                         "name":"TrainID",
                         "title":"TrainId",
                         "dc:description":"Unique identifier of train",
-                        "datatype":"integer",
+                        "datatype":"string",
                         "required":true
                     },
                     {
@@ -177,7 +177,7 @@
                     {
                         "columnReference": "ProducerID",
                         "reference": {
-                            "resource": "Producer.csv",
+                            "resource": "data-3.csv",
                             "columnReference": "ProducerID"
                         }
                     }
@@ -186,7 +186,7 @@
         },
         {
             "@type":"Table",
-            "url":"Bus.csv",
+            "url":"data-2.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -195,7 +195,7 @@
                         "name":"BusID",
                         "title":"Bus Id",
                         "dc:description":"Unique identifier of train",
-                        "datatype":"integer",
+                        "datatype":"string",
                         "required":true
                     },
                     {
@@ -244,7 +244,7 @@
                     {
                         "columnReference": "ProducerID",
                         "reference": {
-                            "resource": "Producer.csv",
+                            "resource": "data-3.csv",
                             "columnReference": "ProducerID"
                         }
                     }
@@ -253,7 +253,7 @@
         },
         {
             "@type":"Table",
-            "url":"Producer.csv",
+            "url":"data-3.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -280,7 +280,7 @@
         },
         {
             "@type":"Table",
-            "url":"Connection.csv",
+            "url":"data-4.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -322,14 +322,14 @@
                     {
                         "columnReference": "BusID",
                         "reference": {
-                            "resource": "Bus.csv",
+                            "resource": "data-2.csv",
                             "columnReference": "BusID"
                         }
                     },
                     {
                         "columnReference": "TrainID",
                         "reference": {
-                            "resource": "Train.csv",
+                            "resource": "data-1.csv",
                             "columnReference": "TrainID"
                         }
                     },
@@ -419,28 +419,28 @@
                     {
                         "columnReference": "BusStation1ID",
                         "reference": {
-                            "resource": "BusStation.csv",
+                            "resource": "data-14.csv",
                             "columnReference": "BusStationID"
                         }
                     },
                     {
                         "columnReference": "BusStation2ID",
                         "reference": {
-                            "resource": "BusStation.csv",
+                            "resource": "data-14.csv",
                             "columnReference": "BusStationID"
                         }
                     },
                     {
                         "columnReference": "TrainStation1ID",
                         "reference": {
-                            "resource": "TrainStation.csv",
+                            "resource": "data-13.csv",
                             "columnReference": "TrainStationID"
                         }
                     },
                     {
                         "columnReference": "TrainStation2ID",
                         "reference": {
-                            "resource": "TrainStation.csv",
+                            "resource": "data-13.csv",
                             "columnReference": "TrainStationID"
                         }
                     }
@@ -449,7 +449,7 @@
         },
         {
             "@type":"Table",
-            "url":"Stop.csv",
+            "url":"data-10.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -513,21 +513,21 @@
                     {
                         "columnReference": "BusStationID",
                         "reference": {
-                            "resource": "BusStation.csv",
+                            "resource": "data-14.csv",
                             "columnReference": "BusStationID"
                         }
                     },
                     {
                         "columnReference": "TrainStationID",
                         "reference": {
-                            "resource": "TrainStation.csv",
+                            "resource": "data-13.csv",
                             "columnReference": "TrainStationID"
                         }
                     },
                     {
                         "columnReference": "ConnectionID",
                         "reference": {
-                            "resource": "Connection.csv",
+                            "resource": "data-4.csv",
                             "columnReference": "ConnectionID"
                         }
                     }
@@ -536,7 +536,7 @@
         },
         {
             "@type":"Table",
-            "url":"FollowedBy.csv",
+            "url":"data-11.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -570,14 +570,14 @@
                     {
                         "columnReference": "Stop1ID",
                         "reference": {
-                            "resource": "Stop.csv",
+                            "resource": "data-10.csv",
                             "columnReference": "StopID"
                         }
                     },
                     {
                         "columnReference": "Stop2ID",
                         "reference": {
-                            "resource": "Stop.csv",
+                            "resource": "data-10.csv",
                             "columnReference": "StopID"
                         }
                     }
@@ -586,7 +586,7 @@
         },
         {
             "@type":"Table",
-            "url":"TrainStation.csv",
+            "url":"data-13.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -621,7 +621,7 @@
         },
         {
             "@type":"Table",
-            "url":"BusStation.csv",
+            "url":"data-14.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
