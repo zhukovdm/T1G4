@@ -202,7 +202,7 @@
                         
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -210,7 +210,7 @@
                         
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     }
                 ],
                 "primaryKey":"connectionID",
@@ -494,7 +494,7 @@
                         "name":"validFrom",
                         
                         "dc:description":"A date since when was operation on a route allowed.",
-                        "datatype":"datetime",
+                        "datatype":"date",
                         "required":true
                     },
                     {
@@ -502,7 +502,7 @@
                         "name":"ValidTo",
                         
                         "dc:description":"Last date of allowed operation on a route",
-                        "datatype":"datetime",
+                        "datatype":"date",
                         "required":true
                     },
                     {
@@ -511,7 +511,7 @@
                         "titles":"trainStationID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -519,7 +519,7 @@
                         "titles":"trainStationID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -527,7 +527,7 @@
                         "titles":"busStationID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -535,7 +535,7 @@
                         "titles":"busStationID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     }
                 ],
                 "primaryKey":"routeID",
@@ -668,14 +668,14 @@
                         "name":"ArrivalTime",
                         
                         "dc:description":"Arrival time of a vehicle",
-                        "datatype":"datetime",
+                        "datatype":"time",
                         "required":true
                     },{
                         "@type":"Column",
                         "name":"DepartureTime",
                         
                         "dc:description":"Departure time of a vehicle",
-                        "datatype":"datetime",
+                        "datatype":"time",
                         "required":true
                     }
                     ,{
@@ -691,7 +691,7 @@
                         
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     }
                     ,{
                         "@type":"Column",
@@ -699,7 +699,7 @@
                         
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
-                        "required":true
+                        "required":false
                     }
                 ],
                 "primaryKey":"stopID",
