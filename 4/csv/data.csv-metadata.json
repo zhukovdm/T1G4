@@ -7,7 +7,7 @@
     "tables":[
         {
         "@type":"Table",
-        "url":"https://T1G4.DOX.cz/Agency",
+        "url":"Agency.csv",
         "tableSchema":{
             "@type":"Schema",
             "columns": [
@@ -35,7 +35,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Phone",
+            "url":"Phone.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -64,7 +64,7 @@
                     {
                         "columnReference": "AgencyID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Agency",
+                            "resource": "Agency.csv",
                             "columnReference": "AgencyID"
                         }
                     }
@@ -73,7 +73,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Email",
+            "url":"Email.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -102,7 +102,7 @@
                     {
                         "columnReference": "AgencyID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Agency",
+                            "resource": "Agency.csv",
                             "columnReference": "AgencyID"
                         }
                     }
@@ -111,7 +111,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Train",
+            "url":"Train.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -177,7 +177,7 @@
                     {
                         "columnReference": "ProducerID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Producer",
+                            "resource": "Producer.csv",
                             "columnReference": "ProducerID"
                         }
                     }
@@ -186,7 +186,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Bus",
+            "url":"Bus.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -244,7 +244,7 @@
                     {
                         "columnReference": "ProducerID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Producer",
+                            "resource": "Producer.csv",
                             "columnReference": "ProducerID"
                         }
                     }
@@ -253,7 +253,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Producer",
+            "url":"Producer.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -280,7 +280,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Connection",
+            "url":"Connection.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -322,21 +322,21 @@
                     {
                         "columnReference": "BusID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Bus",
+                            "resource": "Bus.csv",
                             "columnReference": "BusID"
                         }
                     },
                     {
                         "columnReference": "TrainID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Train",
+                            "resource": "Train.csv",
                             "columnReference": "TrainID"
                         }
                     },
                     {
                         "columnReference": "RouteID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Route",
+                            "resource": "Route.csv",
                             "columnReference": "RouteID"
                         }
                     }
@@ -345,7 +345,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Route",
+            "url":"Route.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -419,28 +419,28 @@
                     {
                         "columnReference": "BusStation1ID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/BusStation",
+                            "resource": "BusStation.csv",
                             "columnReference": "BusStationID"
                         }
                     },
                     {
                         "columnReference": "BusStation2ID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/BusStation",
+                            "resource": "BusStation.csv",
                             "columnReference": "BusStationID"
                         }
                     },
                     {
                         "columnReference": "TrainStation1ID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/TrainStation",
+                            "resource": "TrainStation.csv",
                             "columnReference": "TrainStationID"
                         }
                     },
                     {
                         "columnReference": "TrainStation2ID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/TrainStation",
+                            "resource": "TrainStation.csv",
                             "columnReference": "TrainStationID"
                         }
                     }
@@ -449,7 +449,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/Stop",
+            "url":"Stop.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -513,21 +513,21 @@
                     {
                         "columnReference": "BusStationID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/BusStation",
+                            "resource": "BusStation.csv",
                             "columnReference": "BusStationID"
                         }
                     },
                     {
                         "columnReference": "TrainStationID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/TrainStation",
+                            "resource": "TrainStation.csv",
                             "columnReference": "TrainStationID"
                         }
                     },
                     {
                         "columnReference": "ConnectionID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Connection",
+                            "resource": "Connection.csv",
                             "columnReference": "ConnectionID"
                         }
                     }
@@ -536,7 +536,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/FollowedBy",
+            "url":"FollowedBy.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -570,14 +570,14 @@
                     {
                         "columnReference": "Stop1ID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Stop",
+                            "resource": "Stop.csv",
                             "columnReference": "StopID"
                         }
                     },
                     {
                         "columnReference": "Stop2ID",
                         "reference": {
-                            "resource": "data.csv-metadata.json/Stop",
+                            "resource": "Stop.csv",
                             "columnReference": "StopID"
                         }
                     }
@@ -586,7 +586,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/TrainStation",
+            "url":"TrainStation.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -621,7 +621,7 @@
         },
         {
             "@type":"Table",
-            "url":"https://T1G4.DOX.cz/BusStation",
+            "url":"BusStation.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
