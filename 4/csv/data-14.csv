@@ -1,7 +1,7 @@
-trainStationID,stationName,capacity
-1,Heřmánky,50
-2,Vítkov,40
-3,Jakubčovice nad Odrou,60
-4,Malostranské náměstí,120
-5,Doliny,5
-6,Budějovická,170
+busStationID,stationName,capacity
+1,Oderská,30
+2,Budišovská,20
+3,Spojovací,45
+4,Na Vrstevnici,35
+5,Sídliště Novodvorská,25
+6,Limuzská,80
