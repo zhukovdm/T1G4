@@ -1,0 +1,4 @@
+vehicleID,capacity,consumption,purchasePrice,licensePlate,producerID
+bus:1,23,42,523147,4A2 7983,tatra
+bus:2,5,10,65000,5T1 9876,tatra
+bus:3,54,98,123000,6M4 1426,man
