@@ -239,80 +239,7 @@
                 ]
             }
         },
-        {
-            "@type":"Table",
-            "url":"data-9.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"busID",
-                        
-                        "dc:description":"Bus owned by the company",
-                        "datatype":"integer",
-                        "required":true,
-                        "lang":"cs"
-                    }
-                ],
-                "primaryKey":"trainID",
-                "foreignKeys":[
-                    {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-10.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"trainID",
-                        
-                        "dc:description":"Train owned by the company",
-                        "datatype":"integer",
-                        "required":true,
-                        "lang":"cs"
-                    }
-                ],
-                "primaryKey":"trainID",
-                "foreignKeys":[
-                    {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
-                        }
-                    }
-                ]
-            }
-        },
+        
         {
         "@type":"Table",
         "url":"data-6.csv",
@@ -339,8 +266,6 @@
                 "primaryKey":"agencyID"
             }
         },
-        
-        
         {
             "@type":"Table",
             "url":"data-7.csv",
@@ -418,7 +343,80 @@
                 ]
             }
         },
-        
+        {
+            "@type":"Table",
+            "url":"data-9.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"busID",
+                        
+                        "dc:description":"Bus owned by the company",
+                        "datatype":"integer",
+                        "required":true,
+                        "lang":"cs"
+                    }
+                ],
+                "primaryKey":"busID",
+                "foreignKeys":[
+                    {
+                        "columnReference": "agencyID",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "agencyID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"data-10.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"trainID",
+                        
+                        "dc:description":"Train owned by the company",
+                        "datatype":"integer",
+                        "required":true,
+                        "lang":"cs"
+                    }
+                ],
+                "primaryKey":"trainID",
+                "foreignKeys":[
+                    {
+                        "columnReference": "agencyID",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "agencyID"
+                        }
+                    }
+                ]
+            }
+        },
         {
             "@type":"Table",
             "url":"data-11.csv",
@@ -455,14 +453,14 @@
                     {
                         "columnReference": "stop1ID",
                         "reference": {
-                            "resource": "data-10.csv",
+                            "resource": "data-15.csv",
                             "columnReference": "stopID"
                         }
                     },
                     {
                         "columnReference": "stop2ID",
                         "reference": {
-                            "resource": "data-10.csv",
+                            "resource": "data-15.csv",
                             "columnReference": "stopID"
                         }
                     }
