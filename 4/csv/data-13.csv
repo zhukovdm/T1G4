@@ -1,7 +1,5 @@
-stationID,stationName,capacity
-tst1,Heřmánky,50
-tst2,Vítkov,40
-tst3,Jakubčovice nad Odrou,60
-tst4,Malostranské náměstí,120
-tst5,Doliny,5
-tst6,Budějovická,170
+routeID,lenght,validFrom,validTo,trainStationID,trainStationID,busStationID,busStationID
+1,120.5,2015-01-01,2020-12-31,1,3,null,null
+9,37.0,2005-10-01,2025-09-25,null,null,1,3
+37,11.6,2021-12-10,2022-12-12,4,5,null,null
+137,12.2,2021-12-13,2022-12-12,null,null,4,6

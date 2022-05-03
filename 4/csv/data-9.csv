@@ -1,6 +1,3 @@
-agencyID,vehicleID
-dpp,train:1
-dpp,bus:2
-leo,train:2
-leo,train:3
-student,bus:3
+agencyID,busID
+dpp,2
+student,3
