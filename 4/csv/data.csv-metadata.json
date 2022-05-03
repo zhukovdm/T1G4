@@ -22,7 +22,7 @@
                     {
                         "@type":"Column",
                         "name":"capacity",
-                        
+                        "titles":"capacity",
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
                         "required":true
@@ -30,7 +30,7 @@
                     {
                         "@type":"Column",
                         "name":"consumption",
-                        
+                        "titles":"consumption",
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true
@@ -38,7 +38,7 @@
                     {
                         "@type":"Column",
                         "name":"purchasePrice",
-                        
+                        "titles":"purchasePrice",
                         "dc:description":"Vehicle purchase price in CZK.",
                         "datatype":"integer",
                         "required":true
@@ -46,7 +46,7 @@
                     {
                         "@type":"Column",
                         "name":"electricMotor",
-                        
+                        "titles":"electricMotor",
                         "dc:description":"Indication if a vehicle has electric motor or not",
                         "datatype":"boolean",
                         "required":true
@@ -54,7 +54,7 @@
                     {
                         "@type":"Column",
                         "name":"europeanVehicleNumber",
-                        
+                        "titles":"europeanVehicleNumber",
                         "dc:description":"Vehicle number issued by a European regulator.",
                         "datatype":"string",
                         "required":true
@@ -62,7 +62,7 @@
                     {
                         "@type":"Column",
                         "name":"producerID",
-                        
+                        "titles":"producerID",
                         "dc:description":"Identifier of company producing this train",
                         "datatype":"string",
                         "required":true
@@ -89,7 +89,7 @@
                     {
                         "@type":"Column",
                         "name":"busID",
-                        
+                        "titles":"busID",
                         "dc:description":"Unique identifier of train",
                         "datatype":"string",
                         "required":true
@@ -97,7 +97,7 @@
                     {
                         "@type":"Column",
                         "name":"capacity",
-                        
+                        "titles":"capacity",
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
                         "required":true
@@ -105,7 +105,7 @@
                     {
                         "@type":"Column",
                         "name":"consumption",
-                        
+                        "titles":"consumption",
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true
@@ -113,7 +113,7 @@
                     {
                         "@type":"Column",
                         "name":"purchasePrice",
-                        
+                        "titles":"purchasePrice",
                         "dc:description":"Vehicle purchase price in CZK.",
                         "datatype":"integer",
                         "required":true
@@ -121,7 +121,7 @@
                     {
                         "@type":"Column",
                         "name":"licensePlateNumber",
-                        
+                        "titles":"licensePlateNumber",
                         "dc:description":"License plate number issued by a regulator.",
                         "datatype":"string",
                         "required":true
@@ -129,7 +129,7 @@
                     {
                         "@type":"Column",
                         "name":"producerID",
-                        
+                        "titles":"producerID",
                         "dc:description":"Identifier of company producing this bus",
                         "datatype":"string",
                         "required":true
@@ -156,7 +156,7 @@
                     {
                         "@type":"Column",
                         "name":"producerID",
-                        
+                        "titles":"producerID",
                         "dc:description":"A company-producer of different kinds of vehicles",
                         "datatype":"string",
                         "required":true
@@ -164,7 +164,7 @@
                     {
                         "@type":"Column",
                         "name":"legalName",
-                        
+                        "titles":"legalName",
                         "dc:description":"Company legal name",
                         "datatype":"string",
                         "required":true
@@ -183,7 +183,7 @@
                     {
                         "@type":"Column",
                         "name":"connectionID",
-                        
+                        "titles":"connectionID",
                         "dc:description":"A particular instance of a transit route which has its id. Each connection goes through the set of stops",
                         "datatype":"integer",
                         "required":true
@@ -191,23 +191,23 @@
                     {
                         "@type":"Column",
                         "name":"routeID",
-                        
+                        "titles":"routeID",
                         "dc:description":"Transit route as grouping of connections",
                         "datatype":"integer",
                         "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"trainID",
-                        
+                        "name":"busID",
+                        "titles":"busID",
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
                         "required":false
                     },
                     {
                         "@type":"Column",
-                        "name":"busID",
-                        
+                        "name":"trainID",
+                        "titles":"trainID",
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
                         "required":false
@@ -249,6 +249,7 @@
                     {
                         "@type":"Column",
                         "name":"agencyID",
+                        "titles":"agencyID",
                         "dc:description":"Unique identifier for the agency",
                         "datatype":"string",
                         "required":true,
@@ -257,6 +258,7 @@
                     {
                         "@type":"Column",
                         "name":"legalName",
+                        "titles":"legalName",
                         "dc:description":"Official name of the company",
                         "datatype":"string",
                         "required":true,
@@ -275,7 +277,7 @@
                     {
                         "@type":"Column",
                         "name":"phone",
-                        
+                        "titles":"phone",
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "pattern": "^tel:\\+[0-9-]+$",
@@ -285,7 +287,7 @@
                     {
                         "@type":"Column",
                         "name":"agencyID",
-                        
+                        "titles":"agencyID",
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
@@ -313,23 +315,24 @@
                 "columns": [
                     {
                         "@type":"Column",
-                        "name":"agencyID",
-                        
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
                         "name":"email",
-                        
+                        "titles":"email",
                         "dc:description":"E-mail address",
                         "datatype":"string",
                         "format":"email",
                         "required":true,
                         "lang":"cs"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        "titles":"agencyID",
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs"
                     }
+                    
                 ],
                 "primaryKey":"email",
                 "foreignKeys":[
@@ -352,7 +355,7 @@
                     {
                         "@type":"Column",
                         "name":"agencyID",
-                        
+                        "titles":"agencyID",
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
@@ -361,7 +364,7 @@
                     {
                         "@type":"Column",
                         "name":"busID",
-                        
+                        "titles":"busID",
                         "dc:description":"Bus owned by the company",
                         "datatype":"integer",
                         "required":true,
@@ -389,7 +392,7 @@
                     {
                         "@type":"Column",
                         "name":"agencyID",
-                        
+                        "titles":"agencyID",
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
@@ -398,7 +401,7 @@
                     {
                         "@type":"Column",
                         "name":"trainID",
-                        
+                        "titles":"trainID",
                         "dc:description":"Train owned by the company",
                         "datatype":"integer",
                         "required":true,
@@ -426,7 +429,7 @@
                     {
                         "@type":"Column",
                         "name":"followingID",
-                        
+                        "titles":"followingID",
                         "dc:description":"Identifier of the \"followed by\" tuple",
                         "datatype":"string",
                         "required":true
@@ -476,7 +479,7 @@
                     {
                         "@type":"Column",
                         "name":"routeID",
-                        
+                        "titles":"routeID",
                         "dc:description":"Transit route as grouping of connections",
                         "datatype":"integer",
                         "required":true
@@ -484,7 +487,7 @@
                     {
                         "@type":"Column",
                         "name":"length",
-                        
+                        "titles":"length",
                         "dc:description":"A length of route in kilometers",
                         "datatype":"decimal",
                         "required":true
@@ -492,15 +495,15 @@
                     {
                         "@type":"Column",
                         "name":"validFrom",
-                        
+                        "titles":"validFrom",
                         "dc:description":"A date since when was operation on a route allowed.",
                         "datatype":"date",
                         "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"ValidTo",
-                        
+                        "name":"validTo",
+                        "titles":"validTo",
                         "dc:description":"Last date of allowed operation on a route",
                         "datatype":"date",
                         "required":true
@@ -580,7 +583,7 @@
                     {
                         "@type":"Column",
                         "name":"trainStationID",
-                        
+                        "titles":"trainStationID",
                         "dc:description":"Station for train",
                         "datatype":"integer",
                         "required":true
@@ -588,7 +591,7 @@
                     {
                         "@type":"Column",
                         "name":"stationName",
-                        
+                        "titles":"stationName",
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
                         "required":true
@@ -596,7 +599,7 @@
                     {
                         "@type":"Column",
                         "name":"capacity",
-                        
+                        "titles":"capacity",
                         "dc:description":"Number of people who can fit to a structure",
                         "datatype":"integer",
                         "required":true
@@ -615,7 +618,7 @@
                     {
                         "@type":"Column",
                         "name":"busStationID",
-                        
+                        "titles":"busStationID",
                         "dc:description":"Bus stop",
                         "datatype":"integer",
                         "required":true
@@ -623,7 +626,7 @@
                     {
                         "@type":"Column",
                         "name":"stationName",
-                        
+                        "titles":"stationName",
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
                         "required":true
@@ -631,7 +634,7 @@
                     {
                         "@type":"Column",
                         "name":"capacity",
-                        
+                        "titles":"capacity",
                         "dc:description":"Number of people who can fit to a structure",
                         "datatype":"integer",
                         "required":true
@@ -650,7 +653,7 @@
                     {
                         "@type":"Column",
                         "name":"stopID",
-                        
+                        "titles":"stopID",
                         "dc:description":"gtfs:stop",
                         "datatype":"integer",
                         "required":true
@@ -658,22 +661,22 @@
                     {
                         "@type":"Column",
                         "name":"gps",
-                        
+                        "titles":"gps",
                         "dc:description":"Location of the stop",
                         "datatype":"string",
                         "pattern":"^[0-9]{1,2}\\.[0-9]{7}N, [0-9]{1,2}\\.[0-9]{7}E$",
                         "required":true
                     },{
                         "@type":"Column",
-                        "name":"ArrivalTime",
-                        
+                        "name":"arrivalTime",
+                        "titles":"arrivalTime",
                         "dc:description":"Arrival time of a vehicle",
                         "datatype":"time",
                         "required":true
                     },{
                         "@type":"Column",
-                        "name":"DepartureTime",
-                        
+                        "name":"departureTime",
+                        "titles":"departureTime",
                         "dc:description":"Departure time of a vehicle",
                         "datatype":"time",
                         "required":true
@@ -681,22 +684,23 @@
                     ,{
                         "@type":"Column",
                         "name":"connectionID",
-                        
+                        "titles":"connectionID",
                         "dc:description":"Connection to which this stop belongs",
                         "datatype":"integer",
                         "required":true
-                    },{
+                    },
+                    {
                         "@type":"Column",
-                        "name":"trainStationID",
-                        
+                        "name":"busStationID",
+                        "titles":"busStationID",
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
                         "required":false
-                    }
-                    ,{
+                    },
+                    {
                         "@type":"Column",
-                        "name":"busStationID",
-                        
+                        "name":"trainStationID",
+                        "titles":"trainStationID",
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
                         "required":false
