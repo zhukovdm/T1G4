@@ -280,7 +280,6 @@
                         "titles":"phone",
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
-                        "pattern": "^tel:\\+[0-9-]+$",
                         "required":false,
                         "lang":"cs"
                     },
@@ -319,7 +318,6 @@
                         "titles":"email",
                         "dc:description":"E-mail address",
                         "datatype":"string",
-                        "format":"email",
                         "required":true,
                         "lang":"cs"
                     },
@@ -664,7 +662,6 @@
                         "titles":"gps",
                         "dc:description":"Location of the stop",
                         "datatype":"string",
-                        "pattern":"^[0-9]{1,2}\\.[0-9]{7}N, [0-9]{1,2}\\.[0-9]{7}E$",
                         "required":true
                     },{
                         "@type":"Column",
