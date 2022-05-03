@@ -404,7 +404,7 @@
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/Stop",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -476,7 +476,7 @@
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/FollowedBy",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -526,7 +526,7 @@
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/TrainStation",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -545,19 +545,13 @@
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
                         "required":true
-                    },{
+                    },
+                    {
                         "@type":"Column",
                         "name":"Capacity",
                         "title":"Capacity",
                         "dc:description":"Number of people who can fit to a structure",
                         "datatype":"integer",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
                         "required":true
                     }
                 ],
@@ -567,7 +561,7 @@
         },
         {
             "@type":"Table",
-            "url":"",
+            "url":"https://T1G4.DOX.cz/BusStation",
             "tableSchema":{
                 "@type":"schema",
                 "columns": [
@@ -586,109 +580,19 @@
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
                         "required":true
-                    },{
+                    },
+                    {
                         "@type":"Column",
                         "name":"Capacity",
                         "title":"Capacity",
                         "dc:description":"Number of people who can fit to a structure",
                         "datatype":"integer",
                         "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
                     }
                 ],
                 "primaryKey":"BusStationID",
                 "foreignKeys":[]
             }
-        },
-        {
-            "@type":"Table",
-            "url":"",
-            "tableSchema":{
-                "@type":"schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    }
-                ],
-                "primaryKey":"",
-                "foreignKeys":[]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"",
-            "tableSchema":{
-                "@type":"schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    },{
-                        "@type":"Column",
-                        "name":"",
-                        "title":"",
-                        "dc:description":"",
-                        "datatype":"",
-                        "required":true
-                    }
-                ],
-                "primaryKey":"",
-                "foreignKeys":[]
-            }
         }
-
-        
     ]
 }
