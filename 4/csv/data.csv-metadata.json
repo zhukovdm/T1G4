@@ -368,17 +368,33 @@
                     },
                     {
                         "@type":"Column",
-                        "name":"Station1ID",
-                        "title":"First station Id",
-                        "dc:description":"Name of a station, where the route begins",
+                        "name":"BusStation1ID",
+                        "title":"First bus station Id",
+                        "dc:description":"Station, where the route begins",
                         "datatype":"integer",
                         "required":true
                     },
                     {
                         "@type":"Column",
-                        "name":"Station2ID",
-                        "title":"Last station Id",
-                        "dc:description":"Name of a station, where the route ends",
+                        "name":"BusStation2ID",
+                        "title":"Last bus station Id",
+                        "dc:description":"Station, where the route ends",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"TrainStation1ID",
+                        "title":"First train station Id",
+                        "dc:description":"Station, where the route begins",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"TrasinStation2ID",
+                        "title":"Last trai  station Id",
+                        "dc:description":"Station, where the route ends",
                         "datatype":"integer",
                         "required":true
                     }
@@ -386,17 +402,31 @@
                 "primaryKey":"RouteID",
                 "foreignKeys":[
                     {
-                        "columnReference": "Station1ID",
+                        "columnReference": "BusStation1ID",
                         "reference": {
                             "resource": "data.csv-metadata.json/BusStation",
                             "columnReference": "BusStationID"
                         }
                     },
                     {
-                        "columnReference": "Station2ID",
+                        "columnReference": "BusStation2ID",
                         "reference": {
                             "resource": "data.csv-metadata.json/BusStation",
                             "columnReference": "BusStationID"
+                        }
+                    },
+                    {
+                        "columnReference": "TrainStation1ID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/TrainStation",
+                            "columnReference": "TrainStationID"
+                        }
+                    },
+                    {
+                        "columnReference": "TrainStation2ID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/TrainStation",
+                            "columnReference": "TrainStationID"
                         }
                     }
                 ]
@@ -448,9 +478,17 @@
                         "required":true
                     },{
                         "@type":"Column",
-                        "name":"TrainID/BusID",
-                        "title":"Train or bus Id",
-                        "dc:description":"Train or bus serving this stop",
+                        "name":"TrainStationID",
+                        "title":"Train station Id",
+                        "dc:description":"Station serving this stop",
+                        "datatype":"integer",
+                        "required":true
+                    }
+                    ,{
+                        "@type":"Column",
+                        "name":"BusStationID",
+                        "title":"Bus station Id",
+                        "dc:description":"Station serving this stop",
                         "datatype":"integer",
                         "required":true
                     }
@@ -458,10 +496,17 @@
                 "primaryKey":"StopID",
                 "foreignKeys":[
                     {
-                        "columnReference": "BusID",
+                        "columnReference": "BusStationID",
                         "reference": {
                             "resource": "data.csv-metadata.json/BusStation",
                             "columnReference": "BusStationID"
+                        }
+                    },
+                    {
+                        "columnReference": "TrainStationID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/TrainStation",
+                            "columnReference": "TrainStationID"
                         }
                     },
                     {
