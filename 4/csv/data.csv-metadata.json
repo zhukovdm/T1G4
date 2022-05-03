@@ -9,7 +9,7 @@
         "@type":"Table",
         "url":"https://T1G4.DOX.cz/Agency",
         "tableSchema":{
-            "@type":"schema",
+            "@type":"Schema",
             "columns": [
                     {
                         "@type":"Column",
@@ -18,7 +18,7 @@
                         "dc:description":"Unique identifier for the agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":["cs","en"]
+                        "lang":"en"
                     },
                     {
                         "@type":"Column",
@@ -27,7 +27,7 @@
                         "dc:description":"Official name of the company",
                         "datatype":"string",
                         "required":true,
-                        "lang":["cs","en"]
+                        "lang":"en"
                     }
                 ],
                 "primaryKey":"AgencyID"
@@ -37,7 +37,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Phone",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -46,7 +46,7 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":["cs","en"]
+                        "lang":"cs"
                     },
                     {
                         "@type":"Column",
@@ -56,7 +56,7 @@
                         "datatype":"string",
                         "pattern": "^tel:\\+[0-9-]+$",
                         "required":false,
-                        "lang":["cs","en"]
+                        "lang":"cs"
                     }
                 ],
                 "primaryKey":"Phone",
@@ -75,7 +75,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Email",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -84,7 +84,7 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":["cs","en"]
+                        "lang":"cs"
                     },
                     {
                         "@type":"Column",
@@ -94,7 +94,7 @@
                         "datatype":"string",
                         "format":"email",
                         "required":true,
-                        "lang":["cs","en"]
+                        "lang":"cs"
                     }
                 ],
                 "primaryKey":"Email",
@@ -113,7 +113,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Train",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -188,7 +188,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Bus",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -255,7 +255,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Producer",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -282,7 +282,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Connection",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -302,8 +302,16 @@
                     },
                     {
                         "@type":"Column",
-                        "name":"TrainID/BusID",
-                        "title":"Train or bus ID",
+                        "name":"TrainID",
+                        "title":"Train ID",
+                        "dc:description":"Vehicle riding that particular connection",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"BusID",
+                        "title":"TBus ID",
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
                         "required":true
@@ -316,6 +324,13 @@
                         "reference": {
                             "resource": "data.csv-metadata.json/Bus",
                             "columnReference": "BusID"
+                        }
+                    },
+                    {
+                        "columnReference": "TrainID",
+                        "reference": {
+                            "resource": "data.csv-metadata.json/Train",
+                            "columnReference": "TrainID"
                         }
                     },
                     {
@@ -332,7 +347,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Route",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -368,6 +383,22 @@
                     },
                     {
                         "@type":"Column",
+                        "name":"TrainStation1ID",
+                        "title":"First train station Id",
+                        "dc:description":"Station, where the route begins",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"TrainStation2ID",
+                        "title":"Last train station Id",
+                        "dc:description":"Station, where the route ends",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
                         "name":"BusStation1ID",
                         "title":"First bus station Id",
                         "dc:description":"Station, where the route begins",
@@ -378,22 +409,6 @@
                         "@type":"Column",
                         "name":"BusStation2ID",
                         "title":"Last bus station Id",
-                        "dc:description":"Station, where the route ends",
-                        "datatype":"integer",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"TrainStation1ID",
-                        "title":"First train station Id",
-                        "dc:description":"Station, where the route begins",
-                        "datatype":"integer",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"TrasinStation2ID",
-                        "title":"Last trai  station Id",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
                         "required":true
@@ -436,7 +451,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/Stop",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -523,14 +538,14 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/FollowedBy",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
                         "name":"FollowingID",
                         "title":"Following Id",
                         "dc:description":"Identifier of the \"followed by\" tuple",
-                        "datatype":"",
+                        "datatype":"integer",
                         "required":true
                     },
                     {
@@ -538,7 +553,7 @@
                         "name":"Stop1ID",
                         "title":"Stop",
                         "dc:description":"A first stop of the \"followed by\" tuple",
-                        "datatype":"",
+                        "datatype":"integer",
                         "required":true
                     },
                     {
@@ -573,7 +588,7 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/TrainStation",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
@@ -600,7 +615,7 @@
                         "required":true
                     }
                 ],
-                "primaryKey":"TrainStation",
+                "primaryKey":"TrainStationID",
                 "foreignKeys":[]
             }
         },
@@ -608,13 +623,13 @@
             "@type":"Table",
             "url":"https://T1G4.DOX.cz/BusStation",
             "tableSchema":{
-                "@type":"schema",
+                "@type":"Schema",
                 "columns": [
                     {
                         "@type":"Column",
                         "name":"BusStationID",
                         "title":"Bus station Id",
-                        "dc:description":"Station for train",
+                        "dc:description":"Bus stop",
                         "datatype":"integer",
                         "required":true
                     },
