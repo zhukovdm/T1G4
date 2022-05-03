@@ -1,6 +1,6 @@
 connectionID,routeID,busID,trainID
-11,1,null,1
-91,9,2,null
-371,37,3,null
-1371,137,null,3
-1372,137,1,null
+11,1,,1
+91,9,2,
+371,37,3,
+1371,137,,3
+1372,137,1,
