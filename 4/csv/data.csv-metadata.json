@@ -1,5 +1,5 @@
 {
-    "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-csv.metadata.jsonld",
+    "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json",
     "@context":[
         "http://www.w3.org/ns/csvw"
     ],
