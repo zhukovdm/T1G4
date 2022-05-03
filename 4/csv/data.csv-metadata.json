@@ -6,182 +6,6 @@
     "@type":"TableGroup",
     "tables":[
         {
-        "@type":"Table",
-        "url":"data-6.csv",
-        "tableSchema":{
-            "@type":"Schema",
-            "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        "dc:description":"Unique identifier for the agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"en"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"legalName",
-                        "dc:description":"Official name of the company",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"en"
-                    }
-                ],
-                "primaryKey":"agencyID"
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-5.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"trainID",
-                        
-                        "dc:description":"Train owned by the company",
-                        "datatype":"integer",
-                        "required":true,
-                        "lang":"cs"
-                    }
-                ],
-                "primaryKey":"trainID",
-                "foreignKeys":[
-                    {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-15.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"busID",
-                        
-                        "dc:description":"Bus owned by the company",
-                        "datatype":"integer",
-                        "required":true,
-                        "lang":"cs"
-                    }
-                ],
-                "primaryKey":"busID",
-                "foreignKeys":[
-                    {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-7.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"phone",
-                        
-                        "dc:description":"Mobile or stationary phone number",
-                        "datatype":"string",
-                        "pattern": "^tel:\\+[0-9-]+$",
-                        "required":false,
-                        "lang":"cs"
-                    }
-                ],
-                "primaryKey":"phone",
-                "foreignKeys":[
-                    {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-8.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"email",
-                        
-                        "dc:description":"E-mail address",
-                        "datatype":"string",
-                        "format":"email",
-                        "required":true,
-                        "lang":"cs"
-                    }
-                ],
-                "primaryKey":"email",
-                "foreignKeys":[
-                    {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "@type":"Table",
             "url":"data-1.csv",
             "tableSchema":{
@@ -417,6 +241,236 @@
         },
         {
             "@type":"Table",
+            "url":"data-9.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"busID",
+                        
+                        "dc:description":"Bus owned by the company",
+                        "datatype":"integer",
+                        "required":true,
+                        "lang":"cs"
+                    }
+                ],
+                "primaryKey":"trainID",
+                "foreignKeys":[
+                    {
+                        "columnReference": "agencyID",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "agencyID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"data-10.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"trainID",
+                        
+                        "dc:description":"Train owned by the company",
+                        "datatype":"integer",
+                        "required":true,
+                        "lang":"cs"
+                    }
+                ],
+                "primaryKey":"trainID",
+                "foreignKeys":[
+                    {
+                        "columnReference": "agencyID",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "agencyID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+        "@type":"Table",
+        "url":"data-6.csv",
+        "tableSchema":{
+            "@type":"Schema",
+            "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        "dc:description":"Unique identifier for the agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"en"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"legalName",
+                        "dc:description":"Official name of the company",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"en"
+                    }
+                ],
+                "primaryKey":"agencyID"
+            }
+        },
+        
+        
+        {
+            "@type":"Table",
+            "url":"data-7.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"phone",
+                        
+                        "dc:description":"Mobile or stationary phone number",
+                        "datatype":"string",
+                        "pattern": "^tel:\\+[0-9-]+$",
+                        "required":false,
+                        "lang":"cs"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs"
+                    }
+                    
+                ],
+                "primaryKey":"phone",
+                "foreignKeys":[
+                    {
+                        "columnReference": "agencyID",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "agencyID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"data-8.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        
+                        "dc:description":"Unique identifier for an agency",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"email",
+                        
+                        "dc:description":"E-mail address",
+                        "datatype":"string",
+                        "format":"email",
+                        "required":true,
+                        "lang":"cs"
+                    }
+                ],
+                "primaryKey":"email",
+                "foreignKeys":[
+                    {
+                        "columnReference": "agencyID",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "agencyID"
+                        }
+                    }
+                ]
+            }
+        },
+        
+        {
+            "@type":"Table",
+            "url":"data-11.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"followingID",
+                        
+                        "dc:description":"Identifier of the \"followed by\" tuple",
+                        "datatype":"string",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"stop1ID",
+                        "titles":"stopID",
+                        "dc:description":"A first stop of the \"followed by\" tuple",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"stop2ID",
+                        "titles":"stopID",
+                        "dc:description":"Second stop of the \"followed by\" tuple",
+                        "datatype":"integer",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"followingID",
+                "foreignKeys":[
+                    {
+                        "columnReference": "stop1ID",
+                        "reference": {
+                            "resource": "data-10.csv",
+                            "columnReference": "stopID"
+                        }
+                    },
+                    {
+                        "columnReference": "stop2ID",
+                        "reference": {
+                            "resource": "data-10.csv",
+                            "columnReference": "stopID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@type":"Table",
             "url":"data-12.csv",
             "tableSchema":{
                 "@type":"Schema",
@@ -521,7 +575,77 @@
         },
         {
             "@type":"Table",
-            "url":"data-10.csv",
+            "url":"data-13.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"trainStationID",
+                        
+                        "dc:description":"Station for train",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"stationName",
+                        
+                        "dc:description":"dbpedia-owl:Station",
+                        "datatype":"string",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"capacity",
+                        
+                        "dc:description":"Number of people who can fit to a structure",
+                        "datatype":"integer",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"trainStationID",
+                "foreignKeys":[]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"data-14.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
+                    {
+                        "@type":"Column",
+                        "name":"busStationID",
+                        
+                        "dc:description":"Bus stop",
+                        "datatype":"integer",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"stationName",
+                        
+                        "dc:description":"dbpedia-owl:Station",
+                        "datatype":"string",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"capacity",
+                        
+                        "dc:description":"Number of people who can fit to a structure",
+                        "datatype":"integer",
+                        "required":true
+                    }
+                ],
+                "primaryKey":"busStationID",
+                "foreignKeys":[]
+            }
+        },
+        {
+            "@type":"Table",
+            "url":"data-15.csv",
             "tableSchema":{
                 "@type":"Schema",
                 "columns": [
@@ -604,126 +728,6 @@
                         }
                     }
                 ]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-11.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"FollowingID",
-                        
-                        "dc:description":"Identifier of the \"followed by\" tuple",
-                        "datatype":"integer",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"stop1ID",
-                        "titles":"stopID",
-                        "dc:description":"A first stop of the \"followed by\" tuple",
-                        "datatype":"integer",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"stop2ID",
-                        "titles":"stopID",
-                        "dc:description":"Second stop of the \"followed by\" tuple",
-                        "datatype":"integer",
-                        "required":true
-                    }
-                ],
-                "primaryKey":"FollowingID",
-                "foreignKeys":[
-                    {
-                        "columnReference": "stop1ID",
-                        "reference": {
-                            "resource": "data-10.csv",
-                            "columnReference": "stopID"
-                        }
-                    },
-                    {
-                        "columnReference": "stop2ID",
-                        "reference": {
-                            "resource": "data-10.csv",
-                            "columnReference": "stopID"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-13.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"trainStationID",
-                        
-                        "dc:description":"Station for train",
-                        "datatype":"integer",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"stationName",
-                        
-                        "dc:description":"dbpedia-owl:Station",
-                        "datatype":"string",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"capacity",
-                        
-                        "dc:description":"Number of people who can fit to a structure",
-                        "datatype":"integer",
-                        "required":true
-                    }
-                ],
-                "primaryKey":"trainStationID",
-                "foreignKeys":[]
-            }
-        },
-        {
-            "@type":"Table",
-            "url":"data-14.csv",
-            "tableSchema":{
-                "@type":"Schema",
-                "columns": [
-                    {
-                        "@type":"Column",
-                        "name":"busStationID",
-                        
-                        "dc:description":"Bus stop",
-                        "datatype":"integer",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"stationName",
-                        
-                        "dc:description":"dbpedia-owl:Station",
-                        "datatype":"string",
-                        "required":true
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"capacity",
-                        
-                        "dc:description":"Number of people who can fit to a structure",
-                        "datatype":"integer",
-                        "required":true
-                    }
-                ],
-                "primaryKey":"busStationID",
-                "foreignKeys":[]
             }
         }
     ]
