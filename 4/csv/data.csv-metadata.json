@@ -664,6 +664,7 @@
             "url":"data-13.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/TrainStation/{#trainStationID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -671,7 +672,9 @@
                         "titles":"trainStationID",
                         "dc:description":"Station for train",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/TrainStation"
                     },
                     {
                         "@type":"Column",
@@ -679,7 +682,8 @@
                         "titles":"stationName",
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/stationName"
                     },
                     {
                         "@type":"Column",
@@ -687,7 +691,8 @@
                         "titles":"capacity",
                         "dc:description":"Number of people who can fit to a structure",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/capacity"
                     }
                 ],
                 "primaryKey":"trainStationID",
@@ -699,6 +704,7 @@
             "url":"data-14.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/BusStation/{#busStationID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -706,7 +712,9 @@
                         "titles":"busStationID",
                         "dc:description":"Bus stop",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/BusStation"
                     },
                     {
                         "@type":"Column",
@@ -714,7 +722,8 @@
                         "titles":"stationName",
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/stationName"
                     },
                     {
                         "@type":"Column",
@@ -722,7 +731,8 @@
                         "titles":"capacity",
                         "dc:description":"Number of people who can fit to a structure",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/capacity"
                     }
                 ],
                 "primaryKey":"busStationID",
