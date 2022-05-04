@@ -127,7 +127,7 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "ex:consumtion"
+                        "propertyUrl": "ex:consumption"
                     },
                     {
                         "@type":"Column",
@@ -226,7 +226,10 @@
                         "titles":"busID",
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "aboutUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
+                        "propertyUrl":"ex:rides",
+                        "valueUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}"
                     },
                     {
                         "@type":"Column",
@@ -234,7 +237,10 @@
                         "titles":"trainID",
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "aboutUrl":"https://T1G4.DOX.cz/Train/{#trainID}",
+                        "propertyUrl":"ex:rides",
+                        "valueUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}"
                     }
                 ],
                 "primaryKey":"connectionID",
@@ -304,7 +310,7 @@
                         "titles":"phone",
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
-                        "required":false,
+                        "required":true,
                         "lang":"cs"
                     },
                     {
