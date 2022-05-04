@@ -311,7 +311,8 @@
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "propertyUrl":"ex:phone"
                     },
                     {
                         "@type":"Column",
@@ -349,7 +350,8 @@
                         "dc:description":"E-mail address",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "propertyUrl":"ex:email"
                     },
                     {
                         "@type":"Column",
