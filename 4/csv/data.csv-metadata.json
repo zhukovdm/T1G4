@@ -404,6 +404,9 @@
             "url":"data-9.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                "propertyUrl":"http://example.org/vocabulary/owns",
+                "valueUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -441,6 +444,9 @@
             "url":"data-10.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                "propertyUrl":"http://example.org/vocabulary/owns",
+                "valueUrl":"https://T1G4.DOX.cz/Train/{#trainID}",
                 "columns": [
                     {
                         "@type":"Column",
