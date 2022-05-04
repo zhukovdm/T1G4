@@ -22,7 +22,7 @@
                         "dc:description":"Unique identifier of train",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl": "a",
+                        "propertyUrl": "rdf:type",
                         "valueUrl": "dbpedia-owl:Train"
                     },
                     {
@@ -108,7 +108,7 @@
                         "dc:description":"Unique identifier of train",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl": "a",
+                        "propertyUrl": "rdf:type",
                         "valueUrl": "ex:Bus"
                     },
                     {
@@ -156,7 +156,7 @@
                         "required":true,
                         "aboutUrl":"https://T1G4.DOX.cz/Producer/{#producerID}",
                         "propertyUrl":"ex:produces",
-                        "valueUrl":"https://T1G4.DOX.cz/Train/{#busID}"
+                        "valueUrl":"https://T1G4.DOX.cz/Bus/{#busID}"
                     }
                 ],
                 "primaryKey":"busID",
