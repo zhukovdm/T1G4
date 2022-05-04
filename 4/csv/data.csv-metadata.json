@@ -492,6 +492,9 @@
             "url":"data-11.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Stop/{#stop1ID}",
+                "propertyUrl":"http://example.org/vocabulary/followedBy",
+                "valueUrl":"https://T1G4.DOX.cz/Stop/{#stop2ID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -543,6 +546,7 @@
             "url":"data-12.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Route/{#routeID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -550,7 +554,9 @@
                         "titles":"routeID",
                         "dc:description":"Transit route as grouping of connections",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/Route"
                     },
                     {
                         "@type":"Column",
@@ -558,7 +564,8 @@
                         "titles":"length",
                         "dc:description":"A length of route in kilometers",
                         "datatype":"decimal",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/length"
                     },
                     {
                         "@type":"Column",
@@ -566,7 +573,8 @@
                         "titles":"validFrom",
                         "dc:description":"A date since when was operation on a route allowed.",
                         "datatype":"date",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/validFrom"
                     },
                     {
                         "@type":"Column",
@@ -574,7 +582,8 @@
                         "titles":"validTo",
                         "dc:description":"Last date of allowed operation on a route",
                         "datatype":"date",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/validTo"
                     },
                     {
                         "@type":"Column",
@@ -582,7 +591,9 @@
                         "titles":"trainStationID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "propertyUrl":"http://example.org/vocabulary/startsWith",
+                        "valueUrl":"https://T1G4.DOX.cz/TrainStation/{#trainStation1ID}"
                     },
                     {
                         "@type":"Column",
@@ -590,7 +601,9 @@
                         "titles":"trainStationID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "propertyUrl":"http://example.org/vocabulary/endsWith",
+                        "valueUrl":"https://T1G4.DOX.cz/TrainStation/{#trainStation2ID}"
                     },
                     {
                         "@type":"Column",
@@ -598,7 +611,9 @@
                         "titles":"busStationID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "propertyUrl":"http://example.org/vocabulary/startsWith",
+                        "valueUrl":"https://T1G4.DOX.cz/BusStation/{#busStation1ID}"
                     },
                     {
                         "@type":"Column",
@@ -606,7 +621,9 @@
                         "titles":"busStationID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "propertyUrl":"http://example.org/vocabulary/endsWith",
+                        "valueUrl":"https://T1G4.DOX.cz/BusStation/{#busStation1ID}"
                     }
                 ],
                 "primaryKey":"routeID",
