@@ -103,7 +103,9 @@
                         "titles":"busID",
                         "dc:description":"Unique identifier of train",
                         "datatype":"string",
-                        "required":true
+                        "required":true,
+                        "propertyUrl": "a",
+                        "valueUrl": "ex:Train"
                     },
                     {
                         "@type":"Column",
