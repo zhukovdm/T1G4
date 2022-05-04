@@ -1,8 +1,12 @@
 {
     "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json",
     "@context":[
-        "http://www.w3.org/ns/csvw"
+        "http://www.w3.org/ns/csvw",
+        { 
+            "@language": "cs" 
+        }
     ],
+    "dc:description":"An overview of bus/train public transport",
     "@type":"TableGroup",
     "tables":[
         {
@@ -123,7 +127,11 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
+<<<<<<< HEAD
                         "propertyUrl": "http://example.org/vocabulary/consumtion"
+=======
+                        "propertyUrl": "ex:consumption"
+>>>>>>> fb2702c58df3f1d39d908dfb375199c0ec11417e
                     },
                     {
                         "@type":"Column",
@@ -233,7 +241,11 @@
                         "datatype":"integer",
                         "required":false,
                         "aboutUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
+<<<<<<< HEAD
                         "propertyUrl":"http://example.org/vocabulary/rides",
+=======
+                        "propertyUrl":"ex:rides",
+>>>>>>> fb2702c58df3f1d39d908dfb375199c0ec11417e
                         "valueUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}"
                     },
                     {
@@ -244,7 +256,11 @@
                         "datatype":"integer",
                         "required":false,
                         "aboutUrl":"https://T1G4.DOX.cz/Train/{#trainID}",
+<<<<<<< HEAD
                         "propertyUrl":"http://example.org/vocabulary/rides",
+=======
+                        "propertyUrl":"ex:rides",
+>>>>>>> fb2702c58df3f1d39d908dfb375199c0ec11417e
                         "valueUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}"
                     }
                 ],
@@ -315,7 +331,7 @@
                         "titles":"phone",
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
-                        "required":false,
+                        "required":true,
                         "lang":"cs"
                     },
                     {
