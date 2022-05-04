@@ -42,7 +42,7 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "http://example.org/vocabulary/consumption"
+                        "propertyUrl": "http://example.org/vocabulary/consumtion"
                     },
                     {
                         "@type":"Column",
@@ -211,7 +211,7 @@
             "url":"data-4.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/Producer/{#connectionID}",
+                "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -288,6 +288,7 @@
             "url":"data-6.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -296,7 +297,9 @@
                         "dc:description":"Unique identifier for the agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"en"
+                        "lang":"en",
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/Agency"
                     },
                     {
                         "@type":"Column",
@@ -305,7 +308,8 @@
                         "dc:description":"Official name of the company",
                         "datatype":"string",
                         "required":true,
-                        "lang":"en"
+                        "lang":"en",
+                        "propertyUrl":"http://example.org/vocabulary/legalName"
                     }
                 ],
                 "primaryKey":"agencyID"
@@ -317,6 +321,7 @@
             "url":"data-7.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Phone/{#phone}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -326,7 +331,8 @@
                         "datatype":"string",
                         "required":true,
                         "lang":"cs",
-                        "propertyUrl":"ex:phone"
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/phone"
                     },
                     {
                         "@type":"Column",
@@ -335,7 +341,10 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                        "propertyUrl":"http://example.org/vocabulary/has",
+                        "valueUrl":"https://T1G4.DOX.cz/Phone/{#phone}"
                     }
                     
                 ],
@@ -357,6 +366,7 @@
             "url":"data-8.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Email/{#email}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -366,7 +376,8 @@
                         "datatype":"string",
                         "required":true,
                         "lang":"cs",
-                        "propertyUrl":"ex:email"
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/email"
                     },
                     {
                         "@type":"Column",
@@ -375,7 +386,10 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                        "propertyUrl":"http://example.org/vocabulary/has",
+                        "valueUrl":"https://T1G4.DOX.cz/Email/{#email}"
                     }
                     
                 ],
@@ -530,8 +544,7 @@
                         "titles":"routeID",
                         "dc:description":"Transit route as grouping of connections",
                         "datatype":"integer",
-                        "required":true,
-                        "propertyUrl":"http://example.org/vocabulary/route"
+                        "required":true
                     },
                     {
                         "@type":"Column",
@@ -539,8 +552,7 @@
                         "titles":"length",
                         "dc:description":"A length of route in kilometers",
                         "datatype":"decimal",
-                        "required":true,
-                        "propertyUrl":"http://example.org/vocabulary/length"
+                        "required":true
                     },
                     {
                         "@type":"Column",
@@ -548,8 +560,7 @@
                         "titles":"validFrom",
                         "dc:description":"A date since when was operation on a route allowed.",
                         "datatype":"date",
-                        "required":true,
-                        "propertyUrl":"http://example.org/vocabulary/validFrom"
+                        "required":true
                     },
                     {
                         "@type":"Column",
@@ -557,8 +568,7 @@
                         "titles":"validTo",
                         "dc:description":"Last date of allowed operation on a route",
                         "datatype":"date",
-                        "required":true,
-                        "propertyUrl":"http://example.org/vocabulary/validTo"
+                        "required":true
                     },
                     {
                         "@type":"Column",
@@ -566,10 +576,7 @@
                         "titles":"trainStationID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
-                        "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
-                        "propertyUrl":"http://example.org/vocabulary/startsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/trainStation/{#trainStation1ID}"
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -577,10 +584,7 @@
                         "titles":"trainStationID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
-                        "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
-                        "propertyUrl":"http://example.org/vocabulary/endsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/trainStation/{#trainStation2ID}"
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -588,10 +592,7 @@
                         "titles":"busStationID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
-                        "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
-                        "propertyUrl":"http://example.org/vocabulary/startsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/trainStation/{#busStation1ID}"
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -599,10 +600,7 @@
                         "titles":"busStationID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
-                        "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
-                        "propertyUrl":"http://example.org/vocabulary/endsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/trainStation/{#busStation2ID}"
+                        "required":false
                     }
                 ],
                 "primaryKey":"routeID",
@@ -750,10 +748,7 @@
                         "titles":"connectionID",
                         "dc:description":"Connection to which this stop belongs",
                         "datatype":"integer",
-                        "required":true,
-                        "aboutUrl":"https://T1G4.DOX.cz/Station/{#connectionID}",
-                        "propertyUrl":"http://example.org/vocabulary/belongsTo",
-                        "valueUrl":"https://T1G4.DOX.cz/Connection/{#stopID}"
+                        "required":true
                     },
                     {
                         "@type":"Column",
@@ -761,10 +756,7 @@
                         "titles":"busStationID",
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
-                        "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/Station/{#busStationID}",
-                        "propertyUrl":"http://example.org/vocabulary/serves",
-                        "valueUrl":"https://T1G4.DOX.cz/Connection/{#stopID}"
+                        "required":false
                     },
                     {
                         "@type":"Column",
@@ -772,10 +764,7 @@
                         "titles":"trainStationID",
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
-                        "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/Station/{#trainStationID}",
-                        "propertyUrl":"http://example.org/vocabulary/serves",
-                        "valueUrl":"https://T1G4.DOX.cz/Connection/{#stopID}"
+                        "required":false
                     }
                 ],
                 "primaryKey":"stopID",
