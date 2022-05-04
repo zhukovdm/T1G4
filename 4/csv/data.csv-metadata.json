@@ -19,7 +19,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "dbpedia-owl:Train"
+                        "valueUrl": "http://example.org/vocabulary/Train"
                     },
                     {
                         "@type":"Column",
@@ -28,7 +28,7 @@
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "ex:capacity"
+                        "propertyUrl": "http://example.org/vocabulary/capacity"
                     },
                     {
                         "@type":"Column",
@@ -37,7 +37,7 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "ex:consumtion"
+                        "propertyUrl": "http://example.org/vocabulary/consumtion"
                     },
                     {
                         "@type":"Column",
@@ -46,7 +46,7 @@
                         "dc:description":"Vehicle purchase price in CZK.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl":"ex:purchasePrice"
+                        "propertyUrl":"http://example.org/vocabulary/purchasePrice"
                     },
                     {
                         "@type":"Column",
@@ -55,7 +55,7 @@
                         "dc:description":"Indication if a vehicle has electric motor or not",
                         "datatype":"boolean",
                         "required":true,
-                        "propertyUrl":"ex:electricMotor"
+                        "propertyUrl":"http://example.org/vocabulary/electricMotor"
                     },
                     {
                         "@type":"Column",
@@ -64,7 +64,7 @@
                         "dc:description":"Vehicle number issued by a European regulator.",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl":"ex:europeanVehicleNumber"
+                        "propertyUrl":"http://example.org/vocabulary/europeanVehicleNumber"
                     },
                     {
                         "@type":"Column",
@@ -74,7 +74,7 @@
                         "datatype":"string",
                         "required":true,
                         "aboutUrl":"https://T1G4.DOX.cz/Producer/{#producerID}",
-                        "propertyUrl":"ex:produces",
+                        "propertyUrl":"http://example.org/vocabulary/produces",
                         "valueUrl":"https://T1G4.DOX.cz/Train/{#trainID}"
                     }
                 ],
@@ -105,7 +105,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "ex:Bus"
+                        "valueUrl": "http://example.org/vocabulary/Bus"
                     },
                     {
                         "@type":"Column",
@@ -114,7 +114,7 @@
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "ex:capacity"
+                        "propertyUrl": "http://example.org/vocabulary/capacity"
                     },
                     {
                         "@type":"Column",
@@ -123,7 +123,7 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "ex:consumtion"
+                        "propertyUrl": "http://example.org/vocabulary/consumtion"
                     },
                     {
                         "@type":"Column",
@@ -132,7 +132,7 @@
                         "dc:description":"Vehicle purchase price in CZK.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl":"ex:purchasePrice"
+                        "propertyUrl":"http://example.org/vocabulary/purchasePrice"
                     },
                     {
                         "@type":"Column",
@@ -141,7 +141,7 @@
                         "dc:description":"License plate number issued by a regulator.",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl":"ex:licensePlateNumber"
+                        "propertyUrl":"http://example.org/vocabulary/licensePlateNumber"
                     },
                     {
                         "@type":"Column",
@@ -151,7 +151,7 @@
                         "datatype":"string",
                         "required":true,
                         "aboutUrl":"https://T1G4.DOX.cz/Producer/{#producerID}",
-                        "propertyUrl":"ex:produces",
+                        "propertyUrl":"http://example.org/vocabulary/produces",
                         "valueUrl":"https://T1G4.DOX.cz/Bus/{#busID}"
                     }
                 ],
@@ -172,6 +172,7 @@
             "url":"data-3.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Producer/{#producerID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -179,7 +180,9 @@
                         "titles":"producerID",
                         "dc:description":"A company-producer of different kinds of vehicles",
                         "datatype":"string",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/Producer"
                     },
                     {
                         "@type":"Column",
@@ -187,7 +190,8 @@
                         "titles":"legalName",
                         "dc:description":"Company legal name",
                         "datatype":"string",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/legalName"
                     }
                 ],
                 "primaryKey":"producerID",
@@ -199,6 +203,7 @@
             "url":"data-4.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Producer/{#connectionID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -206,7 +211,9 @@
                         "titles":"connectionID",
                         "dc:description":"A particular instance of a transit route which has its id. Each connection goes through the set of stops",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/Connection"
                     },
                     {
                         "@type":"Column",
@@ -214,7 +221,9 @@
                         "titles":"routeID",
                         "dc:description":"Transit route as grouping of connections",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"http://example.org/vocabulary/belongsTo",
+                        "valueUrl":"https://T1G4.DOX.cz/TransitRoute/{#routeID}"
                     },
                     {
                         "@type":"Column",
@@ -222,7 +231,10 @@
                         "titles":"busID",
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "aboutUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
+                        "propertyUrl":"http://example.org/vocabulary/rides",
+                        "valueUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}"
                     },
                     {
                         "@type":"Column",
@@ -230,7 +242,10 @@
                         "titles":"trainID",
                         "dc:description":"Vehicle riding that particular connection",
                         "datatype":"integer",
-                        "required":false
+                        "required":false,
+                        "aboutUrl":"https://T1G4.DOX.cz/Train/{#trainID}",
+                        "propertyUrl":"http://example.org/vocabulary/rides",
+                        "valueUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}"
                     }
                 ],
                 "primaryKey":"connectionID",
