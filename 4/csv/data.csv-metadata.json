@@ -105,7 +105,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl": "a",
-                        "valueUrl": "ex:Train"
+                        "valueUrl": "ex:Bus"
                     },
                     {
                         "@type":"Column",
@@ -113,7 +113,8 @@
                         "titles":"capacity",
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl": "ex:capacity"
                     },
                     {
                         "@type":"Column",
@@ -121,7 +122,8 @@
                         "titles":"consumption",
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl": "ex:consumtion"
                     },
                     {
                         "@type":"Column",
@@ -129,7 +131,8 @@
                         "titles":"purchasePrice",
                         "dc:description":"Vehicle purchase price in CZK.",
                         "datatype":"integer",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"ex:purchasePrice"
                     },
                     {
                         "@type":"Column",
@@ -137,7 +140,8 @@
                         "titles":"licensePlateNumber",
                         "dc:description":"License plate number issued by a regulator.",
                         "datatype":"string",
-                        "required":true
+                        "required":true,
+                        "propertyUrl":"ex:licensePlateNumber"
                     },
                     {
                         "@type":"Column",
@@ -145,7 +149,10 @@
                         "titles":"producerID",
                         "dc:description":"Identifier of company producing this bus",
                         "datatype":"string",
-                        "required":true
+                        "required":true,
+                        "aboutUrl":"https://T1G4.DOX.cz/Producer/{#producerID}",
+                        "propertyUrl":"ex:produces",
+                        "valueUrl":"https://T1G4.DOX.cz/Train/{#busID}"
                     }
                 ],
                 "primaryKey":"busID",
