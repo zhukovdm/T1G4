@@ -18,8 +18,8 @@
                         "dc:description":"Unique identifier of train",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl": "rdf:type",
-                        "valueUrl": "ex:Train"
+                        "propertyUrl": "a",
+                        "valueUrl": "dbpedia-owl:Train"
                     },
                     {
                         "@type":"Column",
@@ -28,7 +28,7 @@
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "ex:capacity"
+                        "propertyUrl": "    ex:capacity"
                     },
                     {
                         "@type":"Column",
@@ -37,7 +37,7 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "ex:consumtion"
+                        "propertyUrl": "    ex:consumtion"
                     },
                     {
                         "@type":"Column",
@@ -46,7 +46,7 @@
                         "dc:description":"Vehicle purchase price in CZK.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl":"ex:purchasePrice"
+                        "propertyUrl":"    ex:purchasePrice"
                     },
                     {
                         "@type":"Column",
@@ -55,7 +55,7 @@
                         "dc:description":"Indication if a vehicle has electric motor or not",
                         "datatype":"boolean",
                         "required":true,
-                        "propertyUrl":"ex:electricMotor"
+                        "propertyUrl":"    ex:electricMotor"
                     },
                     {
                         "@type":"Column",
@@ -64,7 +64,7 @@
                         "dc:description":"Vehicle number issued by a European regulator.",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl":"ex:europeanVehicleNumber"
+                        "propertyUrl":"    ex:europeanVehicleNumber"
                     },
                     {
                         "@type":"Column",
@@ -95,6 +95,7 @@
             "url":"data-2.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
                 "columns": [
                     {
                         "@type":"Column",
