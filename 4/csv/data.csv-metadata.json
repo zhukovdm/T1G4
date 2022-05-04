@@ -10,6 +10,7 @@
     "@type":"TableGroup",
     "tables":[
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv",
             "@type":"Table",
             "url":"data-1.csv",
             "tableSchema":{
@@ -95,6 +96,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv",
             "@type":"Table",
             "url":"data-2.csv",
             "tableSchema":{
@@ -172,6 +174,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv",
             "@type":"Table",
             "url":"data-3.csv",
             "tableSchema":{
@@ -203,6 +206,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv",
             "@type":"Table",
             "url":"data-4.csv",
             "tableSchema":{
@@ -278,13 +282,13 @@
                 ]
             }
         },
-        
         {
-        "@type":"Table",
-        "url":"data-6.csv",
-        "tableSchema":{
-            "@type":"Schema",
-            "columns": [
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv",
+            "@type":"Table",
+            "url":"data-6.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "columns": [
                     {
                         "@type":"Column",
                         "name":"agencyID",
@@ -308,6 +312,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv",
             "@type":"Table",
             "url":"data-7.csv",
             "tableSchema":{
@@ -347,6 +352,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv",
             "@type":"Table",
             "url":"data-8.csv",
             "tableSchema":{
@@ -386,6 +392,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv",
             "@type":"Table",
             "url":"data-9.csv",
             "tableSchema":{
@@ -423,6 +430,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv",
             "@type":"Table",
             "url":"data-10.csv",
             "tableSchema":{
@@ -510,6 +518,7 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv",
             "@type":"Table",
             "url":"data-12.csv",
             "tableSchema":{
