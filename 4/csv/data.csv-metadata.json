@@ -207,7 +207,7 @@
             "url":"data-4.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/Producer/{#connectionID}",
+                "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -284,6 +284,7 @@
         "url":"data-6.csv",
         "tableSchema":{
             "@type":"Schema",
+            "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
             "columns": [
                     {
                         "@type":"Column",
@@ -292,7 +293,9 @@
                         "dc:description":"Unique identifier for the agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"en"
+                        "lang":"en",
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/Agency"
                     },
                     {
                         "@type":"Column",
@@ -301,7 +304,8 @@
                         "dc:description":"Official name of the company",
                         "datatype":"string",
                         "required":true,
-                        "lang":"en"
+                        "lang":"en",
+                        "propertyUrl":"http://example.org/vocabulary/legalName"
                     }
                 ],
                 "primaryKey":"agencyID"
@@ -312,6 +316,7 @@
             "url":"data-7.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Phone/{#phone}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -320,7 +325,9 @@
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/phone"
                     },
                     {
                         "@type":"Column",
@@ -329,7 +336,10 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                        "propertyUrl":"http://example.org/vocabulary/has",
+                        "valueUrl":"https://T1G4.DOX.cz/Phone/{#phone}"
                     }
                     
                 ],
@@ -350,6 +360,7 @@
             "url":"data-8.csv",
             "tableSchema":{
                 "@type":"Schema",
+                "aboutUrl":"https://T1G4.DOX.cz/Email/{#email}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -358,7 +369,9 @@
                         "dc:description":"E-mail address",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/email"
                     },
                     {
                         "@type":"Column",
@@ -367,7 +380,10 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs"
+                        "lang":"cs",
+                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                        "propertyUrl":"http://example.org/vocabulary/has",
+                        "valueUrl":"https://T1G4.DOX.cz/Email/{#email}"
                     }
                     
                 ],
