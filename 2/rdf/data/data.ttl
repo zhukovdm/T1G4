@@ -9,29 +9,22 @@
 @prefix pext: <http://www.ontotext.com/proton/protonext#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <https://www.w3.org/TR/xmlschema-2/#> . # not standard
-
-# @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-# custom
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @prefix ex: <http://example.org/vocabulary/> .
 
-# other custom prefixes are defined within "data samples" section
-
 # classes ______________________________________________________________________
 
+# Transit agency ~ gtfs:Agency
 # Vehicle ~ pext:Vehicle
-
-# Train ~ dbpedia-owl:Train
-dbpedia-owl:Train rdfs:subClassOf pext:Vehicle .
 
 ex:Bus a rdfs:Class ;
     rdfs:label "bus"@en ;
     rdfs:comment "Public transport road vehicle"@en .
 ex:Bus rdfs:subClassOf pext:Vehicle .
 
-# Transit agency ~ gtfs:Agency
+# Train ~ dbpedia-owl:Train
+dbpedia-owl:Train rdfs:subClassOf pext:Vehicle .
 
 ex:Producer a rdfs:Class ;
     rdfs:label "producer"@en ;
@@ -44,7 +37,6 @@ ex:Connection a rdfs:Class ;
     rdfs:comment "A particular instance of a transit route which has its id. Each connection goes through the set of stops"@en .
 
 # Stop ~ gtfs:Stop
-
 # Station ~ dbpedia-owl:Station
 
 ex:TrainStation a rdfs:Class ;
