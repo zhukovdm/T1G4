@@ -2,31 +2,126 @@
   "@context": {
     "addr": "http://www.w3.org/Addressing/schemes.html#",
     "dbpedia-owl": "https://dbpedia.org/ontology/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "gtfs": "http://vocab.gtfs.org/terms#",
     "pext": "http://www.ontotext.com/proton/protonext#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "https://www.w3.org/TR/xmlschema-2/#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
     "ex": "http://example.org/vocabulary/",
+
     "agency": "https://T1G4.DOX.cz/TransitAgency/#",
     "bus": "https://T1G4.DOX.cz/Bus/#",
-    "conn": "https://T1G4.DOX.cz/Connection/#",
+    "train": "https://T1G4.DOX.cz/Train/#",
     "producer": "https://T1G4.DOX.cz/Producer/#",
     "route": "https://T1G4.DOX.cz/TransitRoute/#",
-    "station": "https://T1G4.DOX.cz/Station/#",
+    "conn": "https://T1G4.DOX.cz/Connection/#",
     "stop": "https://T1G4.DOX.cz/Stop/#",
-    "train": "https://T1G4.DOX.cz/Train/#",
+    "station": "https://T1G4.DOX.cz/Station/#",
 
-    "rdfs:label": { "@container": "@language" },
-    "rdfs:comment": { "@container": "@language" },
-    "ex:legalName": { "@container": "@language" },
-    "ex:stationName": { "@container": "@language" },
-    "ex:electricMotor": { "@type": "xsd:boolean" },
-    "ex:validFrom": { "@type": "xsd:date" },
-    "ex:validTo": { "@type": "xsd:date" },
-    "ex:arrivalTime": { "@type": "xsd:time" },
-    "ex:departureTime": { "@type": "xsd:time" },
+    "Agency": "gtfs:Agency",
+    "Bus": "ex:Bus",
+    "Train": "dbpedia-owl:Train",
+    "Producer": "ex:Producer",
+    "Route": "gtfs:Route",
+    "Connection": "ex:Connection",
+    "Stop": "gtfs:Stop",
+    "TrainStation": "ex:TrainStation",
+    "BusStation": "ex:BusStation",
 
-    "capacity": { "@id": "ex:capacity" }
+    "id": "@id",
+    "type": "@type",
+    "legalName": {
+      "@id": "ex:legalName",
+      "@container": "@language"
+    },
+    "capacity": {
+      "@id": "ex:capacity",
+      "@type": "xsd:integer"
+    },
+    "electricMotor": {
+      "@id": "ex:electricMotor",
+      "@type": "xsd:boolean"
+    },
+    "europeanVehicleNumber": {
+      "@id": "ex:europeanVehicleNumber",
+      "@type": "xsd:string"
+    },
+    "licensePlateNumber": {
+      "@id": "ex:licensePlateNumber",
+      "@type": "xsd:string"
+    },
+    "consumption": {
+      "@id": "ex:consumption",
+      "@type": "xsd:integer"
+    },
+    "purchasePrice": {
+      "@id": "ex:purchasePrice",
+      "@type": "xsd:integer"
+    },
+    "length": {
+      "@id": "ex:length",
+      "@type": "xsd:decimal"
+    },
+    "validFrom": {
+      "@id": "ex:validFrom",
+      "@type": "xsd:date"
+    },
+    "validTo": {
+      "@id": "ex:validTo",
+      "@type": "xsd:date"
+    },
+    "gps": {
+      "@id": "ex:gps",
+      "@type": "xsd:string"
+    },
+    "arrivalTime": {
+      "@id": "ex:arrivalTime",
+      "@type": "xsd:time"
+    },
+    "departureTime": {
+      "@id": "ex:departureTime",
+      "@type": "xsd:time"
+    },
+    "stationName": {
+      "@id": "ex:stationName",
+      "@container": "@language"
+    },
+    "phone": {
+      "@id": "foaf:phone",
+      "@type": "@id"
+    },
+    "email": {
+      "@id": "foaf:mbox",
+      "@type": "@id"
+    },
+    "owns": {
+      "@id": "ex:owns"
+    },
+    "produces": {
+      "@id": "ex:produces"
+    },
+    "rides": {
+      "@id": "ex:rides"
+    },
+    "belongsTo": {
+      "@id": "ex:belongsTo"
+    },
+    "connects": {
+      "@id": "ex:connects"
+    },
+    "followedBy": {
+      "@id": "ex:followedBy"
+    },
+    "serves": {
+      "@id": "ex:serves"
+    },
+    "startsWith": {
+      "@id": "ex:startsWith"
+    },
+    "endsWith": {
+      "@id": "ex:endsWith"
+    }
   }
 }
