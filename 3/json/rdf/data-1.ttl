@@ -1,37 +1,38 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns1: <http://example.org/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://T1G4.DOX.cz/TransitAgency/#dpp> a <http://vocab.gtfs.org/terms#Agency> ;
-    ns1:email "info@dpp.cz" ;
-    ns1:legalName "Dopravní podnik hl. m. Prahy"@cz ;
+    ns1:legalName "Dopravní podnik hl. m. Prahy"@cs ;
     ns1:owns <https://T1G4.DOX.cz/Bus/#2>,
         <https://T1G4.DOX.cz/Train/#1> ;
-    ns1:phone "tel:+420-640-921-554" .
+    foaf:mbox <mailto:info@dpp.cz> ;
+    foaf:phone <tel:+420-640-921-554> .
 
 <https://T1G4.DOX.cz/TransitAgency/#leo> a <http://vocab.gtfs.org/terms#Agency> ;
-    ns1:email "info@leoexpress.com" ;
     ns1:legalName "Leo Express"@en ;
     ns1:owns <https://T1G4.DOX.cz/Train/#2>,
         <https://T1G4.DOX.cz/Train/#3> ;
-    ns1:phone "tel:+420-543-140-738" .
+    foaf:mbox <mailto:info@leoexpress.com> ;
+    foaf:phone <tel:+420-543-140-738> .
 
 <https://T1G4.DOX.cz/TransitAgency/#student> a <http://vocab.gtfs.org/terms#Agency> ;
-    ns1:email "info@studentagency.cz" ;
     ns1:legalName "Student Agency"@en ;
     ns1:owns <https://T1G4.DOX.cz/Bus/#3> ;
-    ns1:phone "tel:+420-630-784-245" .
+    foaf:mbox <mailto:info@studentagency.cz> ;
+    foaf:phone <tel:+420-630-784-245> .
 
 <https://T1G4.DOX.cz/Bus/#2> a ns1:Bus ;
     ns1:capacity 5 ;
     ns1:consumption 10 ;
-    ns1:licensePlateNumber "5T1 9876" ;
+    ns1:licensePlateNumber "5T1 9876"^^xsd:string ;
     ns1:purchasePrice 65000 ;
     ns1:rides <https://T1G4.DOX.cz/Connection/#9-1> .
 
 <https://T1G4.DOX.cz/Bus/#3> a ns1:Bus ;
     ns1:capacity 54 ;
     ns1:consumption 98 ;
-    ns1:licensePlateNumber "6M4 1426" ;
+    ns1:licensePlateNumber "6M4 1426"^^xsd:string ;
     ns1:purchasePrice 123000 ;
     ns1:rides <https://T1G4.DOX.cz/Connection/#37-1> .
 
@@ -92,112 +93,112 @@
     ns1:stationName "Malostranské náměstí"@cs .
 
 <https://T1G4.DOX.cz/Stop/#1> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "12:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "12:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.7134667N, 17.7582722E" .
+    ns1:arrivalTime "12:00:00"^^xsd:time ;
+    ns1:departureTime "12:01:00"^^xsd:time ;
+    ns1:gps "49.7134667N, 17.7582722E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#10> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:15:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:16:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.1083880N, 14.4757450E" .
+    ns1:arrivalTime "10:15:00"^^xsd:time ;
+    ns1:departureTime "10:16:00"^^xsd:time ;
+    ns1:gps "50.1083880N, 14.4757450E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#11> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "14:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "14:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.1083880N, 14.4757450E" .
+    ns1:arrivalTime "14:00:00"^^xsd:time ;
+    ns1:departureTime "14:01:00"^^xsd:time ;
+    ns1:gps "50.1083880N, 14.4757450E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#12> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "14:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "14:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.1004810N, 14.4645900E" .
+    ns1:arrivalTime "14:05:00"^^xsd:time ;
+    ns1:departureTime "14:06:00"^^xsd:time ;
+    ns1:gps "50.1004810N, 14.4645900E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#2> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "12:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "12:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.7741814N, 17.7475375E" .
+    ns1:arrivalTime "12:05:00"^^xsd:time ;
+    ns1:departureTime "12:06:00"^^xsd:time ;
+    ns1:gps "49.7741814N, 17.7475375E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#3> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "12:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "12:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.6969069N, 17.7886239E" .
+    ns1:arrivalTime "12:10:00"^^xsd:time ;
+    ns1:departureTime "12:11:00"^^xsd:time ;
+    ns1:gps "49.6969069N, 17.7886239E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#4> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "11:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "11:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.6952592N, 17.7879486E" .
+    ns1:arrivalTime "11:00:00"^^xsd:time ;
+    ns1:departureTime "11:01:00"^^xsd:time ;
+    ns1:gps "49.6952592N, 17.7879486E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#5> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "11:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "11:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.7067069N, 17.7684325E" .
+    ns1:arrivalTime "11:05:00"^^xsd:time ;
+    ns1:departureTime "11:06:00"^^xsd:time ;
+    ns1:gps "49.7067069N, 17.7684325E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#6> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "11:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "11:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.7760583N, 17.7494736E" .
+    ns1:arrivalTime "11:10:00"^^xsd:time ;
+    ns1:departureTime "11:11:00"^^xsd:time ;
+    ns1:gps "49.7760583N, 17.7494736E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#7> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "45.0034761N, 14.2635348E" .
+    ns1:arrivalTime "10:00:00"^^xsd:time ;
+    ns1:departureTime "10:01:00"^^xsd:time ;
+    ns1:gps "45.0034761N, 14.2635348E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#8> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.0916890N, 14.4438130E" .
+    ns1:arrivalTime "10:05:00"^^xsd:time ;
+    ns1:departureTime "10:06:00"^^xsd:time ;
+    ns1:gps "50.0916890N, 14.4438130E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#9> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.1004810N, 14.4645900E" .
+    ns1:arrivalTime "10:10:00"^^xsd:time ;
+    ns1:departureTime "10:11:00"^^xsd:time ;
+    ns1:gps "50.1004810N, 14.4645900E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Train/#1> a <https://dbpedia.org/ontology/Train> ;
     ns1:capacity 30 ;
     ns1:consumption 500 ;
-    ns1:electricMotor "true"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
-    ns1:europeanVehicleNumber "B 228 FK" ;
+    ns1:electricMotor true ;
+    ns1:europeanVehicleNumber "B 228 FK"^^xsd:string ;
     ns1:purchasePrice 550000 ;
     ns1:rides <https://T1G4.DOX.cz/Connection/#1-1> .
 
 <https://T1G4.DOX.cz/Train/#2> a <https://dbpedia.org/ontology/Train> ;
     ns1:capacity 100 ;
     ns1:consumption 1000 ;
-    ns1:electricMotor "true"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
-    ns1:europeanVehicleNumber "CGI 964" ;
+    ns1:electricMotor true ;
+    ns1:europeanVehicleNumber "CGI 964"^^xsd:string ;
     ns1:purchasePrice 1000000 .
 
 <https://T1G4.DOX.cz/Train/#3> a <https://dbpedia.org/ontology/Train> ;
     ns1:capacity 123 ;
     ns1:consumption 300 ;
-    ns1:electricMotor "false"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
-    ns1:europeanVehicleNumber "EW 40 672" ;
+    ns1:electricMotor false ;
+    ns1:europeanVehicleNumber "EW 40 672"^^xsd:string ;
     ns1:purchasePrice 200000 ;
     ns1:rides <https://T1G4.DOX.cz/Connection/#137-1> .
 
 <https://T1G4.DOX.cz/TransitRoute/#1> a <http://vocab.gtfs.org/terms#Route> ;
     ns1:endsWith <https://T1G4.DOX.cz/Station/#3> ;
-    ns1:length 1.205e+02 ;
+    ns1:length 120.5 ;
     ns1:startsWith <https://T1G4.DOX.cz/Station/#1> ;
-    ns1:validFrom "2015-01-01"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
-    ns1:validTo "2020-12-31"^^<https://www.w3.org/TR/xmlschema-2/#date> .
+    ns1:validFrom "2015-01-01"^^xsd:date ;
+    ns1:validTo "2020-12-31"^^xsd:date .
 
 <https://T1G4.DOX.cz/TransitRoute/#137> a <http://vocab.gtfs.org/terms#Route> ;
     ns1:endsWith <https://T1G4.DOX.cz/Station/#12> ;
-    ns1:length 1.22e+01 ;
+    ns1:length 12.2 ;
     ns1:startsWith <https://T1G4.DOX.cz/Station/#11> ;
-    ns1:validFrom "2021-12-13"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
-    ns1:validTo "2022-12-12"^^<https://www.w3.org/TR/xmlschema-2/#date> .
+    ns1:validFrom "2021-12-13"^^xsd:date ;
+    ns1:validTo "2022-12-12"^^xsd:date .
 
 <https://T1G4.DOX.cz/TransitRoute/#37> a <http://vocab.gtfs.org/terms#Route> ;
     ns1:endsWith <https://T1G4.DOX.cz/Station/#10> ;
-    ns1:length 1.16e+01 ;
+    ns1:length 11.6 ;
     ns1:startsWith <https://T1G4.DOX.cz/Station/#7> ;
-    ns1:validFrom "2021-12-10"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
-    ns1:validTo "2022-12-12"^^<https://www.w3.org/TR/xmlschema-2/#date> .
+    ns1:validFrom "2021-12-10"^^xsd:date ;
+    ns1:validTo "2022-12-12"^^xsd:date .
 
 <https://T1G4.DOX.cz/TransitRoute/#9> a <http://vocab.gtfs.org/terms#Route> ;
     ns1:endsWith <https://T1G4.DOX.cz/Station/#6> ;
-    ns1:length 3.7e+01 ;
+    ns1:length 37.0 ;
     ns1:startsWith <https://T1G4.DOX.cz/Station/#4> ;
-    ns1:validFrom "2005-10-01"^^<https://www.w3.org/TR/xmlschema-2/#date> ;
-    ns1:validTo "2025-09-25"^^<https://www.w3.org/TR/xmlschema-2/#date> .
+    ns1:validFrom "2005-10-01"^^xsd:date ;
+    ns1:validTo "2025-09-25"^^xsd:date .
