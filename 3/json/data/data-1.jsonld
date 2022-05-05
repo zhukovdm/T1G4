@@ -116,13 +116,17 @@
             "startsWith": {
               "uri": "station:11",
               "type": "BusStation",
-              "stationName": { "cs": "Sídliště Novodvorská" },
+              "stationName": {
+                "cs": "Sídliště Novodvorská"
+              },
               "capacity": 25
             },
             "endsWith": {
               "uri": "station:12",
               "type": "BusStation",
-              "stationName": { "cs": "Limuzská" },
+              "stationName": {
+                "cs": "Limuzská"
+              },
               "capacity": 80
             }
           },
@@ -176,13 +180,17 @@
             "startsWith": {
               "uri": "station:1",
               "type": "TrainStation",
-              "stationName": { "cs": "Heřmánky" },
+              "stationName": {
+                "cs": "Heřmánky"
+              },
               "capacity": 50
             },
             "endsWith": {
               "uri": "station:3",
               "type": "TrainStation",
-              "stationName": { "cs": "Jakubčovice nad Odrou" },
+              "stationName": {
+                "cs": "Jakubčovice nad Odrou"
+              },
               "capacity": 60
             }
           },
@@ -230,13 +238,17 @@
             "startsWith": {
               "uri": "station:4",
               "type": "BusStation",
-              "stationName": { "cs": "Oderská" },
+              "stationName": {
+                "cs": "Oderská"
+              },
               "capacity": 30
             },
             "endsWith": {
               "uri": "station:6",
               "type": "BusStation",
-              "stationName": { "cs": "Spojovací" },
+              "stationName": {
+                "cs": "Spojovací"
+              },
               "capacity": 45
             }
           },
