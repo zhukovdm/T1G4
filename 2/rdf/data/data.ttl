@@ -199,13 +199,13 @@ ex:serves a rdf:Property ;
     rdfs:range gtfs:Stop .
 
 ex:startsWith a rdf:Property ;
-    rdfs:label "starts with"@end ;
+    rdfs:label "starts with"@en ;
     rdfs:comment "Name of a station, where the route begins."@en ;
     rdfs:domain gtfs:Route ;
     rdfs:range dbpedia-owl:Station .
 
 ex:endsWith a rdf:Property ;
-    rdfs:label "ends with"@end ;
+    rdfs:label "ends with"@en ;
     rdfs:comment "Name of a station, where the route ends."@en ;
     rdfs:domain gtfs:Route ;
     rdfs:range dbpedia-owl:Station .
