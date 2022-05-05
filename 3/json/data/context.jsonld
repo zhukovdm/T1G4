@@ -7,9 +7,7 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "https://www.w3.org/TR/xmlschema-2/#",
-
     "ex": "http://example.org/vocabulary/",
-
     "agency": "https://T1G4.DOX.cz/TransitAgency/#",
     "bus": "https://T1G4.DOX.cz/Bus/#",
     "conn": "https://T1G4.DOX.cz/Connection/#",
@@ -27,6 +25,11 @@
     "ex:validFrom": { "@type": "xsd:date" },
     "ex:validTo": { "@type": "xsd:date" },
     "ex:arrivalTime": { "@type": "xsd:time" },
-    "ex:departureTime": { "@type": "xsd:time" }
+    "ex:departureTime": { "@type": "xsd:time" },
+
+    "capacity": {
+      "@id": "ex:capacity",
+      "@type": "rdf:Property"
+    }
   }
 }
