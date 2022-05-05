@@ -30,7 +30,7 @@
     "TrainStation": "ex:TrainStation",
     "BusStation": "ex:BusStation",
 
-    "id": "@id",
+    "uri": "@id",
     "type": "@type",
     "legalName": {
       "@id": "ex:legalName",
