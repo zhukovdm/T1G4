@@ -27,9 +27,6 @@
     "ex:arrivalTime": { "@type": "xsd:time" },
     "ex:departureTime": { "@type": "xsd:time" },
 
-    "capacity": {
-      "@id": "ex:capacity",
-      "@type": "rdf:Property"
-    }
+    "capacity": { "@id": "ex:capacity" }
   }
 }
