@@ -1,13 +1,13 @@
 [ .[]
-| ."ex:owns"[]
+| .owns[]
 | select
-  ( ."@id"
+  ( .uri
   | startswith("train")
   )
-| ."ex:rides"."ex:belongsTo"
-| select(."ex:length" > 20)
-| { firstStation: ."ex:startsWith"."ex:stationName"."cs"
-  , lastStation: ."ex:endsWith"."ex:stationName"."cs"
-  , length: ."ex:length"
+| .rides.belongsTo
+| select(.length > 20)
+| { firstStation: .startsWith.stationName."cs"
+  , lastStation: .endsWith.stationName."cs"
+  , length: .length
   }
 ]

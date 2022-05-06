@@ -1,15 +1,15 @@
 [ .[]
 | select
-  ( ."ex:legalName"
+  ( .legalName
   | has("de")
   )
 | select
-  ( ."ex:produces"[]
+  ( .produces[]
   | select
-    ( ."ex:purchasePrice" > 150000
+    ( .purchasePrice > 150000
     )
   )
-| { producer: ."ex:legalName"."de"
+| { producer: .legalName."de"
   }
 ]
 | unique_by(.producer)

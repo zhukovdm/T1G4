@@ -1,16 +1,16 @@
 [ .[]
 | select
-  ( ."@id"
+  ( .uri
   | endswith("tatra")
   )
-| ."ex:produces"[]
+| .produces[]
 | select
-  ( ."@id"
+  ( .uri
   | startswith("bus")
   )
 | select
-  ( ."ex:consumption" > 20
+  ( .consumption > 20
   )
-| { license: ."ex:licensePlateNumber"
+| { license: .licensePlateNumber
   }
 ]

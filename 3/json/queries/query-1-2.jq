@@ -1,17 +1,17 @@
 [ .[]
 | select
-  ( ."ex:owns"[]
-  | ."@id"
+  ( .owns[]
+  | .uri
   | startswith("bus")
   )
 | select
-  ( ."ex:owns"[]
-  | ."ex:rides"."ex:connects"
+  ( .owns[]
+  | .rides.connects
   | length > 2
   )
-| { name: ."@id"
-  , email: ."ex:email"
-  , phone: ."ex:phone"
+| { name: .uri
+  , email: .email
+  , phone: .phone
   }
 ]
 | unique_by(.name)

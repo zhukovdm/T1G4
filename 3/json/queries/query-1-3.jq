@@ -1,10 +1,10 @@
-[.[]
-| ."ex:owns"[]
+[ .[]
+| .owns[]
 | select
-  ( ."@id"
+  ( .uri
   | startswith("train")
   )
-| { name: ."ex:rides"."ex:belongsTo"."ex:startsWith"."ex:stationName"."cs"
+| { name: .rides.belongsTo.startsWith.stationName."cs"
   }
 | select
   ( .name != null
