@@ -17,9 +17,9 @@ CREATE (siemens:Producer{legalName: "Siemens AG"})
 CREATE (bombardier:Producer{legalName: "Bombardier Inc."})
 
 // "transport" agency definition
-CREATE (student:Agency{legalName: "Student Agency", phone: "tel:+420-630-784-245", mbox: "mailto:info@studentagency.cz"})
-CREATE (leo:Agency{legalName: "Leo Express", phone: "tel:+420-543-140-738", mbox: "mailto:info@leoexpress.com"})
-CREATE (dpp:Agency{legalName: "Dopravní podnik hl. m. Prahy", phone: "tel:+420-640-921-554", mbox: "mailto:info@dpp.cz"})
+CREATE (student:Agency{legalName: "Student Agency", phone: "tel:+420-630-784-245", email: "mailto:info@studentagency.cz"})
+CREATE (leo:Agency{legalName: "Leo Express", phone: "tel:+420-543-140-738", email: "mailto:info@leoexpress.com"})
+CREATE (dpp:Agency{legalName: "Dopravní podnik hl. m. Prahy", phone: "tel:+420-640-921-554", email: "mailto:info@dpp.cz"})
 
 // "station" definition
 CREATE (tst1:TrainStation{stationName: "Heřmánky", capacity: 50})
