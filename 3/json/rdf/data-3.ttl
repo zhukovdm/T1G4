@@ -64,80 +64,80 @@
     ns1:stationName "Budějovická"@cs .
 
 <https://T1G4.DOX.cz/Stop/#1> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "12:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "12:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "12:00:00"^^xsd:time ;
+    ns1:departureTime "12:01:00"^^xsd:time ;
     ns1:followedBy "stop:2" ;
-    ns1:gps "49.7134667N, 17.7582722E" .
+    ns1:gps "49.7134667N, 17.7582722E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#10> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:15:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:16:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.1083880N, 14.4757450E" .
+    ns1:arrivalTime "10:15:00"^^xsd:time ;
+    ns1:departureTime "10:16:00"^^xsd:time ;
+    ns1:gps "50.1083880N, 14.4757450E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#11> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "14:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "14:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "14:00:00"^^xsd:time ;
+    ns1:departureTime "14:01:00"^^xsd:time ;
     ns1:followedBy "stop:12" ;
-    ns1:gps "50.1083880N, 14.4757450E" .
+    ns1:gps "50.1083880N, 14.4757450E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#12> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "14:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "14:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.1004810N, 14.4645900E" .
+    ns1:arrivalTime "14:05:00"^^xsd:time ;
+    ns1:departureTime "14:06:00"^^xsd:time ;
+    ns1:gps "50.1004810N, 14.4645900E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#13> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "15:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "15:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "15:00:00"^^xsd:time ;
+    ns1:departureTime "15:01:00"^^xsd:time ;
     ns1:followedBy "stop:14" ;
-    ns1:gps "50.1083880N, 14.4757450E" .
+    ns1:gps "50.1083880N, 14.4757450E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#14> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "15:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "15:07:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "50.1004810N, 14.4645900E" .
+    ns1:arrivalTime "15:05:00"^^xsd:time ;
+    ns1:departureTime "15:07:00"^^xsd:time ;
+    ns1:gps "50.1004810N, 14.4645900E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#2> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "12:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "12:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "12:05:00"^^xsd:time ;
+    ns1:departureTime "12:06:00"^^xsd:time ;
     ns1:followedBy "stop:3" ;
-    ns1:gps "49.7741814N, 17.7475375E" .
+    ns1:gps "49.7741814N, 17.7475375E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#3> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "12:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "12:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.6969069N, 17.7886239E" .
+    ns1:arrivalTime "12:10:00"^^xsd:time ;
+    ns1:departureTime "12:11:00"^^xsd:time ;
+    ns1:gps "49.6969069N, 17.7886239E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#4> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "11:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "11:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "11:00:00"^^xsd:time ;
+    ns1:departureTime "11:01:00"^^xsd:time ;
     ns1:followedBy "stop:5" ;
-    ns1:gps "49.6952592N, 17.7879486E" .
+    ns1:gps "49.6952592N, 17.7879486E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#5> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "11:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "11:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "11:05:00"^^xsd:time ;
+    ns1:departureTime "11:06:00"^^xsd:time ;
     ns1:followedBy "stop:6" ;
-    ns1:gps "49.7067069N, 17.7684325E" .
+    ns1:gps "49.7067069N, 17.7684325E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#6> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "11:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "11:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:gps "49.7760583N, 17.7494736E" .
+    ns1:arrivalTime "11:10:00"^^xsd:time ;
+    ns1:departureTime "11:11:00"^^xsd:time ;
+    ns1:gps "49.7760583N, 17.7494736E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#7> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:00:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:01:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "10:00:00"^^xsd:time ;
+    ns1:departureTime "10:01:00"^^xsd:time ;
     ns1:followedBy "stop:8" ;
-    ns1:gps "45.0034761N, 14.2635348E" .
+    ns1:gps "45.0034761N, 14.2635348E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#8> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:05:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:06:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "10:05:00"^^xsd:time ;
+    ns1:departureTime "10:06:00"^^xsd:time ;
     ns1:followedBy "stop:9" ;
-    ns1:gps "50.0916890N, 14.4438130E" .
+    ns1:gps "50.0916890N, 14.4438130E"^^xsd:string .
 
 <https://T1G4.DOX.cz/Stop/#9> a <http://vocab.gtfs.org/terms#Stop> ;
-    ns1:arrivalTime "10:10:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
-    ns1:departureTime "10:11:00"^^<https://www.w3.org/TR/xmlschema-2/#time> ;
+    ns1:arrivalTime "10:10:00"^^xsd:time ;
+    ns1:departureTime "10:11:00"^^xsd:time ;
     ns1:followedBy "stop:10" ;
-    ns1:gps "50.1004810N, 14.4645900E" .
+    ns1:gps "50.1004810N, 14.4645900E"^^xsd:string .
