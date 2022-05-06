@@ -18,7 +18,13 @@
                         </xs:simpleContent>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="email" type="xs:string"/>
+                <xs:element name="email">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="mailto:[A-Za-z0-9\-_]+@[A-Za-z0-9\-_]+\.[A-Za-z0-9\-_]+"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
                 <xs:element name="phone">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">

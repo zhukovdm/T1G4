@@ -2,6 +2,7 @@
 @prefix addr: <http://www.w3.org/Addressing/schemes.html#> .
 @prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
 @prefix ex: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix pext: <http://www.ontotext.com/proton/protonext#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -36,18 +37,6 @@ ex:BusStation rdfs:subClassOf dbpedia-owl:Station .
 ex:Connection a rdfs:Class ;
     rdfs:label "connection"@en ;
     rdfs:comment "A particular instance of a transit route which has its id. Each connection goes through the set of stops"@en .
-
-ex:phone a rdf:Property ;
-    rdfs:label "phone number"@en ;
-    rdfs:comment "Mobile or stationary phone number"@en ;
-    rdfs:domain gtfs:Agency ;
-    rdfs:range addr:tel .
-
-ex:email a rdf:Property ;
-    rdfs:label "email"@en ;
-    rdfs:comment "E-mail address"@en ;
-    rdfs:domain gtfs:Agency ;
-    rdfs:range xsd:string .
 
 ex:legalName a rdf:Property ;
     rdfs:label "legal name"@en ;
@@ -171,18 +160,18 @@ ex:endsWith a rdf:Property ;
 
 agency:leo a gtfs:Agency ;
     ex:legalName "Leo Express" ;
-    ex:email "info@leoexpress.com" ;
-    ex:phone "tel:+420-543-140-738" .
+    foaf:mbox <mailto:info@leoexpress.com> ;
+    foaf:phone <tel:+420-543-140-738> .
 
 agency:dpp a gtfs:Agency ;
     ex:legalName "Dopravní podnik hl. m. Prahy" ;
-    ex:email "info@dpp.cz" ;
-    ex:phone "tel:+420-640-921-554" .
+    foaf:mbox <mailto:info@dpp.cz> ;
+    foaf:phone <tel:+420-640-921-554> .
 
 agency:student a gtfs:Agency ;
     ex:legalName "Student Agency" ;
-    ex:email "info@studentagency.cz" ;
-    ex:phone "tel:+420-630-784-245" .
+    foaf:mbox <mailto:info@studentagency.cz> ;
+    foaf:phone <tel:+420-630-784-245> .
 
 train:2 a dbpedia-owl:Train ;
     ex:capacity 100 ;

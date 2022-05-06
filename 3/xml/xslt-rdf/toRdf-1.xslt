@@ -10,6 +10,7 @@
 @prefix addr: &lt;http://www.w3.org/Addressing/schemes.html#&gt; .
 @prefix dbpedia-owl: &lt;https://dbpedia.org/ontology/&gt; .
 @prefix ex: &lt;http://example.org/vocabulary/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
 @prefix gtfs: &lt;http://vocab.gtfs.org/terms#&gt; .
 @prefix pext: &lt;http://www.ontotext.com/proton/protonext#&gt; .
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
@@ -44,18 +45,6 @@ ex:BusStation rdfs:subClassOf dbpedia-owl:Station .
 ex:Connection a rdfs:Class ;
     rdfs:label &quot;connection&quot;@en ;
     rdfs:comment &quot;A particular instance of a transit route which has its id. Each connection goes through the set of stops&quot;@en .
-
-ex:phone a rdf:Property ;
-    rdfs:label &quot;phone number&quot;@en ;
-    rdfs:comment &quot;Mobile or stationary phone number&quot;@en ;
-    rdfs:domain gtfs:Agency ;
-    rdfs:range addr:tel .
-
-ex:email a rdf:Property ;
-    rdfs:label "email"@en ;
-    rdfs:comment "E-mail address"@en ;
-    rdfs:domain gtfs:Agency ;
-    rdfs:range xsd:string .
 
 ex:legalName a rdf:Property ;
     rdfs:label &quot;legal name&quot;@en ;
@@ -185,8 +174,8 @@ ex:endsWith a rdf:Property ;
 <xsl:template match="agency">
 agency:<xsl:value-of select="id"/> a gtfs:Agency ;
     ex:legalName &quot;<xsl:value-of select="legalName"/>&quot; ;
-    ex:email &quot;<xsl:value-of select="email"/>&quot; ;
-    ex:phone &quot;<xsl:value-of select="phone"/>&quot; .
+    foaf:mbox &lt;<xsl:value-of select="email"/>&gt; ;
+    foaf:phone &lt;<xsl:value-of select="phone"/>&gt; .
 </xsl:template>
 
 <xsl:template match="train">

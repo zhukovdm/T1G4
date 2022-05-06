@@ -6,7 +6,7 @@
 <agency>
     <id>leo</id>
     <legalName xml:lang="en">Leo Express</legalName>
-    <email>info@leoexpress.com</email>
+    <email>mailto:info@leoexpress.com</email>
     <phone>tel:+420-543-140-738</phone>
     <owns>
         <vehicle>
@@ -78,7 +78,7 @@
 <agency>
     <id>dpp</id>
     <legalName xml:lang="cs">Dopravní podnik hl. m. Prahy</legalName>
-    <email>info@dpp.cz</email>
+    <email>mailto:info@dpp.cz</email>
     <phone>tel:+420-640-921-554</phone>
     <owns>
         <vehicle>
@@ -204,7 +204,7 @@
 <agency>
     <id>student</id>
     <legalName xml:lang="en">Student Agency</legalName>
-    <email>info@studentagency.cz</email>
+    <email>mailto:info@studentagency.cz</email>
     <phone>tel:+420-630-784-245</phone>
     <owns>
         <vehicle>

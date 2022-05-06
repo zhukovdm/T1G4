@@ -11,6 +11,8 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
   <h1>Agencies</h1>
   <table border="2">
     <xsl:for-each select="agency">
+    <xsl:variable name="email" select="email"/>
+    <xsl:variable name="phone" select="phone"/>
     <tr bgcolor="#9acd38">
       <th style="text-align:left">Name</th>
       <th style="text-align:left">Email</th>
@@ -22,8 +24,8 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
     </tr>
     <tr>
       <td><xsl:value-of select="legalName"/></td>
-      <td><xsl:value-of select="email"/></td>
-      <td><xsl:value-of select="phone"/></td>
+      <td><a href="{$email}"><xsl:value-of select="substring-after($email, ':')"/></a></td>
+      <td><a href="{$phone}"><xsl:value-of select="substring-after($phone, ':')"/></a></td>
 
       <xsl:for-each select="owns/vehicle">
       <td>
@@ -45,7 +47,7 @@ xmlns:fn="http://www.w3.org/2005/xpath-functions">
     </tr>
     </xsl:for-each>
   </table>
-  </body>
-  </html>
-  </xsl:template>
-  </xsl:stylesheet>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
