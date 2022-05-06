@@ -1,5 +1,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/vocabulary/Bus> a rdfs:Class ;
     rdfs:label "bus"@en ;
@@ -28,7 +29,7 @@
     rdfs:label "arrival time"@en ;
     rdfs:comment "Arrival time of a vehicle."@en ;
     rdfs:domain <http://vocab.gtfs.org/terms#Stop> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#time> .
+    rdfs:range xsd:time .
 
 <http://example.org/vocabulary/belongsTo> a rdf:Property ;
     rdfs:label "belongs to"@en ;
@@ -40,7 +41,7 @@
     rdfs:label "capacity"@en ;
     rdfs:comment "Number of people who can fit to a structure"@en ;
     rdfs:domain rdfs:Class ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#integer> .
+    rdfs:range xsd:integer .
 
 <http://example.org/vocabulary/connects> a rdf:Property ;
     rdfs:label "connects"@en ;
@@ -52,25 +53,19 @@
     rdfs:label "consumption"@en ;
     rdfs:comment "Vehicle consumption of gasoline or electricity per km."@en ;
     rdfs:domain <http://www.ontotext.com/proton/protonext#Vehicle> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#integer> .
+    rdfs:range xsd:integer .
 
 <http://example.org/vocabulary/departureTime> a rdf:Property ;
     rdfs:label "departure time"@en ;
     rdfs:comment "Departure time of a vehicle."@en ;
     rdfs:domain <http://vocab.gtfs.org/terms#Stop> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#time> .
+    rdfs:range xsd:time .
 
 <http://example.org/vocabulary/electricMotor> a rdf:Property ;
     rdfs:label "Is motor electric?"@en ;
     rdfs:comment "Indication if a vehicle has electric motor or not"@en ;
     rdfs:domain <https://dbpedia.org/ontology/Train> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#boolean> .
-
-<http://example.org/vocabulary/email> a rdf:Property ;
-    rdfs:label "email"@en ;
-    rdfs:comment "E-mail address"@en ;
-    rdfs:domain <http://vocab.gtfs.org/terms#Agency> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#string> .
+    rdfs:range xsd:boolean .
 
 <http://example.org/vocabulary/endsWith> a rdf:Property ;
     rdfs:label "ends with"@en ;
@@ -82,7 +77,7 @@
     rdfs:label "european vehicle number"@en ;
     rdfs:comment "Vehicle number issued by a European regulator."@en ;
     rdfs:domain <https://dbpedia.org/ontology/Train> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#string> .
+    rdfs:range xsd:string .
 
 <http://example.org/vocabulary/followedBy> a rdf:Property ;
     rdfs:label "followed by"@en ;
@@ -94,37 +89,31 @@
     rdfs:label "gps"@en ;
     rdfs:comment "Exact point on a map where stop is located."@en ;
     rdfs:domain <http://vocab.gtfs.org/terms#Stop> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#string> .
+    rdfs:range xsd:string .
 
 <http://example.org/vocabulary/legalName> a rdf:Property ;
     rdfs:label "legal name"@en ;
     rdfs:comment "Company legal name"@en ;
     rdfs:domain rdfs:Class ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#string> .
+    rdfs:range xsd:string .
 
 <http://example.org/vocabulary/length> a rdf:Property ;
     rdfs:label "length"@en ;
     rdfs:comment "A length of route in kilometers."@en ;
     rdfs:domain <http://vocab.gtfs.org/terms#Route> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#decimal> .
+    rdfs:range xsd:decimal .
 
 <http://example.org/vocabulary/licensePlateNumber> a rdf:Property ;
     rdfs:label "license plate number"@en ;
     rdfs:comment "License plate number issued by a regulator."@en ;
     rdfs:domain <http://example.org/vocabulary/Bus> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#string> .
+    rdfs:range xsd:string .
 
 <http://example.org/vocabulary/owns> a rdf:Property ;
     rdfs:label "owns"@en ;
     rdfs:comment "A transit agency owns a vehicle."@en ;
     rdfs:domain <http://vocab.gtfs.org/terms#Agency> ;
     rdfs:range <http://www.ontotext.com/proton/protonext#Vehicle> .
-
-<http://example.org/vocabulary/phone> a rdf:Property ;
-    rdfs:label "phone number"@en ;
-    rdfs:comment "Mobile or stationary phone number"@en ;
-    rdfs:domain <http://vocab.gtfs.org/terms#Agency> ;
-    rdfs:range <http://www.w3.org/Addressing/schemes.html#tel> .
 
 <http://example.org/vocabulary/produces> a rdf:Property ;
     rdfs:label "produces"@en ;
@@ -136,12 +125,12 @@
     rdfs:label "purchase price"@en ;
     rdfs:comment "Vehicle purchase price in CZK."@en ;
     rdfs:domain <http://www.ontotext.com/proton/protonext#Vehicle> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#integer> .
+    rdfs:range xsd:integer .
 
 <http://example.org/vocabulary/rides> a rdf:Property ;
     rdfs:label "rides"@en ;
     rdfs:comment "A vehicle rides a connection."@en ;
-    rdfs:domain <http://example.org/vocabulary/Vehicle> ;
+    rdfs:domain <http://www.ontotext.com/proton/protonext#Vehicle> ;
     rdfs:range <http://example.org/vocabulary/Connection> .
 
 <http://example.org/vocabulary/serves> a rdf:Property ;
@@ -160,18 +149,18 @@
     rdfs:label "station name"@en ;
     rdfs:comment "Actual station name."@en ;
     rdfs:domain <https://dbpedia.org/ontology/Station> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#string> .
+    rdfs:range xsd:string .
 
 <http://example.org/vocabulary/validFrom> a rdf:Property ;
     rdfs:label "valid from"@en ;
     rdfs:comment "A date since when was operation on a route allowed."@en ;
     rdfs:domain <http://vocab.gtfs.org/terms#Route> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#date> .
+    rdfs:range xsd:date .
 
 <http://example.org/vocabulary/validTo> a rdf:Property ;
     rdfs:label "valid to"@en ;
     rdfs:comment "Last date of allowed operation on a route."@en ;
     rdfs:domain <http://vocab.gtfs.org/terms#Route> ;
-    rdfs:range <https://www.w3.org/TR/xmlschema-2/#date> .
+    rdfs:range xsd:date .
 
 <https://dbpedia.org/ontology/Train> rdfs:subClassOf <http://www.ontotext.com/proton/protonext#Vehicle> .

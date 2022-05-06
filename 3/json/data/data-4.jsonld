@@ -1,270 +1,252 @@
 [
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "dbpedia-owl:Train",
-    "rdfs:subClassOf": { "@id": "pext:Vehicle" }
+    "uri": "dbpedia-owl:Train",
+    "subClassOf": { "uri": "pext:Vehicle" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:Bus",
-    "@type": "rdfs:Class",
-    "rdfs:label": { "en": "bus" },
-    "rdfs:comment": { "en": "Public transport road vehicle" },
-    "rdfs:subClassOf": { "@id": "pext:Vehicle" }
+    "uri": "ex:Bus",
+    "type": "Class",
+    "label": { "en": "bus" },
+    "comment": { "en": "Public transport road vehicle" },
+    "subClassOf": { "uri": "pext:Vehicle" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:Producer",
-    "@type": "rdfs:Class",
-    "rdfs:label": { "en": "producer" },
-    "rdfs:comment": { "en": "A company-producer of different kinds of vehicles" }
+    "uri": "ex:Producer",
+    "type": "Class",
+    "label": { "en": "producer" },
+    "comment": { "en": "A company-producer of different kinds of vehicles" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:Connection",
-    "@type": "rdfs:Class",
-    "rdfs:label": { "en": "connection" },
-    "rdfs:comment": { "en": "A particular instance of a transit route which has its id. Each connection goes through the set of stops" }
+    "uri": "ex:Connection",
+    "type": "Class",
+    "label": { "en": "connection" },
+    "comment": { "en": "A particular instance of a transit route which has its id. Each connection goes through the set of stops" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:TrainStation",
-    "@type": "rdfs:Class",
-    "rdfs:label": { "en": "train station" },
-    "rdfs:comment": { "en": "Named train station." },
-    "rdfs:subClassOf": { "@id": "dbpedia-owl:Station" }
+    "uri": "ex:TrainStation",
+    "type": "Class",
+    "label": { "en": "train station" },
+    "comment": { "en": "Named train station." },
+    "subClassOf": { "uri": "dbpedia-owl:Station" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:BusStation",
-    "@type": "rdfs:Class",
-    "rdfs:label": { "en": "bus station" },
-    "rdfs:comment": { "en": "Named bus station." },
-    "rdfs:subClassOf": { "@id": "dbpedia-owl:Station" }
+    "uri": "ex:BusStation",
+    "type": "Class",
+    "label": { "en": "bus station" },
+    "comment": { "en": "Named bus station." },
+    "subClassOf": { "uri": "dbpedia-owl:Station" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:legalName",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "legal name" },
-    "rdfs:comment": { "en": "Company legal name" },
-    "rdfs:domain": { "@id": "rdfs:Class" },
-    "rdfs:range": { "@id": "xsd:string" }
+    "uri": "ex:legalName",
+    "type": "Property",
+    "label": { "en": "legal name" },
+    "comment": { "en": "Company legal name" },
+    "domain": { "uri": "rdfs:Class" },
+    "range": { "uri": "xsd:string" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:capacity",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "capacity" },
-    "rdfs:comment": { "en": "Number of people who can fit to a structure" },
-    "rdfs:domain": { "@id": "rdfs:Class" },
-    "rdfs:range": { "@id": "xsd:integer" }
+    "uri": "ex:capacity",
+    "type": "Property",
+    "label": { "en": "capacity" },
+    "comment": { "en": "Number of people who can fit to a structure" },
+    "domain": { "uri": "rdfs:Class" },
+    "range": { "uri": "xsd:integer" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:electricMotor",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "Is motor electric?" },
-    "rdfs:comment": { "en": "Indication if a vehicle has electric motor or not" },
-    "rdfs:domain": { "@id": "dbpedia-owl:Train" },
-    "rdfs:range": { "@id": "xsd:boolean" }
+    "uri": "ex:electricMotor",
+    "type": "Property",
+    "label": { "en": "Is motor electric?" },
+    "comment": { "en": "Indication if a vehicle has electric motor or not" },
+    "domain": { "uri": "dbpedia-owl:Train" },
+    "range": { "uri": "xsd:boolean" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:europeanVehicleNumber",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "european vehicle number" },
-    "rdfs:comment": { "en": "Vehicle number issued by a European regulator." },
-    "rdfs:domain": { "@id": "dbpedia-owl:Train" },
-    "rdfs:range": { "@id": "xsd:string" }
+    "uri": "ex:europeanVehicleNumber",
+    "type": "Property",
+    "label": { "en": "european vehicle number" },
+    "comment": { "en": "Vehicle number issued by a European regulator." },
+    "domain": { "uri": "dbpedia-owl:Train" },
+    "range": { "uri": "xsd:string" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:licensePlateNumber",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "license plate number" },
-    "rdfs:comment": { "en": "License plate number issued by a regulator." },
-    "rdfs:domain": { "@id": "ex:Bus" },
-    "rdfs:range": { "@id": "xsd:string" }
+    "uri": "ex:licensePlateNumber",
+    "type": "Property",
+    "label": { "en": "license plate number" },
+    "comment": { "en": "License plate number issued by a regulator." },
+    "domain": { "uri": "ex:Bus" },
+    "range": { "uri": "xsd:string" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:phone",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "phone number" },
-    "rdfs:comment": { "en": "Mobile or stationary phone number" },
-    "rdfs:domain": { "@id": "gtfs:Agency" },
-    "rdfs:range": { "@id": "addr:tel" }
+    "uri": "ex:consumption",
+    "type": "Property",
+    "label": { "en": "consumption" },
+    "comment": { "en": "Vehicle consumption of gasoline or electricity per km." },
+    "domain": { "uri": "pext:Vehicle" },
+    "range": { "uri": "xsd:integer" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:email",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "email" },
-    "rdfs:comment": { "en": "E-mail address" },
-    "rdfs:domain": { "@id": "gtfs:Agency" },
-    "rdfs:range": { "@id": "xsd:string" }
+    "uri": "ex:purchasePrice",
+    "type": "Property",
+    "label": { "en": "purchase price" },
+    "comment": { "en": "Vehicle purchase price in CZK." },
+    "domain": { "uri": "pext:Vehicle" },
+    "range": { "uri": "xsd:integer" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:consumption",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "consumption" },
-    "rdfs:comment": { "en": "Vehicle consumption of gasoline or electricity per km." },
-    "rdfs:domain": { "@id": "pext:Vehicle" },
-    "rdfs:range": { "@id": "xsd:integer" }
+    "uri": "ex:length",
+    "type": "Property",
+    "label": { "en": "length" },
+    "comment": { "en": "A length of route in kilometers." },
+    "domain": { "uri": "gtfs:Route" },
+    "range": { "uri": "xsd:decimal" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:purchasePrice",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "purchase price" },
-    "rdfs:comment": { "en": "Vehicle purchase price in CZK." },
-    "rdfs:domain": { "@id": "pext:Vehicle" },
-    "rdfs:range": { "@id": "xsd:integer" }
+    "uri": "ex:validFrom",
+    "type": "Property",
+    "label": { "en": "valid from" },
+    "comment": { "en": "A date since when was operation on a route allowed." },
+    "domain": { "uri": "gtfs:Route" },
+    "range": { "uri": "xsd:date" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:length",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "length" },
-    "rdfs:comment": { "en": "A length of route in kilometers." },
-    "rdfs:domain": { "@id": "gtfs:Route" },
-    "rdfs:range": { "@id": "xsd:decimal" }
+    "uri": "ex:validTo",
+    "type": "Property",
+    "label": { "en": "valid to" },
+    "comment": { "en": "Last date of allowed operation on a route." },
+    "domain": { "uri": "gtfs:Route" },
+    "range": { "uri": "xsd:date" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:validFrom",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "valid from" },
-    "rdfs:comment": { "en": "A date since when was operation on a route allowed." },
-    "rdfs:domain": { "@id": "gtfs:Route" },
-    "rdfs:range": { "@id": "xsd:date" }
+    "uri": "ex:gps",
+    "type": "Property",
+    "label": { "en": "gps" },
+    "comment": { "en": "Exact point on a map where stop is located." },
+    "domain": { "uri": "gtfs:Stop" },
+    "range": { "uri": "xsd:string" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:validTo",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "valid to" },
-    "rdfs:comment": { "en": "Last date of allowed operation on a route." },
-    "rdfs:domain": { "@id": "gtfs:Route" },
-    "rdfs:range": { "@id": "xsd:date" }
+    "uri": "ex:arrivalTime",
+    "type": "Property",
+    "label": { "en": "arrival time" },
+    "comment": { "en": "Arrival time of a vehicle." },
+    "domain": { "uri": "gtfs:Stop" },
+    "range": { "uri": "xsd:time" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:gps",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "gps" },
-    "rdfs:comment": { "en": "Exact point on a map where stop is located." },
-    "rdfs:domain": { "@id": "gtfs:Stop" },
-    "rdfs:range": { "@id": "xsd:string" }
+    "uri": "ex:departureTime",
+    "type": "Property",
+    "label": { "en": "departure time" },
+    "comment": { "en": "Departure time of a vehicle." },
+    "domain": { "uri": "gtfs:Stop" },
+    "range": { "uri": "xsd:time" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:arrivalTime",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "arrival time" },
-    "rdfs:comment": { "en": "Arrival time of a vehicle." },
-    "rdfs:domain": { "@id": "gtfs:Stop" },
-    "rdfs:range": { "@id": "xsd:time" }
+    "uri": "ex:stationName",
+    "type": "Property",
+    "label": { "en": "station name" },
+    "comment": { "en": "Actual station name." },
+    "domain": { "uri": "dbpedia-owl:Station" },
+    "range": { "uri": "xsd:string" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:departureTime",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "departure time" },
-    "rdfs:comment": { "en": "Departure time of a vehicle." },
-    "rdfs:domain": { "@id": "gtfs:Stop" },
-    "rdfs:range": { "@id": "xsd:time" }
+    "uri": "ex:owns",
+    "type": "Property",
+    "label": { "en": "owns" },
+    "comment": { "en": "A transit agency owns a vehicle." },
+    "domain": { "uri": "gtfs:Agency" },
+    "range": { "uri": "pext:Vehicle" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:stationName",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "station name" },
-    "rdfs:comment": { "en": "Actual station name." },
-    "rdfs:domain": { "@id": "dbpedia-owl:Station" },
-    "rdfs:range": { "@id": "xsd:string" }
+    "uri": "ex:produces",
+    "type": "Property",
+    "label": { "en": "produces" },
+    "comment": { "en": "A producer produces a vehicle." },
+    "domain": { "uri": "ex:Producer" },
+    "range": { "uri": "pext:Vehicle" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:owns",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "owns" },
-    "rdfs:comment": { "en": "A transit agency owns a vehicle." },
-    "rdfs:domain": { "@id": "gtfs:Agency" },
-    "rdfs:range": { "@id": "pext:Vehicle" }
+    "uri": "ex:rides",
+    "type": "Property",
+    "label": { "en": "rides" },
+    "comment": { "en": "A vehicle rides a connection." },
+    "domain": { "uri": "pext:Vehicle" },
+    "range": { "uri": "ex:Connection" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:produces",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "produces" },
-    "rdfs:comment": { "en": "A producer produces a vehicle." },
-    "rdfs:domain": { "@id": "ex:Producer" },
-    "rdfs:range": { "@id": "pext:Vehicle" }
+    "uri": "ex:belongsTo",
+    "type": "Property",
+    "label": { "en": "belongs to" },
+    "comment": { "en": "A connection belongs to a transit route." },
+    "domain": { "uri": "ex:Connection" },
+    "range": { "uri": "gtfs:Route" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:rides",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "rides" },
-    "rdfs:comment": { "en": "A vehicle rides a connection." },
-    "rdfs:domain": { "@id": "ex:Vehicle" },
-    "rdfs:range": { "@id": "ex:Connection" }
+    "uri": "ex:connects",
+    "type": "Property",
+    "label": { "en": "connects" },
+    "comment": { "en": "A connection connects a set of stops." },
+    "domain": { "uri": "ex:Connection" },
+    "range": { "uri": "gtfs:Stop" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:belongsTo",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "belongs to" },
-    "rdfs:comment": { "en": "A connection belongs to a transit route." },
-    "rdfs:domain": { "@id": "ex:Connection" },
-    "rdfs:range": { "@id": "gtfs:Route" }
+    "uri": "ex:followedBy",
+    "type": "Property",
+    "label": { "en": "followed by" },
+    "comment": { "en": "A stop is followed by the next stop." },
+    "domain": { "uri": "gtfs:Stop" },
+    "range": { "uri": "gtfs:Stop" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:connects",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "connects" },
-    "rdfs:comment": { "en": "A connection connects a set of stops." },
-    "rdfs:domain": { "@id": "ex:Connection" },
-    "rdfs:range": { "@id": "gtfs:Stop" }
+    "uri": "ex:serves",
+    "type": "Property",
+    "label": { "en": "serves" },
+    "comment": { "en": "A station serves a stop." },
+    "domain": { "uri": "dbpedia-owl:Station" },
+    "range": { "uri": "gtfs:Stop" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:followedBy",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "followed by" },
-    "rdfs:comment": { "en": "A stop is followed by the next stop." },
-    "rdfs:domain": { "@id": "gtfs:Stop" },
-    "rdfs:range": { "@id": "gtfs:Stop" }
+    "uri": "ex:startsWith",
+    "type": "Property",
+    "label": { "en": "starts with" },
+    "comment": { "en": "Name of a station, where the route begins." },
+    "domain": { "uri": "gtfs:Route" },
+    "range": { "uri": "dbpedia-owl:Station" }
   },
   {
     "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:serves",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "serves" },
-    "rdfs:comment": { "en": "A station serves a stop." },
-    "rdfs:domain": { "@id": "dbpedia-owl:Station" },
-    "rdfs:range": { "@id": "gtfs:Stop" }
-  },
-  {
-    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:startsWith",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "starts with" },
-    "rdfs:comment": { "en": "Name of a station, where the route begins." },
-    "rdfs:domain": { "@id": "gtfs:Route" },
-    "rdfs:range": { "@id": "dbpedia-owl:Station" }
-  },
-  {
-    "@context": "https://raw.githubusercontent.com/zhukovdm/T1G4/main/3/json/data/context.jsonld",
-    "@id": "ex:endsWith",
-    "@type": "rdf:Property",
-    "rdfs:label": { "en": "ends with" },
-    "rdfs:comment": { "en": "Name of a station, where the route ends." },
-    "rdfs:domain": { "@id": "gtfs:Route" },
-    "rdfs:range": { "@id": "dbpedia-owl:Station" }
+    "uri": "ex:endsWith",
+    "type": "Property",
+    "label": { "en": "ends with" },
+    "comment": { "en": "Name of a station, where the route ends." },
+    "domain": { "uri": "gtfs:Route" },
+    "range": { "uri": "dbpedia-owl:Station" }
   }
 ]
