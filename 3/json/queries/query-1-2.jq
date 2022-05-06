@@ -6,7 +6,8 @@
   )
 | select
   ( .owns[]
-  | .rides.connects
+  | .rides[]
+  | .connects
   | length > 2
   )
 | { name: .uri

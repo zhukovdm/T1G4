@@ -9,7 +9,7 @@
     ( .purchasePrice > 150000
     )
   )
-| { producer: .legalName."de"
+| { producer: .legalName.de
   }
 ]
 | unique_by(.producer)

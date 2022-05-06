@@ -6,8 +6,9 @@ Get name, email and phone of an agency which owns bus that rides
 a connection with more than two stops, avoid duplicates.
 
 query-1-3.jq
-Select all names of stations with which starts a route that belongs
-to connection which is ridden by a train.
+Select all Czech names of stations with which starts a route that
+belongs to connection which is ridden by a train. Names should start
+with letter "H".
 
 query-2-1.jq
 Find license plate numbers of all buses produced by Tatra with

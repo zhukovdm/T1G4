@@ -4,7 +4,10 @@
   ( .uri
   | startswith("train")
   )
-| { name: .rides.belongsTo.startsWith.stationName."cs"
+| { name: .rides[].belongsTo.startsWith.stationName.cs
+  | select
+    ( startswith("H")
+    )
   }
 | select
   ( .name != null
