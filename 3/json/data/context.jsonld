@@ -20,18 +20,39 @@
     "stop": "https://T1G4.DOX.cz/Stop/#",
     "station": "https://T1G4.DOX.cz/Station/#",
 
+    "Class": "rdfs:Class",
+    "Property": "rdf:Property",
     "Agency": "gtfs:Agency",
+    "Vehicle": "pext:Vehicle",
     "Bus": "ex:Bus",
     "Train": "dbpedia-owl:Train",
     "Producer": "ex:Producer",
     "Route": "gtfs:Route",
     "Connection": "ex:Connection",
     "Stop": "gtfs:Stop",
+    "Station": "dbpedia-owl:Station",
     "TrainStation": "ex:TrainStation",
     "BusStation": "ex:BusStation",
 
     "uri": "@id",
     "type": "@type",
+    "subClassOf": {
+      "@id": "rdfs:subClassOf"
+    },
+    "label": {
+      "@id": "rdfs:label",
+      "@container": "@language"
+    },
+    "comment": {
+      "@id": "rdfs:comment",
+      "@container": "@language"
+    },
+    "domain": {
+      "@id": "rdfs:domain"
+    },
+    "range": {
+      "@id": "rdfs:range"
+    },
     "legalName": {
       "@id": "ex:legalName",
       "@container": "@language"
