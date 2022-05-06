@@ -262,14 +262,14 @@
             },
             {
               "uri": "stop:5",
-              "type": "gtfs:Stop",
+              "type": "Stop",
               "gps": "49.7067069N, 17.7684325E",
               "arrivalTime": "11:05:00",
               "departureTime": "11:06:00"
             },
             {
               "uri": "stop:6",
-              "type": "gtfs:Stop",
+              "type": "Stop",
               "gps": "49.7760583N, 17.7494736E",
               "arrivalTime": "11:10:00",
               "departureTime": "11:11:00"
