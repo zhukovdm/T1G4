@@ -1,0 +1,23 @@
+NPRG036-HW2-T1G4.zip
+    2/
+        rdf/
+            model/
+                covered.svg
+            data/
+                data.ttl
+            queries/
+                query-1.sparql
+                query-2.sparql
+                query-3.sparql
+                query-4.sparql
+                query-5.sparql
+        lpg/
+            model/
+                example.svg
+            data/
+                data.cypher
+            queries/
+                query-1.cypher
+                query-2.cypher
+                query-3.cypher
+                query-4.cypher

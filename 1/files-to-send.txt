@@ -1,0 +1,4 @@
+NPRG036-HW1-T1G4.zip
+    1/
+        domain.svg
+        domain.txt
