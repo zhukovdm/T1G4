@@ -22,38 +22,38 @@
 <https://T1G4.DOX.cz/Bus/#1> a ns1:Bus ;
     ns1:capacity 23 ;
     ns1:consumption 42 ;
-    ns1:licensePlateNumber "4A2 7983" ;
+    ns1:licensePlateNumber "4A2 7983"^^xsd:string ;
     ns1:purchasePrice 523147 .
 
 <https://T1G4.DOX.cz/Bus/#2> a ns1:Bus ;
     ns1:capacity 5 ;
     ns1:consumption 10 ;
-    ns1:licensePlateNumber "5T1 9876" ;
+    ns1:licensePlateNumber "5T1 9876"^^xsd:string ;
     ns1:purchasePrice 65000 .
 
 <https://T1G4.DOX.cz/Bus/#3> a ns1:Bus ;
     ns1:capacity 54 ;
     ns1:consumption 98 ;
-    ns1:licensePlateNumber "6M4 1426" ;
+    ns1:licensePlateNumber "6M4 1426"^^xsd:string ;
     ns1:purchasePrice 123000 .
 
 <https://T1G4.DOX.cz/Train/#1> a <https://dbpedia.org/ontology/Train> ;
     ns1:capacity 30 ;
     ns1:consumption 500 ;
-    ns1:electricMotor "true"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
-    ns1:europeanVehicleNumber "B 228 FK" ;
+    ns1:electricMotor true ;
+    ns1:europeanVehicleNumber "B 228 FK"^^xsd:string ;
     ns1:purchasePrice 550000 .
 
 <https://T1G4.DOX.cz/Train/#2> a <https://dbpedia.org/ontology/Train> ;
     ns1:capacity 100 ;
     ns1:consumption 1000 ;
-    ns1:electricMotor "true"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
-    ns1:europeanVehicleNumber "CGI 964" ;
+    ns1:electricMotor true ;
+    ns1:europeanVehicleNumber "CGI 964"^^xsd:string ;
     ns1:purchasePrice 1000000 .
 
 <https://T1G4.DOX.cz/Train/#3> a <https://dbpedia.org/ontology/Train> ;
     ns1:capacity 123 ;
     ns1:consumption 300 ;
-    ns1:electricMotor "false"^^<https://www.w3.org/TR/xmlschema-2/#boolean> ;
-    ns1:europeanVehicleNumber "EW 40 672" ;
+    ns1:electricMotor false ;
+    ns1:europeanVehicleNumber "EW 40 672"^^xsd:string ;
     ns1:purchasePrice 200000 .
