@@ -16,63 +16,65 @@
         "consumption": 98,
         "purchasePrice": 123000,
         "licensePlateNumber": "6M4 1426",
-        "rides": {
-          "uri": "conn:37-1",
-          "type": "Connection",
-          "belongsTo": {
-            "uri": "route:37",
-            "type": "Route",
-            "length": 11.6,
-            "validFrom": "2021-12-10",
-            "validTo": "2022-12-12",
-            "startsWith": {
-              "uri": "station:7",
-              "type": "TrainStation",
-              "stationName": {
-                "cs": "Malostranské náměstí"
+        "rides": [
+            {
+            "uri": "conn:37-1",
+            "type": "Connection",
+            "belongsTo": {
+              "uri": "route:37",
+              "type": "Route",
+              "length": 11.6,
+              "validFrom": "2021-12-10",
+              "validTo": "2022-12-12",
+              "startsWith": {
+                "uri": "station:7",
+                "type": "TrainStation",
+                "stationName": {
+                  "cs": "Malostranské náměstí"
+                },
+                "capacity": 120
               },
-              "capacity": 120
+              "endsWith": {
+                "uri": "station:10",
+                "type": "BusStation",
+                "stationName": {
+                  "cs": "Na Vrstevnici"
+                },
+                "capacity": 35
+              }
             },
-            "endsWith": {
-              "uri": "station:10",
-              "type": "BusStation",
-              "stationName": {
-                "cs": "Na Vrstevnici"
+            "connects": [
+              {
+                "uri": "stop:7",
+                "type": "Stop",
+                "gps": "45.0034761N, 14.2635348E",
+                "arrivalTime": "10:00:00",
+                "departureTime": "10:01:00"
               },
-              "capacity": 35
-            }
-          },
-          "connects": [
-            {
-              "uri": "stop:7",
-              "type": "Stop",
-              "gps": "45.0034761N, 14.2635348E",
-              "arrivalTime": "10:00:00",
-              "departureTime": "10:01:00"
-            },
-            {
-              "uri": "stop:8",
-              "type": "Stop",
-              "gps": "50.0916890N, 14.4438130E",
-              "arrivalTime": "10:05:00",
-              "departureTime": "10:06:00"
-            },
-            {
-              "uri": "stop:9",
-              "type": "Stop",
-              "gps": "50.1004810N, 14.4645900E",
-              "arrivalTime": "10:10:00",
-              "departureTime": "10:11:00"
-            },
-            {
-              "uri": "stop:10",
-              "type": "Stop",
-              "gps": "50.1083880N, 14.4757450E",
-              "arrivalTime": "10:15:00",
-              "departureTime": "10:16:00"
-            }
-          ]
-        }
+              {
+                "uri": "stop:8",
+                "type": "Stop",
+                "gps": "50.0916890N, 14.4438130E",
+                "arrivalTime": "10:05:00",
+                "departureTime": "10:06:00"
+              },
+              {
+                "uri": "stop:9",
+                "type": "Stop",
+                "gps": "50.1004810N, 14.4645900E",
+                "arrivalTime": "10:10:00",
+                "departureTime": "10:11:00"
+              },
+              {
+                "uri": "stop:10",
+                "type": "Stop",
+                "gps": "50.1083880N, 14.4757450E",
+                "arrivalTime": "10:15:00",
+                "departureTime": "10:16:00"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -94,7 +96,7 @@
         "purchasePrice": 1000000,
         "electricMotor": true,
         "europeanVehicleNumber": "CGI 964",
-        "rides": null
+        "rides": []
       },
       {
         "uri": "train:3",
@@ -104,49 +106,51 @@
         "purchasePrice": 200000,
         "electricMotor": false,
         "europeanVehicleNumber": "EW 40 672",
-        "rides": {
-          "uri": "conn:137-1",
-          "type": "Connection",
-          "belongsTo": {
-            "uri": "route:137",
-            "type": "Route",
-            "length": 12.2,
-            "validFrom": "2021-12-13",
-            "validTo": "2022-12-12",
-            "startsWith": {
-              "uri": "station:11",
-              "type": "BusStation",
-              "stationName": {
-                "cs": "Sídliště Novodvorská"
+        "rides": [
+          {
+            "uri": "conn:137-1",
+            "type": "Connection",
+            "belongsTo": {
+              "uri": "route:137",
+              "type": "Route",
+              "length": 12.2,
+              "validFrom": "2021-12-13",
+              "validTo": "2022-12-12",
+              "startsWith": {
+                "uri": "station:11",
+                "type": "BusStation",
+                "stationName": {
+                  "cs": "Sídliště Novodvorská"
+                },
+                "capacity": 25
               },
-              "capacity": 25
+              "endsWith": {
+                "uri": "station:12",
+                "type": "BusStation",
+                "stationName": {
+                  "cs": "Limuzská"
+                },
+                "capacity": 80
+              }
             },
-            "endsWith": {
-              "uri": "station:12",
-              "type": "BusStation",
-              "stationName": {
-                "cs": "Limuzská"
+            "connects": [
+              {
+                "uri": "stop:11",
+                "type": "Stop",
+                "gps": "50.1083880N, 14.4757450E",
+                "arrivalTime": "14:00:00",
+                "departureTime": "14:01:00"
               },
-              "capacity": 80
-            }
-          },
-          "connects": [
-            {
-              "uri": "stop:11",
-              "type": "Stop",
-              "gps": "50.1083880N, 14.4757450E",
-              "arrivalTime": "14:00:00",
-              "departureTime": "14:01:00"
-            },
-            {
-              "uri": "stop:12",
-              "type": "Stop",
-              "gps": "50.1004810N, 14.4645900E",
-              "arrivalTime": "14:05:00",
-              "departureTime": "14:06:00"
-            }
-          ]
-        }
+              {
+                "uri": "stop:12",
+                "type": "Stop",
+                "gps": "50.1004810N, 14.4645900E",
+                "arrivalTime": "14:05:00",
+                "departureTime": "14:06:00"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -168,56 +172,58 @@
         "purchasePrice": 550000,
         "electricMotor": true,
         "europeanVehicleNumber": "B 228 FK",
-        "rides": {
-          "uri": "conn:1-1",
-          "type": "Connection",
-          "belongsTo": {
-            "uri": "route:1",
-            "type": "Route",
-            "length": 120.5,
-            "validFrom": "2015-01-01",
-            "validTo": "2020-12-31",
-            "startsWith": {
-              "uri": "station:1",
-              "type": "TrainStation",
-              "stationName": {
-                "cs": "Heřmánky"
+        "rides": [
+          {
+            "uri": "conn:1-1",
+            "type": "Connection",
+            "belongsTo": {
+              "uri": "route:1",
+              "type": "Route",
+              "length": 120.5,
+              "validFrom": "2015-01-01",
+              "validTo": "2020-12-31",
+              "startsWith": {
+                "uri": "station:1",
+                "type": "TrainStation",
+                "stationName": {
+                  "cs": "Heřmánky"
+                },
+                "capacity": 50
               },
-              "capacity": 50
+              "endsWith": {
+                "uri": "station:3",
+                "type": "TrainStation",
+                "stationName": {
+                  "cs": "Jakubčovice nad Odrou"
+                },
+                "capacity": 60
+              }
             },
-            "endsWith": {
-              "uri": "station:3",
-              "type": "TrainStation",
-              "stationName": {
-                "cs": "Jakubčovice nad Odrou"
+            "connects": [
+              {
+                "uri": "stop:1",
+                "type": "Stop",
+                "gps": "49.7134667N, 17.7582722E",
+                "arrivalTime": "12:00:00",
+                "departureTime": "12:01:00"
               },
-              "capacity": 60
-            }
-          },
-          "connects": [
-            {
-              "uri": "stop:1",
-              "type": "Stop",
-              "gps": "49.7134667N, 17.7582722E",
-              "arrivalTime": "12:00:00",
-              "departureTime": "12:01:00"
-            },
-            {
-              "uri": "stop:2",
-              "type": "Stop",
-              "gps": "49.7741814N, 17.7475375E",
-              "arrivalTime": "12:05:00",
-              "departureTime": "12:06:00"
-            },
-            {
-              "uri": "stop:3",
-              "type": "Stop",
-              "gps": "49.6969069N, 17.7886239E",
-              "arrivalTime": "12:10:00",
-              "departureTime": "12:11:00"
-            }
-          ]
-        }
+              {
+                "uri": "stop:2",
+                "type": "Stop",
+                "gps": "49.7741814N, 17.7475375E",
+                "arrivalTime": "12:05:00",
+                "departureTime": "12:06:00"
+              },
+              {
+                "uri": "stop:3",
+                "type": "Stop",
+                "gps": "49.6969069N, 17.7886239E",
+                "arrivalTime": "12:10:00",
+                "departureTime": "12:11:00"
+              }
+            ]
+          }
+        ]
       },
       {
         "uri": "bus:2",
@@ -226,56 +232,58 @@
         "consumption": 10,
         "purchasePrice": 65000,
         "licensePlateNumber": "5T1 9876",
-        "rides": {
-          "uri": "conn:9-1",
-          "type": "Connection",
-          "belongsTo": {
-            "uri": "route:9",
-            "type": "Route",
-            "length": 37.0,
-            "validFrom": "2005-10-01",
-            "validTo": "2025-09-25",
-            "startsWith": {
-              "uri": "station:4",
-              "type": "BusStation",
-              "stationName": {
-                "cs": "Oderská"
+        "rides": [
+          {
+            "uri": "conn:9-1",
+            "type": "Connection",
+            "belongsTo": {
+              "uri": "route:9",
+              "type": "Route",
+              "length": 37.0,
+              "validFrom": "2005-10-01",
+              "validTo": "2025-09-25",
+              "startsWith": {
+                "uri": "station:4",
+                "type": "BusStation",
+                "stationName": {
+                  "cs": "Oderská"
+                },
+                "capacity": 30
               },
-              "capacity": 30
+              "endsWith": {
+                "uri": "station:6",
+                "type": "BusStation",
+                "stationName": {
+                  "cs": "Spojovací"
+                },
+                "capacity": 45
+              }
             },
-            "endsWith": {
-              "uri": "station:6",
-              "type": "BusStation",
-              "stationName": {
-                "cs": "Spojovací"
+            "connects": [
+              {
+                "uri": "stop:4",
+                "type": "Stop",
+                "gps": "49.6952592N, 17.7879486E",
+                "arrivalTime": "11:00:00",
+                "departureTime": "11:01:00"
               },
-              "capacity": 45
-            }
-          },
-          "connects": [
-            {
-              "uri": "stop:4",
-              "type": "Stop",
-              "gps": "49.6952592N, 17.7879486E",
-              "arrivalTime": "11:00:00",
-              "departureTime": "11:01:00"
-            },
-            {
-              "uri": "stop:5",
-              "type": "Stop",
-              "gps": "49.7067069N, 17.7684325E",
-              "arrivalTime": "11:05:00",
-              "departureTime": "11:06:00"
-            },
-            {
-              "uri": "stop:6",
-              "type": "Stop",
-              "gps": "49.7760583N, 17.7494736E",
-              "arrivalTime": "11:10:00",
-              "departureTime": "11:11:00"
-            }
-          ]
-        }
+              {
+                "uri": "stop:5",
+                "type": "Stop",
+                "gps": "49.7067069N, 17.7684325E",
+                "arrivalTime": "11:05:00",
+                "departureTime": "11:06:00"
+              },
+              {
+                "uri": "stop:6",
+                "type": "Stop",
+                "gps": "49.7760583N, 17.7494736E",
+                "arrivalTime": "11:10:00",
+                "departureTime": "11:11:00"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
