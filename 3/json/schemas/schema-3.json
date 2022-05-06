@@ -11,15 +11,15 @@
         "type": "string",
         "format": "iri"
       },
-      "@id": {
+      "uri": {
         "type": "string",
         "pattern": "^station:[A-Za-z0-9]+$"
       },
-      "@type": {
+      "type": {
         "type": "string",
-        "pattern": "^(ex:BusStation)|(ex:TrainStation)$"
+        "pattern": "^(BusStation)|(TrainStation)$"
       },
-      "ex:stationName": {
+      "stationName": {
         "type": "object",
         "patternProperties": {
           "^cs$": { "type": "string" }
@@ -27,46 +27,46 @@
         "minProperties": 1,
         "additionalProperties": false
       },
-      "ex:capacity": {
+      "capacity": {
         "type": "integer",
         "minimum": 1
       },
-      "ex:serves": {
+      "serves": {
         "type": "array",
         "items": {
           "type": "object",
           "properties": {
-            "@id": {
+            "uri": {
               "type": "string",
               "pattern": "^stop:[0-9]+$"
             },
-            "@type": {
+            "type": {
               "type": "string",
-              "pattern": "^gtfs:Stop$"
+              "pattern": "^Stop$"
             },
-            "ex:gps": {
+            "gps": {
               "type": "string",
               "pattern": "^[0-9]{1,2}\\.[0-9]{7}N, [0-9]{1,2}\\.[0-9]{7}E$"
             },
-            "ex:arrivalTime": {
+            "arrivalTime": {
               "type": "string",
               "format": "time"
             },
-            "ex:departureTime": {
+            "departureTime": {
               "type": "string",
               "format": "time"
             },
-            "ex:followedBy": {
+            "followedBy": {
               "type": "string",
               "pattern": "^stop:[0-9]+$"
             }
           },
           "required": [
-            "@id",
-            "@type",
-            "ex:gps",
-            "ex:arrivalTime",
-            "ex:departureTime"
+            "uri",
+            "type",
+            "gps",
+            "arrivalTime",
+            "departureTime"
           ],
           "additionalProperties": false
         }

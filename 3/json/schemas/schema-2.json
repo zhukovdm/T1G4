@@ -11,15 +11,15 @@
         "type": "string",
         "format": "iri"
       },
-      "@id": {
+      "uri": {
         "type": "string",
         "pattern": "^producer:[A-Za-z0-9]+$"
       },
-      "@type": {
+      "type": {
         "type": "string",
-        "pattern": "^ex:Producer$"
+        "pattern": "^Producer$"
       },
-      "ex:legalName": {
+      "legalName": {
         "type": "object",
         "patternProperties": {
           "(en)|(cs)|(de)": { "type": "string" }
@@ -27,81 +27,81 @@
         "minProperties": 1,
         "additionalProperties": false
       },
-      "ex:produces": {
+      "produces": {
         "type": "array",
         "items": {
           "oneOf": [
             {
               "type": "object",
               "properties": {
-                "@id": {
+                "uri": {
                   "type": "string",
                   "pattern": "^bus:[0-9]+$"
                 },
-                "@type": {
+                "type": {
                   "type": "string",
-                  "pattern": "^ex:Bus$"
+                  "pattern": "^Bus$"
                 },
-                "ex:capacity": {
+                "capacity": {
                   "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
                 },
-                "ex:consumption": {
+                "consumption": {
                   "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
                 },
-                "ex:purchasePrice": {
+                "purchasePrice": {
                   "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
                 },
-                "ex:licensePlateNumber": {
+                "licensePlateNumber": {
                   "type": "string",
                   "minLength": 1
                 }
               },
               "required": [
-                "@id",
-                "@type",
-                "ex:capacity",
-                "ex:consumption",
-                "ex:purchasePrice",
-                "ex:licensePlateNumber"
+                "uri",
+                "type",
+                "capacity",
+                "consumption",
+                "purchasePrice",
+                "licensePlateNumber"
               ],
               "additionalProperties": false
             },
             {
               "type": "object",
               "properties": {
-                "@id": {
+                "uri": {
                   "type": "string",
                   "pattern": "^train:[0-9]+$"
                 },
-                "@type": {
+                "type": {
                   "type": "string",
-                  "pattern": "^dbpedia-owl:Train$"
+                  "pattern": "^Train$"
                 },
-                "ex:capacity": {
+                "capacity": {
                   "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
                 },
-                "ex:consumption": {
+                "consumption": {
                   "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
                 },
-                "ex:purchasePrice": {
+                "purchasePrice": {
                   "$ref": "https://T1G4.DOX.cz/schemas/positive_int"
                 },
-                "ex:electricMotor": {
+                "electricMotor": {
                   "type": "boolean"
                 },
-                "ex:europeanVehicleNumber": {
+                "europeanVehicleNumber": {
                   "type": "string",
                   "minLength": 1
                 }
               },
               "required": [
-                "@id",
-                "@type",
-                "ex:capacity",
-                "ex:consumption",
-                "ex:purchasePrice",
-                "ex:electricMotor",
-                "ex:europeanVehicleNumber"
+                "uri",
+                "type",
+                "capacity",
+                "consumption",
+                "purchasePrice",
+                "electricMotor",
+                "europeanVehicleNumber"
               ],
               "additionalProperties": false
             }
@@ -111,10 +111,10 @@
     },
     "required": [
       "@context",
-      "@id",
-      "@type",
-      "ex:legalName",
-      "ex:produces"
+      "uri",
+      "type",
+      "legalName",
+      "produces"
     ],
     "additionalProperties": false
   },

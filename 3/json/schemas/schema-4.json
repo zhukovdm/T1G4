@@ -12,17 +12,17 @@
         "type": "string",
         "format": "iri"
       },
-      "@id": { "type": "string" },
-      "@type": { "type": "string" },
-      "rdfs:label": { "$ref": "#/$defs/lang_pack" },
-      "rdfs:comment": { "$ref": "#/$defs/lang_pack" },
-      "rdfs:domain": { "$ref": "#/$defs/func_pack" },
-      "rdfs:range": { "$ref": "#/$defs/func_pack" },
-      "rdfs:subClassOf": { "$ref": "#/$defs/func_pack" }
+      "uri": { "type": "string" },
+      "type": { "type": "string" },
+      "label": { "$ref": "#/$defs/lang_pack" },
+      "comment": { "$ref": "#/$defs/lang_pack" },
+      "domain": { "$ref": "#/$defs/func_pack" },
+      "range": { "$ref": "#/$defs/func_pack" },
+      "subClassOf": { "$ref": "#/$defs/func_pack" }
     },
     "required": [
       "@context",
-      "@id"
+      "uri"
     ],
     "additionalProperties": false,
     "$defs": {
@@ -37,13 +37,13 @@
       "func_pack": {
         "type": "object",
         "properties": {
-          "@id": {
+          "uri": {
             "type": "string",
             "pattern": "^[A-Za-z-]+:[A-Za-z-]+$"
           }
         },
         "required": [
-          "@id"
+          "uri"
         ],
         "additionalProperties": false
       }
