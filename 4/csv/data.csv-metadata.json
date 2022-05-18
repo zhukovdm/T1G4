@@ -311,9 +311,54 @@
                         "required":true,
                         "lang":"en",
                         "propertyUrl":"http://example.org/vocabulary/legalName"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"phone",
+                        "titles":"phone",
+                        "dc:description":"Mobile or stationary phone number",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs",
+                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
+                        "valueUrl":"{#phone}"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"email",
+                        "titles":"email",
+                        "dc:description":"E-mail address",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"cs",
+                        "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
+                        "valueUrl":"{#email}"
                     }
                 ],
-                "primaryKey":"agencyID"
+                "primaryKey":"agencyID",
+                "foreignKeys":[
+                    {
+                        "columnReference": "agencyID",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "agencyID"
+                        }
+                    },
+                    {
+                        "columnReference": "phone",
+                        "reference": {
+                            "resource": "data-7.csv",
+                            "columnReference": "phone"
+                        }
+                    },
+                    {
+                        "columnReference": "email",
+                        "reference": {
+                            "resource": "data-8.csv",
+                            "columnReference": "email"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -331,9 +376,7 @@
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs",
-                        "propertyUrl":"rdf:type",
-                        "valueUrl":"http://xmlns.com/foaf/0.1/phone"
+                        "lang":"cs"
                     },
                     {
                         "@type":"Column",
@@ -342,10 +385,7 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs",
-                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
-                        "propertyUrl":"http://example.org/vocabulary/has",
-                        "valueUrl":"https://T1G4.DOX.cz/Phone/{#phone}"
+                        "lang":"cs"
                     }
                     
                 ],
@@ -367,7 +407,6 @@
             "url":"data-8.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/Email/{#email}",
                 "columns": [
                     {
                         "@type":"Column",
@@ -376,9 +415,7 @@
                         "dc:description":"E-mail address",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs",
-                        "propertyUrl":"rdf:type",
-                        "valueUrl":"http://example.org/vocabulary/email"
+                        "lang":"cs"
                     },
                     {
                         "@type":"Column",
@@ -387,10 +424,7 @@
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs",
-                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
-                        "propertyUrl":"http://example.org/vocabulary/has",
-                        "valueUrl":"https://T1G4.DOX.cz/Email/{#email}"
+                        "lang":"cs"
                     }
                     
                 ],
