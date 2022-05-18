@@ -310,7 +310,7 @@
             "tableSchema":{
                 "@type":"Schema",
                 "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"agencyID",
@@ -318,44 +318,111 @@
                         "dc:description":"Unique identifier for the agency",
                         "datatype":"string",
                         "required":true,
-                        "lang":"en",
                         "propertyUrl":"rdf:type",
                         "valueUrl":"http://vocab.gtfs.org/terms#Agency"
                     },
                     {
                         "@type":"Column",
-                        "name":"legalName",
-                        "titles":"legalName",
-                        "dc:description":"Official name of the company",
+                        "name":"legalName_cs",
+                        "titles":"legalName_cs",
+                        "dc:description":"Official name of the company in Czech",
                         "datatype":"string",
-                        "required":true,
-                        "lang":"en",
+                        "lang":"cs",
                         "propertyUrl":"http://example.org/vocabulary/legalName"
                     },
                     {
                         "@type":"Column",
-                        "name":"phone",
-                        "titles":"phone",
-                        "dc:description":"Mobile or stationary phone number",
+                        "name":"legalName_en",
+                        "titles":"legalName_en",
+                        "dc:description":"Official name of the company in English",
                         "datatype":"string",
-                        "required":true,
-                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"email",
-                        "titles":"email",
-                        "dc:description":"E-mail address",
-                        "datatype":"string",
-                        "required":true,
-                        "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
-                        "valueUrl":"mailto:{email}"
+                        "lang":"en",
+                        "propertyUrl":"http://example.org/vocabulary/legalName"
                     }
                 ],
                 "primaryKey":"agencyID",
                 "foreignKeys":[]
             }
         },
+        {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv",
+            "@type":"Table",
+            "url":"data-7.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "valueUrl":"{phone}",
+                "columns":[
+                    {
+                        "@type":"Column",
+                        "name":"phone",
+                        "titles":"phone",
+                        "dc:description":"Mobile or stationary phone number",
+                        "datatype":"anyURI",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        "titles":"agencyID",
+                        "dc:description":"Unique identifier for the agency",
+                        "datatype":"string",
+                        "required":true,
+                        "propertyUrl":"foaf:phone",
+                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}"
+                    }
+                ],
+                "primaryKey":"phone",
+                "foreignKeys":[
+                    {
+                        "columnReference":"agencyID",
+                        "reference": {
+                            "resource":"data-6.csv",
+                            "columnReference":"agencyID"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv",
+            "@type":"Table",
+            "url":"data-8.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "valueUrl":"{email}",
+                "columns":[
+                    {
+                        "@type":"Column",
+                        "name":"email",
+                        "titles":"email",
+                        "dc:description":"E-mail address",
+                        "datatype":"anyURI",
+                        "required":true
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"agencyID",
+                        "titles":"agencyID",
+                        "dc:description":"Unique identifier for the agency",
+                        "datatype":"string",
+                        "required":true,
+                        "propertyUrl":"foaf:mbox",
+                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}"
+                    }
+                ],
+                "primaryKey":"email",
+                "foreignKeys":[
+                    {
+                        "columnReference":"agencyID",
+                        "reference": {
+                            "resource":"data-6.csv",
+                            "columnReference":"agencyID"
+                        }
+                    }
+                ]
+            }
+        },
+
         {
             "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv",
             "@type":"Table",

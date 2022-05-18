@@ -1,4 +1,4 @@
-agencyID,legalName,phone,email
-student,Student Agency,tel:+420-630-784-245,info@studentagency.cz
-leo,Leo Express,tel:+420-543-140-738,info@leoexpress.com
-dpp,Dopravní podnik hl. m. Prahy,tel:+420-640-921-554,info@dpp.cz
+agencyID,legalName_cs,legalName_en
+student,,Student Agency
+leo,,Leo Express
+dpp,Dopravní podnik hl. m. Prahy,
