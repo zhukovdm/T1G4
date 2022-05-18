@@ -336,29 +336,7 @@
                     }
                 ],
                 "primaryKey":"agencyID",
-                "foreignKeys":[
-                    {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
-                        }
-                    },
-                    {
-                        "columnReference": "phone",
-                        "reference": {
-                            "resource": "data-7.csv",
-                            "columnReference": "phone"
-                        }
-                    },
-                    {
-                        "columnReference": "email",
-                        "reference": {
-                            "resource": "data-8.csv",
-                            "columnReference": "email"
-                        }
-                    }
-                ]
+                "foreignKeys":[]
             }
         },
         {
@@ -416,17 +394,8 @@
                         "datatype":"string",
                         "required":true,
                         "lang":"cs"
-                    },
-                    {
-                        "@type":"Column",
-                        "name":"agencyID",
-                        "titles":"agencyID",
-                        "dc:description":"Unique identifier for an agency",
-                        "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
                     }
-                    
+
                 ],
                 "primaryKey":"email",
                 "foreignKeys":[
