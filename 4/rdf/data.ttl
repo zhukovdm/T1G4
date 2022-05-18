@@ -6,24 +6,24 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://T1G4.DOX.cz/Agency/#dpp> a gtfs:Agency;
-  ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554>,
-    <https://T1G4.DOX.cz/Email/#info@dpp.cz>;
   ex:legalName "Dopravní podnik hl. m. Prahy"@en;
   ex:owns <https://T1G4.DOX.cz/Bus/#2>,
-    <https://T1G4.DOX.cz/Train/#1> .
+    <https://T1G4.DOX.cz/Train/#1>;
+  foaf:mbox <mailto:#info@dpp.cz>;
+  foaf:phone <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv#tel:+420-640-921-554> .
 
 <https://T1G4.DOX.cz/Agency/#leo> a gtfs:Agency;
-  ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738>,
-    <https://T1G4.DOX.cz/Email/#info@leoexpress.com>;
   ex:legalName "Leo Express"@en;
   ex:owns <https://T1G4.DOX.cz/Train/#2>,
-    <https://T1G4.DOX.cz/Train/#3> .
+    <https://T1G4.DOX.cz/Train/#3>;
+  foaf:mbox <mailto:#info@leoexpress.com>;
+  foaf:phone <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv#tel:+420-543-140-738> .
 
 <https://T1G4.DOX.cz/Agency/#student> a gtfs:Agency;
-  ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245>,
-    <https://T1G4.DOX.cz/Email/#info@studentagency.cz>;
   ex:legalName "Student Agency"@en;
-  ex:owns <https://T1G4.DOX.cz/Bus/#3> .
+  ex:owns <https://T1G4.DOX.cz/Bus/#3>;
+  foaf:mbox <mailto:#info@studentagency.cz>;
+  foaf:phone <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv#tel:+420-630-784-245> .
 
 <https://T1G4.DOX.cz/BusStation/#2> a ex:BusStation;
   ex:capacity 20;
@@ -136,18 +136,6 @@
   ex:connects <https://T1G4.DOX.cz/Stop/#4>,
     <https://T1G4.DOX.cz/Stop/#5>,
     <https://T1G4.DOX.cz/Stop/#6> .
-
-<https://T1G4.DOX.cz/Email/#info@dpp.cz> a ex:email .
-
-<https://T1G4.DOX.cz/Email/#info@leoexpress.com> a ex:email .
-
-<https://T1G4.DOX.cz/Email/#info@studentagency.cz> a ex:email .
-
-<https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738> a foaf:phone .
-
-<https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245> a foaf:phone .
-
-<https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554> a foaf:phone .
 
 <https://T1G4.DOX.cz/TrainStation/#1> a ex:TrainStation;
   ex:capacity 50;
