@@ -263,7 +263,7 @@ agency:leo a gtfs:Agency ;
     foaf:mbox <mailto:info@leoexpress.com> .
 
 agency:dpp a gtfs:Agency ;
-    ex:legalName "Dopravní podnik hl. m. Prahy"@cz ;
+    ex:legalName "Dopravní podnik hl. m. Prahy"@cs ;
     foaf:phone <tel:+420-640-921-554> ;
     foaf:mbox <mailto:info@dpp.cz> .
 
