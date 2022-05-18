@@ -2,7 +2,6 @@
 
 # 3rd party
 
-@prefix addr: <http://www.w3.org/Addressing/schemes.html#> .
 @prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
