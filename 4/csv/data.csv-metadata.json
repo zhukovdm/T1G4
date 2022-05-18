@@ -300,7 +300,7 @@
                         "required":true,
                         "lang":"en",
                         "propertyUrl":"rdf:type",
-                        "valueUrl":"http://example.org/vocabulary/Agency"
+                        "valueUrl":"http://vocab.gtfs.org/terms#Agency"
                     },
                     {
                         "@type":"Column",

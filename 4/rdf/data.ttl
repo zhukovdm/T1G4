@@ -25,37 +25,37 @@
 <https://T1G4.DOX.cz/BusStation/#2> a ex:BusStation;
   ex:capacity 20;
   ex:serves <https://T1G4.DOX.cz/Stop/#5>;
-  ex:stationName "Budišovská" .
+  ex:stationName "Budišovská"@cs .
 
 <https://T1G4.DOX.cz/BusStation/#3> a ex:BusStation;
   ex:capacity 45;
   ex:serves <https://T1G4.DOX.cz/Stop/#6>;
-  ex:stationName "Spojovací" .
+  ex:stationName "Spojovací"@cs .
 
 <https://T1G4.DOX.cz/BusStation/#5> a ex:BusStation;
   ex:capacity 25;
   ex:serves <https://T1G4.DOX.cz/Stop/#11>;
-  ex:stationName "Sídliště Novodvorská" .
+  ex:stationName "Sídliště Novodvorská"@cs .
 
 <https://T1G4.DOX.cz/BusStation/#6> a ex:BusStation;
   ex:capacity 80;
   ex:serves <https://T1G4.DOX.cz/Stop/#12>;
-  ex:stationName "Limuzská" .
+  ex:stationName "Limuzská"@cs .
 
 <https://T1G4.DOX.cz/Producer/#bombardier> a ex:Producer;
-  ex:legalName "Bombardier Inc.";
+  ex:legalName "Bombardier Inc."@en;
   ex:produces <https://T1G4.DOX.cz/Train/#2> .
 
 <https://T1G4.DOX.cz/Producer/#man> a ex:Producer;
-  ex:legalName "Maschinenfabrik Augsburg-Nürnberg";
+  ex:legalName "Maschinenfabrik Augsburg-Nürnberg"@en;
   ex:produces <https://T1G4.DOX.cz/Bus/#3> .
 
 <https://T1G4.DOX.cz/Producer/#siemens> a ex:Producer;
-  ex:legalName "Siemens AG";
+  ex:legalName "Siemens AG"@en;
   ex:produces <https://T1G4.DOX.cz/Train/#1> .
 
 <https://T1G4.DOX.cz/Producer/#tatra> a ex:Producer;
-  ex:legalName "TATRA TRUCKS a.s.";
+  ex:legalName "TATRA TRUCKS a.s."@en;
   ex:produces <https://T1G4.DOX.cz/Train/#3>,
     <https://T1G4.DOX.cz/Bus/#1>,
     <https://T1G4.DOX.cz/Bus/#2> .
@@ -91,12 +91,12 @@
 <https://T1G4.DOX.cz/TrainStation/#2> a ex:TrainStation;
   ex:capacity 40;
   ex:serves <https://T1G4.DOX.cz/Stop/#2>;
-  ex:stationName "Vítkov" .
+  ex:stationName "Vítkov"@cs .
 
 <https://T1G4.DOX.cz/TrainStation/#6> a ex:TrainStation;
   ex:capacity 170;
   ex:serves <https://T1G4.DOX.cz/Stop/#9>;
-  ex:stationName "Budějovická" .
+  ex:stationName "Budějovická"@cs .
 
 <https://T1G4.DOX.cz/Bus/#1> a ex:Bus;
   ex:capacity 23;
@@ -150,22 +150,22 @@
   ex:capacity 50;
   ex:serves <https://T1G4.DOX.cz/Stop/#1>,
     <https://T1G4.DOX.cz/Stop/#13>;
-  ex:stationName "Heřmánky" .
+  ex:stationName "Heřmánky"@cs .
 
 <https://T1G4.DOX.cz/TrainStation/#3> a ex:TrainStation;
   ex:capacity 60;
   ex:serves <https://T1G4.DOX.cz/Stop/#3>;
-  ex:stationName "Jakubčovice nad Odrou" .
+  ex:stationName "Jakubčovice nad Odrou"@cs .
 
 <https://T1G4.DOX.cz/TrainStation/#4> a ex:TrainStation;
   ex:capacity 120;
   ex:serves <https://T1G4.DOX.cz/Stop/#7>;
-  ex:stationName "Malostranské náměstí" .
+  ex:stationName "Malostranské náměstí"@cs .
 
 <https://T1G4.DOX.cz/TrainStation/#5> a ex:TrainStation;
   ex:capacity 5;
   ex:serves <https://T1G4.DOX.cz/Stop/#8>;
-  ex:stationName "Doliny" .
+  ex:stationName "Doliny"@cs .
 
 <https://T1G4.DOX.cz/Bus/#2> a ex:Bus;
   ex:capacity 5;
@@ -185,12 +185,12 @@
   ex:capacity 30;
   ex:serves <https://T1G4.DOX.cz/Stop/#4>,
     <https://T1G4.DOX.cz/Stop/#14>;
-  ex:stationName "Oderská" .
+  ex:stationName "Oderská"@cs .
 
 <https://T1G4.DOX.cz/BusStation/#4> a ex:BusStation;
   ex:capacity 35;
   ex:serves <https://T1G4.DOX.cz/Stop/#10>;
-  ex:stationName "Na Vrstevnici" .
+  ex:stationName "Na Vrstevnici"@cs .
 
 <https://T1G4.DOX.cz/Stop/#1> a ex:Stop;
   ex:arrivalTime "12:00:00"^^xsd:time;
