@@ -319,8 +319,7 @@
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
-                        "valueUrl":"{phone}"
+                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone"
                     },
                     {
                         "@type":"Column",
