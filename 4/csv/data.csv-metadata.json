@@ -24,7 +24,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "http://example.org/vocabulary/Train"
+                        "valueUrl": "https://dbpedia.org/ontology/Train"
                     },
                     {
                         "@type":"Column",
@@ -333,7 +333,7 @@
                         "required":true,
                         "lang":"cs",
                         "propertyUrl":"rdf:type",
-                        "valueUrl":"http://example.org/vocabulary/phone"
+                        "valueUrl":"http://xmlns.com/foaf/0.1/phone"
                     },
                     {
                         "@type":"Column",
