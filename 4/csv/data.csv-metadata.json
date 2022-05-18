@@ -320,7 +320,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
-                        "valueUrl":"http://example.org/vocabulary/{#phone}"
+                        "valueUrl":"tel:{#phone}"
                     },
                     {
                         "@type":"Column",
@@ -330,7 +330,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
-                        "valueUrl":"http://example.org/vocabulary/{#email}"
+                        "valueUrl":"mailto:{#email}"
                     }
                 ],
                 "primaryKey":"agencyID",
