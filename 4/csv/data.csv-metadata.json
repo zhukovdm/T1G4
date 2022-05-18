@@ -330,7 +330,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
-                        "valueUrl":"mailto:{#email}"
+                        "valueUrl":"mailto:{email}"
                     }
                 ],
                 "primaryKey":"agencyID",
