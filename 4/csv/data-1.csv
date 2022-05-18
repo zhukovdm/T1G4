@@ -1,4 +1,4 @@
 trainID,capacity,consumption,purchasePrice,electricMotor,europeanVehicleNumber,producerID
-1,30,500,550000,TRUE,B 228 FK,siemens
-2,100,1000,1000000,TRUE,CGI 964,bombardier
-3,123,300,200000,FALSE,EW 40 672,tatra
+1,30,500,550000,true,B 228 FK,siemens
+2,100,1000,1000000,true,CGI 964,bombardier
+3,123,300,200000,false,EW 40 672,tatra

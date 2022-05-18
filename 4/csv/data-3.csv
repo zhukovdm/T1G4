@@ -1,5 +1,5 @@
-producerID,legalName
-tatra,TATRA TRUCKS a.s.
-man,Maschinenfabrik Augsburg-Nürnberg
-siemens,Siemens AG
-bombardier,Bombardier Inc.
+producerID,legalName_cs,legalName_de,legalName_en
+tatra,TATRA TRUCKS a.s.,,
+man,,Maschinenfabrik Augsburg-Nürnberg,
+siemens,,Siemens AG,
+bombardier,,,Bombardier Inc.

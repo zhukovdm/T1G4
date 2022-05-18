@@ -3,7 +3,7 @@
     "@context":[
         "http://www.w3.org/ns/csvw",
         { 
-            "@language": "cs" 
+            "@language":"cs" 
         }
     ],
     "dc:description":"An overview of bus/train public transport",
@@ -15,16 +15,16 @@
             "url":"data-1.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl": "https://T1G4.DOX.cz/Train/{#trainID}",
-                "columns": [
+                "aboutUrl":"https://T1G4.DOX.cz/Train/{#trainID}",
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"trainID",
                         "dc:description":"Unique identifier of train",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl": "rdf:type",
-                        "valueUrl": "https://dbpedia.org/ontology/Train"
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"https://dbpedia.org/ontology/Train"
                     },
                     {
                         "@type":"Column",
@@ -33,7 +33,7 @@
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "http://example.org/vocabulary/capacity"
+                        "propertyUrl":"http://example.org/vocabulary/capacity"
                     },
                     {
                         "@type":"Column",
@@ -42,7 +42,7 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "http://example.org/vocabulary/consumtion"
+                        "propertyUrl":"http://example.org/vocabulary/consumption"
                     },
                     {
                         "@type":"Column",
@@ -86,10 +86,10 @@
                 "primaryKey":"trainID",
                 "foreignKeys":[
                     {
-                        "columnReference": "producerID",
-                        "reference": {
-                            "resource": "data-3.csv",
-                            "columnReference": "producerID"
+                        "columnReference":"producerID",
+                        "reference":{
+                            "resource":"data-3.csv",
+                            "columnReference":"producerID"
                         }
                     }
                 ]
@@ -102,7 +102,7 @@
             "tableSchema":{
                 "@type":"Schema",
                 "aboutUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"busID",
@@ -110,8 +110,8 @@
                         "dc:description":"Unique identifier of train",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl": "rdf:type",
-                        "valueUrl": "http://example.org/vocabulary/Bus"
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"http://example.org/vocabulary/Bus"
                     },
                     {
                         "@type":"Column",
@@ -120,7 +120,7 @@
                         "dc:description":"Number of people who can fit into a vehicle",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "http://example.org/vocabulary/capacity"
+                        "propertyUrl":"http://example.org/vocabulary/capacity"
                     },
                     {
                         "@type":"Column",
@@ -129,7 +129,7 @@
                         "dc:description":"Vehicle consumption of gasoline or electricity per km.",
                         "datatype":"integer",
                         "required":true,
-                        "propertyUrl": "http://example.org/vocabulary/consumtion"
+                        "propertyUrl":"http://example.org/vocabulary/consumption"
                     },
                     {
                         "@type":"Column",
@@ -164,10 +164,10 @@
                 "primaryKey":"busID",
                 "foreignKeys":[
                     {
-                        "columnReference": "producerID",
+                        "columnReference":"producerID",
                         "reference": {
-                            "resource": "data-3.csv",
-                            "columnReference": "producerID"
+                            "resource":"data-3.csv",
+                            "columnReference":"producerID"
                         }
                     }
                 ]
@@ -180,7 +180,7 @@
             "tableSchema":{
                 "@type":"Schema",
                 "aboutUrl":"https://T1G4.DOX.cz/Producer/{#producerID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"producerID",
@@ -193,12 +193,29 @@
                     },
                     {
                         "@type":"Column",
-                        "name":"legalName",
-                        "titles":"legalName",
-                        "dc:description":"Company legal name",
+                        "name":"legalName_cs",
+                        "titles":"legalName_cs",
+                        "dc:description":"Company legal name in Czech",
+                        "datatype":"string",
+                        "lang":"cs",
+                        "propertyUrl":"http://example.org/vocabulary/legalName"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"legalName_de",
+                        "titles":"legalName_de",
+                        "dc:description":"Company legal name in German",
+                        "datatype":"string",
+                        "lang":"de",
+                        "propertyUrl":"http://example.org/vocabulary/legalName"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"legalName_en",
+                        "titles":"legalName_en",
+                        "dc:description":"Company legal name in English",
                         "datatype":"string",
                         "lang":"en",
-                        "required":true,
                         "propertyUrl":"http://example.org/vocabulary/legalName"
                     }
                 ],
