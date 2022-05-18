@@ -1,22 +1,23 @@
 @prefix ex: <http://example.org/vocabulary/> .
+@prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://T1G4.DOX.cz/Agency/#dpp> a ex:Agency;
+<https://T1G4.DOX.cz/Agency/#dpp> a gtfs:Agency;
   ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554>,
     <https://T1G4.DOX.cz/Email/#info@dpp.cz>;
   ex:legalName "Dopravní podnik hl. m. Prahy"@en;
   ex:owns <https://T1G4.DOX.cz/Bus/#2>,
     <https://T1G4.DOX.cz/Train/#1> .
 
-<https://T1G4.DOX.cz/Agency/#leo> a ex:Agency;
+<https://T1G4.DOX.cz/Agency/#leo> a gtfs:Agency;
   ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738>,
     <https://T1G4.DOX.cz/Email/#info@leoexpress.com>;
   ex:legalName "Leo Express"@en;
   ex:owns <https://T1G4.DOX.cz/Train/#2>,
     <https://T1G4.DOX.cz/Train/#3> .
 
-<https://T1G4.DOX.cz/Agency/#student> a ex:Agency;
+<https://T1G4.DOX.cz/Agency/#student> a gtfs:Agency;
   ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245>,
     <https://T1G4.DOX.cz/Email/#info@studentagency.cz>;
   ex:legalName "Student Agency"@en;
