@@ -319,9 +319,8 @@
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs",
                         "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
-                        "valueUrl":"tel:{#phone}"
+                        "valueUrl":"http://example.org/vocabulary/{#phone}"
                     },
                     {
                         "@type":"Column",
@@ -330,9 +329,8 @@
                         "dc:description":"E-mail address",
                         "datatype":"string",
                         "required":true,
-                        "lang":"cs",
                         "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
-                        "valueUrl":"mailto:{#email}"
+                        "valueUrl":"http://example.org/vocabulary/{#email}"
                     }
                 ],
                 "primaryKey":"agencyID",
