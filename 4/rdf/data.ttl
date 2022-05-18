@@ -1,4 +1,6 @@
+@prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
 @prefix ex: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -141,11 +143,11 @@
 
 <https://T1G4.DOX.cz/Email/#info@studentagency.cz> a ex:email .
 
-<https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738> a ex:phone .
+<https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738> a foaf:phone .
 
-<https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245> a ex:phone .
+<https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245> a foaf:phone .
 
-<https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554> a ex:phone .
+<https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554> a foaf:phone .
 
 <https://T1G4.DOX.cz/TrainStation/#1> a ex:TrainStation;
   ex:capacity 50;
@@ -223,7 +225,7 @@
   ex:followedBy <https://T1G4.DOX.cz/Stop/#8>;
   ex:gps "45.0034761N 14.2635348E" .
 
-<https://T1G4.DOX.cz/Train/#1> a ex:Train;
+<https://T1G4.DOX.cz/Train/#1> a dbpedia-owl:Train;
   ex:capacity 30;
   ex:consumtion 500;
   ex:electricMotor true;
@@ -231,14 +233,14 @@
   ex:purchasePrice 550000;
   ex:rides <https://T1G4.DOX.cz/Connection/#11> .
 
-<https://T1G4.DOX.cz/Train/#2> a ex:Train;
+<https://T1G4.DOX.cz/Train/#2> a dbpedia-owl:Train;
   ex:capacity 100;
   ex:consumtion 1000;
   ex:electricMotor true;
   ex:europeanVehicleNumber "CGI 964";
   ex:purchasePrice 1000000 .
 
-<https://T1G4.DOX.cz/Train/#3> a ex:Train;
+<https://T1G4.DOX.cz/Train/#3> a dbpedia-owl:Train;
   ex:capacity 123;
   ex:consumtion 300;
   ex:electricMotor false;
