@@ -165,7 +165,7 @@
                 "foreignKeys":[
                     {
                         "columnReference":"producerID",
-                        "reference": {
+                        "reference":{
                             "resource":"data-3.csv",
                             "columnReference":"producerID"
                         }
@@ -281,21 +281,21 @@
                 "foreignKeys":[
                     {
                         "columnReference":"busID",
-                        "reference": {
+                        "reference":{
                             "resource":"data-2.csv",
                             "columnReference":"busID"
                         }
                     },
                     {
                         "columnReference":"trainID",
-                        "reference": {
+                        "reference":{
                             "resource":"data-1.csv",
                             "columnReference":"trainID"
                         }
                     },
                     {
                         "columnReference":"routeID",
-                        "reference": {
+                        "reference":{
                             "resource":"data-12.csv",
                             "columnReference":"routeID"
                         }
@@ -375,7 +375,7 @@
                 "foreignKeys":[
                     {
                         "columnReference":"agencyID",
-                        "reference": {
+                        "reference":{
                             "resource":"data-6.csv",
                             "columnReference":"agencyID"
                         }
@@ -414,7 +414,7 @@
                 "foreignKeys":[
                     {
                         "columnReference":"agencyID",
-                        "reference": {
+                        "reference":{
                             "resource":"data-6.csv",
                             "columnReference":"agencyID"
                         }
@@ -422,7 +422,6 @@
                 ]
             }
         },
-
         {
             "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv",
             "@type":"Table",
@@ -432,15 +431,14 @@
                 "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
                 "propertyUrl":"http://example.org/vocabulary/owns",
                 "valueUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"agencyID",
                         "titles":"agencyID",
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
+                        "required":true
                     },
                     {
                         "@type":"Column",
@@ -448,17 +446,16 @@
                         "titles":"busID",
                         "dc:description":"Bus owned by the company",
                         "datatype":"integer",
-                        "required":true,
-                        "lang":"cs"
+                        "required":true
                     }
                 ],
                 "primaryKey":"busID",
                 "foreignKeys":[
                     {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
+                        "columnReference":"agencyID",
+                        "reference":{
+                            "resource":"data-6.csv",
+                            "columnReference":"agencyID"
                         }
                     }
                 ]
@@ -473,15 +470,14 @@
                 "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
                 "propertyUrl":"http://example.org/vocabulary/owns",
                 "valueUrl":"https://T1G4.DOX.cz/Train/{#trainID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"agencyID",
                         "titles":"agencyID",
                         "dc:description":"Unique identifier for an agency",
                         "datatype":"string",
-                        "required":true,
-                        "lang":"cs"
+                        "required":true
                     },
                     {
                         "@type":"Column",
@@ -489,17 +485,16 @@
                         "titles":"trainID",
                         "dc:description":"Train owned by the company",
                         "datatype":"integer",
-                        "required":true,
-                        "lang":"cs"
+                        "required":true
                     }
                 ],
                 "primaryKey":"trainID",
                 "foreignKeys":[
                     {
-                        "columnReference": "agencyID",
-                        "reference": {
-                            "resource": "data-6.csv",
-                            "columnReference": "agencyID"
+                        "columnReference":"agencyID",
+                        "reference":{
+                            "resource":"data-6.csv",
+                            "columnReference":"agencyID"
                         }
                     }
                 ]
@@ -513,7 +508,7 @@
                 "aboutUrl":"https://T1G4.DOX.cz/Stop/{#stop1ID}",
                 "propertyUrl":"http://example.org/vocabulary/followedBy",
                 "valueUrl":"https://T1G4.DOX.cz/Stop/{#stop2ID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"followingID",
@@ -542,17 +537,17 @@
                 "primaryKey":"followingID",
                 "foreignKeys":[
                     {
-                        "columnReference": "stop1ID",
-                        "reference": {
-                            "resource": "data-15.csv",
-                            "columnReference": "stopID"
+                        "columnReference":"stop1ID",
+                        "reference":{
+                            "resource":"data-15.csv",
+                            "columnReference":"stopID"
                         }
                     },
                     {
-                        "columnReference": "stop2ID",
-                        "reference": {
-                            "resource": "data-15.csv",
-                            "columnReference": "stopID"
+                        "columnReference":"stop2ID",
+                        "reference":{
+                            "resource":"data-15.csv",
+                            "columnReference":"stopID"
                         }
                     }
                 ]
@@ -564,8 +559,8 @@
             "url":"data-12.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/Route/{#routeID}",
-                "columns": [
+                "aboutUrl":"https://T1G4.DOX.cz/TransitRoute/{#routeID}",
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"routeID",
@@ -611,7 +606,7 @@
                         "datatype":"integer",
                         "required":false,
                         "propertyUrl":"http://example.org/vocabulary/startsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/TrainStation/{#trainStation1ID}"
+                        "valueUrl":"https://T1G4.DOX.cz/Station/{#trainStation1ID}"
                     },
                     {
                         "@type":"Column",
@@ -621,7 +616,7 @@
                         "datatype":"integer",
                         "required":false,
                         "propertyUrl":"http://example.org/vocabulary/endsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/TrainStation/{#trainStation2ID}"
+                        "valueUrl":"https://T1G4.DOX.cz/Station/{#trainStation2ID}"
                     },
                     {
                         "@type":"Column",
@@ -631,7 +626,7 @@
                         "datatype":"integer",
                         "required":false,
                         "propertyUrl":"http://example.org/vocabulary/startsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/BusStation/{#busStation1ID}"
+                        "valueUrl":"https://T1G4.DOX.cz/Station/{#busStation1ID}"
                     },
                     {
                         "@type":"Column",
@@ -641,37 +636,37 @@
                         "datatype":"integer",
                         "required":false,
                         "propertyUrl":"http://example.org/vocabulary/endsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/BusStation/{#busStation1ID}"
+                        "valueUrl":"https://T1G4.DOX.cz/Station/{#busStation1ID}"
                     }
                 ],
                 "primaryKey":"routeID",
                 "foreignKeys":[
                     {
-                        "columnReference": "busStation1ID",
-                        "reference": {
-                            "resource": "data-14.csv",
-                            "columnReference": "busStationID"
+                        "columnReference":"busStation1ID",
+                        "reference":{
+                            "resource":"data-14.csv",
+                            "columnReference":"busStationID"
                         }
                     },
                     {
-                        "columnReference": "busStation2ID",
-                        "reference": {
-                            "resource": "data-14.csv",
-                            "columnReference": "busStationID"
+                        "columnReference":"busStation2ID",
+                        "reference":{
+                            "resource":"data-14.csv",
+                            "columnReference":"busStationID"
                         }
                     },
                     {
-                        "columnReference": "trainStation1ID",
-                        "reference": {
-                            "resource": "data-13.csv",
-                            "columnReference": "trainStationID"
+                        "columnReference":"trainStation1ID",
+                        "reference":{
+                            "resource":"data-13.csv",
+                            "columnReference":"trainStationID"
                         }
                     },
                     {
-                        "columnReference": "trainStation2ID",
-                        "reference": {
-                            "resource": "data-13.csv",
-                            "columnReference": "trainStationID"
+                        "columnReference":"trainStation2ID",
+                        "reference":{
+                            "resource":"data-13.csv",
+                            "columnReference":"trainStationID"
                         }
                     }
                 ]
@@ -682,8 +677,8 @@
             "url":"data-13.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/TrainStation/{#trainStationID}",
-                "columns": [
+                "aboutUrl":"https://T1G4.DOX.cz/Station/{#trainStationID}",
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"trainStationID",
@@ -696,9 +691,9 @@
                     },
                     {
                         "@type":"Column",
-                        "name":"stationName",
-                        "titles":"stationName",
-                        "dc:description":"dbpedia-owl:Station",
+                        "name":"stationName_cs",
+                        "titles":"stationName_cs",
+                        "dc:description":"Actual station name in Czech",
                         "datatype":"string",
                         "required":true,
                         "lang":"cs",
@@ -723,8 +718,8 @@
             "url":"data-14.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/BusStation/{#busStationID}",
-                "columns": [
+                "aboutUrl":"https://T1G4.DOX.cz/Station/{#busStationID}",
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"busStationID",
@@ -737,9 +732,9 @@
                     },
                     {
                         "@type":"Column",
-                        "name":"stationName",
-                        "titles":"stationName",
-                        "dc:description":"dbpedia-owl:Station",
+                        "name":"stationName_cs",
+                        "titles":"stationName_cs",
+                        "dc:description":"Actual station name in Czech",
                         "datatype":"string",
                         "required":true,
                         "lang":"cs",
@@ -765,12 +760,12 @@
             "tableSchema":{
                 "@type":"Schema",
                 "aboutUrl":"https://T1G4.DOX.cz/Stop/{#stopID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"stopID",
                         "titles":"stopID",
-                        "dc:description":"gtfs:stop",
+                        "dc:description":"Unique identifier of a stop",
                         "datatype":"integer",
                         "required":true,
                         "propertyUrl":"rdf:type",
@@ -780,7 +775,7 @@
                         "@type":"Column",
                         "name":"gps",
                         "titles":"gps",
-                        "dc:description":"Location of the stop",
+                        "dc:description":"Exact point on a map where stop is located",
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"http://example.org/vocabulary/gps"
@@ -806,7 +801,10 @@
                         "name":"connectionID",
                         "titles":"connectionID",
                         "dc:description":"Connection to which this stop belongs",
-                        "datatype":"integer",
+                        "datatype":{
+                            "base":"string",
+                            "format":"^[0-9]+-[0-9]+$"
+                        },
                         "required":true,
                         "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
                         "propertyUrl":"http://example.org/vocabulary/connects",
@@ -819,7 +817,7 @@
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
                         "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/BusStation/{#busStationID}",
+                        "aboutUrl":"https://T1G4.DOX.cz/Station/{#busStationID}",
                         "propertyUrl":"http://example.org/vocabulary/serves",
                         "valueUrl":"https://T1G4.DOX.cz/Stop/{#stopID}"
                     },
@@ -830,7 +828,7 @@
                         "dc:description":"Station serving this stop",
                         "datatype":"integer",
                         "required":false,
-                        "aboutUrl":"https://T1G4.DOX.cz/TrainStation/{#trainStationID}",
+                        "aboutUrl":"https://T1G4.DOX.cz/Station/{#trainStationID}",
                         "propertyUrl":"http://example.org/vocabulary/serves",
                         "valueUrl":"https://T1G4.DOX.cz/Stop/{#stopID}"
                     }
@@ -838,24 +836,24 @@
                 "primaryKey":"stopID",
                 "foreignKeys":[
                     {
-                        "columnReference": "busStationID",
-                        "reference": {
-                            "resource": "data-14.csv",
-                            "columnReference": "busStationID"
+                        "columnReference":"busStationID",
+                        "reference":{
+                            "resource":"data-14.csv",
+                            "columnReference":"busStationID"
                         }
                     },
                     {
-                        "columnReference": "trainStationID",
-                        "reference": {
-                            "resource": "data-13.csv",
-                            "columnReference": "trainStationID"
+                        "columnReference":"trainStationID",
+                        "reference":{
+                            "resource":"data-13.csv",
+                            "columnReference":"trainStationID"
                         }
                     },
                     {
-                        "columnReference": "connectionID",
-                        "reference": {
-                            "resource": "data-4.csv",
-                            "columnReference": "connectionID"
+                        "columnReference":"connectionID",
+                        "reference":{
+                            "resource":"data-4.csv",
+                            "columnReference":"connectionID"
                         }
                     }
                 ]
