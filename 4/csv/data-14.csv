@@ -1,7 +1,7 @@
-busStationID,stationName,capacity
-1,Oderská,30
-2,Budišovská,20
-3,Spojovací,45
-4,Na Vrstevnici,35
-5,Sídliště Novodvorská,25
-6,Limuzská,80
+busStationID,stationName_cs,capacity
+4,Oderská,30
+5,Budišovská,20
+6,Spojovací,45
+10,Na Vrstevnici,35
+11,Sídliště Novodvorská,25
+12,Limuzská,80
