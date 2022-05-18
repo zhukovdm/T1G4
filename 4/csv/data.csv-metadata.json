@@ -197,6 +197,7 @@
                         "titles":"legalName",
                         "dc:description":"Company legal name",
                         "datatype":"string",
+                        "lang":"en",
                         "required":true,
                         "propertyUrl":"http://example.org/vocabulary/legalName"
                     }
@@ -683,6 +684,7 @@
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
                         "required":true,
+                        "lang":"cs",
                         "propertyUrl":"http://example.org/vocabulary/stationName"
                     },
                     {
@@ -723,6 +725,7 @@
                         "dc:description":"dbpedia-owl:Station",
                         "datatype":"string",
                         "required":true,
+                        "lang":"cs",
                         "propertyUrl":"http://example.org/vocabulary/stationName"
                     },
                     {
