@@ -320,7 +320,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
-                        "valueUrl":"tel:{#phone}"
+                        "valueUrl":"{#phone}"
                     },
                     {
                         "@type":"Column",
