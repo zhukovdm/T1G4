@@ -319,7 +319,8 @@
                         "dc:description":"Mobile or stationary phone number",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone"
+                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
+                        "valueUrl":"#phone"
                     },
                     {
                         "@type":"Column",
@@ -328,7 +329,8 @@
                         "dc:description":"E-mail address",
                         "datatype":"string",
                         "required":true,
-                        "propertyUrl":"http://xmlns.com/foaf/0.1/mbox"
+                        "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
+                        "valueUrl":"mailto:{email}"
                     }
                 ],
                 "primaryKey":"agencyID",
