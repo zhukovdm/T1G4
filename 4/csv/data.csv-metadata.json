@@ -320,8 +320,7 @@
                         "datatype":"string",
                         "required":true,
                         "lang":"cs",
-                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
-                        "valueUrl":"phone"
+                        "propertyUrl":"http://xmlns.com/foaf/0.1/phone"
                     },
                     {
                         "@type":"Column",
@@ -331,8 +330,7 @@
                         "datatype":"string",
                         "required":true,
                         "lang":"cs",
-                        "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
-                        "valueUrl":"email"
+                        "propertyUrl":"http://xmlns.com/foaf/0.1/mbox"
                     }
                 ],
                 "primaryKey":"agencyID",
