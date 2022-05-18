@@ -321,7 +321,7 @@
                         "required":true,
                         "lang":"cs",
                         "propertyUrl":"http://xmlns.com/foaf/0.1/phone",
-                        "valueUrl":"{#phone}"
+                        "valueUrl":"phone"
                     },
                     {
                         "@type":"Column",
@@ -332,7 +332,7 @@
                         "required":true,
                         "lang":"cs",
                         "propertyUrl":"http://xmlns.com/foaf/0.1/mbox",
-                        "valueUrl":"{#email}"
+                        "valueUrl":"email"
                     }
                 ],
                 "primaryKey":"agencyID",
