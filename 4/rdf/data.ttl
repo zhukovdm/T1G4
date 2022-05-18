@@ -1,712 +1,295 @@
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#TableGroup> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://purl.org/dc/terms/description> "An overview of bus/train public transport"@cs .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> _:g446400 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> _:g446960 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> _:g447240 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/csvw#table> _:g447520 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> <http://www.w3.org/ns/prov#wasGeneratedBy> _:g448120 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> <http://www.w3.org/ns/csvw#row> _:g445240 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> <http://www.w3.org/ns/csvw#row> _:g445280 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> <http://www.w3.org/ns/csvw#row> _:g445320 .
-_:g445240 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445240 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445240 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv#row=2> .
-_:g445240 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#1> .
-_:g445240 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#siemens> .
-<https://T1G4.DOX.cz/Train/#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Train> .
-<https://T1G4.DOX.cz/Train/#1> <http://example.org/vocabulary/capacity> "30"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#1> <http://example.org/vocabulary/consumtion> "500"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#1> <http://example.org/vocabulary/purchasePrice> "550000"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#1> <http://example.org/vocabulary/electricMotor> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<https://T1G4.DOX.cz/Train/#1> <http://example.org/vocabulary/europeanVehicleNumber> "B 228 FK" .
-<https://T1G4.DOX.cz/Train/#1> <http://example.org/vocabulary/rides> <https://T1G4.DOX.cz/Connection/#11> .
-<https://T1G4.DOX.cz/Producer/#siemens> <http://example.org/vocabulary/produces> <https://T1G4.DOX.cz/Train/#1> .
-<https://T1G4.DOX.cz/Producer/#siemens> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Producer> .
-<https://T1G4.DOX.cz/Producer/#siemens> <http://example.org/vocabulary/legalName> "Siemens AG" .
-_:g445280 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445280 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv#row=3> .
-_:g445280 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#2> .
-_:g445280 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#bombardier> .
-<https://T1G4.DOX.cz/Train/#2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Train> .
-<https://T1G4.DOX.cz/Train/#2> <http://example.org/vocabulary/capacity> "100"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#2> <http://example.org/vocabulary/consumtion> "1000"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#2> <http://example.org/vocabulary/purchasePrice> "1000000"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#2> <http://example.org/vocabulary/electricMotor> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<https://T1G4.DOX.cz/Train/#2> <http://example.org/vocabulary/europeanVehicleNumber> "CGI 964" .
-<https://T1G4.DOX.cz/Producer/#bombardier> <http://example.org/vocabulary/produces> <https://T1G4.DOX.cz/Train/#2> .
-<https://T1G4.DOX.cz/Producer/#bombardier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Producer> .
-<https://T1G4.DOX.cz/Producer/#bombardier> <http://example.org/vocabulary/legalName> "Bombardier Inc." .
-_:g445320 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445320 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv#row=4> .
-_:g445320 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#3> .
-_:g445320 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#tatra> .
-<https://T1G4.DOX.cz/Train/#3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Train> .
-<https://T1G4.DOX.cz/Train/#3> <http://example.org/vocabulary/capacity> "123"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#3> <http://example.org/vocabulary/consumtion> "300"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#3> <http://example.org/vocabulary/purchasePrice> "200000"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Train/#3> <http://example.org/vocabulary/electricMotor> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<https://T1G4.DOX.cz/Train/#3> <http://example.org/vocabulary/europeanVehicleNumber> "EW 40 672" .
-<https://T1G4.DOX.cz/Train/#3> <http://example.org/vocabulary/rides> <https://T1G4.DOX.cz/Connection/#1371> .
-<https://T1G4.DOX.cz/Producer/#tatra> <http://example.org/vocabulary/produces> <https://T1G4.DOX.cz/Train/#3> .
-<https://T1G4.DOX.cz/Producer/#tatra> <http://example.org/vocabulary/produces> <https://T1G4.DOX.cz/Bus/#1> .
-<https://T1G4.DOX.cz/Producer/#tatra> <http://example.org/vocabulary/produces> <https://T1G4.DOX.cz/Bus/#2> .
-<https://T1G4.DOX.cz/Producer/#tatra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Producer> .
-<https://T1G4.DOX.cz/Producer/#tatra> <http://example.org/vocabulary/legalName> "TATRA TRUCKS a.s." .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> <http://www.w3.org/ns/csvw#row> _:g445360 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> <http://www.w3.org/ns/csvw#row> _:g445400 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> <http://www.w3.org/ns/csvw#row> _:g445440 .
-_:g445360 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445360 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445360 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv#row=2> .
-_:g445360 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#1> .
-_:g445360 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#tatra> .
-<https://T1G4.DOX.cz/Bus/#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Bus> .
-<https://T1G4.DOX.cz/Bus/#1> <http://example.org/vocabulary/capacity> "23"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#1> <http://example.org/vocabulary/consumtion> "42"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#1> <http://example.org/vocabulary/purchasePrice> "523147"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#1> <http://example.org/vocabulary/licensePlateNumber> "4A2 7983" .
-<https://T1G4.DOX.cz/Bus/#1> <http://example.org/vocabulary/rides> <https://T1G4.DOX.cz/Connection/#1372> .
-_:g445400 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445400 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445400 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv#row=3> .
-_:g445400 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#2> .
-_:g445400 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#tatra> .
-<https://T1G4.DOX.cz/Bus/#2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Bus> .
-<https://T1G4.DOX.cz/Bus/#2> <http://example.org/vocabulary/capacity> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#2> <http://example.org/vocabulary/consumtion> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#2> <http://example.org/vocabulary/purchasePrice> "65000"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#2> <http://example.org/vocabulary/licensePlateNumber> "5T1 9876" .
-<https://T1G4.DOX.cz/Bus/#2> <http://example.org/vocabulary/rides> <https://T1G4.DOX.cz/Connection/#91> .
-_:g445440 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445440 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445440 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv#row=4> .
-_:g445440 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#3> .
-_:g445440 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#man> .
-<https://T1G4.DOX.cz/Bus/#3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Bus> .
-<https://T1G4.DOX.cz/Bus/#3> <http://example.org/vocabulary/capacity> "54"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#3> <http://example.org/vocabulary/consumtion> "98"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#3> <http://example.org/vocabulary/purchasePrice> "123000"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/Bus/#3> <http://example.org/vocabulary/licensePlateNumber> "6M4 1426" .
-<https://T1G4.DOX.cz/Bus/#3> <http://example.org/vocabulary/rides> <https://T1G4.DOX.cz/Connection/#371> .
-<https://T1G4.DOX.cz/Producer/#man> <http://example.org/vocabulary/produces> <https://T1G4.DOX.cz/Bus/#3> .
-<https://T1G4.DOX.cz/Producer/#man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Producer> .
-<https://T1G4.DOX.cz/Producer/#man> <http://example.org/vocabulary/legalName> "Maschinenfabrik Augsburg-Nürnberg" .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> <http://www.w3.org/ns/csvw#row> _:g445480 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> <http://www.w3.org/ns/csvw#row> _:g445520 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> <http://www.w3.org/ns/csvw#row> _:g445560 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> <http://www.w3.org/ns/csvw#row> _:g445600 .
-_:g445480 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445480 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445480 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv#row=2> .
-_:g445480 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#tatra> .
-_:g445520 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445520 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv#row=3> .
-_:g445520 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#man> .
-_:g445560 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445560 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445560 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv#row=4> .
-_:g445560 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#siemens> .
-_:g445600 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445600 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv#row=5> .
-_:g445600 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Producer/#bombardier> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> <http://www.w3.org/ns/csvw#row> _:g445640 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> <http://www.w3.org/ns/csvw#row> _:g445680 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> <http://www.w3.org/ns/csvw#row> _:g445720 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> <http://www.w3.org/ns/csvw#row> _:g445760 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> <http://www.w3.org/ns/csvw#row> _:g445800 .
-_:g445640 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445640 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv#row=2> .
-_:g445640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#11> .
-_:g445640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#> .
-_:g445640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#1> .
-<https://T1G4.DOX.cz/Connection/#11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Connection> .
-<https://T1G4.DOX.cz/Connection/#11> <http://example.org/vocabulary/belongsTo> <https://T1G4.DOX.cz/TransitRoute/#1> .
-<https://T1G4.DOX.cz/Connection/#11> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#1> .
-<https://T1G4.DOX.cz/Connection/#11> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#2> .
-<https://T1G4.DOX.cz/Connection/#11> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#3> .
-_:g445680 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445680 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv#row=3> .
-_:g445680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#91> .
-_:g445680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#2> .
-_:g445680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#> .
-<https://T1G4.DOX.cz/Connection/#91> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Connection> .
-<https://T1G4.DOX.cz/Connection/#91> <http://example.org/vocabulary/belongsTo> <https://T1G4.DOX.cz/TransitRoute/#9> .
-<https://T1G4.DOX.cz/Connection/#91> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#4> .
-<https://T1G4.DOX.cz/Connection/#91> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#5> .
-<https://T1G4.DOX.cz/Connection/#91> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#6> .
-_:g445720 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445720 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv#row=4> .
-_:g445720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#371> .
-_:g445720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#3> .
-_:g445720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#> .
-<https://T1G4.DOX.cz/Connection/#371> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Connection> .
-<https://T1G4.DOX.cz/Connection/#371> <http://example.org/vocabulary/belongsTo> <https://T1G4.DOX.cz/TransitRoute/#37> .
-<https://T1G4.DOX.cz/Connection/#371> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#7> .
-<https://T1G4.DOX.cz/Connection/#371> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#8> .
-<https://T1G4.DOX.cz/Connection/#371> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#9> .
-<https://T1G4.DOX.cz/Connection/#371> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#10> .
-_:g445760 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445760 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445760 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv#row=5> .
-_:g445760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#1371> .
-_:g445760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#> .
-_:g445760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#3> .
-<https://T1G4.DOX.cz/Connection/#1371> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Connection> .
-<https://T1G4.DOX.cz/Connection/#1371> <http://example.org/vocabulary/belongsTo> <https://T1G4.DOX.cz/TransitRoute/#137> .
-<https://T1G4.DOX.cz/Connection/#1371> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#11> .
-<https://T1G4.DOX.cz/Connection/#1371> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#12> .
-_:g445800 <http://www.w3.org/ns/csvw#rownum> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445800 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445800 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv#row=6> .
-_:g445800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#1372> .
-_:g445800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Bus/#1> .
-_:g445800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Train/#> .
-<https://T1G4.DOX.cz/Connection/#1372> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Connection> .
-<https://T1G4.DOX.cz/Connection/#1372> <http://example.org/vocabulary/belongsTo> <https://T1G4.DOX.cz/TransitRoute/#137> .
-<https://T1G4.DOX.cz/Connection/#1372> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#13> .
-<https://T1G4.DOX.cz/Connection/#1372> <http://example.org/vocabulary/connects> <https://T1G4.DOX.cz/Stop/#14> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> <http://www.w3.org/ns/csvw#row> _:g445840 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> <http://www.w3.org/ns/csvw#row> _:g445880 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> <http://www.w3.org/ns/csvw#row> _:g445920 .
-_:g445840 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445840 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445840 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv#row=2> .
-_:g445840 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#student> .
-<https://T1G4.DOX.cz/Agency/#student> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Agency> .
-<https://T1G4.DOX.cz/Agency/#student> <http://example.org/vocabulary/legalName> "Student Agency"@en .
-<https://T1G4.DOX.cz/Agency/#student> <http://example.org/vocabulary/has> <https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245> .
-<https://T1G4.DOX.cz/Agency/#student> <http://example.org/vocabulary/has> <https://T1G4.DOX.cz/Email/#info@studentagency.cz> .
-<https://T1G4.DOX.cz/Agency/#student> <http://example.org/vocabulary/owns> <https://T1G4.DOX.cz/Bus/#3> .
-_:g445880 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445880 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445880 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv#row=3> .
-_:g445880 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#leo> .
-<https://T1G4.DOX.cz/Agency/#leo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Agency> .
-<https://T1G4.DOX.cz/Agency/#leo> <http://example.org/vocabulary/legalName> "Leo Express"@en .
-<https://T1G4.DOX.cz/Agency/#leo> <http://example.org/vocabulary/has> <https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738> .
-<https://T1G4.DOX.cz/Agency/#leo> <http://example.org/vocabulary/has> <https://T1G4.DOX.cz/Email/#info@leoexpress.com> .
-<https://T1G4.DOX.cz/Agency/#leo> <http://example.org/vocabulary/owns> <https://T1G4.DOX.cz/Train/#2> .
-<https://T1G4.DOX.cz/Agency/#leo> <http://example.org/vocabulary/owns> <https://T1G4.DOX.cz/Train/#3> .
-_:g445920 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445920 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445920 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv#row=4> .
-_:g445920 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#dpp> .
-<https://T1G4.DOX.cz/Agency/#dpp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Agency> .
-<https://T1G4.DOX.cz/Agency/#dpp> <http://example.org/vocabulary/legalName> "Dopravní podnik hl. m. Prahy"@en .
-<https://T1G4.DOX.cz/Agency/#dpp> <http://example.org/vocabulary/has> <https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554> .
-<https://T1G4.DOX.cz/Agency/#dpp> <http://example.org/vocabulary/has> <https://T1G4.DOX.cz/Email/#info@dpp.cz> .
-<https://T1G4.DOX.cz/Agency/#dpp> <http://example.org/vocabulary/owns> <https://T1G4.DOX.cz/Bus/#2> .
-<https://T1G4.DOX.cz/Agency/#dpp> <http://example.org/vocabulary/owns> <https://T1G4.DOX.cz/Train/#1> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> <http://www.w3.org/ns/csvw#row> _:g445960 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> <http://www.w3.org/ns/csvw#row> _:g446000 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> <http://www.w3.org/ns/csvw#row> _:g446040 .
-_:g445960 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g445960 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g445960 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv#row=2> .
-_:g445960 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245> .
-_:g445960 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#student> .
-<https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/phone> .
-_:g446000 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446000 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446000 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv#row=3> .
-_:g446000 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738> .
-_:g446000 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#leo> .
-<https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/phone> .
-_:g446040 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446040 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446040 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv#row=4> .
-_:g446040 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554> .
-_:g446040 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#dpp> .
-<https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/phone> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> <http://www.w3.org/ns/csvw#row> _:g446080 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> <http://www.w3.org/ns/csvw#row> _:g446120 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> <http://www.w3.org/ns/csvw#row> _:g446160 .
-_:g446080 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446080 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446080 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv#row=2> .
-_:g446080 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Email/#info@studentagency.cz> .
-_:g446080 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#student> .
-<https://T1G4.DOX.cz/Email/#info@studentagency.cz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/email> .
-_:g446120 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446120 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv#row=3> .
-_:g446120 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Email/#info@leoexpress.com> .
-_:g446120 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#leo> .
-<https://T1G4.DOX.cz/Email/#info@leoexpress.com> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/email> .
-_:g446160 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446160 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv#row=4> .
-_:g446160 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Email/#info@dpp.cz> .
-_:g446160 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#dpp> .
-<https://T1G4.DOX.cz/Email/#info@dpp.cz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/email> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv> <http://www.w3.org/ns/csvw#row> _:g446200 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv> <http://www.w3.org/ns/csvw#row> _:g446240 .
-_:g446200 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446200 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv#row=2> .
-_:g446200 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#dpp> .
-_:g446240 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446240 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446240 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv#row=3> .
-_:g446240 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#student> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> <http://www.w3.org/ns/csvw#row> _:g446280 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> <http://www.w3.org/ns/csvw#row> _:g446320 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> <http://www.w3.org/ns/csvw#row> _:g446360 .
-_:g446280 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446280 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv#row=2> .
-_:g446280 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#dpp> .
-_:g446320 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446320 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv#row=3> .
-_:g446320 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#leo> .
-_:g446360 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446360 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446360 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv#row=4> .
-_:g446360 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Agency/#leo> .
-_:g446400 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-_:g446400 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv> .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446440 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446480 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446520 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446560 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446600 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446640 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446680 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446720 .
-_:g446400 <http://www.w3.org/ns/csvw#row> _:g446760 .
-_:g446440 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446440 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446440 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=2> .
-_:g446440 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#1> .
-<https://T1G4.DOX.cz/Stop/#1> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#2> .
-<https://T1G4.DOX.cz/Stop/#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#1> <http://example.org/vocabulary/gps> "49.7134667N, 17.7582722E" .
-<https://T1G4.DOX.cz/Stop/#1> <http://example.org/vocabulary/arrivalTime> "12:00:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#1> <http://example.org/vocabulary/departureTime> "12:01:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446480 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446480 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446480 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=3> .
-_:g446480 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#2> .
-<https://T1G4.DOX.cz/Stop/#2> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#3> .
-<https://T1G4.DOX.cz/Stop/#2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#2> <http://example.org/vocabulary/gps> "49.7741814N, 17.7475375E" .
-<https://T1G4.DOX.cz/Stop/#2> <http://example.org/vocabulary/arrivalTime> "12:05:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#2> <http://example.org/vocabulary/departureTime> "12:06:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446520 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446520 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=4> .
-_:g446520 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#4> .
-<https://T1G4.DOX.cz/Stop/#4> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#5> .
-<https://T1G4.DOX.cz/Stop/#4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#4> <http://example.org/vocabulary/gps> "49.6952592N, 17.7879486E" .
-<https://T1G4.DOX.cz/Stop/#4> <http://example.org/vocabulary/arrivalTime> "11:00:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#4> <http://example.org/vocabulary/departureTime> "11:01:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446560 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446560 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446560 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=5> .
-_:g446560 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#5> .
-<https://T1G4.DOX.cz/Stop/#5> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#6> .
-<https://T1G4.DOX.cz/Stop/#5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#5> <http://example.org/vocabulary/gps> "49.7067069N, 17.7684325E" .
-<https://T1G4.DOX.cz/Stop/#5> <http://example.org/vocabulary/arrivalTime> "11:05:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#5> <http://example.org/vocabulary/departureTime> "11:06:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446600 <http://www.w3.org/ns/csvw#rownum> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446600 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=6> .
-_:g446600 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#7> .
-<https://T1G4.DOX.cz/Stop/#7> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#8> .
-<https://T1G4.DOX.cz/Stop/#7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#7> <http://example.org/vocabulary/gps> "45.0034761N 14.2635348E" .
-<https://T1G4.DOX.cz/Stop/#7> <http://example.org/vocabulary/arrivalTime> "10:00:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#7> <http://example.org/vocabulary/departureTime> "10:01:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446640 <http://www.w3.org/ns/csvw#rownum> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446640 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=7> .
-_:g446640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#8> .
-<https://T1G4.DOX.cz/Stop/#8> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#9> .
-<https://T1G4.DOX.cz/Stop/#8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#8> <http://example.org/vocabulary/gps> "50.091689N 14.443813E" .
-<https://T1G4.DOX.cz/Stop/#8> <http://example.org/vocabulary/arrivalTime> "10:05:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#8> <http://example.org/vocabulary/departureTime> "10:06:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446680 <http://www.w3.org/ns/csvw#rownum> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446680 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=8> .
-_:g446680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#9> .
-<https://T1G4.DOX.cz/Stop/#9> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#10> .
-<https://T1G4.DOX.cz/Stop/#9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#9> <http://example.org/vocabulary/gps> "50.100481N 14.464590E" .
-<https://T1G4.DOX.cz/Stop/#9> <http://example.org/vocabulary/arrivalTime> "10:10:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#9> <http://example.org/vocabulary/departureTime> "10:11:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446720 <http://www.w3.org/ns/csvw#rownum> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446720 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=9> .
-_:g446720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#11> .
-<https://T1G4.DOX.cz/Stop/#11> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#12> .
-<https://T1G4.DOX.cz/Stop/#11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#11> <http://example.org/vocabulary/gps> "50.108388N 14.475745E" .
-<https://T1G4.DOX.cz/Stop/#11> <http://example.org/vocabulary/arrivalTime> "14:00:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#11> <http://example.org/vocabulary/departureTime> "14:01:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g446760 <http://www.w3.org/ns/csvw#rownum> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446760 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446760 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv#row=10> .
-_:g446760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#13> .
-<https://T1G4.DOX.cz/Stop/#13> <http://example.org/vocabulary/followedBy> <https://T1G4.DOX.cz/Stop/#14> .
-<https://T1G4.DOX.cz/Stop/#13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#13> <http://example.org/vocabulary/gps> "50.108388N 14.475745E" .
-<https://T1G4.DOX.cz/Stop/#13> <http://example.org/vocabulary/arrivalTime> "15:00:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#13> <http://example.org/vocabulary/departureTime> "15:01:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> <http://www.w3.org/ns/csvw#row> _:g446800 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> <http://www.w3.org/ns/csvw#row> _:g446840 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> <http://www.w3.org/ns/csvw#row> _:g446880 .
-<https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> <http://www.w3.org/ns/csvw#row> _:g446920 .
-_:g446800 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446800 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446800 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv#row=2> .
-_:g446800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Route/#1> .
-<https://T1G4.DOX.cz/Route/#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Route> .
-<https://T1G4.DOX.cz/Route/#1> <http://example.org/vocabulary/length> "120.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://T1G4.DOX.cz/Route/#1> <http://example.org/vocabulary/validFrom> "2015-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#1> <http://example.org/vocabulary/validTo> "2020-12-31"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#1> <http://example.org/vocabulary/startsWith> <https://T1G4.DOX.cz/TrainStation/#1> .
-<https://T1G4.DOX.cz/Route/#1> <http://example.org/vocabulary/endsWith> <https://T1G4.DOX.cz/TrainStation/#3> .
-_:g446840 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446840 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446840 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv#row=3> .
-_:g446840 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Route/#9> .
-<https://T1G4.DOX.cz/Route/#9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Route> .
-<https://T1G4.DOX.cz/Route/#9> <http://example.org/vocabulary/length> "37.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://T1G4.DOX.cz/Route/#9> <http://example.org/vocabulary/validFrom> "2005-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#9> <http://example.org/vocabulary/validTo> "2025-09-25"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#9> <http://example.org/vocabulary/startsWith> <https://T1G4.DOX.cz/BusStation/#1> .
-<https://T1G4.DOX.cz/Route/#9> <http://example.org/vocabulary/endsWith> <https://T1G4.DOX.cz/BusStation/#1> .
-_:g446880 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446880 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446880 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv#row=4> .
-_:g446880 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Route/#37> .
-<https://T1G4.DOX.cz/Route/#37> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Route> .
-<https://T1G4.DOX.cz/Route/#37> <http://example.org/vocabulary/length> "11.6"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://T1G4.DOX.cz/Route/#37> <http://example.org/vocabulary/validFrom> "2021-12-10"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#37> <http://example.org/vocabulary/validTo> "2022-12-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#37> <http://example.org/vocabulary/startsWith> <https://T1G4.DOX.cz/TrainStation/#4> .
-<https://T1G4.DOX.cz/Route/#37> <http://example.org/vocabulary/endsWith> <https://T1G4.DOX.cz/TrainStation/#5> .
-_:g446920 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g446920 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g446920 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv#row=5> .
-_:g446920 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Route/#137> .
-<https://T1G4.DOX.cz/Route/#137> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Route> .
-<https://T1G4.DOX.cz/Route/#137> <http://example.org/vocabulary/length> "12.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-<https://T1G4.DOX.cz/Route/#137> <http://example.org/vocabulary/validFrom> "2021-12-13"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#137> <http://example.org/vocabulary/validTo> "2022-12-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://T1G4.DOX.cz/Route/#137> <http://example.org/vocabulary/startsWith> <https://T1G4.DOX.cz/BusStation/#4> .
-<https://T1G4.DOX.cz/Route/#137> <http://example.org/vocabulary/endsWith> <https://T1G4.DOX.cz/BusStation/#4> .
-_:g446960 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-_:g446960 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv> .
-_:g446960 <http://www.w3.org/ns/csvw#row> _:g447000 .
-_:g446960 <http://www.w3.org/ns/csvw#row> _:g447040 .
-_:g446960 <http://www.w3.org/ns/csvw#row> _:g447080 .
-_:g446960 <http://www.w3.org/ns/csvw#row> _:g447120 .
-_:g446960 <http://www.w3.org/ns/csvw#row> _:g447160 .
-_:g446960 <http://www.w3.org/ns/csvw#row> _:g447200 .
-_:g447000 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447000 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447000 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv#row=2> .
-_:g447000 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#1> .
-<https://T1G4.DOX.cz/TrainStation/#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TrainStation> .
-<https://T1G4.DOX.cz/TrainStation/#1> <http://example.org/vocabulary/stationName> "Heřmánky" .
-<https://T1G4.DOX.cz/TrainStation/#1> <http://example.org/vocabulary/capacity> "50"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/TrainStation/#1> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#1> .
-<https://T1G4.DOX.cz/TrainStation/#1> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#13> .
-_:g447040 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447040 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447040 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv#row=3> .
-_:g447040 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#2> .
-<https://T1G4.DOX.cz/TrainStation/#2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TrainStation> .
-<https://T1G4.DOX.cz/TrainStation/#2> <http://example.org/vocabulary/stationName> "Vítkov" .
-<https://T1G4.DOX.cz/TrainStation/#2> <http://example.org/vocabulary/capacity> "40"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/TrainStation/#2> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#2> .
-_:g447080 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447080 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447080 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv#row=4> .
-_:g447080 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#3> .
-<https://T1G4.DOX.cz/TrainStation/#3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TrainStation> .
-<https://T1G4.DOX.cz/TrainStation/#3> <http://example.org/vocabulary/stationName> "Jakubčovice nad Odrou" .
-<https://T1G4.DOX.cz/TrainStation/#3> <http://example.org/vocabulary/capacity> "60"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/TrainStation/#3> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#3> .
-_:g447120 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447120 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv#row=5> .
-_:g447120 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#4> .
-<https://T1G4.DOX.cz/TrainStation/#4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TrainStation> .
-<https://T1G4.DOX.cz/TrainStation/#4> <http://example.org/vocabulary/stationName> "Malostranské náměstí" .
-<https://T1G4.DOX.cz/TrainStation/#4> <http://example.org/vocabulary/capacity> "120"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/TrainStation/#4> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#7> .
-_:g447160 <http://www.w3.org/ns/csvw#rownum> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447160 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv#row=6> .
-_:g447160 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#5> .
-<https://T1G4.DOX.cz/TrainStation/#5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TrainStation> .
-<https://T1G4.DOX.cz/TrainStation/#5> <http://example.org/vocabulary/stationName> "Doliny" .
-<https://T1G4.DOX.cz/TrainStation/#5> <http://example.org/vocabulary/capacity> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/TrainStation/#5> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#8> .
-_:g447200 <http://www.w3.org/ns/csvw#rownum> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447200 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447200 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv#row=7> .
-_:g447200 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#6> .
-<https://T1G4.DOX.cz/TrainStation/#6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/TrainStation> .
-<https://T1G4.DOX.cz/TrainStation/#6> <http://example.org/vocabulary/stationName> "Budějovická" .
-<https://T1G4.DOX.cz/TrainStation/#6> <http://example.org/vocabulary/capacity> "170"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/TrainStation/#6> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#9> .
-_:g447240 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-_:g447240 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv> .
-_:g447240 <http://www.w3.org/ns/csvw#row> _:g447280 .
-_:g447240 <http://www.w3.org/ns/csvw#row> _:g447320 .
-_:g447240 <http://www.w3.org/ns/csvw#row> _:g447360 .
-_:g447240 <http://www.w3.org/ns/csvw#row> _:g447400 .
-_:g447240 <http://www.w3.org/ns/csvw#row> _:g447440 .
-_:g447240 <http://www.w3.org/ns/csvw#row> _:g447480 .
-_:g447280 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447280 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv#row=2> .
-_:g447280 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#1> .
-<https://T1G4.DOX.cz/BusStation/#1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/BusStation> .
-<https://T1G4.DOX.cz/BusStation/#1> <http://example.org/vocabulary/stationName> "Oderská" .
-<https://T1G4.DOX.cz/BusStation/#1> <http://example.org/vocabulary/capacity> "30"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/BusStation/#1> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#4> .
-<https://T1G4.DOX.cz/BusStation/#1> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#14> .
-_:g447320 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447320 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv#row=3> .
-_:g447320 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#2> .
-<https://T1G4.DOX.cz/BusStation/#2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/BusStation> .
-<https://T1G4.DOX.cz/BusStation/#2> <http://example.org/vocabulary/stationName> "Budišovská" .
-<https://T1G4.DOX.cz/BusStation/#2> <http://example.org/vocabulary/capacity> "20"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/BusStation/#2> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#5> .
-_:g447360 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447360 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447360 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv#row=4> .
-_:g447360 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#3> .
-<https://T1G4.DOX.cz/BusStation/#3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/BusStation> .
-<https://T1G4.DOX.cz/BusStation/#3> <http://example.org/vocabulary/stationName> "Spojovací" .
-<https://T1G4.DOX.cz/BusStation/#3> <http://example.org/vocabulary/capacity> "45"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/BusStation/#3> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#6> .
-_:g447400 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447400 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447400 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv#row=5> .
-_:g447400 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#4> .
-<https://T1G4.DOX.cz/BusStation/#4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/BusStation> .
-<https://T1G4.DOX.cz/BusStation/#4> <http://example.org/vocabulary/stationName> "Na Vrstevnici" .
-<https://T1G4.DOX.cz/BusStation/#4> <http://example.org/vocabulary/capacity> "35"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/BusStation/#4> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#10> .
-_:g447440 <http://www.w3.org/ns/csvw#rownum> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447440 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447440 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv#row=6> .
-_:g447440 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#5> .
-<https://T1G4.DOX.cz/BusStation/#5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/BusStation> .
-<https://T1G4.DOX.cz/BusStation/#5> <http://example.org/vocabulary/stationName> "Sídliště Novodvorská" .
-<https://T1G4.DOX.cz/BusStation/#5> <http://example.org/vocabulary/capacity> "25"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/BusStation/#5> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#11> .
-_:g447480 <http://www.w3.org/ns/csvw#rownum> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447480 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447480 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv#row=7> .
-_:g447480 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#6> .
-<https://T1G4.DOX.cz/BusStation/#6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/BusStation> .
-<https://T1G4.DOX.cz/BusStation/#6> <http://example.org/vocabulary/stationName> "Limuzská" .
-<https://T1G4.DOX.cz/BusStation/#6> <http://example.org/vocabulary/capacity> "80"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://T1G4.DOX.cz/BusStation/#6> <http://example.org/vocabulary/serves> <https://T1G4.DOX.cz/Stop/#12> .
-_:g447520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Table> .
-_:g447520 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv> .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447560 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447600 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447640 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447680 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447720 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447760 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447800 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447840 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447880 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447920 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g447960 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g448000 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g448040 .
-_:g447520 <http://www.w3.org/ns/csvw#row> _:g448080 .
-_:g447560 <http://www.w3.org/ns/csvw#rownum> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447560 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447560 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=2> .
-_:g447560 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#1> .
-_:g447560 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#11> .
-_:g447560 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#> .
-_:g447560 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#1> .
-_:g447600 <http://www.w3.org/ns/csvw#rownum> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447600 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=3> .
-_:g447600 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#2> .
-_:g447600 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#11> .
-_:g447600 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#> .
-_:g447600 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#2> .
-_:g447640 <http://www.w3.org/ns/csvw#rownum> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447640 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=4> .
-_:g447640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#3> .
-_:g447640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#11> .
-_:g447640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#> .
-_:g447640 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#3> .
-<https://T1G4.DOX.cz/Stop/#3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#3> <http://example.org/vocabulary/gps> "49.6969069N, 17.7886239E" .
-<https://T1G4.DOX.cz/Stop/#3> <http://example.org/vocabulary/arrivalTime> "12:10:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#3> <http://example.org/vocabulary/departureTime> "12:11:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g447680 <http://www.w3.org/ns/csvw#rownum> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447680 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=5> .
-_:g447680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#4> .
-_:g447680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#91> .
-_:g447680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#1> .
-_:g447680 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#> .
-_:g447720 <http://www.w3.org/ns/csvw#rownum> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447720 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=6> .
-_:g447720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#5> .
-_:g447720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#91> .
-_:g447720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#2> .
-_:g447720 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#> .
-_:g447760 <http://www.w3.org/ns/csvw#rownum> "6"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447760 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447760 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=7> .
-_:g447760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#6> .
-_:g447760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#91> .
-_:g447760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#3> .
-_:g447760 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#> .
-<https://T1G4.DOX.cz/Stop/#6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#6> <http://example.org/vocabulary/gps> "49.7760583N, 17.7494736E" .
-<https://T1G4.DOX.cz/Stop/#6> <http://example.org/vocabulary/arrivalTime> "11:10:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#6> <http://example.org/vocabulary/departureTime> "11:11:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g447800 <http://www.w3.org/ns/csvw#rownum> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447800 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447800 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=8> .
-_:g447800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#7> .
-_:g447800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#371> .
-_:g447800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#> .
-_:g447800 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#4> .
-_:g447840 <http://www.w3.org/ns/csvw#rownum> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447840 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447840 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=9> .
-_:g447840 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#8> .
-_:g447840 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#371> .
-_:g447840 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#> .
-_:g447840 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#5> .
-_:g447880 <http://www.w3.org/ns/csvw#rownum> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447880 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447880 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=10> .
-_:g447880 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#9> .
-_:g447880 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#371> .
-_:g447880 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#> .
-_:g447880 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#6> .
-_:g447920 <http://www.w3.org/ns/csvw#rownum> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447920 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447920 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=11> .
-_:g447920 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#10> .
-_:g447920 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#371> .
-_:g447920 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#4> .
-_:g447920 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#> .
-<https://T1G4.DOX.cz/Stop/#10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#10> <http://example.org/vocabulary/gps> "50.108388N 14.475745E" .
-<https://T1G4.DOX.cz/Stop/#10> <http://example.org/vocabulary/arrivalTime> "10:15:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#10> <http://example.org/vocabulary/departureTime> "10:16:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g447960 <http://www.w3.org/ns/csvw#rownum> "11"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g447960 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g447960 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=12> .
-_:g447960 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#11> .
-_:g447960 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#1371> .
-_:g447960 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#5> .
-_:g447960 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#> .
-_:g448000 <http://www.w3.org/ns/csvw#rownum> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g448000 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g448000 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=13> .
-_:g448000 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#12> .
-_:g448000 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#1371> .
-_:g448000 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#6> .
-_:g448000 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#> .
-<https://T1G4.DOX.cz/Stop/#12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#12> <http://example.org/vocabulary/gps> "50.100481N 14.464590E" .
-<https://T1G4.DOX.cz/Stop/#12> <http://example.org/vocabulary/arrivalTime> "14:05:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#12> <http://example.org/vocabulary/departureTime> "14:06:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g448040 <http://www.w3.org/ns/csvw#rownum> "13"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g448040 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g448040 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=14> .
-_:g448040 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#13> .
-_:g448040 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#1372> .
-_:g448040 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#> .
-_:g448040 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#1> .
-_:g448080 <http://www.w3.org/ns/csvw#rownum> "14"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:g448080 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/csvw#Row> .
-_:g448080 <http://www.w3.org/ns/csvw#url> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv#row=15> .
-_:g448080 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Stop/#14> .
-_:g448080 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/Connection/#1372> .
-_:g448080 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/BusStation/#1> .
-_:g448080 <http://www.w3.org/ns/csvw#describes> <https://T1G4.DOX.cz/TrainStation/#> .
-<https://T1G4.DOX.cz/Stop/#14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Stop> .
-<https://T1G4.DOX.cz/Stop/#14> <http://example.org/vocabulary/gps> "50.100481N 14.464590E" .
-<https://T1G4.DOX.cz/Stop/#14> <http://example.org/vocabulary/arrivalTime> "15:05:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-<https://T1G4.DOX.cz/Stop/#14> <http://example.org/vocabulary/departureTime> "15:07:00"^^<http://www.w3.org/2001/XMLSchema#time> .
-_:g448120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
-_:g448120 <http://www.w3.org/ns/prov#wasAssociatedWith> <https://rubygems.org/gems/rdf-tabular> .
-_:g448120 <http://www.w3.org/ns/prov#startedAtTime> "2022-05-04T12:12:03.648+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-_:g448120 <http://www.w3.org/ns/prov#endedAtTime> "2022-05-04T12:12:07.617+02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-_:g448120 <http://www.w3.org/ns/prov#qualifiedUsage> _:g448140 .
-_:g448120 <http://www.w3.org/ns/prov#qualifiedUsage> _:g448160 .
-_:g448140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-1.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-2.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-3.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-4.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-7.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-8.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-9.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-10.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-11.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-12.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-13.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-14.csv> .
-_:g448140 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-15.csv> .
-_:g448140 <http://www.w3.org/ns/prov#hadRole> <http://www.w3.org/ns/csvw#csvEncodedTabularData> .
-_:g448160 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Usage> .
-_:g448160 <http://www.w3.org/ns/prov#entity> <https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data.csv-metadata.json> .
-_:g448160 <http://www.w3.org/ns/prov#hadRole> <http://www.w3.org/ns/csvw#tabularMetadata> .
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://T1G4.DOX.cz/Agency/#dpp> a ex:Agency;
+  ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554>,
+    <https://T1G4.DOX.cz/Email/#info@dpp.cz>;
+  ex:legalName "Dopravní podnik hl. m. Prahy"@en;
+  ex:owns <https://T1G4.DOX.cz/Bus/#2>,
+    <https://T1G4.DOX.cz/Train/#1> .
+
+<https://T1G4.DOX.cz/Agency/#leo> a ex:Agency;
+  ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738>,
+    <https://T1G4.DOX.cz/Email/#info@leoexpress.com>;
+  ex:legalName "Leo Express"@en;
+  ex:owns <https://T1G4.DOX.cz/Train/#2>,
+    <https://T1G4.DOX.cz/Train/#3> .
+
+<https://T1G4.DOX.cz/Agency/#student> a ex:Agency;
+  ex:has <https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245>,
+    <https://T1G4.DOX.cz/Email/#info@studentagency.cz>;
+  ex:legalName "Student Agency"@en;
+  ex:owns <https://T1G4.DOX.cz/Bus/#3> .
+
+<https://T1G4.DOX.cz/BusStation/#2> a ex:BusStation;
+  ex:capacity 20;
+  ex:serves <https://T1G4.DOX.cz/Stop/#5>;
+  ex:stationName "Budišovská" .
+
+<https://T1G4.DOX.cz/BusStation/#3> a ex:BusStation;
+  ex:capacity 45;
+  ex:serves <https://T1G4.DOX.cz/Stop/#6>;
+  ex:stationName "Spojovací" .
+
+<https://T1G4.DOX.cz/BusStation/#5> a ex:BusStation;
+  ex:capacity 25;
+  ex:serves <https://T1G4.DOX.cz/Stop/#11>;
+  ex:stationName "Sídliště Novodvorská" .
+
+<https://T1G4.DOX.cz/BusStation/#6> a ex:BusStation;
+  ex:capacity 80;
+  ex:serves <https://T1G4.DOX.cz/Stop/#12>;
+  ex:stationName "Limuzská" .
+
+<https://T1G4.DOX.cz/Producer/#bombardier> a ex:Producer;
+  ex:legalName "Bombardier Inc.";
+  ex:produces <https://T1G4.DOX.cz/Train/#2> .
+
+<https://T1G4.DOX.cz/Producer/#man> a ex:Producer;
+  ex:legalName "Maschinenfabrik Augsburg-Nürnberg";
+  ex:produces <https://T1G4.DOX.cz/Bus/#3> .
+
+<https://T1G4.DOX.cz/Producer/#siemens> a ex:Producer;
+  ex:legalName "Siemens AG";
+  ex:produces <https://T1G4.DOX.cz/Train/#1> .
+
+<https://T1G4.DOX.cz/Producer/#tatra> a ex:Producer;
+  ex:legalName "TATRA TRUCKS a.s.";
+  ex:produces <https://T1G4.DOX.cz/Train/#3>,
+    <https://T1G4.DOX.cz/Bus/#1>,
+    <https://T1G4.DOX.cz/Bus/#2> .
+
+<https://T1G4.DOX.cz/Route/#1> a ex:Route;
+  ex:endsWith <https://T1G4.DOX.cz/TrainStation/#3>;
+  ex:length 120.5;
+  ex:startsWith <https://T1G4.DOX.cz/TrainStation/#1>;
+  ex:validFrom "2015-01-01"^^xsd:date;
+  ex:validTo "2020-12-31"^^xsd:date .
+
+<https://T1G4.DOX.cz/Route/#137> a ex:Route;
+  ex:endsWith <https://T1G4.DOX.cz/BusStation/#4>;
+  ex:length 12.2;
+  ex:startsWith <https://T1G4.DOX.cz/BusStation/#4>;
+  ex:validFrom "2021-12-13"^^xsd:date;
+  ex:validTo "2022-12-12"^^xsd:date .
+
+<https://T1G4.DOX.cz/Route/#37> a ex:Route;
+  ex:endsWith <https://T1G4.DOX.cz/TrainStation/#5>;
+  ex:length 11.6;
+  ex:startsWith <https://T1G4.DOX.cz/TrainStation/#4>;
+  ex:validFrom "2021-12-10"^^xsd:date;
+  ex:validTo "2022-12-12"^^xsd:date .
+
+<https://T1G4.DOX.cz/Route/#9> a ex:Route;
+  ex:endsWith <https://T1G4.DOX.cz/BusStation/#1>;
+  ex:length 37.0;
+  ex:startsWith <https://T1G4.DOX.cz/BusStation/#1>;
+  ex:validFrom "2005-10-01"^^xsd:date;
+  ex:validTo "2025-09-25"^^xsd:date .
+
+<https://T1G4.DOX.cz/TrainStation/#2> a ex:TrainStation;
+  ex:capacity 40;
+  ex:serves <https://T1G4.DOX.cz/Stop/#2>;
+  ex:stationName "Vítkov" .
+
+<https://T1G4.DOX.cz/TrainStation/#6> a ex:TrainStation;
+  ex:capacity 170;
+  ex:serves <https://T1G4.DOX.cz/Stop/#9>;
+  ex:stationName "Budějovická" .
+
+<https://T1G4.DOX.cz/Bus/#1> a ex:Bus;
+  ex:capacity 23;
+  ex:consumtion 42;
+  ex:licensePlateNumber "4A2 7983";
+  ex:purchasePrice 523147;
+  ex:rides <https://T1G4.DOX.cz/Connection/#1372> .
+
+<https://T1G4.DOX.cz/Connection/#11> a ex:Connection;
+  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#1>;
+  ex:connects <https://T1G4.DOX.cz/Stop/#1>,
+    <https://T1G4.DOX.cz/Stop/#2>,
+    <https://T1G4.DOX.cz/Stop/#3> .
+
+<https://T1G4.DOX.cz/Connection/#1371> a ex:Connection;
+  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#137>;
+  ex:connects <https://T1G4.DOX.cz/Stop/#11>,
+    <https://T1G4.DOX.cz/Stop/#12> .
+
+<https://T1G4.DOX.cz/Connection/#1372> a ex:Connection;
+  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#137>;
+  ex:connects <https://T1G4.DOX.cz/Stop/#13>,
+    <https://T1G4.DOX.cz/Stop/#14> .
+
+<https://T1G4.DOX.cz/Connection/#371> a ex:Connection;
+  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#37>;
+  ex:connects <https://T1G4.DOX.cz/Stop/#7>,
+    <https://T1G4.DOX.cz/Stop/#8>,
+    <https://T1G4.DOX.cz/Stop/#9>,
+    <https://T1G4.DOX.cz/Stop/#10> .
+
+<https://T1G4.DOX.cz/Connection/#91> a ex:Connection;
+  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#9>;
+  ex:connects <https://T1G4.DOX.cz/Stop/#4>,
+    <https://T1G4.DOX.cz/Stop/#5>,
+    <https://T1G4.DOX.cz/Stop/#6> .
+
+<https://T1G4.DOX.cz/Email/#info@dpp.cz> a ex:email .
+
+<https://T1G4.DOX.cz/Email/#info@leoexpress.com> a ex:email .
+
+<https://T1G4.DOX.cz/Email/#info@studentagency.cz> a ex:email .
+
+<https://T1G4.DOX.cz/Phone/#tel:+420-543-140-738> a ex:phone .
+
+<https://T1G4.DOX.cz/Phone/#tel:+420-630-784-245> a ex:phone .
+
+<https://T1G4.DOX.cz/Phone/#tel:+420-640-921-554> a ex:phone .
+
+<https://T1G4.DOX.cz/TrainStation/#1> a ex:TrainStation;
+  ex:capacity 50;
+  ex:serves <https://T1G4.DOX.cz/Stop/#1>,
+    <https://T1G4.DOX.cz/Stop/#13>;
+  ex:stationName "Heřmánky" .
+
+<https://T1G4.DOX.cz/TrainStation/#3> a ex:TrainStation;
+  ex:capacity 60;
+  ex:serves <https://T1G4.DOX.cz/Stop/#3>;
+  ex:stationName "Jakubčovice nad Odrou" .
+
+<https://T1G4.DOX.cz/TrainStation/#4> a ex:TrainStation;
+  ex:capacity 120;
+  ex:serves <https://T1G4.DOX.cz/Stop/#7>;
+  ex:stationName "Malostranské náměstí" .
+
+<https://T1G4.DOX.cz/TrainStation/#5> a ex:TrainStation;
+  ex:capacity 5;
+  ex:serves <https://T1G4.DOX.cz/Stop/#8>;
+  ex:stationName "Doliny" .
+
+<https://T1G4.DOX.cz/Bus/#2> a ex:Bus;
+  ex:capacity 5;
+  ex:consumtion 10;
+  ex:licensePlateNumber "5T1 9876";
+  ex:purchasePrice 65000;
+  ex:rides <https://T1G4.DOX.cz/Connection/#91> .
+
+<https://T1G4.DOX.cz/Bus/#3> a ex:Bus;
+  ex:capacity 54;
+  ex:consumtion 98;
+  ex:licensePlateNumber "6M4 1426";
+  ex:purchasePrice 123000;
+  ex:rides <https://T1G4.DOX.cz/Connection/#371> .
+
+<https://T1G4.DOX.cz/BusStation/#1> a ex:BusStation;
+  ex:capacity 30;
+  ex:serves <https://T1G4.DOX.cz/Stop/#4>,
+    <https://T1G4.DOX.cz/Stop/#14>;
+  ex:stationName "Oderská" .
+
+<https://T1G4.DOX.cz/BusStation/#4> a ex:BusStation;
+  ex:capacity 35;
+  ex:serves <https://T1G4.DOX.cz/Stop/#10>;
+  ex:stationName "Na Vrstevnici" .
+
+<https://T1G4.DOX.cz/Stop/#1> a ex:Stop;
+  ex:arrivalTime "12:00:00"^^xsd:time;
+  ex:departureTime "12:01:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#2>;
+  ex:gps "49.7134667N, 17.7582722E" .
+
+<https://T1G4.DOX.cz/Stop/#11> a ex:Stop;
+  ex:arrivalTime "14:00:00"^^xsd:time;
+  ex:departureTime "14:01:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#12>;
+  ex:gps "50.108388N 14.475745E" .
+
+<https://T1G4.DOX.cz/Stop/#13> a ex:Stop;
+  ex:arrivalTime "15:00:00"^^xsd:time;
+  ex:departureTime "15:01:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#14>;
+  ex:gps "50.108388N 14.475745E" .
+
+<https://T1G4.DOX.cz/Stop/#4> a ex:Stop;
+  ex:arrivalTime "11:00:00"^^xsd:time;
+  ex:departureTime "11:01:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#5>;
+  ex:gps "49.6952592N, 17.7879486E" .
+
+<https://T1G4.DOX.cz/Stop/#7> a ex:Stop;
+  ex:arrivalTime "10:00:00"^^xsd:time;
+  ex:departureTime "10:01:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#8>;
+  ex:gps "45.0034761N 14.2635348E" .
+
+<https://T1G4.DOX.cz/Train/#1> a ex:Train;
+  ex:capacity 30;
+  ex:consumtion 500;
+  ex:electricMotor true;
+  ex:europeanVehicleNumber "B 228 FK";
+  ex:purchasePrice 550000;
+  ex:rides <https://T1G4.DOX.cz/Connection/#11> .
+
+<https://T1G4.DOX.cz/Train/#2> a ex:Train;
+  ex:capacity 100;
+  ex:consumtion 1000;
+  ex:electricMotor true;
+  ex:europeanVehicleNumber "CGI 964";
+  ex:purchasePrice 1000000 .
+
+<https://T1G4.DOX.cz/Train/#3> a ex:Train;
+  ex:capacity 123;
+  ex:consumtion 300;
+  ex:electricMotor false;
+  ex:europeanVehicleNumber "EW 40 672";
+  ex:purchasePrice 200000;
+  ex:rides <https://T1G4.DOX.cz/Connection/#1371> .
+
+<https://T1G4.DOX.cz/Stop/#10> a ex:Stop;
+  ex:arrivalTime "10:15:00"^^xsd:time;
+  ex:departureTime "10:16:00"^^xsd:time;
+  ex:gps "50.108388N 14.475745E" .
+
+<https://T1G4.DOX.cz/Stop/#12> a ex:Stop;
+  ex:arrivalTime "14:05:00"^^xsd:time;
+  ex:departureTime "14:06:00"^^xsd:time;
+  ex:gps "50.100481N 14.464590E" .
+
+<https://T1G4.DOX.cz/Stop/#14> a ex:Stop;
+  ex:arrivalTime "15:05:00"^^xsd:time;
+  ex:departureTime "15:07:00"^^xsd:time;
+  ex:gps "50.100481N 14.464590E" .
+
+<https://T1G4.DOX.cz/Stop/#2> a ex:Stop;
+  ex:arrivalTime "12:05:00"^^xsd:time;
+  ex:departureTime "12:06:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#3>;
+  ex:gps "49.7741814N, 17.7475375E" .
+
+<https://T1G4.DOX.cz/Stop/#3> a ex:Stop;
+  ex:arrivalTime "12:10:00"^^xsd:time;
+  ex:departureTime "12:11:00"^^xsd:time;
+  ex:gps "49.6969069N, 17.7886239E" .
+
+<https://T1G4.DOX.cz/Stop/#5> a ex:Stop;
+  ex:arrivalTime "11:05:00"^^xsd:time;
+  ex:departureTime "11:06:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#6>;
+  ex:gps "49.7067069N, 17.7684325E" .
+
+<https://T1G4.DOX.cz/Stop/#6> a ex:Stop;
+  ex:arrivalTime "11:10:00"^^xsd:time;
+  ex:departureTime "11:11:00"^^xsd:time;
+  ex:gps "49.7760583N, 17.7494736E" .
+
+<https://T1G4.DOX.cz/Stop/#8> a ex:Stop;
+  ex:arrivalTime "10:05:00"^^xsd:time;
+  ex:departureTime "10:06:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#9>;
+  ex:gps "50.091689N 14.443813E" .
+
+<https://T1G4.DOX.cz/Stop/#9> a ex:Stop;
+  ex:arrivalTime "10:10:00"^^xsd:time;
+  ex:departureTime "10:11:00"^^xsd:time;
+  ex:followedBy <https://T1G4.DOX.cz/Stop/#10>;
+  ex:gps "50.100481N 14.464590E" .
