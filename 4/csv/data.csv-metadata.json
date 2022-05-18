@@ -21,7 +21,7 @@
                         "@type":"Column",
                         "name":"trainID",
                         "dc:description":"Unique identifier of train",
-                        "datatype":"string",
+                        "datatype":"integer",
                         "required":true,
                         "propertyUrl":"rdf:type",
                         "valueUrl":"https://dbpedia.org/ontology/Train"
@@ -108,7 +108,7 @@
                         "name":"busID",
                         "titles":"busID",
                         "dc:description":"Unique identifier of train",
-                        "datatype":"string",
+                        "datatype":"integer",
                         "required":true,
                         "propertyUrl":"rdf:type",
                         "valueUrl":"http://example.org/vocabulary/Bus"
@@ -230,13 +230,16 @@
             "tableSchema":{
                 "@type":"Schema",
                 "aboutUrl":"https://T1G4.DOX.cz/Connection/{#connectionID}",
-                "columns": [
+                "columns":[
                     {
                         "@type":"Column",
                         "name":"connectionID",
                         "titles":"connectionID",
                         "dc:description":"A particular instance of a transit route which has its id. Each connection goes through the set of stops",
-                        "datatype":"integer",
+                        "datatype":{
+                            "base":"string",
+                            "format":"^[0-9]+-[0-9]+$"
+                        },
                         "required":true,
                         "propertyUrl":"rdf:type",
                         "valueUrl":"http://example.org/vocabulary/Connection"
@@ -277,24 +280,24 @@
                 "primaryKey":"connectionID",
                 "foreignKeys":[
                     {
-                        "columnReference": "busID",
+                        "columnReference":"busID",
                         "reference": {
-                            "resource": "data-2.csv",
-                            "columnReference": "busID"
+                            "resource":"data-2.csv",
+                            "columnReference":"busID"
                         }
                     },
                     {
-                        "columnReference": "trainID",
+                        "columnReference":"trainID",
                         "reference": {
-                            "resource": "data-1.csv",
-                            "columnReference": "trainID"
+                            "resource":"data-1.csv",
+                            "columnReference":"trainID"
                         }
                     },
                     {
-                        "columnReference": "routeID",
+                        "columnReference":"routeID",
                         "reference": {
-                            "resource": "data-12.csv",
-                            "columnReference": "routeID"
+                            "resource":"data-12.csv",
+                            "columnReference":"routeID"
                         }
                     }
                 ]
