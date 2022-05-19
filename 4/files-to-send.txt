@@ -1,0 +1,24 @@
+NPRG036-HW4-T1G4.zip
+    4/
+        model/
+            relational.svg
+        csv/
+            data.csv-metadata.json
+            data-1.csv
+            data-2.csv
+            data-3.csv
+            data-4.csv
+            data-5.csv
+            data-6.csv
+            data-7.csv
+            data-8.csv
+            data-9.csv
+            data-10.csv
+            data-11.csv
+            data-12.csv
+            data-13.csv
+            data-14.csv
+            data-15.csv
+            data-16.csv
+        rdf/
+            data.ttl
