@@ -1,286 +1,306 @@
+@prefix agency: <https://T1G4.DOX.cz/TransitAgency/#> .
+@prefix bus: <https://T1G4.DOX.cz/Bus/#> .
+@prefix conn: <https://T1G4.DOX.cz/Connection/#> .
 @prefix dbpedia-owl: <https://dbpedia.org/ontology/> .
-@prefix ex: <http://example.org/vocabulary/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
+@prefix ns1: <http://example.org/vocabulary/> .
+@prefix producer: <https://T1G4.DOX.cz/Producer/#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix route: <https://T1G4.DOX.cz/TransitRoute/#> .
+@prefix station: <https://T1G4.DOX.cz/Station/#> .
+@prefix stop: <https://T1G4.DOX.cz/Stop/#> .
+@prefix train: <https://T1G4.DOX.cz/Train/#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://T1G4.DOX.cz/Agency/#dpp> a gtfs:Agency;
-  ex:legalName "Dopravní podnik hl. m. Prahy"@en;
-  ex:owns <https://T1G4.DOX.cz/Bus/#2>,
-    <https://T1G4.DOX.cz/Train/#1>;
-  foaf:mbox <mailto:info%40dpp.cz>;
-  foaf:phone "tel:+420-640-921-554" .
+producer:bombardier a ns1:Producer;
+  ns1:legalName "Bombardier Inc."@en;
+  ns1:produces train:2 .
 
-<https://T1G4.DOX.cz/Agency/#leo> a gtfs:Agency;
-  ex:legalName "Leo Express"@en;
-  ex:owns <https://T1G4.DOX.cz/Train/#2>,
-    <https://T1G4.DOX.cz/Train/#3>;
-  foaf:mbox <mailto:info%40leoexpress.com>;
-  foaf:phone "tel:+420-543-140-738" .
+producer:man a ns1:Producer;
+  ns1:legalName "Maschinenfabrik Augsburg-Nürnberg"@de;
+  ns1:produces bus:3 .
 
-<https://T1G4.DOX.cz/Agency/#student> a gtfs:Agency;
-  ex:legalName "Student Agency"@en;
-  ex:owns <https://T1G4.DOX.cz/Bus/#3>;
-  foaf:mbox <mailto:info%40studentagency.cz>;
-  foaf:phone "tel:+420-630-784-245" .
+producer:siemens a ns1:Producer;
+  ns1:legalName "Siemens AG"@de;
+  ns1:produces train:1 .
 
-<https://T1G4.DOX.cz/BusStation/#2> a ex:BusStation;
-  ex:capacity 20;
-  ex:serves <https://T1G4.DOX.cz/Stop/#5>;
-  ex:stationName "Budišovská"@cs .
+producer:tatra a ns1:Producer;
+  ns1:legalName "TATRA TRUCKS a.s."@cs;
+  ns1:produces train:3,
+    bus:1,
+    bus:2 .
 
-<https://T1G4.DOX.cz/BusStation/#3> a ex:BusStation;
-  ex:capacity 45;
-  ex:serves <https://T1G4.DOX.cz/Stop/#6>;
-  ex:stationName "Spojovací"@cs .
+station:2 a ns1:TrainStation;
+  ns1:capacity 40;
+  ns1:serves stop:2;
+  ns1:stationName "Vítkov"@cs .
 
-<https://T1G4.DOX.cz/BusStation/#5> a ex:BusStation;
-  ex:capacity 25;
-  ex:serves <https://T1G4.DOX.cz/Stop/#11>;
-  ex:stationName "Sídliště Novodvorská"@cs .
+station:5 a ns1:BusStation;
+  ns1:capacity 20;
+  ns1:serves stop:5;
+  ns1:stationName "Budišovská"@cs .
 
-<https://T1G4.DOX.cz/BusStation/#6> a ex:BusStation;
-  ex:capacity 80;
-  ex:serves <https://T1G4.DOX.cz/Stop/#12>;
-  ex:stationName "Limuzská"@cs .
+station:8 a ns1:TrainStation;
+  ns1:capacity 5;
+  ns1:serves stop:8;
+  ns1:stationName "Doliny"@cs .
 
-<https://T1G4.DOX.cz/Producer/#bombardier> a ex:Producer;
-  ex:legalName "Bombardier Inc."@en;
-  ex:produces <https://T1G4.DOX.cz/Train/#2> .
+station:9 a ns1:TrainStation;
+  ns1:capacity 170;
+  ns1:serves stop:9;
+  ns1:stationName "Budějovická"@cs .
 
-<https://T1G4.DOX.cz/Producer/#man> a ex:Producer;
-  ex:legalName "Maschinenfabrik Augsburg-Nürnberg"@en;
-  ex:produces <https://T1G4.DOX.cz/Bus/#3> .
+agency:dpp a gtfs:Agency;
+  ns1:legalName "Dopravní podnik hl. m. Prahy"@cs;
+  ns1:owns bus:2,
+    train:1;
+  foaf:mbox <mailto:info@dpp.cz>;
+  foaf:phone <tel:+420-640-921-554> .
 
-<https://T1G4.DOX.cz/Producer/#siemens> a ex:Producer;
-  ex:legalName "Siemens AG"@en;
-  ex:produces <https://T1G4.DOX.cz/Train/#1> .
+agency:leo a gtfs:Agency;
+  ns1:legalName "Leo Express"@en;
+  ns1:owns train:2,
+    train:3;
+  foaf:mbox <mailto:info@leoexpress.com>;
+  foaf:phone <tel:+420-543-140-738> .
 
-<https://T1G4.DOX.cz/Producer/#tatra> a ex:Producer;
-  ex:legalName "TATRA TRUCKS a.s."@en;
-  ex:produces <https://T1G4.DOX.cz/Train/#3>,
-    <https://T1G4.DOX.cz/Bus/#1>,
-    <https://T1G4.DOX.cz/Bus/#2> .
+agency:student a gtfs:Agency;
+  ns1:legalName "Student Agency"@en;
+  ns1:owns bus:3;
+  foaf:mbox <mailto:info@studentagency.cz>;
+  foaf:phone <tel:+420-630-784-245> .
 
-<https://T1G4.DOX.cz/Route/#1> a gtfs:Route;
-  ex:endsWith <https://T1G4.DOX.cz/TrainStation/#3>;
-  ex:length 120.5;
-  ex:startsWith <https://T1G4.DOX.cz/TrainStation/#1>;
-  ex:validFrom "2015-01-01"^^xsd:date;
-  ex:validTo "2020-12-31"^^xsd:date .
+bus:1 a ns1:Bus;
+  ns1:capacity 23;
+  ns1:consumption 42;
+  ns1:licensePlateNumber "4A2 7983";
+  ns1:purchasePrice 523147;
+  ns1:rides conn:137-2 .
 
-<https://T1G4.DOX.cz/Route/#137> a gtfs:Route;
-  ex:endsWith <https://T1G4.DOX.cz/BusStation/#4>;
-  ex:length 12.2;
-  ex:startsWith <https://T1G4.DOX.cz/BusStation/#4>;
-  ex:validFrom "2021-12-13"^^xsd:date;
-  ex:validTo "2022-12-12"^^xsd:date .
+conn:1-1 a ns1:Connection;
+  ns1:belongsTo route:1;
+  ns1:connects stop:1,
+    stop:2,
+    stop:3 .
 
-<https://T1G4.DOX.cz/Route/#37> a gtfs:Route;
-  ex:endsWith <https://T1G4.DOX.cz/TrainStation/#5>;
-  ex:length 11.6;
-  ex:startsWith <https://T1G4.DOX.cz/TrainStation/#4>;
-  ex:validFrom "2021-12-10"^^xsd:date;
-  ex:validTo "2022-12-12"^^xsd:date .
+conn:137-1 a ns1:Connection;
+  ns1:belongsTo route:137;
+  ns1:connects stop:11,
+    stop:12 .
 
-<https://T1G4.DOX.cz/Route/#9> a gtfs:Route;
-  ex:endsWith <https://T1G4.DOX.cz/BusStation/#1>;
-  ex:length 37.0;
-  ex:startsWith <https://T1G4.DOX.cz/BusStation/#1>;
-  ex:validFrom "2005-10-01"^^xsd:date;
-  ex:validTo "2025-09-25"^^xsd:date .
+conn:137-2 a ns1:Connection;
+  ns1:belongsTo route:137;
+  ns1:connects stop:13,
+    stop:14 .
 
-<https://T1G4.DOX.cz/TrainStation/#2> a ex:TrainStation;
-  ex:capacity 40;
-  ex:serves <https://T1G4.DOX.cz/Stop/#2>;
-  ex:stationName "Vítkov"@cs .
+conn:37-1 a ns1:Connection;
+  ns1:belongsTo route:37;
+  ns1:connects stop:7,
+    stop:8,
+    stop:9,
+    stop:10 .
 
-<https://T1G4.DOX.cz/TrainStation/#6> a ex:TrainStation;
-  ex:capacity 170;
-  ex:serves <https://T1G4.DOX.cz/Stop/#9>;
-  ex:stationName "Budějovická"@cs .
+conn:9-1 a ns1:Connection;
+  ns1:belongsTo route:9;
+  ns1:connects stop:4,
+    stop:5,
+    stop:6 .
 
-<https://T1G4.DOX.cz/Bus/#1> a ex:Bus;
-  ex:capacity 23;
-  ex:consumtion 42;
-  ex:licensePlateNumber "4A2 7983";
-  ex:purchasePrice 523147;
-  ex:rides <https://T1G4.DOX.cz/Connection/#1372> .
+station:1 a ns1:TrainStation;
+  ns1:capacity 50;
+  ns1:serves stop:1;
+  ns1:stationName "Heřmánky"@cs .
 
-<https://T1G4.DOX.cz/Connection/#11> a ex:Connection;
-  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#1>;
-  ex:connects <https://T1G4.DOX.cz/Stop/#1>,
-    <https://T1G4.DOX.cz/Stop/#2>,
-    <https://T1G4.DOX.cz/Stop/#3> .
+station:10 a ns1:BusStation;
+  ns1:capacity 35;
+  ns1:serves stop:10;
+  ns1:stationName "Na Vrstevnici"@cs .
 
-<https://T1G4.DOX.cz/Connection/#1371> a ex:Connection;
-  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#137>;
-  ex:connects <https://T1G4.DOX.cz/Stop/#11>,
-    <https://T1G4.DOX.cz/Stop/#12> .
+station:11 a ns1:BusStation;
+  ns1:capacity 25;
+  ns1:serves stop:11,
+    stop:13;
+  ns1:stationName "Sídliště Novodvorská"@cs .
 
-<https://T1G4.DOX.cz/Connection/#1372> a ex:Connection;
-  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#137>;
-  ex:connects <https://T1G4.DOX.cz/Stop/#13>,
-    <https://T1G4.DOX.cz/Stop/#14> .
+station:12 a ns1:BusStation;
+  ns1:capacity 80;
+  ns1:serves stop:12,
+    stop:14;
+  ns1:stationName "Limuzská"@cs .
 
-<https://T1G4.DOX.cz/Connection/#371> a ex:Connection;
-  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#37>;
-  ex:connects <https://T1G4.DOX.cz/Stop/#7>,
-    <https://T1G4.DOX.cz/Stop/#8>,
-    <https://T1G4.DOX.cz/Stop/#9>,
-    <https://T1G4.DOX.cz/Stop/#10> .
+station:3 a ns1:TrainStation;
+  ns1:capacity 60;
+  ns1:serves stop:3;
+  ns1:stationName "Jakubčovice nad Odrou"@cs .
 
-<https://T1G4.DOX.cz/Connection/#91> a ex:Connection;
-  ex:belongsTo <https://T1G4.DOX.cz/TransitRoute/#9>;
-  ex:connects <https://T1G4.DOX.cz/Stop/#4>,
-    <https://T1G4.DOX.cz/Stop/#5>,
-    <https://T1G4.DOX.cz/Stop/#6> .
+station:4 a ns1:BusStation;
+  ns1:capacity 30;
+  ns1:serves stop:4;
+  ns1:stationName "Oderská"@cs .
 
-<https://T1G4.DOX.cz/TrainStation/#1> a ex:TrainStation;
-  ex:capacity 50;
-  ex:serves <https://T1G4.DOX.cz/Stop/#1>,
-    <https://T1G4.DOX.cz/Stop/#13>;
-  ex:stationName "Heřmánky"@cs .
+station:6 a ns1:BusStation;
+  ns1:capacity 45;
+  ns1:serves stop:6;
+  ns1:stationName "Spojovací"@cs .
 
-<https://T1G4.DOX.cz/TrainStation/#3> a ex:TrainStation;
-  ex:capacity 60;
-  ex:serves <https://T1G4.DOX.cz/Stop/#3>;
-  ex:stationName "Jakubčovice nad Odrou"@cs .
+station:7 a ns1:TrainStation;
+  ns1:capacity 120;
+  ns1:serves stop:7;
+  ns1:stationName "Malostranské náměstí"@cs .
 
-<https://T1G4.DOX.cz/TrainStation/#4> a ex:TrainStation;
-  ex:capacity 120;
-  ex:serves <https://T1G4.DOX.cz/Stop/#7>;
-  ex:stationName "Malostranské náměstí"@cs .
+route:1 a gtfs:Route;
+  ns1:endsWith station:3;
+  ns1:length 120.5;
+  ns1:startsWith station:1;
+  ns1:validFrom "2015-01-01"^^xsd:date;
+  ns1:validTo "2020-12-31"^^xsd:date .
 
-<https://T1G4.DOX.cz/TrainStation/#5> a ex:TrainStation;
-  ex:capacity 5;
-  ex:serves <https://T1G4.DOX.cz/Stop/#8>;
-  ex:stationName "Doliny"@cs .
+route:37 a gtfs:Route;
+  ns1:endsWith station:10;
+  ns1:length 11.6;
+  ns1:startsWith station:7;
+  ns1:validFrom "2021-12-10"^^xsd:date;
+  ns1:validTo "2022-12-12"^^xsd:date .
 
-<https://T1G4.DOX.cz/Bus/#2> a ex:Bus;
-  ex:capacity 5;
-  ex:consumtion 10;
-  ex:licensePlateNumber "5T1 9876";
-  ex:purchasePrice 65000;
-  ex:rides <https://T1G4.DOX.cz/Connection/#91> .
+route:9 a gtfs:Route;
+  ns1:endsWith station:6;
+  ns1:length 37.0;
+  ns1:startsWith station:4;
+  ns1:validFrom "2005-10-01"^^xsd:date;
+  ns1:validTo "2025-09-25"^^xsd:date .
 
-<https://T1G4.DOX.cz/Bus/#3> a ex:Bus;
-  ex:capacity 54;
-  ex:consumtion 98;
-  ex:licensePlateNumber "6M4 1426";
-  ex:purchasePrice 123000;
-  ex:rides <https://T1G4.DOX.cz/Connection/#371> .
+bus:2 a ns1:Bus;
+  ns1:capacity 5;
+  ns1:consumption 10;
+  ns1:licensePlateNumber "5T1 9876";
+  ns1:purchasePrice 65000;
+  ns1:rides conn:9-1 .
 
-<https://T1G4.DOX.cz/BusStation/#1> a ex:BusStation;
-  ex:capacity 30;
-  ex:serves <https://T1G4.DOX.cz/Stop/#4>,
-    <https://T1G4.DOX.cz/Stop/#14>;
-  ex:stationName "Oderská"@cs .
+bus:3 a ns1:Bus;
+  ns1:capacity 54;
+  ns1:consumption 98;
+  ns1:licensePlateNumber "6M4 1426";
+  ns1:purchasePrice 123000;
+  ns1:rides conn:37-1 .
 
-<https://T1G4.DOX.cz/BusStation/#4> a ex:BusStation;
-  ex:capacity 35;
-  ex:serves <https://T1G4.DOX.cz/Stop/#10>;
-  ex:stationName "Na Vrstevnici"@cs .
+stop:1 a gtfs:Stop;
+  ns1:arrivalTime "12:00:00"^^xsd:time;
+  ns1:departureTime "12:01:00"^^xsd:time;
+  ns1:followedBy stop:2;
+  ns1:gps "49.7134667N, 17.7582722E" .
 
-<https://T1G4.DOX.cz/Stop/#1> a ex:Stop;
-  ex:arrivalTime "12:00:00"^^xsd:time;
-  ex:departureTime "12:01:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#2>;
-  ex:gps "49.7134667N, 17.7582722E" .
+stop:11 a gtfs:Stop;
+  ns1:arrivalTime "14:00:00"^^xsd:time;
+  ns1:departureTime "14:01:00"^^xsd:time;
+  ns1:followedBy stop:12;
+  ns1:gps "50.1083880N, 14.4757450E" .
 
-<https://T1G4.DOX.cz/Stop/#11> a ex:Stop;
-  ex:arrivalTime "14:00:00"^^xsd:time;
-  ex:departureTime "14:01:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#12>;
-  ex:gps "50.108388N 14.475745E" .
+stop:13 a gtfs:Stop;
+  ns1:arrivalTime "15:00:00"^^xsd:time;
+  ns1:departureTime "15:01:00"^^xsd:time;
+  ns1:followedBy stop:14;
+  ns1:gps "50.1083880N, 14.4757450E" .
 
-<https://T1G4.DOX.cz/Stop/#13> a ex:Stop;
-  ex:arrivalTime "15:00:00"^^xsd:time;
-  ex:departureTime "15:01:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#14>;
-  ex:gps "50.108388N 14.475745E" .
+stop:4 a gtfs:Stop;
+  ns1:arrivalTime "11:00:00"^^xsd:time;
+  ns1:departureTime "11:01:00"^^xsd:time;
+  ns1:followedBy stop:5;
+  ns1:gps "49.6952592N, 17.7879486E" .
 
-<https://T1G4.DOX.cz/Stop/#4> a ex:Stop;
-  ex:arrivalTime "11:00:00"^^xsd:time;
-  ex:departureTime "11:01:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#5>;
-  ex:gps "49.6952592N, 17.7879486E" .
+stop:7 a gtfs:Stop;
+  ns1:arrivalTime "10:00:00"^^xsd:time;
+  ns1:departureTime "10:01:00"^^xsd:time;
+  ns1:followedBy stop:8;
+  ns1:gps "45.0034761N, 14.2635348E" .
 
-<https://T1G4.DOX.cz/Stop/#7> a ex:Stop;
-  ex:arrivalTime "10:00:00"^^xsd:time;
-  ex:departureTime "10:01:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#8>;
-  ex:gps "45.0034761N 14.2635348E" .
+train:1 a dbpedia-owl:Train;
+  ns1:capacity 30;
+  ns1:consumption 500;
+  ns1:electricMotor true;
+  ns1:europeanVehicleNumber "B 228 FK";
+  ns1:purchasePrice 550000;
+  ns1:rides conn:1-1 .
 
-<https://T1G4.DOX.cz/Train/#1> a dbpedia-owl:Train;
-  ex:capacity 30;
-  ex:consumtion 500;
-  ex:electricMotor true;
-  ex:europeanVehicleNumber "B 228 FK";
-  ex:purchasePrice 550000;
-  ex:rides <https://T1G4.DOX.cz/Connection/#11> .
+train:2 a dbpedia-owl:Train;
+  ns1:capacity 100;
+  ns1:consumption 1000;
+  ns1:electricMotor true;
+  ns1:europeanVehicleNumber "CGI 964";
+  ns1:purchasePrice 1000000 .
 
-<https://T1G4.DOX.cz/Train/#2> a dbpedia-owl:Train;
-  ex:capacity 100;
-  ex:consumtion 1000;
-  ex:electricMotor true;
-  ex:europeanVehicleNumber "CGI 964";
-  ex:purchasePrice 1000000 .
+train:3 a dbpedia-owl:Train;
+  ns1:capacity 123;
+  ns1:consumption 300;
+  ns1:electricMotor false;
+  ns1:europeanVehicleNumber "EW 40 672";
+  ns1:purchasePrice 200000;
+  ns1:rides conn:137-1 .
 
-<https://T1G4.DOX.cz/Train/#3> a dbpedia-owl:Train;
-  ex:capacity 123;
-  ex:consumtion 300;
-  ex:electricMotor false;
-  ex:europeanVehicleNumber "EW 40 672";
-  ex:purchasePrice 200000;
-  ex:rides <https://T1G4.DOX.cz/Connection/#1371> .
+route:137 a gtfs:Route;
+  ns1:endsWith station:12;
+  ns1:length 12.2;
+  ns1:startsWith station:11;
+  ns1:validFrom "2021-12-13"^^xsd:date;
+  ns1:validTo "2022-12-12"^^xsd:date .
 
-<https://T1G4.DOX.cz/Stop/#10> a ex:Stop;
-  ex:arrivalTime "10:15:00"^^xsd:time;
-  ex:departureTime "10:16:00"^^xsd:time;
-  ex:gps "50.108388N 14.475745E" .
+stop:10 a gtfs:Stop;
+  ns1:arrivalTime "10:15:00"^^xsd:time;
+  ns1:departureTime "10:16:00"^^xsd:time;
+  ns1:gps "50.1083880N, 14.4757450E" .
 
-<https://T1G4.DOX.cz/Stop/#12> a ex:Stop;
-  ex:arrivalTime "14:05:00"^^xsd:time;
-  ex:departureTime "14:06:00"^^xsd:time;
-  ex:gps "50.100481N 14.464590E" .
+stop:12 a gtfs:Stop;
+  ns1:arrivalTime "14:05:00"^^xsd:time;
+  ns1:departureTime "14:06:00"^^xsd:time;
+  ns1:gps "50.1004810N, 14.4645900E" .
 
-<https://T1G4.DOX.cz/Stop/#14> a ex:Stop;
-  ex:arrivalTime "15:05:00"^^xsd:time;
-  ex:departureTime "15:07:00"^^xsd:time;
-  ex:gps "50.100481N 14.464590E" .
+stop:14 a gtfs:Stop;
+  ns1:arrivalTime "15:05:00"^^xsd:time;
+  ns1:departureTime "15:07:00"^^xsd:time;
+  ns1:gps "50.1004810N, 14.4645900E" .
 
-<https://T1G4.DOX.cz/Stop/#2> a ex:Stop;
-  ex:arrivalTime "12:05:00"^^xsd:time;
-  ex:departureTime "12:06:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#3>;
-  ex:gps "49.7741814N, 17.7475375E" .
+stop:2 a gtfs:Stop;
+  ns1:arrivalTime "12:05:00"^^xsd:time;
+  ns1:departureTime "12:06:00"^^xsd:time;
+  ns1:followedBy stop:3;
+  ns1:gps "49.7741814N, 17.7475375E" .
 
-<https://T1G4.DOX.cz/Stop/#3> a ex:Stop;
-  ex:arrivalTime "12:10:00"^^xsd:time;
-  ex:departureTime "12:11:00"^^xsd:time;
-  ex:gps "49.6969069N, 17.7886239E" .
+stop:3 a gtfs:Stop;
+  ns1:arrivalTime "12:10:00"^^xsd:time;
+  ns1:departureTime "12:11:00"^^xsd:time;
+  ns1:gps "49.6969069N, 17.7886239E" .
 
-<https://T1G4.DOX.cz/Stop/#5> a ex:Stop;
-  ex:arrivalTime "11:05:00"^^xsd:time;
-  ex:departureTime "11:06:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#6>;
-  ex:gps "49.7067069N, 17.7684325E" .
+stop:5 a gtfs:Stop;
+  ns1:arrivalTime "11:05:00"^^xsd:time;
+  ns1:departureTime "11:06:00"^^xsd:time;
+  ns1:followedBy stop:6;
+  ns1:gps "49.7067069N, 17.7684325E" .
 
-<https://T1G4.DOX.cz/Stop/#6> a ex:Stop;
-  ex:arrivalTime "11:10:00"^^xsd:time;
-  ex:departureTime "11:11:00"^^xsd:time;
-  ex:gps "49.7760583N, 17.7494736E" .
+stop:6 a gtfs:Stop;
+  ns1:arrivalTime "11:10:00"^^xsd:time;
+  ns1:departureTime "11:11:00"^^xsd:time;
+  ns1:gps "49.7760583N, 17.7494736E" .
 
-<https://T1G4.DOX.cz/Stop/#8> a ex:Stop;
-  ex:arrivalTime "10:05:00"^^xsd:time;
-  ex:departureTime "10:06:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#9>;
-  ex:gps "50.091689N 14.443813E" .
+stop:8 a gtfs:Stop;
+  ns1:arrivalTime "10:05:00"^^xsd:time;
+  ns1:departureTime "10:06:00"^^xsd:time;
+  ns1:followedBy stop:9;
+  ns1:gps "50.0916890N, 14.4438130E" .
 
-<https://T1G4.DOX.cz/Stop/#9> a ex:Stop;
-  ex:arrivalTime "10:10:00"^^xsd:time;
-  ex:departureTime "10:11:00"^^xsd:time;
-  ex:followedBy <https://T1G4.DOX.cz/Stop/#10>;
-  ex:gps "50.100481N 14.464590E" .
+stop:9 a gtfs:Stop;
+  ns1:arrivalTime "10:10:00"^^xsd:time;
+  ns1:departureTime "10:11:00"^^xsd:time;
+  ns1:followedBy stop:10;
+  ns1:gps "50.1004810N, 14.4645900E" .
+
+ [<file:/home/user/git/T1G4/4/csv/data-7.csv#phone> <tel:+420-630-784-245>] .
+
+ [<file:/home/user/git/T1G4/4/csv/data-7.csv#phone> <tel:+420-543-140-738>] .
+
+ [<file:/home/user/git/T1G4/4/csv/data-7.csv#phone> <tel:+420-640-921-554>] .
+
+ [<file:/home/user/git/T1G4/4/csv/data-8.csv#email> <mailto:info@studentagency.cz>] .
+
+ [<file:/home/user/git/T1G4/4/csv/data-8.csv#email> <mailto:info@leoexpress.com>] .
+
+ [<file:/home/user/git/T1G4/4/csv/data-8.csv#email> <mailto:info@dpp.cz>] .
