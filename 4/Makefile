@@ -10,7 +10,7 @@ all:
 			--input-format tabular \
 			--minimal \
 			--decode-uri \
-			--prefixes dbpedia-owl:https://dbpedia.org/ontology/,gtfs:http://vocab.gtfs.org/terms#,ns1:http://example.org/vocabulary/,agency:https://T1G4.DOX.cz/TransitAgency/#,producer:https://T1G4.DOX.cz/Producer/#,bus:https://T1G4.DOX.cz/Bus/#,train:https://T1G4.DOX.cz/Train/#,conn:https://T1G4.DOX.cz/Connection/#,route:https://T1G4.DOX.cz/TransitRoute/#,station:https://T1G4.DOX.cz/Station/#,stop:https://T1G4.DOX.cz/Stop/# \
+			--prefixes dbpedia-owl:https://dbpedia.org/ontology/,gtfs:http://vocab.gtfs.org/terms#,pext:http://www.ontotext.com/proton/protonext#,ns1:http://example.org/vocabulary/,agency:https://T1G4.DOX.cz/TransitAgency/#,producer:https://T1G4.DOX.cz/Producer/#,bus:https://T1G4.DOX.cz/Bus/#,train:https://T1G4.DOX.cz/Train/#,conn:https://T1G4.DOX.cz/Connection/#,route:https://T1G4.DOX.cz/TransitRoute/#,station:https://T1G4.DOX.cz/Station/#,stop:https://T1G4.DOX.cz/Stop/# \
 			--output-format turtle \
 			$(CSV_DIR)/"$$file" \
 			> \
