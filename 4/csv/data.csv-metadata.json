@@ -350,14 +350,16 @@
             "url":"data-7.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "valueUrl":"{phone}",
+                "valueUrl":"tel:{phone}",
+                "propertyUrl":"foaf:phone",
+                "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}",
                 "columns":[
                     {
                         "@type":"Column",
                         "name":"phone",
                         "titles":"phone",
                         "dc:description":"Mobile or stationary phone number",
-                        "datatype":"anyURI",
+                        "datatype":"string",
                         "required":true
                     },
                     {
@@ -366,9 +368,7 @@
                         "titles":"agencyID",
                         "dc:description":"Unique identifier for the agency",
                         "datatype":"string",
-                        "required":true,
-                        "propertyUrl":"foaf:phone",
-                        "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}"
+                        "required":true
                     }
                 ],
                 "primaryKey":"phone",
@@ -389,14 +389,16 @@
             "url":"data-8.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "valueUrl":"{email}",
+                "valueUrl":"mailto:{email}",
+                "propertyUrl":"foaf:mbox",
+                "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}",
                 "columns":[
                     {
                         "@type":"Column",
                         "name":"email",
                         "titles":"email",
                         "dc:description":"E-mail address",
-                        "datatype":"anyURI",
+                        "datatype":"string",
                         "required":true
                     },
                     {
@@ -405,9 +407,7 @@
                         "titles":"agencyID",
                         "dc:description":"Unique identifier for the agency",
                         "datatype":"string",
-                        "required":true,
-                        "propertyUrl":"foaf:mbox",
-                        "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}"
+                        "required":true
                     }
                 ],
                 "primaryKey":"email",

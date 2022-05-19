@@ -292,15 +292,3 @@ stop:9 a gtfs:Stop;
   ns1:departureTime "10:11:00"^^xsd:time;
   ns1:followedBy stop:10;
   ns1:gps "50.1004810N, 14.4645900E" .
-
- [<file:/home/user/git/T1G4/4/csv/data-7.csv#phone> <tel:+420-630-784-245>] .
-
- [<file:/home/user/git/T1G4/4/csv/data-7.csv#phone> <tel:+420-543-140-738>] .
-
- [<file:/home/user/git/T1G4/4/csv/data-7.csv#phone> <tel:+420-640-921-554>] .
-
- [<file:/home/user/git/T1G4/4/csv/data-8.csv#email> <mailto:info@studentagency.cz>] .
-
- [<file:/home/user/git/T1G4/4/csv/data-8.csv#email> <mailto:info@leoexpress.com>] .
-
- [<file:/home/user/git/T1G4/4/csv/data-8.csv#email> <mailto:info@dpp.cz>] .
