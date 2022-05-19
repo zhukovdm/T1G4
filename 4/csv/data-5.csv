@@ -1,0 +1,5 @@
+propertyID,label_en,comment_en,domain,range
+legalName,legal name,Company legal name,rdfs:Class,xsd:string
+capacity,capacity,Number of people who can fit to a structure,rdfs:Class,xsd:integer
+electricMotor,Is motor electric?,Indication if a vehicle has electric motor or not,https://dbpedia.org/ontology/Train,xsd:boolean
+europeanVehicleNumber,european vehicle number,Vehicle number issued by a European regulator.,https://dbpedia.org/ontology/Train,xsd:string
