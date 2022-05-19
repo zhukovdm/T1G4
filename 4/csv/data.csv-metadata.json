@@ -583,7 +583,7 @@
                     {
                         "@type":"Column",
                         "name":"stop1ID",
-                        "titles":"stopID",
+                        "titles":"stop1ID",
                         "dc:description":"A first stop of the \"followed by\" tuple",
                         "datatype":"integer",
                         "required":true
@@ -591,7 +591,7 @@
                     {
                         "@type":"Column",
                         "name":"stop2ID",
-                        "titles":"stopID",
+                        "titles":"stop2ID",
                         "dc:description":"Second stop of the \"followed by\" tuple",
                         "datatype":"integer",
                         "required":true
