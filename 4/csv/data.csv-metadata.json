@@ -921,6 +921,56 @@
                     }
                 ]
             }
+        },
+        {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-16.csv",
+            "@type":"Table",
+            "url":"data-16.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "aboutUrl":"{entityID}",
+                "columns":[
+                    {
+                        "@type":"Column",
+                        "name":"entityID",
+                        "titles":"entityID",
+                        "dc:description":"Unique entity identifier",
+                        "datatype":"anyURI",
+                        "required":true,
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"rdfs:Class"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"label_en",
+                        "titles":"label_en",
+                        "dc:description":"Rdf label in English",
+                        "datatype":"string",
+                        "lang":"en",
+                        "propertyUrl":"rdfs:label"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"comment_en",
+                        "titles":"comment_en",
+                        "dc:description":"Rdf comment in English",
+                        "datatype":"string",
+                        "lang":"en",
+                        "propertyUrl":"rdfs:comment"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"subClassOf",
+                        "titles":"subClassOf",
+                        "dc:description":"Rdf subclass of a class",
+                        "datatype":"anyURI",
+                        "propertyUrl":"rdfs:subClassOf",
+                        "valueUrl":"{subClassOf}"
+                    }
+                ],
+                "primaryKey":"entityID",
+                "foreignKeys":[]
+            }
         }
     ]
 }

@@ -1,0 +1,7 @@
+entityID,label_en,comment_en,subClassOf
+http://example.org/vocabulary/Bus,bus,Public transport road vehicle,http://www.ontotext.com/proton/protonext#Vehicle
+https://dbpedia.org/ontology/Train,,,http://www.ontotext.com/proton/protonext#Vehicle
+http://example.org/vocabulary/Producer,producer,A company-producer of different kinds of vehicles,
+http://example.org/vocabulary/Connection,connection,A particular instance of a transit route which has its id. Each connection goes through the set of stops,
+http://example.org/vocabulary/TrainStation,train station,Named train station.,https://dbpedia.org/ontology/Station
+http://example.org/vocabulary/BusStation,bus station,Named bus station.,https://dbpedia.org/ontology/Station

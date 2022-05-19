@@ -15,6 +15,32 @@
 @prefix train: <https://T1G4.DOX.cz/Train/#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+ns1:Bus a rdfs:Class;
+  rdfs:label "bus"@en;
+  rdfs:comment "Public transport road vehicle"@en;
+  rdfs:subClassOf pext:Vehicle .
+
+ns1:BusStation a rdfs:Class;
+  rdfs:label "bus station"@en;
+  rdfs:comment "Named bus station."@en;
+  rdfs:subClassOf dbpedia-owl:Station .
+
+ns1:Connection a rdfs:Class;
+  rdfs:label "connection"@en;
+  rdfs:comment "A particular instance of a transit route which has its id. Each connection goes through the set of stops"@en .
+
+ns1:Producer a rdfs:Class;
+  rdfs:label "producer"@en;
+  rdfs:comment "A company-producer of different kinds of vehicles"@en .
+
+ns1:TrainStation a rdfs:Class;
+  rdfs:label "train station"@en;
+  rdfs:comment "Named train station."@en;
+  rdfs:subClassOf dbpedia-owl:Station .
+
+dbpedia-owl:Train a rdfs:Class;
+  rdfs:subClassOf pext:Vehicle .
+
 ns1:arrivalTime a rdf:Property;
   rdfs:label "arrival time"@en;
   rdfs:comment "Arrival time of a vehicle."@en;
