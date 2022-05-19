@@ -5,13 +5,153 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix gtfs: <http://vocab.gtfs.org/terms#> .
 @prefix ns1: <http://example.org/vocabulary/> .
+@prefix pext: <http://www.ontotext.com/proton/protonext#> .
 @prefix producer: <https://T1G4.DOX.cz/Producer/#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix route: <https://T1G4.DOX.cz/TransitRoute/#> .
 @prefix station: <https://T1G4.DOX.cz/Station/#> .
 @prefix stop: <https://T1G4.DOX.cz/Stop/#> .
 @prefix train: <https://T1G4.DOX.cz/Train/#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:arrivalTime a rdf:Property;
+  rdfs:label "arrival time"@en;
+  rdfs:comment "Arrival time of a vehicle."@en;
+  rdfs:domain gtfs:Stop;
+  rdfs:range xsd:time .
+
+ns1:belongsTo a rdf:Property;
+  rdfs:label "belongs to"@en;
+  rdfs:comment "A connection belongs to a transit route."@en;
+  rdfs:domain ns1:Connection;
+  rdfs:range gtfs:Route .
+
+ns1:capacity a rdf:Property;
+  rdfs:label "capacity"@en;
+  rdfs:comment "Number of people who can fit to a structure"@en;
+  rdfs:domain rdfs:Class;
+  rdfs:range xsd:integer .
+
+ns1:connects a rdf:Property;
+  rdfs:label "connects"@en;
+  rdfs:comment "A connection connects a set of stops."@en;
+  rdfs:domain ns1:Connection;
+  rdfs:range gtfs:Stop .
+
+ns1:consumption a rdf:Property;
+  rdfs:label "consumption"@en;
+  rdfs:comment "Vehicle consumption of gasoline or electricity per km."@en;
+  rdfs:domain pext:Vehicle;
+  rdfs:range xsd:integer .
+
+ns1:departureTime a rdf:Property;
+  rdfs:label "departure time"@en;
+  rdfs:comment "Departure time of a vehicle."@en;
+  rdfs:domain gtfs:Stop;
+  rdfs:range xsd:time .
+
+ns1:electricMotor a rdf:Property;
+  rdfs:label "Is motor electric?"@en;
+  rdfs:comment "Indication if a vehicle has electric motor or not"@en;
+  rdfs:domain dbpedia-owl:Train;
+  rdfs:range xsd:boolean .
+
+ns1:endsWith a rdf:Property;
+  rdfs:label "ends with"@en;
+  rdfs:comment "Name of a station, where the route ends."@en;
+  rdfs:domain gtfs:Route;
+  rdfs:range dbpedia-owl:Station .
+
+ns1:europeanVehicleNumber a rdf:Property;
+  rdfs:label "european vehicle number"@en;
+  rdfs:comment "Vehicle number issued by a European regulator."@en;
+  rdfs:domain dbpedia-owl:Train;
+  rdfs:range xsd:string .
+
+ns1:followedBy a rdf:Property;
+  rdfs:label "followed by"@en;
+  rdfs:comment "A stop is followed by the next stop."@en;
+  rdfs:domain gtfs:Stop;
+  rdfs:range gtfs:Stop .
+
+ns1:gps a rdf:Property;
+  rdfs:label "gps"@en;
+  rdfs:comment "Exact point on a map where stop is located."@en;
+  rdfs:domain gtfs:Stop;
+  rdfs:range xsd:string .
+
+ns1:legalName a rdf:Property;
+  rdfs:label "legal name"@en;
+  rdfs:comment "Company legal name"@en;
+  rdfs:domain rdfs:Class;
+  rdfs:range xsd:string .
+
+ns1:length a rdf:Property;
+  rdfs:label "length"@en;
+  rdfs:comment "A length of route in kilometers."@en;
+  rdfs:domain gtfs:Route;
+  rdfs:range xsd:decimal .
+
+ns1:licensePlateNumber a rdf:Property;
+  rdfs:label "license plate number"@en;
+  rdfs:comment "License plate number issued by a regulator."@en;
+  rdfs:domain ns1:Bus;
+  rdfs:range xsd:string .
+
+ns1:owns a rdf:Property;
+  rdfs:label "owns"@en;
+  rdfs:comment "A transit agency owns a vehicle."@en;
+  rdfs:domain gtfs:Agency;
+  rdfs:range pext:Vehicle .
+
+ns1:produces a rdf:Property;
+  rdfs:label "produces"@en;
+  rdfs:comment "A producer produces a vehicle."@en;
+  rdfs:domain ns1:Producer;
+  rdfs:range pext:Vehicle .
+
+ns1:purchasePrice a rdf:Property;
+  rdfs:label "purchase price"@en;
+  rdfs:comment "Vehicle purchase price in CZK."@en;
+  rdfs:domain pext:Vehicle;
+  rdfs:range xsd:integer .
+
+ns1:rides a rdf:Property;
+  rdfs:label "rides"@en;
+  rdfs:comment "A vehicle rides a connection."@en;
+  rdfs:domain pext:Vehicle;
+  rdfs:range ns1:Connection .
+
+ns1:serves a rdf:Property;
+  rdfs:label "serves"@en;
+  rdfs:comment "A station serves a stop."@en;
+  rdfs:domain dbpedia-owl:Station;
+  rdfs:range gtfs:Stop .
+
+ns1:startsWith a rdf:Property;
+  rdfs:label "starts with"@en;
+  rdfs:comment "Name of a station, where the route begins."@en;
+  rdfs:domain gtfs:Route;
+  rdfs:range dbpedia-owl:Station .
+
+ns1:stationName a rdf:Property;
+  rdfs:label "station name"@en;
+  rdfs:comment "Actual station name."@en;
+  rdfs:domain dbpedia-owl:Station;
+  rdfs:range xsd:string .
+
+ns1:validFrom a rdf:Property;
+  rdfs:label "valid from"@en;
+  rdfs:comment "A date since when was operation on a route allowed."@en;
+  rdfs:domain gtfs:Route;
+  rdfs:range xsd:date .
+
+ns1:validTo a rdf:Property;
+  rdfs:label "valid to"@en;
+  rdfs:comment "Last date of allowed operation on a route."@en;
+  rdfs:domain gtfs:Route;
+  rdfs:range xsd:date .
 
 producer:bombardier a ns1:Producer;
   ns1:legalName "Bombardier Inc."@en;

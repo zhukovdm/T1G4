@@ -1,5 +1,24 @@
 propertyID,label_en,comment_en,domain,range
-legalName,legal name,Company legal name,rdfs:Class,xsd:string
-capacity,capacity,Number of people who can fit to a structure,rdfs:Class,xsd:integer
-electricMotor,Is motor electric?,Indication if a vehicle has electric motor or not,https://dbpedia.org/ontology/Train,xsd:boolean
-europeanVehicleNumber,european vehicle number,Vehicle number issued by a European regulator.,https://dbpedia.org/ontology/Train,xsd:string
+legalName,legal name,Company legal name,http://www.w3.org/2000/01/rdf-schema#Class,http://www.w3.org/2001/XMLSchema#string
+capacity,capacity,Number of people who can fit to a structure,http://www.w3.org/2000/01/rdf-schema#Class,http://www.w3.org/2001/XMLSchema#integer
+electricMotor,Is motor electric?,Indication if a vehicle has electric motor or not,https://dbpedia.org/ontology/Train,http://www.w3.org/2001/XMLSchema#boolean
+europeanVehicleNumber,european vehicle number,Vehicle number issued by a European regulator.,https://dbpedia.org/ontology/Train,http://www.w3.org/2001/XMLSchema#string
+licensePlateNumber,license plate number,License plate number issued by a regulator.,http://example.org/vocabulary/Bus,http://www.w3.org/2001/XMLSchema#string
+consumption,consumption,Vehicle consumption of gasoline or electricity per km.,http://www.ontotext.com/proton/protonext#Vehicle,http://www.w3.org/2001/XMLSchema#integer
+purchasePrice,purchase price,Vehicle purchase price in CZK.,http://www.ontotext.com/proton/protonext#Vehicle,http://www.w3.org/2001/XMLSchema#integer
+length,length,A length of route in kilometers.,http://vocab.gtfs.org/terms#Route,http://www.w3.org/2001/XMLSchema#decimal
+validFrom,valid from,A date since when was operation on a route allowed.,http://vocab.gtfs.org/terms#Route,http://www.w3.org/2001/XMLSchema#date
+validTo,valid to,Last date of allowed operation on a route.,http://vocab.gtfs.org/terms#Route,http://www.w3.org/2001/XMLSchema#date
+gps,gps,Exact point on a map where stop is located.,http://vocab.gtfs.org/terms#Stop,http://www.w3.org/2001/XMLSchema#string
+arrivalTime,arrival time,Arrival time of a vehicle.,http://vocab.gtfs.org/terms#Stop,http://www.w3.org/2001/XMLSchema#time
+departureTime,departure time,Departure time of a vehicle.,http://vocab.gtfs.org/terms#Stop,http://www.w3.org/2001/XMLSchema#time
+stationName,station name,Actual station name.,https://dbpedia.org/ontology/Station,http://www.w3.org/2001/XMLSchema#string
+owns,owns,A transit agency owns a vehicle.,http://vocab.gtfs.org/terms#Agency,http://www.ontotext.com/proton/protonext#Vehicle
+produces,produces,A producer produces a vehicle.,http://example.org/vocabulary/Producer,http://www.ontotext.com/proton/protonext#Vehicle
+rides,rides,A vehicle rides a connection.,http://www.ontotext.com/proton/protonext#Vehicle,http://example.org/vocabulary/Connection
+belongsTo,belongs to,A connection belongs to a transit route.,http://example.org/vocabulary/Connection,http://vocab.gtfs.org/terms#Route
+connects,connects,A connection connects a set of stops.,http://example.org/vocabulary/Connection,http://vocab.gtfs.org/terms#Stop
+followedBy,followed by,A stop is followed by the next stop.,http://vocab.gtfs.org/terms#Stop,http://vocab.gtfs.org/terms#Stop
+serves,serves,A station serves a stop.,https://dbpedia.org/ontology/Station,http://vocab.gtfs.org/terms#Stop
+startsWith,starts with,"Name of a station, where the route begins.",http://vocab.gtfs.org/terms#Route,https://dbpedia.org/ontology/Station
+endsWith,ends with,"Name of a station, where the route ends.",http://vocab.gtfs.org/terms#Route,https://dbpedia.org/ontology/Station

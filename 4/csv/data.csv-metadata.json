@@ -304,6 +304,69 @@
             }
         },
         {
+            "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-5.csv",
+            "@type":"Table",
+            "url":"data-5.csv",
+            "tableSchema":{
+                "@type":"Schema",
+                "aboutUrl":"http://example.org/vocabulary/{propertyID}",
+                "columns":[
+                    {
+                        "@type":"Column",
+                        "name":"propertyID",
+                        "titles":"propertyID",
+                        "dc:description":"Unique property identifier",
+                        "datatype":"string",
+                        "required":true,
+                        "propertyUrl":"rdf:type",
+                        "valueUrl":"rdf:Property"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"label_en",
+                        "titles":"label_en",
+                        "dc:description":"Rdf label in English",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"en",
+                        "propertyUrl":"rdfs:label"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"comment_en",
+                        "titles":"comment_en",
+                        "dc:description":"Rdf comment in English",
+                        "datatype":"string",
+                        "required":true,
+                        "lang":"en",
+                        "propertyUrl":"rdfs:comment"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"domain",
+                        "titles":"domain",
+                        "dc:description":"Rdf domain",
+                        "datatype":"anyURI",
+                        "required":true,
+                        "propertyUrl":"rdfs:domain",
+                        "valueUrl":"{domain}"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"range",
+                        "titles":"range",
+                        "dc:description":"Rdf range",
+                        "datatype":"anyURI",
+                        "required":true,
+                        "propertyUrl":"rdfs:range",
+                        "valueUrl":"{range}"
+                    }
+                ],
+                "primaryKey":"propertyID",
+                "foreignKeys":[]
+            }
+        },
+        {
             "@id":"https://raw.githubusercontent.com/zhukovdm/T1G4/main/4/csv/data-6.csv",
             "@type":"Table",
             "url":"data-6.csv",
