@@ -309,7 +309,7 @@
             "url":"data-6.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}",
                 "columns":[
                     {
                         "@type":"Column",
@@ -368,7 +368,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"foaf:phone",
-                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}"
+                        "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}"
                     }
                 ],
                 "primaryKey":"phone",
@@ -407,7 +407,7 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"foaf:mbox",
-                        "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}"
+                        "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}"
                     }
                 ],
                 "primaryKey":"email",
@@ -428,7 +428,7 @@
             "url":"data-9.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}",
                 "propertyUrl":"http://example.org/vocabulary/owns",
                 "valueUrl":"https://T1G4.DOX.cz/Bus/{#busID}",
                 "columns":[
@@ -467,7 +467,7 @@
             "url":"data-10.csv",
             "tableSchema":{
                 "@type":"Schema",
-                "aboutUrl":"https://T1G4.DOX.cz/Agency/{#agencyID}",
+                "aboutUrl":"https://T1G4.DOX.cz/TransitAgency/{#agencyID}",
                 "propertyUrl":"http://example.org/vocabulary/owns",
                 "valueUrl":"https://T1G4.DOX.cz/Train/{#trainID}",
                 "columns":[
@@ -601,7 +601,7 @@
                     {
                         "@type":"Column",
                         "name":"trainStation1ID",
-                        "titles":"trainStationID",
+                        "titles":"trainStation1ID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
                         "required":false,
@@ -611,7 +611,7 @@
                     {
                         "@type":"Column",
                         "name":"trainStation2ID",
-                        "titles":"trainStationID",
+                        "titles":"trainStation2ID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
                         "required":false,
@@ -621,7 +621,7 @@
                     {
                         "@type":"Column",
                         "name":"busStation1ID",
-                        "titles":"busStationID",
+                        "titles":"busStation1ID",
                         "dc:description":"Station, where the route begins",
                         "datatype":"integer",
                         "required":false,
@@ -631,12 +631,12 @@
                     {
                         "@type":"Column",
                         "name":"busStation2ID",
-                        "titles":"busStationID",
+                        "titles":"busStation2ID",
                         "dc:description":"Station, where the route ends",
                         "datatype":"integer",
                         "required":false,
                         "propertyUrl":"http://example.org/vocabulary/endsWith",
-                        "valueUrl":"https://T1G4.DOX.cz/Station/{#busStation1ID}"
+                        "valueUrl":"https://T1G4.DOX.cz/Station/{#busStation2ID}"
                     }
                 ],
                 "primaryKey":"routeID",
@@ -769,7 +769,7 @@
                         "datatype":"integer",
                         "required":true,
                         "propertyUrl":"rdf:type",
-                        "valueUrl":"http://example.org/vocabulary/Stop"
+                        "valueUrl":"http://vocab.gtfs.org/terms#Stop"
                     },
                     {
                         "@type":"Column",
