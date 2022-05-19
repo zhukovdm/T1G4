@@ -842,7 +842,8 @@
                         "datatype":"string",
                         "required":true,
                         "propertyUrl":"http://example.org/vocabulary/gps"
-                    },{
+                    },
+                    {
                         "@type":"Column",
                         "name":"arrivalTime",
                         "titles":"arrivalTime",
@@ -850,7 +851,8 @@
                         "datatype":"time",
                         "required":true,
                         "propertyUrl":"http://example.org/vocabulary/arrivalTime"
-                    },{
+                    },
+                    {
                         "@type":"Column",
                         "name":"departureTime",
                         "titles":"departureTime",
@@ -858,8 +860,8 @@
                         "datatype":"time",
                         "required":true,
                         "propertyUrl":"http://example.org/vocabulary/departureTime"
-                    }
-                    ,{
+                    },
+                    {
                         "@type":"Column",
                         "name":"connectionID",
                         "titles":"connectionID",
